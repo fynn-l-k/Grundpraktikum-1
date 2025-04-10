@@ -1,1 +1,1 @@
-# Grundpraktikum_1
+# Grundpraktikum-1
