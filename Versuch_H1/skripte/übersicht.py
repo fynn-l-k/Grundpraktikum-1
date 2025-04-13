@@ -63,36 +63,36 @@ axs[2, 1].set_ylim(-1.5, 1.5)
 axs[2, 1].grid(True)
 
 # Lineare Beschleunigungsdaten (Spalte 3)
-df_lin = pd.read_csv('data/Linear Acceleration.csv')
-df_lin['Zeit_Angepasst'] = df_lin['Time (s)'] - start_time
+#df_lin = pd.read_csv('data/Linear Acceleration.csv')
+#df_lin['Zeit_Angepasst'] = df_lin['Time (s)'] - start_time
 
-axs[0, 2].plot(df_lin['Zeit_Angepasst'], df_lin['Linear Acceleration x (m/s^2)'], color='b')
-axs[0, 2].set_title('Lineare Beschleunigung X')
-axs[0, 2].set_ylabel('Lin. Beschl. (m/s²)')
-axs[0, 2].set_xlim(0, end_time)
-axs[0, 2].set_ylim(-2.8, 2.8)
-axs[0, 2].grid(True)
+#axs[0, 2].plot(df_lin['Zeit_Angepasst'], df_lin['Linear Acceleration x (m/s^2)'], color='b')
+#axs[0, 2].set_title('Lineare Beschleunigung X')
+#axs[0, 2].set_ylabel('Lin. Beschl. (m/s²)')
+#axs[0, 2].set_xlim(0, end_time)
+#axs[0, 2].set_ylim(-2.8, 2.8)
+#axs[0, 2].grid(True)
 
-axs[1, 2].plot(df_lin['Zeit_Angepasst'], df_lin['Linear Acceleration y (m/s^2)'], color='b')
-axs[1, 2].set_title('Lineare Beschleunigung Y')
-axs[1, 2].set_ylabel('Lin. Beschl. (m/s²)')
-axs[1, 2].set_xlim(0, end_time)
-axs[1, 2].set_ylim(-2, 2)
-axs[1, 2].grid(True)
+#axs[1, 2].plot(df_lin['Zeit_Angepasst'], df_lin['Linear Acceleration y (m/s^2)'], color='b')
+#axs[1, 2].set_title('Lineare Beschleunigung Y')
+#axs[1, 2].set_ylabel('Lin. Beschl. (m/s²)')
+#axs[1, 2].set_xlim(0, end_time)
+#axs[1, 2].set_ylim(-2, 2)
+#axs[1, 2].grid(True)
 
-axs[2, 2].plot(df_lin['Zeit_Angepasst'], df_lin['Linear Acceleration z (m/s^2)'], color='b')
-axs[2, 2].set_title('Lineare Beschleunigung Z')
-axs[2, 2].set_ylabel('Lin. Beschl. (m/s²)')
-axs[2, 2].set_xlabel('Zeit (s)')
-axs[2, 2].set_xlim(0, end_time)
-axs[2, 2].set_ylim(-1.5, 1.5)
-axs[2, 2].grid(True)
+#axs[2, 2].plot(df_lin['Zeit_Angepasst'], df_lin['Linear Acceleration z (m/s^2)'], color='b')
+#axs[2, 2].set_title('Lineare Beschleunigung Z')
+#axs[2, 2].set_ylabel('Lin. Beschl. (m/s²)')
+#axs[2, 2].set_xlabel('Zeit (s)')
+#axs[2, 2].set_xlim(0, end_time)
+#axs[2, 2].set_ylim(-1.5, 1.5)
+#axs[2, 2].grid(True)
 
 # Legende für die gesamten Spalten erstellen
 handles = [
     plt.Line2D([0], [0], color='r', label='Rohbeschleunigung'),
     plt.Line2D([0], [0], color='g', label='Gyroskop'),
-    plt.Line2D([0], [0], color='b', label='Lineare Beschleunigung')
+    #plt.Line2D([0], [0], color='b', label='Lineare Beschleunigung')
 ]
 fig.legend(handles=handles, loc='lower center', ncol=3, bbox_to_anchor=(0.5, 0.01))
 
