@@ -1,1 +1,56 @@
 # Aufgabe 1: Magnetfeldverlauf in einer langen Spule
+
+## Messen der magnetischen Induktion B(z)
+
+## Gemessene und berechnete Feldverteilung
+
+```{python}
+#| label: fig-magentfeldsolenoid
+#| fig-cap: Das Megnetfeld des Solenoid 2 entlang der Spulenachse z
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Konstanten
+mu0 = 4 * np.pi * 1e-7  # H/m
+
+# Geometrie der Spule
+L = 0.3  # Länge in m
+N = 282  # Windungszahl
+R = 0.0204  # Radius in m
+I = 1.999  # Strom in Ampere
+
+# Spulenenden relativ zur Mitte
+z1 = -L / 2
+z2 = L / 2
+
+# Theoretisches Feld entlang z-Achse
+def B_z(z, N, I, R, z1, z2):
+    term1 = (z2 - z) / np.sqrt(R**2 + (z2 - z)**2)
+    term2 = (z1 - z) / np.sqrt(R**2 + (z1 - z)**2)
+    return (mu0 * N * I / (2 * L)) * (term1 - term2)
+
+# z-Achse erzeugen (in m, aber später für Plot in mm)
+z = np.linspace(-0.5, 0.5, 1000)
+B_theoretical = B_z(z, N, I, R, z1, z2)
+
+# Messdaten laden
+df = pd.read_csv('./data/Solenoid.csv')  # Datei mit Spalten 'pos' (in mm) und 'by' (in mT)
+B_measured = df['by'] * 10**(-3) # In mT unrechnen
+z_measured = df['pos'] - 465 #Mitte von der Spule nach Experimentellen Daten
+
+
+# Plot
+plt.figure(figsize=(10, 5))
+plt.plot(z * 1000, B_theoretical * 1e3, label='Theoretisch', color='blue')  # z in mm, B in mT
+plt.scatter(z_measured, B_measured, color='red', label='Gemessen', marker='o')
+plt.title("Magnetfeld $B_z$ entlang der Spulenachse")
+plt.xlabel("z [mm]")
+plt.ylabel("B [mT]")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+
+```
