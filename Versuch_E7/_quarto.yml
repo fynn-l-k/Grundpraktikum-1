@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "E7 - Spulenfeder"
+  title: "E7-Spulenfeder"
   author: "Fynn Kanja 3780065, Valentino D’Agosto 3763229"
   date: 24 04 2025
   date-format: "DD.MM.YYYY"

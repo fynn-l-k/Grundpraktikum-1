@@ -3,6 +3,10 @@
 ## Messen der magnetischen Induktion B(z)
 
 ## Gemessene und berechnete Feldverteilung
+Das Magnetfeld B einer idealen Zylinderspule kann durch Integration des Biot-Savart-Gesetzes berechnet werden. So kommt man für eine kreisfömige Leiterschleife auf die Formel
+$$B(z) = \frac{\mu_0}{2}\frac{R^2 I}{(R^2 + z^2)^{3/2}}$$
+wobei $R$ der Radius der Leiterschleife ist, $z$ der Abstand entlang der Achse der Leiterschleife ist, $I$ der Strom durch die Leiterschleife ist,
+(https://de.wikipedia.org/wiki/Biot-Savart-Gesetz#Kreisf%C3%B6rmige_Leiterschleife)
 
 ```{python}
 #| label: fig-magentfeldsolenoid
@@ -54,3 +58,5 @@ plt.show()
 
 
 ```
+
+## Bestimmung der Induktivität
