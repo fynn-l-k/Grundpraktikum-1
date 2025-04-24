@@ -1,0 +1,35 @@
+project:
+  type: book
+
+book:
+  title: "E7 - Spulenfeder"
+  author: "Fynn Kanja 3780065, Valentino D’Agosto 3763229"
+  date: 24 04 2025
+  date-format: "DD.MM.YYYY"
+  chapters:
+    - index.qmd
+    - Aufgabe 1.qmd
+    - Aufgabe 2.qmd
+    - Aufgabe 3.qmd
+    - Schluss.qmd
+
+#bibliography: refs.bib
+
+jupyter: python3
+execute:
+  echo: false
+
+format:
+  pdf:
+    toc: true
+    toc-depth: 3
+    toc-title: Inhaltsverzeichnis
+
+    fig-pos: 'h'
+
+    number-sections: true
+    number-depth: 3
+
+    colorlinks: true
+    documentclass: scrreprt
+    papersize: letter

@@ -1,0 +1,18 @@
+# Motivation
+Das Ziel des gesamten Versuchs ist es, den Magnetfeldverlauf entlang der z-Achse für verschiedene Spulentypen experimentell zu messen, theoretisch zu berechnen und miteinander zu vergleichen. Und dabei, ein tiefes Verständnis für die Verteilung und Eigenschaften magnetischer Felder unterschiedlicher Spulenanordnungen zu erlangen.
+
+# Aufgabenstellung
+1. Magnetfeldverlauf in einer langen Spule
+    a. Messen Sie die magnetische Induktion B(z) längs der Spulenachse (z) eines langen Solenoids.
+    b. Stellen Sie die gemessene und berechnete Feldverteilung in einem Diagramm graphisch dar.
+    c. Bestimmen Sie die magnetische Induktion am Ende des Solenoids und vergleichen Sie die
+experimentellen und theoretischen Werte.
+2. Magnetfeldverlauf flache Kreisspule
+    a. Messen Sie die axiale magnetische Induktion B(z) einer flachen Kreisspule.
+    b. Stellen Sie die gemessene und die berechnete Feldverteilung in einem Diagramm graphisch dar.
+    c. Ermitteln Sie graphisch und durch Berechnung, in welchem Abstand zur Spulenmitte der
+Maximalwert des Magnetfelds auf die Hälfte abgenommen hat.
+3. Magnetfeldverlauf Spulenpaar
+    a. Messen Sie die axiale magnetische Induktion B(z) eines Kreisspulenpaares, das gleichsinnig vom Strom durchflossen wird, für drei verschiedene Spulenabstände a: a = 2r, a = r, a = r/2 (r: Spulenradius).
+    b. Stellen Sie die berechneten und gemessenen Feldverteilungen in einem Diagramm graphisch dar.
+    c. Bestimmen Sie für den Fall der Helmholtz-Spule (a = r) den Bereich, in dem das Magnetfeld maximal um 5% vom Maximalwert abweicht.
