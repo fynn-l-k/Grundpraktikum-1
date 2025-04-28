@@ -7,4 +7,4 @@ Mit Lineal wurde der Abstand eingestellt
 
 
 # Quellen
-Wikipedia contributors. (o. J.). Biot-Savart-Gesetz. Wikipedia, The Free Encyclopedia. https://de.wikipedia.org/w/index.php?title=Biot-Savart-Gesetz&oldid=255048120 
+Wikipedia contributors. (o. J.). Biot-Savart-Gesetz. Wikipedia, The Free Encyclopedia. https://de.wikipedia.org/w/index.php?title=Biot-Savart-Gesetz&oldid=255048120 {}
