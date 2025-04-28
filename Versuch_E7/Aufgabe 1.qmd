@@ -3,7 +3,7 @@
 ## Messen der magnetischen Induktion B(z)
 Die z-Richtung des Magnetfeldes wurde durch die 300mm lange Spule in 5mm Abständen über eine insgesammte Messlänge von 420mm, mithilfe eine Vektormagentometers des Herstellers Adafruit, aufgenommen. Die Daten wurden dabei in jedem Experiment vom Sensor über einne Arduino ausgelesen und über dan seriellen Monitor des Arduino-GUI auf eine Tabelle auf einen externen Rechner übernommen. Der Sensor und der Solenoid befanden sich beide parallel auf einer Optischen Bank mit einem Lineal zum Abmessen, wie in [Abbildung @fig-versuchsaufbau] zu sehen ist.
 
-![Versuchsaufbau mit Solenoid und Vektormagentometer auf der Optische Bank mit Skaler](./data/Solenoid.csv){#fig-versuchsaufbau}
+![Versuchsaufbau mit Solenoid und Vektormagentometer auf der Optische Bank mit Skaler](./figures/Selenoid%202%20Aufbau.jpg){#fig-versuchsaufbau}
 
 (Hier bekommen wir safe nen Kommentar, nach dem Motto das wir nicht die Mitte der Spule genau wussen, bzw. wann der Sensor wirklich in der Mitte war, da der Sensor nicht sichbar war.)
 
