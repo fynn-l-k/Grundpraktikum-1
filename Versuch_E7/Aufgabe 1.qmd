@@ -1,12 +1,18 @@
 # Aufgabe 1: Magnetfeldverlauf in einer langen Spule
 
 ## Messen der magnetischen Induktion B(z)
+Die z-Richtung des Magnetfeldes wurde durch die 300mm lange Spule in 5mm Abständen über eine insgesammte Messlänge von 420mm, mithilfe eine Vektormagentometers des Herstellers Adafruit, aufgenommen. Die Daten wurden dabei in jedem Experiment vom Sensor über einne Arduino ausgelesen und über dan seriellen Monitor des Arduino-GUI auf eine Tabelle auf einen externen Rechner übernommen.
+
+(Hier bekommen wir safe nen Kommentar, nach dem Motto das wir nicht die Mitte der Spule genau wussen, bzw. wann der Sensor wirklich in der Mitte war, da der Sensor nicht sichbar war.)
 
 ## Gemessene und berechnete Feldverteilung
-Das Magnetfeld B einer idealen Zylinderspule kann durch Integration des Biot-Savart-Gesetzes berechnet werden. So kommt man für eine kreisfömige Leiterschleife auf die Formel
-$$B(z) = \frac{\mu_0}{2}\frac{R^2 I}{(R^2 + z^2)^{3/2}}$$
-wobei $R$ der Radius der Leiterschleife ist, $z$ der Abstand entlang der Achse der Leiterschleife ist, $I$ der Strom durch die Leiterschleife ist,
-(https://de.wikipedia.org/wiki/Biot-Savart-Gesetz#Kreisf%C3%B6rmige_Leiterschleife)
+Das Magnetfeld B einer idealen Zylinderspule kann durch Integration des Biot-Savart-Gesetzes berechnet werden. So kommt man nach [@Wikipedia] für $B_z$ eine kreisfömige Leiterschleife auf die Formel
+$$B_L(z) = \frac{\mu_0}{2}\frac{R^2 I}{(R^2 + z^2)^{3/2}}$$
+wobei $R$ der Radius der Leiterschleife ist, $z$ der Abstand entlang der Achse der Leiterschleife ist und $I$ der Strom durch die Leiterschleife ist. Dabei trägt jeder dünner Scheibenabschnitt zwischen $z'\in [-\frac{L}{2}, + \frac{L}{2}]$ mit der Dicke $dz'$ zu $n dz'$ Schleifen bei, wobei $n$ die Windungsdichte ist.
+
+$$B(z) = \frac{\mu_0 N I}{2L}\left( \frac{\frac{L}{2}-z}{\sqrt{R^2 + \left( \frac{L}{2} - z\right)^2}} - \frac{-\frac{L}{2}-z}{\sqrt{R^2 + \left( -\frac{L}{2} - z\right)^2}}\right)$$
+
+Wie man in @fig-magentfeldsolenoid sehr schön sehen kann liegen die Meswerte sehr nah bei dem theoretischen Werten, die leichte Abweichung der Kurve entstand höchswahrscheinlich durch falsches ablesen der Mitte der Spule und dadurch das die Spule idealisiert ist in der theorie, liegen die Messwerte leicht darunter.
 
 ```{python}
 #| label: fig-magentfeldsolenoid
@@ -60,3 +66,5 @@ plt.show()
 ```
 
 ## Bestimmung der Induktivität
+Die Induktivität eine Selenoids kann einfach mit der Formel
+$$L=\frac{\mu_0N^2A}{I}$$

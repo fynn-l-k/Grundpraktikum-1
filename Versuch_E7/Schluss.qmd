@@ -1,1 +1,10 @@
 # Fehlerbetrachtung
+Der Stab wo der Sonsor dran war etws Schief war. (In nem Foto sieht man das auch nochmal)
+Toleranz des Messgerätes
+Toleranz des Netzgerätes
+Netzgerät generell (Stromstärke hat durch den höheren Wiederstand zugenommen)
+Mit Lineal wurde der Abstand eingestellt
+
+
+# Quellen
+Wikipedia contributors. (o. J.). Biot-Savart-Gesetz. Wikipedia, The Free Encyclopedia. https://de.wikipedia.org/w/index.php?title=Biot-Savart-Gesetz&oldid=255048120 
