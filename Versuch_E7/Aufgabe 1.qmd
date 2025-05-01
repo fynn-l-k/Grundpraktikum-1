@@ -18,7 +18,7 @@ Wie man in [Abbildung @fig-magentfeldsolenoid] sehr schön sehen kann liegen die
 
 ```{python}
 #| label: fig-magentfeldsolenoid
-#| fig-cap: Das Megnetfeld des Solenoid 2 entlang der Spulenachse z
+#| fig-cap: Das Magnetfeld des Solenoid 2 entlang der Spulenachse z
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
