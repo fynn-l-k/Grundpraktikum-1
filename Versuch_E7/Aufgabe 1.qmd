@@ -8,11 +8,9 @@ Die z-Richtung des Magnetfeldes wurde durch die 300mm lange Spule in 5mm Abstän
 (Hier bekommen wir safe nen Kommentar, nach dem Motto das wir nicht die Mitte der Spule genau wussen, bzw. wann der Sensor wirklich in der Mitte war, da der Sensor nicht sichbar war.)
 
 ## Gemessene und berechnete Feldverteilung
-Das Magnetfeld B einer idealen Zylinderspule kann durch Integration des Biot-Savart-Gesetzes berechnet werden. So kommt man nach [@Wikipedia] für $B_z$ eine kreisfömige Leiterschleife auf die Formel
-$$B_L(z) = \frac{\mu_0}{2}\frac{R^2 I}{(R^2 + z^2)^{3/2}}$$
-wobei $R$ der Radius der Leiterschleife ist, $z$ der Abstand entlang der Achse der Leiterschleife ist und $I$ der Strom durch die Leiterschleife ist. Dabei trägt jeder dünner Scheibenabschnitt zwischen $z'\in [-\frac{L}{2}, + \frac{L}{2}]$ mit der Dicke $dz'$ zu $n dz'$ Schleifen bei, wobei $n$ die Windungsdichte ist.
+Das Magnetfeld B einer idealen Zylinderspule kann durch Integration des Biot-Savart-Gesetzes berechnet werden. Dies wird in [Quelle @quelle-1] gemacht und man kommt auf folgende Formel.
 
-$$B(z) = \frac{\mu_0 N I}{2L}\left( \frac{\frac{L}{2}-z}{\sqrt{R^2 + \left( \frac{L}{2} - z\right)^2}} - \frac{-\frac{L}{2}-z}{\sqrt{R^2 + \left( -\frac{L}{2} - z\right)^2}}\right)$$
+$$B(z) = \frac{\mu_0 N I}{2L}\left( \frac{z}{\sqrt{R^2 + z^2}} + \frac{L-z}{\sqrt{R^2 + \left( {L} - z\right)^2}}\right)$$
 
 Wie man in [Abbildung @fig-magentfeldsolenoid] sehr schön sehen kann liegen die Meswerte sehr nah bei dem theoretischen Werten, die leichte Abweichung der Kurve entstand höchswahrscheinlich durch falsches ablesen der Mitte der Spule und dadurch das die Spule idealisiert ist in der theorie, liegen die Messwerte leicht darunter.
 
@@ -32,41 +30,97 @@ N = 282  # Windungszahl
 R = 0.0204  # Radius in m
 I = 1.999  # Strom in Ampere
 
-# Spulenenden relativ zur Mitte
-z1 = -L / 2
-z2 = L / 2
-
 # Theoretisches Feld entlang z-Achse
-def B_z(z, N, I, R, z1, z2):
-    term1 = (z2 - z) / np.sqrt(R**2 + (z2 - z)**2)
-    term2 = (z1 - z) / np.sqrt(R**2 + (z1 - z)**2)
-    return (mu0 * N * I / (2 * L)) * (term1 - term2)
+def B_z(z, N, I, R, L):
+    term1 = z / np.sqrt(R**2 + z**2)
+    term2 = (L - z) / np.sqrt(R**2 + (L - z)**2)
+    return (mu0 * N * I / (2 * L)) * (term1 + term2)
 
 # z-Achse erzeugen (in m, aber später für Plot in mm)
 z = np.linspace(-0.5, 0.5, 1000)
-B_theoretical = B_z(z, N, I, R, z1, z2)
+B_theoretical = B_z(z, N, I, R, L)
 
 # Messdaten laden
 df = pd.read_csv('./data/Solenoid.csv')  # Datei mit Spalten 'pos' (in mm) und 'by' (in mT)
 B_measured = df['by'] * 10**(-3) # In mT unrechnen
-z_measured = df['pos'] - 465 #Mitte von der Spule nach Experimentellen Daten
+z_measured = df['pos'] - 480 #Mitte von der Spule nach Experimentellen Daten
 
 
 # Plot
 plt.figure(figsize=(10, 5))
-plt.plot(z * 1000, B_theoretical * 1e3, label='Theoretisch', color='blue')  # z in mm, B in mT
+plt.plot((z - L/2) * 1000, B_theoretical * 1e3, label='Theoretisch', color='blue')  # z in mm, B in mT
 plt.scatter(z_measured, B_measured, color='red', label='Gemessen', marker='o')
 plt.title("Magnetfeld $B_z$ entlang der Spulenachse")
 plt.xlabel("z [mm]")
 plt.ylabel("B [mT]")
 plt.legend()
+plt.xlim(-230, 230)
 plt.grid(True)
 plt.tight_layout()
 plt.show()
-
-
 ```
 
 ## Bestimmung der Induktivität
-Die Induktivität $L=\frac{\Phi}{I}$ an einer beliebigen Stelle $z$ kann man mittels Integration von $B(z)$ herasufinden. Da
-$$\Phi = \int{B(z) dA}$$
+Die lokale magnetische Kopplung L(z)$ entlang der Spulenachse wurde sowohl theoretisch als auch experimentell bestimmt. Theoretisch wurde das axialsymmetrische Magnetfeld $B(z)$ eines langen Zylinderspulenmodells (Solenoid) berechnet. Daraus ergibt sich eine ortsabhängige Induktivität $L(z)\app B(z)⋅A$, wobei $A$ die Querschnittsfläche der Spule ist. Diese Größe beschreibt die lokale Kopplung an einen idealisierten, kleinen Sensor an Ort $z$.
+
+Für jeden Messpunkt die entsprechende lokale Induktivität $L(z)=B(z)\cdot A/I$ bestimmt und gemeinsam mit den theoretischen Werten geplottet.
+
+Der Vergleich zeigt eine gute qualitative Übereinstimmung innerhalb der Spulenlänge, außerhalb nimmt das Feld erwartungsgemäß rasch ab. Kleine Abweichungen sind auf Messungenauigkeiten, nicht-ideale Spulengeometrie sowie Nichtberücksichtigung von Streufeldern zurückzuführen.
+
+```{python}
+#| label: fig-induktivitätsolenoid
+#| fig-cap: Die Induktivität des Solenoid 2 entlang der Spulenachse z
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Konstanten
+mu0 = 4 * np.pi * 1e-7  # H/m
+
+# Geometrie der Spule
+L = 0.3  # Länge in m
+N = 282  # Windungszahl
+R = 0.0204  # Radius in m
+I = 1.999  # Strom in Ampere
+
+# Fläche der Spule
+A = np.pi * R**2  # m^2
+
+# Magnetfeld B(z) entlang der Achse
+def B_z(z, N, I, R, L):
+    term1 = z / np.sqrt(R**2 + z**2)
+    term2 = (L - z) / np.sqrt(R**2 + (L - z)**2)
+    return (mu0 * N * I / (2 * L)) * (term1 + term2)
+
+# z-Achse (Messpunkte), z=0 ist am Anfang der Spule
+z = np.linspace(-0.5, 0.5, 1000)  # in m
+B = B_z(z, N, I, R, L)
+
+# Lokale "Induktivität" proportional zu B(z) * A
+L_local = B * A / I  # in H (aber sehr klein)
+
+# Messdaten laden
+df = pd.read_csv('./data/Solenoid.csv')  # enthält Spalten 'pos' (in mm) und 'by' (in mT)
+
+# Daten umrechnen
+B_measured = df['by'] * 1e-3  # in T
+z_measured = (df['pos'] - 480) * 1e-3  # in m, auf Spulenmitte bezogen
+
+# Lokale "Induktivität" aus gemessenem Feld
+L_local_measured = B_measured * A / I  # in mH
+
+# Plot (relativ zur Spulenmitte: z - L/2)
+plt.figure(figsize=(10, 5))
+plt.plot((z - L/2) * 1000, L_local * 1000, label='Lokale Induktivität')
+plt.scatter(z_measured * 1000, L_local_measured, label='Messung', color='orange', s=10)
+plt.axvline(x=+150, color='red', linestyle='--', label='Spulenenden')
+plt.axvline(x=-150, color='red', linestyle='--')  # Anfang
+plt.title("Induktivität entlang der Spulenachse")
+plt.xlabel("z [mm]")
+plt.ylabel("L [mH]")
+plt.legend()
+plt.grid(True)
+plt.xlim(-240, 240)
+plt.tight_layout()
+plt.show()
+```
