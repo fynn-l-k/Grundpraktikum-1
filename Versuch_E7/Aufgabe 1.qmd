@@ -5,8 +5,6 @@ Die z-Richtung des Magnetfeldes wurde durch die 300mm lange Spule in 5mm Abstän
 
 ![Versuchsaufbau mit Solenoid und Vektormagentometer auf der Optische Bank mit Skaler](./figures/Selenoid%202%20Aufbau.jpg){#fig-versuchsaufbau}
 
-(Hier bekommen wir safe nen Kommentar, nach dem Motto das wir nicht die Mitte der Spule genau wussen, bzw. wann der Sensor wirklich in der Mitte war, da der Sensor nicht sichbar war.)
-
 ## Gemessene und berechnete Feldverteilung
 Das Magnetfeld B einer idealen Zylinderspule kann durch Integration des Biot-Savart-Gesetzes berechnet werden. Dies wird in [Quelle @quelle-1] gemacht und man kommt auf folgende Formel.
 

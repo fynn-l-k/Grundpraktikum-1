@@ -10,7 +10,7 @@ book:
     - index.qmd
     - Aufgabe 1.qmd
     - Aufgabe 2.qmd
-    - Aufgabe 3.qmd
+    - Aufgabe_3.ipynb
     - Schluss.qmd
 
 #bibliography: refs.bib
