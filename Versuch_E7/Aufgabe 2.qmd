@@ -1,1 +1,122 @@
 # Aufgabe 2: Magnetfeldverlauf flache Kreisspule
+## Messung der axialen magnetischen Induktion B(z) einer flachen Kreisspule
+Die Messung der flachen Kreisspule lief analog zu der Messung beim Solenoid. Nur das dieses mal der Sensor anstatt der Spule auf der Schiene geschoben wurde. In [Abbildung @fig-verscuhsaufbau-spule-3] zu sehen, ist der Aufbau auch fast identisch nur das eine andere Spule genommen wurde.
+
+![Versuchsaufbau für die messung der magentischen Induktion der flachen Kreisspule](./figures/Spule%203%20Aufbau.jpg){#fig-verscuhsaufbau-spule-3}
+
+## Gemessene und theoretische Feldverteilung
+```{python}
+#| label: fig-magentfeldspule-3
+#| fig-cap: Das Megnetfeld des Solenoid 2 entlang der Spulenachse z
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Konstanten
+mu0 = 4 * np.pi * 1e-7  # H/m
+
+# Geometrie der Spule
+L = 0.01  # Länge in m
+N = 320  # Windungszahl
+R = 0.068  # Radius in m
+I = 1.999  # Strom in Ampere
+
+# Spulenenden relativ zur Mitte
+z1 = -L / 2
+z2 = L / 2
+
+# Theoretisches Feld entlang z-Achse
+def B_z(z, N, I, R, z1, z2):
+    term1 = (z2 - z) / np.sqrt(R**2 + (z2 - z)**2)
+    term2 = (z1 - z) / np.sqrt(R**2 + (z1 - z)**2)
+    return (mu0 * N * I / (2 * L)) * (term1 - term2)
+
+# z-Achse erzeugen (in m, aber später für Plot in mm)
+z = np.linspace(-0.5, 0.5, 1000)
+B_theoretical = B_z(z, N, I, R, z1, z2)
+
+# Messdaten laden
+df = pd.read_csv('./data/FlacheKreisspule3.csv')  # Datei mit Spalten 'pos' (in mm) und 'by' (in mT)
+B_measured = df['by'] * 10**(-3) # In mT unrechnen
+z_measured = df['pos'] - 372.5 #Mitte von der Spule nach Experimentellen Daten
+
+
+# Plot
+plt.figure(figsize=(10, 5))
+plt.plot(z * 1000, B_theoretical * 1e3, label='Theoretisch', color='blue')  # z in mm, B in mT
+plt.scatter(z_measured, B_measured, color='red', label='Gemessen', marker='o')
+plt.title("Magnetfeld $B_z$ entlang der Spulenachse")
+plt.xlabel("z [mm]")
+plt.ylabel("B [mT]")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+```
+## Ermittlung der position wo das Magnetfeld den Halbwert erreicht
+
+Graphisch sieht man in [Abbildung @fig-magentfeldspule-3] gut, dass die Messdaten einen ungefähren maximalwert von $5$mT davon die Hälft ist 2,5mT was beim ablesen, bei einer ungefähren enfehrnung von $\pm50$mm von der Spulenmitte erreicht wird.
+Beim ausrechnen wird mithilfe `np.max` der maximalwert des Datensatzes ermittelt und durch zwei geteilt. Dann werden die zwei Datenpunkte die am nächsten darunter und darüber sind aus dem Datensatz genommen und eine Gerade zwischen ihnen gezeichnet, wo dann der Abstand ermittelt werden kann.
+Dabei kann wie in [Abbildung @fig-bz05-ermitteln] zu sehen ist, ein Halbwert des magentischen Feldes bei $-47.44$mm ermittelt werden, da die Spule als symmetrisch angenommen wird, kann gesagt werden, dass der Halbwert bei $\pm 47$mm von der SPulenmitte entfernt ist.
+
+```{python}
+#| label: fig-bz05-ermitteln
+#| fig-cap: Den Halbwert des Magnetfeldes relativ zur SPulenmitte ermitteln
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Messdaten laden
+df = pd.read_csv('./data/FlacheKreisspule3.csv')  # Datei mit Spalten 'pos' (in mm) und 'by' (in mT)
+B_measured = df['by'] * 10**(-3) # In mT unrechnen
+z_measured = df['pos'] - 372.5 #Mitte von der Spule nach Experimentellen Daten
+
+B_numpy = B_measured.to_numpy()
+z_numpy = z_measured.to_numpy()
+
+#Das Maximum bestimmen und durch 2 dividieren
+half_value = np.max(B_numpy) / 2 #5.07
+
+# Find the index where the array crosses the half value
+index_half = np.where(B_numpy >= half_value)[0][0]
+
+# Split the array into two parts: below and above the half value
+B_numpy_below = B_numpy[:index_half + 1]
+B_numpy_above = B_numpy[index_half:]
+z_numpy_below = z_numpy[:index_half + 1]
+z_numpy_above = z_numpy[index_half:]
+
+# Get two points for a line for the below part
+y1_below = B_numpy_below[-2]
+x1_below = z_numpy_below[-2]
+y2_below = B_numpy_below[-1]
+x2_below = z_numpy_below[-1]
+
+# Calculate the line equations
+a_below = (y2_below - y1_below) / (x2_below - x1_below)
+b_below = y2_below - a_below * x2_below
+x_below = np.linspace(x1_below, x2_below, 100)
+y_below = a_below * x_below + b_below
+
+# Calculate the intersection point
+intersection_x = (half_value - b_below) / a_below
+intersection_y = half_value
+
+# Plot
+plt.figure(figsize=(10, 5))
+plt.plot(x_below, y_below, label='Gerade', color='blue')  # Line below half value
+plt.scatter(z_measured, B_measured, color='red', label='Gemessen', marker='o')
+plt.axhline(half_value, color='orange', linestyle='--', label='Halbwert')
+plt.scatter(intersection_x, intersection_y, color='green', label='Schnittpunkt', zorder=5, marker="x")  # Intersection marker
+plt.annotate(f"Halbwert: {intersection_x:.2f} mm", xy=(intersection_x, intersection_y), 
+             xytext=(intersection_x + 3, intersection_y - 0.5), 
+             fontsize=13)
+plt.title("Halbwert des Magnetfelds $B_z$")
+plt.xlim(right=10, left=-60)
+plt.xlabel("z [mm]")
+plt.ylabel("B [mT]")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+```

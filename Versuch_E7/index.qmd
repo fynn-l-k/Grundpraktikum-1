@@ -9,8 +9,7 @@ Das Ziel des gesamten Versuchs ist es, den Magnetfeldverlauf entlang der z-Achse
 2. Magnetfeldverlauf flache Kreisspule
     a. Messen Sie die axiale magnetische Induktion B(z) einer flachen Kreisspule.
     b. Stellen Sie die gemessene und die berechnete Feldverteilung in einem Diagramm graphisch dar.
-    c. Ermitteln Sie graphisch und durch Berechnung, in welchem Abstand zur Spulenmitte der
-Maximalwert des Magnetfelds auf die Hälfte abgenommen hat.
+    c. Ermitteln Sie graphisch und durch Berechnung, in welchem Abstand zur Spulenmitte der Maximalwert des Magnetfelds auf die Hälfte abgenommen hat.
 3. Magnetfeldverlauf Spulenpaar
     a. Messen Sie die axiale magnetische Induktion B(z) eines Kreisspulenpaares, das gleichsinnig vom Strom durchflossen wird, für drei verschiedene Spulenabstände a: a = 2r, a = r, a = r/2 (r: Spulenradius).
     b. Stellen Sie die berechneten und gemessenen Feldverteilungen in einem Diagramm graphisch dar.
