@@ -5,8 +5,7 @@ Das Ziel des gesamten Versuchs ist es, den Magnetfeldverlauf entlang der z-Achse
 1. Magnetfeldverlauf in einer langen Spule
     a. Messen Sie die magnetische Induktion B(z) längs der Spulenachse (z) eines langen Solenoids.
     b. Stellen Sie die gemessene und berechnete Feldverteilung in einem Diagramm graphisch dar.
-    c. Bestimmen Sie die magnetische Induktion am Ende des Solenoids und vergleichen Sie die
-experimentellen und theoretischen Werte.
+    c. Bestimmen Sie die magnetische Induktion am Ende des Solenoids und vergleichen Sie die experimentellen und theoretischen Werte.
 2. Magnetfeldverlauf flache Kreisspule
     a. Messen Sie die axiale magnetische Induktion B(z) einer flachen Kreisspule.
     b. Stellen Sie die gemessene und die berechnete Feldverteilung in einem Diagramm graphisch dar.

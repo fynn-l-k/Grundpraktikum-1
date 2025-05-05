@@ -68,6 +68,5 @@ plt.show()
 ```
 
 ## Bestimmung der Induktivität
-Die Induktivität eines Selenoids kann einfach mit der Formel
-$$L(z)=\frac{\mu_0N^2A}{z}$$ (https://de.wikipedia.org/wiki/Zylinderspule#Induktivit%C3%A4t)
-dies ist eine vereinfachung der Induktivität einer Zylinderspule im Vakuum, die im Falle einer sehr langen Zylinderspule ($z >\!\!> R$). Da die Spule in der theorie auf beiden Enden gleich ist, ist es sommt egal welches der beiden Enden wir uns anschauen.
+Die Induktivität $L=\frac{\Phi}{I}$ an einer beliebigen Stelle $z$ kann man mittels Integration von $B(z)$ herasufinden. Da
+$$\Phi = \int{B(z) dA}$$
