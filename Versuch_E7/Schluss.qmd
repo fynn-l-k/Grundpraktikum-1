@@ -16,3 +16,6 @@ Bei der Durchführung und Auswertung des Experiments sind mehrere mögliche Fehl
     Stromschwankung durch Widerstand: Da der Widerstand der Spule recht hoch war, ist die tatsächliche Stromstärke möglicherweise leicht von der eingestellten abgewichen. Eine genaue Kontrolle war nur bedingt möglich, was sich direkt auf die berechnete Induktivität auswirkt (da $L~1/I$).
 
     - Manuelle Positionsmessung: Die Position des Sensors wurde per Lineal bestimmt. Dadurch sind Messfehler im Millimeterbereich wahrscheinlich. Diese wirken sich auf die Zuordnung von $B(z)$ zur jeweiligen Position aus und können die Kurvenform beeinflussen.
+
+# Quellen
+E 7a „Spulenfeder“. (o. D.). Abgerufen am 6. Mai 2025, von https://home.uni-leipzig.de/prakphys/pdf/VersucheNF/E-Lehre/E-07a-AUF.pdf
