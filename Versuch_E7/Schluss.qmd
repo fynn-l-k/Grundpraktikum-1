@@ -7,7 +7,7 @@ Bei der Durchführung und Auswertung des Experiments sind mehrere mögliche Fehl
 
     - Toleranz des Netzgeräts: Auch das Netzgerät, mit dem der Spulenstrom eingestellt wurde, hat eine gewisse Anzeigeungenauigkeit ($\pm 0.01% + 3$mV, $\pm0.05% + 3$mA). Besonders bei kleineren Stromänderungen können dadurch Abweichungen entstehen.
 
-    Stromschwankung durch Widerstand: Da der Widerstand der Spule recht hoch war, ist die tatsächliche Stromstärke möglicherweise leicht von der eingestellten abgewichen. Vorallem, da die Spule sich durch den Strom erwärmt hat und dadurch einen größeren Wiederstand bekommen hat, was sich direkt auf die berechnete Induktivität auswirkt (da $L~1/I$).
+    Stromschwankung durch Widerstand: Da der Widerstand der Spule recht hoch war, ist die tatsächliche Stromstärke möglicherweise leicht von der eingestellten abgewichen. Vorallem, da die Spule sich durch den Strom erwärmt hat und dadurch einen größeren Wiederstand bekommen hat, was sich direkt auf die berechnete Induktivität auswirkt (da $L\sim1/I$).
 
     - Manuelle Positionsmessung: Die Position des Sensors wurde per Lineal bestimmt. Dadurch sind Messfehler im Millimeterbereich wahrscheinlich. Diese wirken sich auf die Zuordnung von $B(z)$ zur jeweiligen Position aus und können die Kurvenform beeinflussen.
 
