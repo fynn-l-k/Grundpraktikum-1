@@ -1,19 +1,13 @@
 # Fehlerbetrachtung
-Der Stab wo der Sonsor dran war etws Schief war. (In nem Foto sieht man das auch nochmal)
-Toleranz des Messgerätes
-Toleranz des Netzgerätes
-Netzgerät generell (Stromstärke hat durch den höheren Wiederstand zugenommen)
-Mit Lineal wurde der Abstand eingestellt
-
 Bei der Durchführung und Auswertung des Experiments sind mehrere mögliche Fehlerquellen zu beachten, die sich auf die Messergebnisse ausgewirkt haben könnten:
 
     - Schiefer Sensorstab: Der Sensor war an einem langen Stab befestigt, der leicht schief montiert war. Das erkennt man auch gut auf einem Foto der Versuchsanordnung. Dadurch kann es sein, dass der Sensor nicht exakt auf der Spulenachse lag, was besonders im Bereich des stärksten Feldes zu systematischen Abweichungen geführt haben könnte.
 
-    - Toleranz des Messgeräts: Das verwendete Magnetfeldmessgerät besitzt eine gewisse Unsicherheit, insbesondere im niedrigen Bereich des Feldes (außerhalb der Spule), wo das Signal ohnehin schwach ist. Die Genauigkeit ist dort entsprechend begrenzt.
+    - Toleranz des Messgeräts: Das verwendete Magnetfeldmessgerät besitzt eine gewisse Unsicherheit von $\pm 50$ mT, insbesondere im niedrigen Bereich des Feldes (außerhalb der Spule), wo das Signal ohnehin schwach ist. Die Genauigkeit ist dort entsprechend begrenzt.
 
-    - Toleranz des Netzgeräts: Auch das Netzgerät, mit dem der Spulenstrom eingestellt wurde, hat eine gewisse Anzeigeungenauigkeit. Besonders bei kleineren Stromänderungen können dadurch Abweichungen entstehen.
+    - Toleranz des Netzgeräts: Auch das Netzgerät, mit dem der Spulenstrom eingestellt wurde, hat eine gewisse Anzeigeungenauigkeit ($\pm 0.01% + 3$mV, $\pm0.05% + 3$mA). Besonders bei kleineren Stromänderungen können dadurch Abweichungen entstehen.
 
-    Stromschwankung durch Widerstand: Da der Widerstand der Spule recht hoch war, ist die tatsächliche Stromstärke möglicherweise leicht von der eingestellten abgewichen. Eine genaue Kontrolle war nur bedingt möglich, was sich direkt auf die berechnete Induktivität auswirkt (da $L~1/I$).
+    Stromschwankung durch Widerstand: Da der Widerstand der Spule recht hoch war, ist die tatsächliche Stromstärke möglicherweise leicht von der eingestellten abgewichen. Vorallem, da die Spule sich durch den Strom erwärmt hat und dadurch einen größeren Wiederstand bekommen hat, was sich direkt auf die berechnete Induktivität auswirkt (da $L~1/I$).
 
     - Manuelle Positionsmessung: Die Position des Sensors wurde per Lineal bestimmt. Dadurch sind Messfehler im Millimeterbereich wahrscheinlich. Diese wirken sich auf die Zuordnung von $B(z)$ zur jeweiligen Position aus und können die Kurvenform beeinflussen.
 
