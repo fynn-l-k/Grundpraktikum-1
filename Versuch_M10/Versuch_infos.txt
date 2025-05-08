@@ -1,0 +1,16 @@
+Aufgabe 1
+
+Auslenkung 90 grad
+Messzeit 20 sekunden
+Angefangen bei 0.3 A bis 1.2 A in 0.1 Schritten (10 Messungen)
+Vor den Messungen auf 0 gesetzt
+Ab Messung 0.6A auf 10 sekunden gewechselt, da nach 10 sekunden schon eingependelt.
+90 Grad entspricht 1 auf der y-Achse
+
+Aufgabe 2
+Getestet zwischen 3 und 12 V in 1 V Abständen
+Resonanz kommt im Bereich um 11 zustande
+Dadurch folgt für unsere Messungen: Angefangen bei 9V und dann 0.1V Schritte mit jeweils 20 Sekunden Messungen nach Einschwingzeit
+Channel 1 wurde auf 0.3 A gestellt
+Strombegrenzung bei Channel 2 auf 0.1
+Es wurde nur am Anfang einmal auf 0 gesetzt
