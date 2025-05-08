@@ -4,7 +4,7 @@ Auslenkung 90 grad
 Messzeit 20 sekunden
 Angefangen bei 0.3 A bis 1.2 A in 0.1 Schritten (10 Messungen)
 Vor den Messungen auf 0 gesetzt
-Ab Messung 0.6A auf 10 sekunden gewechselt. da nach 10 sekunden schon eingependelt.
+Ab Messung 0.5A auf 10 sekunden gewechselt. da nach 10 sekunden schon eingependelt.
 90 Grad entspricht 1 auf der y-Achse
 
 Aufgabe 2
