@@ -28,3 +28,4 @@ def process_folder(folder_path):
             print(f"Processing {input_file} → {output_file}")
             txt_to_csv(input_file, output_file)
 
+txt_to_csv('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_aufgabe_2_Daten/9_3V_Aufgabe_2_daten.txt', '/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/test.csv')
