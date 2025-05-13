@@ -28,5 +28,5 @@ def process_folder(folder_path):
             print(f"Processing {input_file} → {output_file}")
             txt_to_csv(input_file, output_file)
 
-for file in os.listdir('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_Daten'):
-    txt_to_csv('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_Daten/' + file, '/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_CSV_Daten/' + file.replace('.txt', '.csv'))
+#for file in os.listdir('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_Daten'):
+#    txt_to_csv('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_Daten/' + file, '/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_CSV_Daten/' + file.replace('.txt', '.csv'))
