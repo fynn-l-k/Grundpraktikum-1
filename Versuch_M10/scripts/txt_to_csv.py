@@ -24,8 +24,9 @@ def process_folder(folder_path):
     for filename in os.listdir(folder_path):
         if filename.endswith('.txt'):
             input_file = os.path.join(folder_path, filename)
-            output_file = os.path.join('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_2_CSV_Daten', filename.replace('.txt', '.csv'))
+            output_file = os.path.join('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_CSV_Daten', filename.replace('.txt', '.csv'))
             print(f"Processing {input_file} → {output_file}")
             txt_to_csv(input_file, output_file)
 
-txt_to_csv('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_aufgabe_2_Daten/9_3V_Aufgabe_2_daten.txt', '/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/test.csv')
+for file in os.listdir('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_Daten'):
+    txt_to_csv('/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_Daten/' + file, '/Users/fynnlucca/Documents/Grundpraktikum-1/Versuch_M10/M10_Aufgabe_1_CSV_Daten/' + file.replace('.txt', '.csv'))
