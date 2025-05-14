@@ -9,7 +9,7 @@ i = 0 #bis 9
 # Daten einlesen
 # Daten aus allen Dateien im Ordner "M10_Aufgabe_1_Daten" einlesen
 
-folder_path = "../M10_Aufgabe_1_Daten"
+folder_path = "M10_Aufgabe_1_Daten"
 file_names = [f"{i}A_Aufgabe_1_M10.txt" for i in ["0_3", "0_4", "0_5", "0_6", "0_7", "0_8", "0_9", "1_0", "1_1", "1_2"]]
 
 data_frames = []
