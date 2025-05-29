@@ -1,4 +1,5 @@
 # Grundpraktikum-1
-
-
-## Quarto Basics
+ Nummerierung der Gleichungen
+ ```md
+$$F=ma$${#eq-xyz}
+ ```
