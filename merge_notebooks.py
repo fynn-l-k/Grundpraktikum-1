@@ -1,7 +1,7 @@
 # check if the package exists
 try:
     import nbformat as nbf
-    import nbmerge
+    #import nbmerge
     import os
 except ImportError:
     print("nbformat package is not installed. Please install it using 'pip install nbformat'.")
