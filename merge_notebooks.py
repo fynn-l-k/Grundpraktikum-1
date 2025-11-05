@@ -31,7 +31,7 @@ def choose_path():
     Prompts the user to choose a directory and returns the path.
     """
     #Get all Folders in the current directory
-    current_directory = os.getcwd()
+    current_directory = os.getcwd() + "/GP2"
     folders = [f for f in os.listdir(current_directory) if os.path.isdir(os.path.join(current_directory, f))]
     print("Available folders:")
     for i, folder in enumerate(folders):
