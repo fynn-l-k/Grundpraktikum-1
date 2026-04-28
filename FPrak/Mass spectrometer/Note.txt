@@ -1,0 +1,4 @@
+4x flush und wieder reinfüllen, dann Background und dann erst Messung
+immer auf 10mbar gegagen bei Aufgabe 3/4
+
+jede Messung 2mal geaveraged
