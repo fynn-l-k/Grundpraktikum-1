@@ -1,0 +1,32 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{}%
+\contentsline {subsection}{\numberline {1.1}Tasks}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Theoretical Background}{5}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Basics of the atom and quantum physics}{5}{}%
+\contentsline {paragraph}{Spin and orbital magnetism}{5}{}%
+\contentsline {paragraph}{Atoms in an external magnetic field and spin-orbit coupling}{7}{}%
+\contentsline {paragraph}{Selection Rules}{8}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Normal Zeeman Effect}{9}{}%
+\contentsline {paragraph}{Classical picture}{9}{}%
+\contentsline {paragraph}{Observation directions}{10}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Anomalous Zeeman Effect}{11}{}%
+\contentsline {subsubsection}{\numberline {1.2.4}Optical Polarizers}{13}{}%
+\contentsline {paragraph}{Linear polarization filter}{13}{}%
+\contentsline {paragraph}{Quarter-wave plate}{13}{}%
+\contentsline {subsubsection}{\numberline {1.2.5}Resolving Power}{13}{}%
+\contentsline {subsubsection}{\numberline {1.2.6}Fabry-Pérot Interferometer}{14}{}%
+\contentsline {subsubsection}{\numberline {1.2.7}Hall Sensor}{15}{}%
+\contentsline {subsection}{\numberline {1.3}Experimental Setup}{17}{}%
+\contentsline {section}{\numberline {2}Results and Discussion}{18}{}%
+\contentsline {subsection}{\numberline {2.1}Calibrating the magnetic fields}{18}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Magnetic flux density over the current}{18}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Spatial profile of the magnetic flux density}{19}{}%
+\contentsline {subsection}{\numberline {2.2}Normal Zeeman Effect}{20}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Transversal configuration}{20}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Longitudinal configuration}{22}{}%
+\contentsline {subsection}{\numberline {2.3}Anomalous Zeeman Effect}{24}{}%
+\contentsline {subsection}{\numberline {2.4}Resolving power}{26}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Human criterion}{26}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Technical criterion}{27}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}Theoretical resolving power}{31}{}%
+\contentsline {subsection}{\numberline {2.5}Bohr magneton}{32}{}%
+\contentsline {section}{\numberline {3}Summary and Outlook}{33}{}%
