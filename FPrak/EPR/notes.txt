@@ -1,0 +1,13 @@
+Software für Frequenz analyse und Simulation von EPR Spektren:
+
+maximal bis 100kHz anzeigen, also Zeitsignal nicht möglich zum angucken
+
+
+software für magnetfeld:
+
+sequenz startet bei 26V
+1 sekunde ein abschnitt
+1 abschnitt erhöht um 0.05V
+81 steps
+letzter step stellt auf 10 V zurück
+Umrechnung Spannung zu Magnetfeld als Video
