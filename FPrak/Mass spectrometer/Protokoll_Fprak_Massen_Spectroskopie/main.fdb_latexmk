@@ -1,16 +1,14 @@
 # Fdb version 4
-["biber main"] 1780238611.2383 "main.bcf" "main.bbl" "main" 1780241438.54532 0
-  "main.bcf" 1780241438.45753 108755 8ed3178eef4b4ef518bb91206204cd75 "pdflatex"
+["biber main"] 1780238611.2383 "main.bcf" "main.bbl" "main" 1780260813.464 0
+  "main.bcf" 1780260813.37639 108755 8ed3178eef4b4ef518bb91206204cd75 "pdflatex"
   "quellen.bib" 1780233666.44312 850 5c4ea363716c359e93e17c712c2c1b78 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1780241437.52474 "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" "main.pdf" "main" 1780241438.54612 0
-  "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" 1780241436.18561 19784 fed6645e154fbc38af56ec85c091a6c0 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
+["pdflatex"] 1780260812.44223 "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" "main.pdf" "main" 1780260813.46451 0
+  "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" 1780260811.04737 9988 54199ea471d186cfcde3d599cd5fa125 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1136768653 1328 5442e22a7072966dbaf88ca900acf3f0 ""
@@ -42,7 +40,6 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty" 1575499628 8356 7bbb2c2373aa810be568c29e333da8ed ""
@@ -61,7 +58,6 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def" 1711143581 32761 18d14e3b502c120f79b2184de4e21d14 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx" 1678141846 4629 cda468e8a0b1cfa0f61872e171037a4b ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1711143581 40021 daa5a82ed0967f3ac4b77cb8384cac55 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty" 1579038678 6078 f1cb470c9199e7110a27851508ed7a5c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty" 1690576852 12494 0c0cdb824278a4d51cefeb2e79901315 ""
@@ -87,18 +83,11 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1744821834 3345734 b1ded56714b7dbdb86606d8d53b2b14d ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "QMS_schematic.png" 1780233666.42697 143165 2f339414e644fdda0241254b72312eab ""
-  "krypton_files/fig1_overview_annotated.pdf" 1780241397.95099 36061 251debf62d14b9a1e390961aee8acc67 ""
-  "krypton_files/fig2_background.pdf" 1780241397.94573 39472 461a96963770ab72015a25ed25b222ca ""
-  "krypton_files/fig3_all_raw.pdf" 1780241397.9407 116963 864b0ce59064fbf116c7efa3d9bd1998 ""
-  "krypton_files/fig4_all_bgcor.pdf" 1780241397.9376 53443 43b85a5633dbf5be4022fbc537b1a6ab ""
-  "krypton_files/fig5_intensity_vs_pressure.pdf" 1780241397.9322 25543 229188326f903239af288d567fd88cd8 ""
-  "krypton_files/fig6_kr1_abundance.pdf" 1780241397.92923 32714 5ee781d7dd10688813274a7bd8b0c6ce ""
-  "krypton_files/fig7_kr2_abundance.pdf" 1780241397.92624 33934 a3b268aad7ed8c2020a68a93c91c18d4 ""
-  "main.aux" 1780241438.45206 6706 fd85b9ef36b9a73101437f6728946ce7 "pdflatex"
+  "main.aux" 1780260813.37446 2932 773cd63340ad9cca736d2d6dba6c2757 "pdflatex"
   "main.bbl" 1780238613.10024 5218 da12486cda08762e679fe859cff1f311 "biber main"
-  "main.run.xml" 1780241438.46002 2302 32e9cf127949af3e6bd10c1f59875af9 "pdflatex"
-  "main.tex" 1780241436.18561 19784 fed6645e154fbc38af56ec85c091a6c0 ""
-  "main.toc" 1780241438.46044 1304 3934e39eb581b588e1fada0a2ed545b5 "pdflatex"
+  "main.run.xml" 1780260813.37751 2302 32e9cf127949af3e6bd10c1f59875af9 "pdflatex"
+  "main.tex" 1780260811.04737 9988 54199ea471d186cfcde3d599cd5fa125 ""
+  "main.toc" 1780260813.37764 1007 8c1eea60cd0e5ef6dad5cd08334f0418 "pdflatex"
   "uni_logo.png" 1780233666.4454 18479 30772fe26a5c47d3f54440bbbe4e57e7 ""
   (generated)
   "main.aux"

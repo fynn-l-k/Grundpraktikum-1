@@ -9,12 +9,7 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Setup of the QMS}{5}{}%
 \contentsline {subsubsection}{\numberline {1.2.2}Funktionsweise des QMS}{5}{}%
 \contentsline {section}{\numberline {2}Aufgabe 1}{7}{}%
-\contentsline {subsection}{\numberline {2.1}Aufgabe 1 -- Krypton}{7}{}%
-\contentsline {paragraph}{Intensit{\"a}t vs.\ Druck}{9}{}%
-\contentsline {paragraph}{Isotopenverteilung}{11}{}%
-\contentsline {paragraph}{Systematische Fehler}{11}{}%
-\contentsline {paragraph}{Statistische Fehler}{13}{}%
-\contentsline {section}{\numberline {3}Aufgabe 2}{13}{}%
-\contentsline {section}{\numberline {4}Aufgabe 3}{13}{}%
-\contentsline {section}{\numberline {5}Aufgabe 4}{13}{}%
-\contentsline {section}{\numberline {6}Aufgabe 5}{13}{}%
+\contentsline {section}{\numberline {3}Aufgabe 2}{7}{}%
+\contentsline {section}{\numberline {4}Aufgabe 3}{7}{}%
+\contentsline {section}{\numberline {5}Aufgabe 4}{7}{}%
+\contentsline {section}{\numberline {6}Aufgabe 5}{7}{}%
