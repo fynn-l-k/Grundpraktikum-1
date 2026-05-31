@@ -1,0 +1,352 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+\title{Mass Spectroscopy on Gases and simple Organic Molecules \\
+Advanced Physics Laboratory}
+\author{Fynn Kanja 3780065 \\
+Valentino D’Agosto 3763229 \\
+Gruppe O43
+}
+
+
+\date{Experiment conducted on: 28. April 2026}
+
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\usepackage[
+    backend=biber,
+    style=numeric,
+  ]{biblatex}
+
+ \addbibresource{quellen.bib}
+
+
+
+\begin{document}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{uni_logo.png}
+\end{figure}
+
+\maketitle
+
+
+\begin{abstract}
+
+\end{abstract}
+\newpage
+\begingroup
+\tableofcontents
+\endgroup
+%\listoffigures
+%\listoftables
+
+\newpage
+
+
+
+\section{Introduction}
+\subsection{Theoretical Overview}
+
+\subsubsection{Massendefekt}
+
+Eine wichtige Konsequenz der unterschiedlichen Neutronenzahl bei Isotopen ist ein Phänomen, das als Massendefekt bezeichnet wird. Aufgrund der anziehenden Kernkräfte ist Energie erforderlich, um einen Atomkern in seine einzelnen Nukleonen zu zerlegen. Diese Energie wird als gesamte Bindungsenergie $E_B$ definiert. Die mittlere Bindungsenergie pro Nukleon ergibt sich dann zu $\bar{E}_B = E_B/A$, wobei $A$ die Massenzahl bezeichnet.
+
+Legt man das Minimum der potentiellen Energie auf den Zustand der vollständig voneinander getrennten Nukleonen fest, so erhält man für das System des zusammengesetzten Kerns eine negative Energie. Gemäß der Einstein'schen Beziehung $E = mc^2$ entspricht diese negative Bindungsenergie $-E_B$ einem Massendefekt
+\begin{equation}
+    \Delta M = \frac{E_B}{c^2}
+\end{equation}
+des Kerns gegenüber der Summe der Massen aller seiner Nukleonen. Folglich ist die Masse des Atomkerns um den Betrag $\Delta M$ kleiner als die Summe der Massen aller in ihm enthaltenen Protonen und Neutronen.
+
+
+\subsubsection{Mittlere freie Weglänge}
+Die mittlere freie Weglänge beschreibt die Strecke, die ein Teilchen in einem gegebenen Material zurücklegen kann, bevor es auf irgendeine Weise mit einem anderen Teilchen zusammenstößt. Zur Bestimmung der mittleren freien Weglänge betrachten wir zunächst ein vereinfachtes Modell, in dem alle übrigen Teilchen als ruhend angenommen werden. Diese Annahme ist gerechtfertigt, da bei einer Ionengeschwindigkeit, die einer Energie von $1\,\mathrm{eV}$ entspricht, die äquivalente Gastemperatur in der Größenordnung von $4 \cdot 10^4\,\mathrm{K}$ liegt \cite{Frieser1979}.
+Ein Stoß findet statt, wenn der Abstand zwischen zwei Teilchen kleiner als der Teilchendurchmesser $d$ ist. Dies definiert einen effektiven Stoßquerschnitt
+\begin{equation}
+    \sigma = \pi d^2.
+\end{equation}
+Das bewegte Teilchen überstreicht entlang seiner Bahn ein Volumen, welches als Zylinder mit dem Querschnitt $\sigma$ interpretiert werden kann. Für eine Weglänge $\ell$ ergibt sich das überstrichene Volumen zu
+\begin{equation}
+    V = \pi d^2 \ell.
+\end{equation}
+Mit der Teilchenzahldichte $N_v$ ergibt sich die Anzahl der Stöße in diesem Volumen zu
+\begin{equation}
+    N = N_v \, V = N_v \pi d^2 \ell.
+\end{equation}
+Die mittlere freie Weglänge $\Lambda_{Ion}$ erhält man, indem man $N = 1$ setzt, woraus
+\begin{equation}
+    \Lambda_{Ion} = \frac{1}{\pi d^2 N_v}
+    \label{eq:mean_free_path_simple}
+\end{equation}
+folgt. Eine genauere Beschreibung der mittleren freien Weglänge berücksichtigt die Maxwell'sche Geschwindigkeitsverteilung der Gasteilchen. In diesem Fall verringert sich die mittlere freie Weglänge um einen Faktor $\sqrt{2}$ \cite{WikiMFP}, sodass sich
+\begin{equation}
+    \Lambda_{Ion} = \frac{1}{\sqrt{2}\,\pi d^2 N_v}
+    \label{eq:mean_free_path_maxwell}
+\end{equation}
+ergibt.
+
+
+\subsubsection{Ionisierungspotential}
+Das Ionisierungspotential (auch Ionisierungsenergie genannt) bezeichnet die minimale Energie, die benötigt wird, um ein Elektron aus einem neutralen Atom oder Molekül im Grundzustand vollständig zu entfernen und so ein einfach positiv geladenes Ion zu erzeugen:
+\begin{equation}
+    A + E_i \rightarrow A^+ + e^-.
+\end{equation}
+Die Ionisierungsenergie wird üblicherweise in Elektronenvolt ($\mathrm{eV}$) angegeben und hängt von der Elektronenkonfiguration des jeweiligen Atoms ab. Edelgase weisen aufgrund ihrer abgeschlossenen Elektronenschalen besonders hohe Ionisierungsenergien auf, während Alkalimetalle nur ein schwach gebundenes Valenzelektron besitzen und entsprechend niedrige Werte aufweisen. Für die Erzeugung mehrfach geladener Ionen sind die zweite, dritte usw.\ Ionisierungsenergien erforderlich, welche aufgrund der stärkeren Bindung der verbleibenden Elektronen sukzessive größer werden. In der Massenspektrometrie ist die Kenntnis des Ionisierungspotentials von Bedeutung, da die Energie der ionisierenden Elektronen in der Ionenquelle ausreichend hoch sein muss, um die Probenmoleküle effizient zu ionisieren.
+
+\subsubsection{Isotopenmuster}
+Die meisten chemischen Elemente kommen in der Natur als Gemisch verschiedener Isotope vor, die sich in der Anzahl der Neutronen im Atomkern unterscheiden, bei identischer Protonenzahl. Da Isotope eines Elements nahezu dieselben chemischen Eigenschaften, aber unterschiedliche Massen besitzen, erscheinen sie im Massenspektrum als charakteristisches Muster mehrerer Peaks. Das Verhältnis der Peakhöhen entspricht dabei der natürlichen relativen Häufigkeit der jeweiligen Isotope. So besitzt beispielsweise Krypton sechs stabile Isotope mit den Massenzahlen 78, 80, 82, 83, 84 und 86, wobei $^{84}\mathrm{Kr}$ mit etwa $57\,\%$ die größte Häufigkeit aufweist. Das Isotopenmuster dient in der Massenspektrometrie als wichtiges Werkzeug zur Identifikation von Elementen und Molekülen, da es einen charakteristischen ,,Fingerabdruck`` darstellt. Bei Molekülen ergibt sich das beobachtete Muster aus der Faltung der Isotopenverteilungen aller im Molekül enthaltenen Elemente.
+
+\subsubsection{Fragmentierung}
+Bei der Ionisierung in der Ionenquelle wird den Molekülen häufig deutlich mehr Energie zugeführt, als für die reine Ionisierung notwendig wäre. Diese überschüssige Energie kann zum Aufbrechen chemischer Bindungen innerhalb des Moleküls führen, was als Fragmentierung bezeichnet wird. Aus einem Molekülion $M^+$ entstehen dabei kleinere geladene Bruchstücke (Fragment-Ionen) sowie neutrale Teilchen, die im Massenspektrometer nicht detektiert werden. Im Massenspektrum erscheint neben dem sogenannten Molekülpeak (auch Hauptpeak oder ,,parent peak``), der dem unfragmentierten Molekülion entspricht, eine Reihe weiterer Peaks bei kleineren Masse-zu-Ladungs-Verhältnissen, die den verschiedenen Fragment-Ionen zuzuordnen sind. Das resultierende Fragmentierungsmuster ist für jede Molekülsorte charakteristisch und kann mit Referenzspektren aus Datenbanken verglichen werden, wodurch eine eindeutige Identifikation auch unbekannter Substanzen ermöglicht wird. Die Fragmentierung liefert somit wertvolle Informationen über die Struktur des untersuchten Moleküls.
+
+
+
+\subsection{Experimenteller Aufbau}
+Der allgemeine Aufbau eines Massenspektrometers besteht aus drei Komponenten. Die \textbf{Ionenquelle}, in der die Probe in einen gasförmigen Zustand überführt und ionisiert wird, meist durch das Entfernen eines Elektrons. Der \textbf{Analysator}, der in unserem Fall ein Quadrupol-Massenspektrometer (\textbf{QMS}) ist und für die Trennung der Atome nach ihrem Masse-zu-Ladungs-Verhältnis ($\frac{m}{q}$) verantwortlich ist, was häufig mithilfe eines magnetischen und elektrischen Feldes erfolgt. Und der \textbf{Detektor}, der die eintreffenden Teilchen registriert und in ein elektrisches Signal umwandelt, mit dem weiter gearbeitet werden kann. \label{core_comp_mass_spctrmtr}
+
+
+\subsubsection{Setup of the QMS}
+\textbf{! TODO !}
+
+\subsubsection{Funktionsweise des QMS}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{QMS_schematic.png}
+    \caption{Schematische Darstellung des Quadrupol-Massenspektrometers mit den Kernkomponenten, die in Kapitel \ref{core_comp_mass_spctrmtr} erläutert werden, sowie dem Funktionsprinzip eines QMS.}
+    %Source: https://www.researchgate.net/figure/Scheme-of-quadrupole-mass-analyzer-Q_fig4_329040300
+    \label{fig:qms_schematic}
+\end{figure}
+Das Quadrupol-Massenspektrometer besitzt als Analysator einen Quadrupol, der aus vier präzise gefertigten, runden Stäben aus Edelstahl oder Molybdän besteht. Diese Pole sind parallel im Abstand $r$ um die Symmetrieachse angeordnet. Die gegenüberliegenden Stäbe liegen jeweils auf dem gleichen Potential. An den benachbarten Stäben liegt eine Gleichspannung ($U$) sowie eine Wechselspannung mit der Amplitude $V$ an:
+\begin{equation}
+    u(t) = U + V \cos(\omega t).
+\end{equation}
+Die Bahnen der Ionen im Inneren des Quadrupol-Massenspektrometers lassen sich durch die Mathieu'sche Differentialgleichung beschreiben:
+\begin{equation}
+    \frac{d^2 y}{dx^2} + (a - 2q \cos(2\xi))\, y = 0.
+\end{equation}
+Die Lösungen dieser Differentialgleichung weisen bekanntermaßen sowohl stabile als auch instabile Bahnen auf. Über die Parameter Frequenz $\omega$ und die Spannungen $U$ und $V$ lässt sich einstellen, welche Ionen mit dem passenden Masse-zu-Ladungs-Verhältnis den Detektor auf einer zentralen Trajektorie erreichen können. Die Bahn der Teilchen mit dem richtigen $\frac{m}{q}$-Verhältnis verläuft sinusförmig mit gleichen Abständen der Amplituden zur Symmetrieachse des Quadrupols. Teilchen mit einem abweichenden Verhältnis folgen zwar ebenfalls einer sinusförmigen Bahn, werden jedoch zunehmend aus dem Quadrupol heraus beschleunigt, bis sie das elektromagnetische Feld verlassen. Auf diese Weise erreichen nur Teilchen mit dem passenden Verhältnis den Detektor am Ende des Massenspektrometers.
+\cite{Wiki_Quadrupol} \cite{Wiki_Mathiu_func}
+
+
+
+\section{Aufgabe 1}
+\subsection{Aufgabe 1 -- Krypton}
+
+\subsubsection*{Aufgabenstellung}
+
+Gemessen wurde das Massenspektrum des Edelgases Krypton bei neun verschiedenen
+Dr{\"u}cken zwischen $3.81\times10^{-2}\,\mathrm{Torr}$ und $25\,\mathrm{Torr}$.
+Ziel ist die Bestimmung der Isotopenverteilung der einfach geladenen Kr$^+$-Ionen
+und der doppelt geladenen Kr$^{2+}$-Ionen sowie der Signalintensit{\"a}t des
+intensivsten Isotops als Funktion des Drucks.
+Krypton besitzt sechs stabile Isotope mit den Massenzahlen $A = 78, 80, 82, 83, 84, 86$,
+wobei $^{84}$Kr mit einem Literaturwert von $56.987\,\%$ das h{\"a}ufigste ist.
+Im Massenspektrum erscheinen die einfach geladenen Ionen bei $m/z = A$,
+die doppelt geladenen bei $m/z = A/2$, also bei den halben Massenzahlen
+$m/z = 39, 40, 41, 41.5, 42, 43$.
+Abbildung~\ref{fig:kr_overview} zeigt das annotierte {\"U}bersichtsspektrum.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{krypton_files/fig1_overview_annotated}
+  \caption{Annotiertes Kr-Spektrum bei $1.80\times10^{-2}\,\mathrm{Torr}$
+    (BG-korrigiert). Gr{\"u}n hinterlegt: Kr$^{2+}$-Bereich ($m/z=38$--$46$),
+    lila hinterlegt: Kr$^+$-Bereich ($m/z=77$--$88$).}
+  \label{fig:kr_overview}
+\end{figure}
+
+\subsubsection*{Hintergrundmessung und -korrektur}
+
+Vor dem Einlass von Krypton wurde ein Hintergrundspektrum aufgenommen.
+Dieses zeigt die Restgaszusammensetzung der evakuierten Kammer:
+prominente Peaks bei $m/z = 2$ (H$_2$), $18$ (H$_2$O), $28$ (N$_2$/CO),
+$32$ (O$_2$) und $44$ (CO$_2$) als Folge der Luftkontamination.
+Dar{\"u}ber hinaus sind im Hintergrundspektrum bereits Peaks bei $m/z = 83$
+und $84$ erkennbar (Abbildung~\ref{fig:kr_bg}, Panel b), die auf
+Kr-R{\"u}ckst{\"a}nde aus einem fr{\"u}heren Experiment hinweisen.
+Das Hintergrundspektrum wird von allen Kr-Messungen abgezogen,
+da es den Zustand der Kammer \emph{unmittelbar vor} dem Kr-Einlass beschreibt.
+F{\"u}r $^{83}$Kr ist die Korrektur daher mit erh{\"o}hter Unsicherheit behaftet,
+da ein Teil des Signals bereits im Hintergrund enthalten ist.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{krypton_files/fig2_background}
+  \caption{(a) Vollst{\"a}ndiges Hintergrundspektrum vor dem Kr-Einlass.
+    Blaue gestrichelte Linien markieren Residualgas-Peaks.
+    Rote gestrichelte Linien zeigen Kr-Kontaminationspeaks bei $m/z=83,84$.
+    (b) Zoom auf den Kr-Bereich im Hintergrundspektrum.
+    (c) Wirkung der BG-Korrektur am Beispiel von $1.80\times10^{-1}\,\mathrm{Torr}$:}
+        Rohdaten (rot), Hintergrund (blau gestrichelt) und korrigiertes Signal (schwarz).
+  \label{fig:kr_bg}
+\end{figure}
+
+\subsubsection*{Messspektren}
+
+Abbildung~\ref{fig:kr_raw} zeigt alle neun Messungen \emph{ohne} Hintergrundabzug,
+Abbildung~\ref{fig:kr_cor} dieselben Messungen \emph{mit} Hintergrundkorrektur.
+Bei hohen Dr{\"u}cken ($p \geq 5\,\mathrm{Torr}$) sind beide Ionensorten deutlich
+sichtbar; bei niedrigen Dr{\"u}cken ($p \leq 5.78\times10^{-2}\,\mathrm{Torr}$)
+verschwinden die Kr$^{2+}$-Peaks im Grundrauschen.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{krypton_files/fig3_all_raw}
+  \caption{Alle neun Krypton-Messungen ohne Hintergrundabzug (logarithmisch).
+    Blau gestrichelt: interpolierter Hintergrund.
+    Grauer Bereich: Messl{\"u}cke zwischen Kr$^{2+}$- und Kr$^+$-Bereich.}
+  \label{fig:kr_raw}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{krypton_files/fig4_all_bgcor}
+  \caption{Alle neun Krypton-Messungen nach Hintergrundabzug (logarithmisch).
+    Rote gestrichelte Linie: Rauschschwelle $\approx 2\times10^{-9}\,\mathrm{Torr}$.}
+  \label{fig:kr_cor}
+\end{figure}
+
+\subsubsection*{Auswertung}
+
+\paragraph{Intensit{\"a}t vs.\ Druck}
+Abbildung~\ref{fig:kr_int} zeigt die Signalintensit{\"a}t des $^{84}$Kr-Peaks
+als Funktion des Drucks. Die Intensit{\"a}t steigt mit dem Druck an und
+s{\"a}ttigt bei hohen Dr{\"u}cken, da der Ionenstrom die Nachweisgrenze des Detektors
+erreicht bzw.\ Raumladungseffekte im Quadrupol auftreten.
+Kr$^{2+}$ zeigt ein {\"a}hnliches Verhalten, ist jedoch insgesamt
+schw{\"a}cher, da die Doppelionisierung eine h{\"o}here Elektronenenergie erfordert.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{krypton_files/fig5_intensity_vs_pressure}
+  \caption{Signalintensit{\"a}t von $^{84}$Kr$^+$ und $^{84}$Kr$^{2+}$
+    als Funktion des Drucks. Links: lineare Druckachse; rechts: doppelt-logarithmisch.}
+  \label{fig:kr_int}
+\end{figure}
+
+\paragraph{Isotopenverteilung}
+Die relativen H{\"a}ufigkeiten werden aus dem Peakmaximum jedes Isotops bestimmt
+und auf $^{84}$Kr normiert.
+Abbildung~\ref{fig:kr1} zeigt die Kr$^+$-Verteilung,
+Abbildung~\ref{fig:kr2} die Kr$^{2+}$-Verteilung.
+Die Zahlenwerte sind in Tabelle~\ref{tab:kr1} bzw.\ \ref{tab:kr2} zusammengefasst.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{krypton_files/fig6_kr1_abundance}
+  \caption{Kr$^+$-Isotopenverteilung.
+    (a) Relative H{\"a}ufigkeiten aller 9 Messungen (farbig) im Vergleich zur
+    IUPAC-Referenz (schwarz). (b) Mittelwert mit Standardabweichung,
+    bester Einzelwert und IUPAC.}
+  \label{fig:kr1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{krypton_files/fig7_kr2_abundance}
+  \caption{Kr$^{2+}$-Isotopenverteilung (nur Messungen mit
+    $p \geq 8.80\times10^{-2}\,\mathrm{Torr}$, $n=7$).
+    (a) Alle auswertbaren Messungen vs.\ IUPAC. Der Pfeil markiert die
+    {\"U}berlagerung von $^{82}$Kr$^{2+}$ ($m/z=41$) mit $^{41}$Ar.
+    (b) Mittelwert, bester Wert und IUPAC.}
+  \label{fig:kr2}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Relative H{\"a}ufigkeiten der Kr$^+$-Isotope, normiert auf
+    $^{84}$Kr$^+$ $= 100\,\%$. Mittelwert und Standardabweichung {\"u}ber alle
+    9 Messungen; bester Einzelwert bei $9.55\times10^{-2}\,\mathrm{Torr}$.}
+  \label{tab:kr1}
+  \begin{tabular}{c r r r r r r r r}
+    \toprule
+    & \multicolumn{4}{c}{Mittelwert (9 Messungen)}
+    & \multicolumn{3}{c}{Bester Wert ($9.55\times10^{-2}\,\mathrm{Torr}$)} & \\
+    \cmidrule(lr){2-5}\cmidrule(lr){6-8}
+    $A$ & $\bar{x}\,[\%]$ & $\sigma\,[\%]$ & $\Delta_\mathrm{abs}$ & $\Delta_\mathrm{rel}\,[\%]$ & $x\,[\%]$ & $\Delta_\mathrm{abs}$ & $\Delta_\mathrm{rel}\,[\%]$ & IUPAC\,[\%] \\
+    \midrule
+    78 & 0.74 & 0.34 & +0.12 & +18.8 & 0.37 & -0.25 & -40.6 & 0.623 \\
+    80 & 4.72 & 0.92 & +0.71 & +17.7 & 4.22 & +0.21 & +5.2 & 4.011 \\
+    82 & 23.30 & 2.38 & +2.96 & +14.5 & 21.88 & +1.54 & +7.6 & 20.343 \\
+    83 & 19.02 & 5.94 & -1.16 & -5.7 & 19.00 & -1.18 & -5.8 & 20.180 \\
+    84 & 100.00 & 0.00 & +0.00 & +0.0 & 100.00 & +0.00 & +0.0 & 100.000 \\
+    86 & 30.65 & 2.01 & +0.33 & +1.1 & 29.59 & -0.73 & -2.4 & 30.321 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Relative H{\"a}ufigkeiten der Kr$^{2+}$-Isotope, normiert auf
+    $^{84}$Kr$^{2+}$ ($m/z=42$) $= 100\,\%$. Mittelwert 7 Messungen
+    ($p \geq 8.80\times10^{-2}\,\mathrm{Torr}$); bester Wert bei $5\,\mathrm{Torr}$.
+    $^\dagger$: $m/z=41$ ist durch {\"U}berlappung mit $^{41}$Ar verf{\"a}lscht.}
+  \label{tab:kr2}
+  \begin{tabular}{c c r r r r r r r r}
+    \toprule
+    & & \multicolumn{4}{c}{Mittelwert (7 Messungen)}
+    & \multicolumn{3}{c}{Bester Wert ($5\,\mathrm{Torr}$)} & \\
+    \cmidrule(lr){3-6}\cmidrule(lr){7-9}
+    $A$ & $m/z$ & $\bar{x}\,[\%]$ & $\sigma\,[\%]$ & $\Delta_\mathrm{abs}$ & $\Delta_\mathrm{rel}\,[\%]$ & $x\,[\%]$ & $\Delta_\mathrm{abs}$ & $\Delta_\mathrm{rel}\,[\%]$ & IUPAC\,[\%] \\
+    \midrule
+    78 & 39 & 0.18 & 0.23 & -0.44 & -71.1 & 0.44 & -0.18 & -29.4 & 0.623 \\
+    80 & 40 & 2.44 & 1.92 & -1.57 & -39.2 & 4.12 & +0.11 & +2.7 & 4.011 \\
+    82$^\dagger$ & 41 & 20.34 & 8.74 & -0.00 & -0.0 & 29.21 & +8.87 & +43.6 & 20.343 \\
+    83$^\dagger$ & 41.5 & 98.87 & 2.78 & +78.69 & +389.9 & 100.00 & +79.82 & +395.5 & 20.180 \\
+    84 & 42 & 100.00 & 0.00 & +0.00 & +0.0 & 100.00 & +0.00 & +0.0 & 100.000 \\
+    86 & 43 & 18.47 & 12.51 & -11.85 & -39.1 & 30.49 & +0.17 & +0.6 & 30.321 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection*{Fehleranalyse}
+
+\paragraph{Systematische Fehler}
+\begin{itemize}
+  \item \textbf{S{\"a}ttigungseffekte bei hohem Druck:}
+    Bei $p \geq 5\,\mathrm{Torr}$ werden die Peaks des intensivsten Isotops
+    ($^{84}$Kr) ges{\"a}ttigt, was zu verf{\"a}lschten relativen H{\"a}ufigkeiten
+    zugunsten der schw{\"a}cheren Isotope f{\"u}hrt.
+    Dies erkl{\"a}rt die {\"u}berwiegend zu gro{\"s}en Messwerte f{\"u}r
+    $^{78}$Kr und $^{80}$Kr im Mittelwert.
+  \item \textbf{Kr-Kontamination im Hintergrund:}
+    Das Hintergrundspektrum enth{\"a}lt bereits Kr-Peaks bei $m/z = 83$ und $84$.
+    Nach dem Abzug wird $^{83}$Kr systematisch untersch{\"a}tzt.
+  \item \textbf{Peak-{\"U}berlappung bei Kr$^{2+}$:}
+    $^{82}$Kr$^{2+}$ ($m/z = 41$) {\"u}berlappt mit $^{41}$Ar aus der Luftkontamination.
+    $^{83}$Kr$^{2+}$ ($m/z = 41.5$) zeigt einen relativen Fehler von $+390\,\%$,
+    da bei $m/z \approx 41$--$42$ der dominierende $^{84}$Kr-Peak in die
+    Nachbarkan{\"a}le {\"u}berl{\"a}uft (Peak-Tailing).
+\end{itemize}
+
+\paragraph{Statistische Fehler}
+\begin{itemize}
+  \item Die Standardabweichungen $\sigma$ (Tabellen~\ref{tab:kr1} und \ref{tab:kr2})
+    spiegeln haupts{\"a}chlich die druckabh{\"a}ngige Ver{\"a}nderung der
+    Peakverh{\"a}ltnisse wider, nicht das elektronische Rauschen.
+  \item Bei den schw{\"a}chsten Isotopen ($^{78}$Kr, $^{80}$Kr) ist das
+    Signal-Rausch-Verh{\"a}ltnis bei niedrigen Dr{\"u}cken gering,
+    was zu einer h{\"o}heren Streuung f{\"u}hrt.
+  \item Die beste {\"U}bereinstimmung mit den IUPAC-Werten ergibt sich
+    im mittleren Druckbereich ($\sim 10^{-1}$--$10^{-2}\,\mathrm{Torr}$),
+    wo weder S{\"a}ttigung noch Rauschen dominieren.
+\end{itemize}
+
+
+
+\section{Aufgabe 2}
+\section{Aufgabe 3}
+\section{Aufgabe 4}
+\section{Aufgabe 5}
+
+
+
+\newpage
+\printbibliography %[heading=none]
+
+\end{document}
