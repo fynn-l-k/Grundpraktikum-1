@@ -2,6 +2,8 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{subcaption}
 \usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{amssymb}
 
 \title{Mass Spectroscopy on Gases and simple Organic Molecules \\
 Advanced Physics Laboratory}
@@ -134,8 +136,7 @@ Die Lösungen dieser Differentialgleichung weisen bekanntermaßen sowohl stabile
 
 
 
-\section{Aufgabe 1}
-\subsection{Aufgabe 1 -- Krypton-Isotopenmuster}
+\section{Aufgabe 1 -- Krypton-Isotopenmuster}
 
 \subsubsection*{Aufgabenstellung}
 
@@ -207,16 +208,12 @@ Kr$^+$ und Kr$^{2+}$ gut sichtbar.
 Bei niedrigen Dr\"ucken ($p \leq 5{,}78 \times 10^{-2}\,\mathrm{mbar}$)
 verschwinden die schwachen Kr$^{2+}$-Peaks im Grundrauschen, da die
 Doppelionisierung eine h\"ohere Elektronenenergie erfordert und
-entsprechend seltener auftritt.
-
-Die logarithmische Darstellung ist in der Massenspektrometrie
+entsprechend seltener auftritt. Die logarithmische Darstellung ist in der Massenspektrometrie
 \"ublich, da die Isotope sehr unterschiedliche H\"aufigkeiten besitzen
 -- $^{84}$Kr ist etwa 160-mal h\"aufiger als $^{78}$Kr -- und das
 Spektrum insgesamt sechs Gr\"o\ss{}enordnungen abdeckt.
 In einer linearen Darstellung w\"aren die seltenen Isotope nicht
-erkennbar.
-
-Abbildung~\ref{fig:kr_overlay} zeigt alle neun Spektren \"uberlagert
+erkennbar. Abbildung~\ref{fig:kr_overlay} zeigt alle neun Spektren \"uberlagert
 in einem Graphen.
 Hier wird besonders gut sichtbar, wie sich das Spektrum mit dem Druck
 ver\"andert: bei hohem Druck dominieren intensive, schmale Peaks,
@@ -250,8 +247,8 @@ farbkodiert nach dem Druck.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{krypton_files/fig_kr_zoom}
-    \caption{Vergr\"o\ss{}erter Ausschnitt des Kr-Spektrums (BG-korrigiert,
-        logarithmisch).
+    \caption{Vergr\"o\ss{}erter Ausschnitt des Kr-Spektrums
+        (BG-korrigiert, logarithmisch).
         (a)~Kr$^+$-Bereich: einfach ionisierte Isotope bei $m/z = A$.
         (b)~Kr$^{2+}$-Bereich: doppelt ionisierte Isotope bei $m/z = A/2$.
         Die gestrichelten Linien markieren die erwarteten Isotoppositionen.}
@@ -260,128 +257,433 @@ farbkodiert nach dem Druck.
 
 \subsubsection*{Auswertung der Isotopenverteilung}
 
-Die relativen H\"aufigkeiten werden aus dem Peakmaximum jedes Isotops
-bestimmt und auf den intensivsten Peak ($^{84}$Kr $= 100\,\%$) normiert.
-Tabelle~\ref{tab:kr1} zeigt die Ergebnisse f\"ur Kr$^+$, Tabelle~\ref{tab:kr2}
-f\"ur Kr$^{2+}$.
+Die relativen H\"aufigkeiten werden aus den Peakh\"ohen aller sechs Isotope
+bestimmt und so normiert, dass ihre Summe $100\,\%$ ergibt -- entsprechend
+der nat\"urlichen Definition der Isotopenzusammensetzung.
 Als bester Einzelwert wird die Messung bei $0{,}4\,\mathrm{mbar}$ (Kr$^+$)
-bzw.\ $5\,\mathrm{mbar}$ (Kr$^{2+}$) angegeben, da diese den besten Kompromiss
-zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
+bzw.\ $5\,\mathrm{mbar}$ (Kr$^{2+}$) angegeben, da diese den besten
+Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
 
+
+% ── Tabelle 1: Kr+ ───────────────────────────────────────────────────────────
 \begin{table}[htbp]
     \centering
-    \caption{Relative H\"aufigkeiten der Kr$^+$-Isotope, normiert auf
-        $^{84}$Kr$^+ = 100\,\%$.
-        Mittelwert und Standardabweichung $\sigma$ \"uber alle 9~Messungen;
-        bester Einzelwert bei $p = 0{,}4\,\mathrm{mbar}$.}
+    \caption{Vergleich der gemessenen und nat\"urlichen Isotopenh\"aufigkeiten
+        f\"ur einfach geladene Kr$^+$-Ionen. Beste Einzelmessung bei
+        $p = 0{,}4\,\mathrm{mbar}$.}
     \label{tab:kr1}
+    \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{c r r r r r r r}
         \toprule
-        & \multicolumn{4}{c}{Mittelwert (9 Messungen)}
-        & \multicolumn{2}{c}{Bester Wert ($0{,}4\,\mathrm{mbar}$)}
-        & \\
-        \cmidrule(lr){2-5}\cmidrule(lr){6-7}
-        $A$ &
-        $\bar{x}$ [\%] & $\sigma$ [\%] &
-        $\Delta_\mathrm{abs}$ [\%] & $\Delta_\mathrm{rel}$ [\%] &
-        $x$ [\%] & $\Delta_\mathrm{rel}$ [\%] &
-        IUPAC [\%] \\
+        & \multicolumn{2}{c}{Gemessene RA [\%]}
+        & {Theorie [\%]}
+        & \multicolumn{2}{c}{Absoluter Fehler [\%]}
+        & \multicolumn{2}{c}{Relativer Fehler [\%]} \\
+        \cmidrule(lr){2-3}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+        $A$
+        & Durchschn. & $0{,}4\,\mathrm{mbar}$
+        &
+        & Durchschn. & $0{,}4\,\mathrm{mbar}$
+        & Durchschn. & $0{,}4\,\mathrm{mbar}$ \\
         \midrule
-        78  &  0.74 & 0.34 & $+$0.12 & $+$18.6 &  0.58 &  $-$6.6 &  0.355 \\
-        80  &  4.72 & 0.92 & $+$0.71 & $+$17.7 &  4.24 & $+$5.6  &  2.286 \\
-        82  & 23.30 & 2.38 & $+$2.96 & $+$14.5 & 20.63 & $+$1.4  & 11.593 \\
-        83  & 19.02 & 5.94 & $-$1.16 &  $-$5.7 & 20.56 & $+$1.9  & 11.500 \\
-        84  &100.00 & 0.00 &    0.00 &     0.0 &100.00 &    0.0  & 56.987 \\
-        86  & 30.65 & 2.01 & $+$0.33 &  $+$1.1 & 28.53 &  $-$5.9 & 17.279 \\
+        78 &  0.411 &  0.334 &  0.355 & $+$0.056 & $-$0.021 & $+$15.77 &  $-$5.92 \\
+        80 &  2.630 &  2.427 &  2.286 & $+$0.344 & $+$0.141 & $+$15.05 &  $+$6.17 \\
+        82 & 13.036 & 11.819 & 11.593 & $+$1.443 & $+$0.226 & $+$12.45 &  $+$1.95 \\
+        83 & 10.538 & 11.780 & 11.500 & $-$0.962 & $+$0.280 &  $-$8.37 &  $+$2.43 \\
+        84 & 56.203 & 57.295 & 56.987 & $-$0.784 & $+$0.308 &  $-$1.38 &  $+$0.54 \\
+        86 & 17.182 & 16.346 & 17.279 & $-$0.097 & $-$0.933 &  $-$0.56 &  $-$5.40 \\
+        \midrule
+        $\sum$ & 100.000 & 100.001 & 100.000 & & & & \\
         \bottomrule
     \end{tabular}
+    \end{adjustbox}
 \end{table}
 
+% ── Tabelle 2: Kr2+ ──────────────────────────────────────────────────────────
 \begin{table}[htbp]
     \centering
-    \caption{Relative H\"aufigkeiten der Kr$^{2+}$-Isotope, normiert auf
-        $^{84}$Kr$^{2+}$ ($m/z = 42$) $= 100\,\%$.
-        Mittelwert und $\sigma$ \"uber 8~Messungen mit auswertbarem Signal
-        ($p \geq 5{,}78 \times 10^{-2}\,\mathrm{mbar}$);
-        bester Einzelwert bei $5\,\mathrm{mbar}$.
-        $^\dagger$: Wert durch Peak-\"Uberlagerung verf\"alscht
-        (siehe Fehleranalyse).}
+    \caption{Vergleich der gemessenen und nat\"urlichen Isotopenh\"aufigkeiten
+        f\"ur doppelt geladene Kr$^{2+}$-Ionen. Beste Einzelmessung bei
+        $p = 5\,\mathrm{mbar}$. $^\dagger$: durch Peak-\"Uberlagerung verf\"alscht.}
     \label{tab:kr2}
+    \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{c c r r r r r r r}
         \toprule
-        & & \multicolumn{4}{c}{Mittelwert (8 Messungen)}
-        & \multicolumn{2}{c}{Bester Wert ($5\,\mathrm{mbar}$)}
-        & \\
-        \cmidrule(lr){3-6}\cmidrule(lr){7-8}
-        $A$ & $m/z$ &
-        $\bar{x}$ [\%] & $\sigma$ [\%] &
-        $\Delta_\mathrm{abs}$ [\%] & $\Delta_\mathrm{rel}$ [\%] &
-        $x$ [\%] & $\Delta_\mathrm{rel}$ [\%] &
-        IUPAC [\%] \\
+        & & \multicolumn{2}{c}{Gemessene RA [\%]}
+        & {Theorie [\%]}
+        & \multicolumn{2}{c}{Absoluter Fehler [\%]}
+        & \multicolumn{2}{c}{Relativer Fehler [\%]} \\
+        \cmidrule(lr){3-4}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+        $A$ & $m/z$
+        & Durchschn. & $5\,\mathrm{mbar}$
+        &
+        & Durchschn. & $5\,\mathrm{mbar}$
+        & Durchschn. & $5\,\mathrm{mbar}$ \\
         \midrule
-        78  & 39   &  0.16 &  0.23 & $-$0.46 &  $-$75.0 &  0.44 &  $-$28.6 &  0.355 \\
-        80  & 40   &  2.13 &  1.97 & $-$1.88 &  $-$46.8 &  4.12 &   $+$2.7 &  2.286 \\
-        82  & 41$^\dagger$ & 17.79 & 10.58 & $-$2.55 & $-$12.5 & 29.21 & $+$43.6 & 11.593 \\
-        83  & 41.5$^\dagger$ & 99.01 & 2.63 & $+$78.83 & $+$390.6 & 100.00 & $+$395.5 & 11.500 \\
-        84  & 42   &100.00 &  0.00 &    0.00 &      0.0 &100.00 &      0.0 & 56.987 \\
-        86  & 43   & 16.16 & 13.20 & $-$14.16 & $-$46.7 & 30.49 &  $+$0.6 & 17.279 \\
+        78 & 39             &  0.060 &  0.168 &  0.355 &  $-$0.295 &  $-$0.187 &  $-$83.10 &  $-$52.68 \\
+        80 & 40             &  0.831 &  1.560 &  2.286 &  $-$1.455 &  $-$0.726 &  $-$63.65 &  $-$31.76 \\
+        82 & 41$^\dagger$   &  7.163 & 11.053 & 11.593 &  $-$4.430 &  $-$0.540 &  $-$38.21 &   $-$4.66 \\
+        83 & 41.5$^\dagger$ & 42.607 & 37.841 & 11.500 & $+$31.107 & $+$26.341 & $+$270.50 & $+$229.05 \\
+        84 & 42             & 42.995 & 37.841 & 56.987 & $-$13.992 & $-$19.146 &  $-$24.55 &  $-$33.60 \\
+        86 & 43             &  6.344 & 11.537 & 17.279 & $-$10.935 &  $-$5.742 &  $-$63.28 &  $-$33.23 \\
+        \midrule
+        $\sum$ & & 100.000 & 100.000 & 100.000 & & & & \\
         \bottomrule
     \end{tabular}
+    \end{adjustbox}
 \end{table}
+
+
 
 \subsubsection*{Fehleranalyse}
 
 Die Kr$^+$-Messung (Tabelle~\ref{tab:kr1}) zeigt f\"ur die beste
-Einzelmessung bei $0{,}4\,\mathrm{mbar}$ eine gute \"Ubereinstimmung
-mit den IUPAC-Werten. Die gr\"o\ss{}ten relativen Abweichungen
-treten bei den seltenen Isotopen $^{78}$Kr ($-6{,}6\,\%$) und
-$^{86}$Kr ($-5{,}9\,\%$) auf, was auf das schlechtere
-Signal-Rausch-Verh\"altnis dieser schw\"acheren Peaks zur\"uckzuf\"uhren ist.
+Einzelmessung bei $0{,}4\,\mathrm{mbar}$ eine sehr gute \"Ubereinstimmung
+mit den IUPAC-Werten; alle relativen Abweichungen liegen unter $6\,\%$.
 Im Mittel \"uber alle neun Messungen sind die Werte f\"ur $^{78}$Kr und
-$^{80}$Kr systematisch zu hoch ($+18{,}6\,\%$ bzw.\ $+17{,}7\,\%$).
+$^{80}$Kr systematisch erh\"oht ($+15\,\%$ bis $+16\,\%$).
 Dies erkl\"art sich durch S\"attigungseffekte bei hohen Dr\"ucken: wenn
-der $^{84}$Kr-Peak in S\"attigung geht, werden die relativen
-H\"aufigkeiten der kleinen Isotope \"ubersch\"atzt.
-
-Die Kr$^{2+}$-Auswertung (Tabelle~\ref{tab:kr2}) zeigt deutlich gr\"o\ss{}ere
-Abweichungen, deren Ursachen im Folgenden erkl\"art werden:
+der $^{84}$Kr-Peak in S\"attigung geht, wird seine Peakh\"ohe
+unterschätzt, und die Normierung verschiebt alle anderen Werte nach oben.
+Die gr\"o\ss{}te Standardabweichung zeigt $^{83}$Kr mit $\sigma = 2{,}955\,\%$,
+was auf die Kr-Kontamination im Hintergrundspektrum zur\"uckzuf\"uhren
+ist (siehe Abschnitt zur Hintergrundmessung). Die Kr$^{2+}$-Auswertung (Tabelle~\ref{tab:kr2}) zeigt deutlich gr\"o\ss{}ere
+Abweichungen. Die Ursachen sind:
 
 \begin{itemize}
     \item \textbf{$^{83}$Kr$^{2+}$ bei $m/z = 41{,}5$:}
-        Der relative Fehler von $+390\,\%$ ist auf eine
-        Peak-\"Uberlagerung zur\"uckzuf\"uhren.
-        Der benachbarte Peak bei $m/z = 41$ geh\"ort zu $^{82}$Kr$^{2+}$,
-        hat aber einen breiten Ausl\"aufer (Peak-Tailing), der den
-        $^{83}$Kr$^{2+}$-Peak bei $m/z = 41{,}5$ stark \"uberlagert.
-        Zus\"atzlich kann $^{41}$Ar aus Luftkontamination bei $m/z = 41$
-        in den Nachbarkanal \"ubersprechen.
+        Der relative Fehler von $+270\,\%$ im Mittel (bzw.\ $+229\,\%$
+        f\"ur den besten Wert) ist auf eine Peak-\"Uberlagerung
+        zur\"uckzuf\"uhren.
+        Der dominierende $^{84}$Kr$^{2+}$-Peak bei $m/z = 42$ hat breite
+        Ausl\"aufer (Peak-Tailing), die den benachbarten
+        $^{83}$Kr$^{2+}$-Peak bei $m/z = 41{,}5$ stark \"uberlagern.
+        Dieser Peak ist daher nicht zuverl\"assig auswertbar.
 
-    \item \textbf{$^{82}$Kr$^{2+}$ bei $m/z = 41$ und $^{86}$Kr$^{2+}$
-        bei $m/z = 43$:}
-        Die hohe Standardabweichung ($\sigma \approx 10$--$13\,\%$)
-        und die starke druckabh\"angige Streuung zeigen, dass diese
-        Peaks durch \"Uberlagerungen mit benachbarten Signalen
-        beeinflusst werden. Der beste Wert bei $5\,\mathrm{mbar}$ stimmt
-        f\"ur $^{86}$Kr$^{2+}$ gut mit der Theorie \"uberein ($+0{,}6\,\%$).
+    \item \textbf{$^{84}$Kr$^{2+}$ bei $m/z = 42$:}
+        Der gemessene Wert von $43{,}0\,\%$ (Mittel) liegt deutlich unter
+        dem IUPAC-Wert von $57{,}0\,\%$ ($-24{,}6\,\%$ relativ).
+        Das \"uberschuss-Signal bei $m/z = 41{,}5$ durch Peak-Tailing
+        fehlt bei $m/z = 42$, was die Normierung verzerrt: weil
+        $^{83}$Kr$^{2+}$ zu hoch gemessen wird, werden alle anderen
+        Werte nach unten gedr\"uckt.
 
-    \item \textbf{$^{78}$Kr$^{2+}$ und $^{80}$Kr$^{2+}$:}
-        Diese Isotope sind im Kr$^{2+}$-Spektrum so schwach, dass sie
-        bei den meisten Drücken im Grundrauschen verschwinden.
-        Der Mittelwert weicht stark vom Theoriewert ab, da viele
-        Messungen nur Rauschen und kein echtes Signal enthalten.
+    \item \textbf{$^{78}$Kr$^{2+}$, $^{80}$Kr$^{2+}$, $^{86}$Kr$^{2+}$:}
+        Diese Isotope sind im Kr$^{2+}$-Spektrum sehr schwach und
+        verschwinden bei niedrigen Dr\"ucken im Grundrauschen.
+        Die Mittelwerte weichen stark von der Theorie ab; der beste
+        Einzelwert bei $5\,\mathrm{mbar}$ liefert f\"ur $^{82}$Kr und
+        $^{86}$Kr noch akzeptable Ergebnisse ($-4{,}7\,\%$ und
+        $-33{,}2\,\%$).
 \end{itemize}
 
-Insgesamt liefert die Kr$^+$-Messung bei mittleren Dr\"ucken
-($\sim 0{,}1$--$1\,\mathrm{mbar}$) die besten Ergebnisse, da in diesem
-Bereich weder S\"attigung noch thermisches Rauschen dominieren.
-F\"ur Kr$^{2+}$ ist eine zuverl\"assige Auswertung nur f\"ur $^{84}$Kr,
-$^{86}$Kr und $^{80}$Kr m\"oglich; die \"ubrigen Isotope sind zu stark
-von \"Uberlagerungseffekten betroffen.
+Zusammenfassend ist die Kr$^+$-Messung bei mittleren Dr\"ucken
+($\sim 0{,}1$--$1\,\mathrm{mbar}$) zuverl\"assig und stimmt gut mit
+der Literatur \"uberein. Die Kr$^{2+}$-Auswertung ist aufgrund der
+Peak-\"Uberlagerung bei $m/z = 41{,}5$ nur eingeschr\"ankt auswertbar;
+lediglich $^{82}$Kr, $^{84}$Kr und $^{86}$Kr liefern bei hohen Dr\"ucken
+brauchbare Ergebnisse.
+
+\subsubsection*{Signalintensität in Abhängigkeit vom Druck}
+
+Abbildung~\ref{fig:kr_int} zeigt die Signalintensität des
+intensivsten Isotops $^{84}$Kr$^+$ ($m/z = 84$) als Funktion
+des Drucks in der Probennahmekammer.
+Aufgetragen ist die hintergrundkorrigierte Peakhöhe in
+linearer/logarithmischer (a) und doppelt-logarithmischer (b)
+Darstellung.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{krypton_files/fig_intensity_vs_pressure}
+    \caption{Signalintensität von $^{84}$Kr$^+$ als Funktion des
+        Kammerdrucks (BG-korrigiert).
+        Die gepunktete blaue Linie markiert das Hintergrundsignal
+        bei $m/z = 84$ ($\approx 1{,}5 \times 10^{-8}\,\mathrm{Torr}$).}
+    \label{fig:kr_int}
+\end{figure}
+
+Wie erwartet steigt die Signalintensität mit zunehmendem Druck an.
+Dies ist plausibel, da ein höherer Druck in der Probennahmekammer
+einer höheren Teilchenzahldichte entspricht: es gelangen mehr
+Kr-Atome in die Ionenquelle, sodass mehr Ionen erzeugt und
+detektiert werden.
+Im mittleren und unteren Druckbereich ($p \lesssim 1\,\mathrm{mbar}$)
+ist dieser Zusammenhang in der doppelt-logarithmischen Darstellung
+annähernd eine Gerade, was auf einen näherungsweise proportionalen
+Zusammenhang zwischen Intensität und Druck hindeutet.
+
+Bei den höchsten Drücken ($p \geq 5\,\mathrm{mbar}$) flacht die
+Kurve jedoch ab, und die Intensität steigt nicht mehr weiter an --
+bei $25\,\mathrm{mbar}$ ist sie sogar geringfügig kleiner als bei
+$5\,\mathrm{mbar}$.
+Diese Sättigung lässt sich durch zwei Effekte erklären:
+Zum einen verkürzt sich bei hohem Druck die mittlere freie Weglänge,
+sodass die Ionen häufiger mit Neutralteilchen stoßen und vor dem
+Erreichen des Detektors abgelenkt werden.
+Zum anderen können bei hoher Ionendichte Raumladungseffekte im
+Quadrupol auftreten, welche die Transmission der Ionen verringern.
+
+Am unteren Ende der Druckskala nähert sich das Signal dem
+Hintergrundwert bei $m/z = 84$ von etwa
+$1{,}5 \times 10^{-8}\,\mathrm{Torr}$ an, der aus Kr-Rückständen
+in der Kammer stammt (vgl.\ Abschnitt zur Hintergrundmessung).
+Bei der niedrigsten gemessenen Druckstufe
+($p = 3{,}81 \times 10^{-2}\,\mathrm{mbar}$) liegt die Intensität
+nur noch knapp oberhalb dieses Hintergrundniveaus.
+Bei noch niedrigeren Drücken würde das Kr-Signal vollständig im
+Hintergrund verschwinden, was das in der Aufgabenstellung erwähnte
+Verschwinden des Kr-Signals erklärt.
 
 
 
+\section{Aufgabe 2 -- Xenon-Isotopenmuster}
 
-\section{Aufgabe 2}
+\subsection*{Aufgabenstellung}
+
+In diesem Versuchsteil wird das Massenspektrum des Edelgases Xenon (Xe)
+bei neun verschiedenen Drücken zwischen $3{,}40 \times 10^{-2}\,\mathrm{mbar}$
+und $25\,\mathrm{mbar}$ aufgenommen.
+Ziel ist die Bestimmung der relativen Isotopenverteilung der einfach
+geladenen Xe$^+$-Ionen sowie der doppelt geladenen Xe$^{2+}$-Ionen und
+der Vergleich mit den natürlichen Isotopenhäufigkeiten aus der Literatur.
+Zusätzlich wird die Signalintensität des intensivsten Isotops in
+Abhängigkeit vom Gasdruck untersucht und gemeinsam mit den Kr-Daten
+dargestellt. Xenon besitzt neun stabile Isotope mit den Massenzahlen
+$A = 124, 126, 128, 129, 130, 131, 132, 134, 136$.
+Das häufigste ist $^{132}$Xe mit einem Literaturwert von $26{,}91\,\%$,
+dicht gefolgt von $^{129}$Xe mit $26{,}40\,\%$.
+Im Massenspektrum erscheinen die einfach geladenen Ionen bei $m/z = A$,
+die doppelt geladenen bei den halben Massenzahlen $m/z = A/2$.
+Da Xenon sowohl gerade als auch ungerade Massenzahlen besitzt, treten
+bei Xe$^{2+}$ auch halbzahlige $m/z$-Werte auf:
+$m/z = 62, 63, 64, 64{,}5, 65, 65{,}5, 66, 67, 68$.
+
+\subsection*{Hintergrundmessung}
+
+Vor dem Einlass von Xenon wurde ein Hintergrundspektrum der evakuierten
+Messkammer aufgenommen (Abbildung~\ref{fig:xe_background}).
+Wie bei der Kr-Messung zeigen sich prominente Residualgas-Peaks bei
+$m/z = 2$ (H$_2$), $m/z = 18$ (H$_2$O), $m/z = 28$ (N$_2$/CO),
+$m/z = 32$ (O$_2$) und $m/z = 44$ (CO$_2$).
+Das Hintergrundspektrum wird von allen Xe-Messungen abgezogen.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{xenon_files/fig_background}
+    \caption{Hintergrundspektrum der Messkammer vor dem Xe-Einlass.
+        Die gestrichelten grauen Linien markieren Residualgas-Peaks
+        (H$_2$, H$_2$O, N$_2$, O$_2$, CO$_2$).
+        Rot hinterlegt: Xe$^+$-Bereich ($m/z = 123$--$137$);
+        grün hinterlegt: Xe$^{2+}$-Bereich ($m/z = 61$--$69$).}
+    \label{fig:xe_background}
+\end{figure}
+
+\subsection*{Messspektren}
+
+Abbildung~\ref{fig:xe_single} zeigt die neun Einzelspektren bei allen
+gemessenen Drücken, Abbildung~\ref{fig:xe_overlay} alle Spektren
+überlagert.
+Wie bei Krypton steigt die Signalintensität mit dem Druck an, und das
+Isotopenmuster bleibt über alle Drücke konsistent.
+Im Vergleich zu Krypton ist das Xe-Isotopenmuster komplexer, da Xenon
+neun statt sechs stabile Isotope besitzt und die beiden häufigsten
+($^{129}$Xe und $^{132}$Xe) annähernd gleich stark sind.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{xenon_files/fig_all_single}
+    \caption{Xenon-Massenspektren bei allen neun Drücken, logarithmisch
+        dargestellt. Rote gestrichelte Linien: Xe$^+$-Positionen
+        ($m/z = A$); grüne gestrichelte Linien: Xe$^{2+}$-Positionen
+        ($m/z = A/2$).}
+    \label{fig:xe_single}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{xenon_files/fig_all_overlay}
+    \caption{Alle neun Xenon-Spektren überlagert, logarithmisch
+        dargestellt. Die Farbe kodiert den Druck: dunkel entspricht
+        hohem Druck ($25\,\mathrm{mbar}$), hell niedrigem Druck
+        ($3{,}40 \times 10^{-2}\,\mathrm{mbar}$).}
+    \label{fig:xe_overlay}
+\end{figure}
+
+\subsection*{Zoom auf die Isotopenbereiche}
+
+Abbildung~\ref{fig:xe_zoom} zeigt die beiden Isotopenbereiche
+vergrößert. Panel~(a) zeigt die einfach geladenen Xe$^+$-Ionen bei
+den ganzen Massenzahlen, Panel~(b) die doppelt geladenen Xe$^{2+}$-Ionen
+bei den halben Massenzahlen.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{xenon_files/fig_xe_zoom}
+    \caption{Vergrößerter Ausschnitt des Xe-Spektrums (BG-korrigiert,
+        logarithmisch). (a) Xe$^+$-Bereich: einfach ionisierte Isotope
+        bei $m/z = A$. (b) Xe$^{2+}$-Bereich: doppelt ionisierte Isotope
+        bei $m/z = A/2$. Die gestrichelten Linien markieren die
+        erwarteten Isotoppositionen.}
+    \label{fig:xe_zoom}
+\end{figure}
+
+\subsection*{Auswertung der Isotopenverteilung}
+
+Die relativen Häufigkeiten werden aus den Peakhöhen aller neun Isotope
+bestimmt und so normiert, dass ihre Summe $100\,\%$ ergibt.
+Als bester Einzelwert wird die Messung bei
+$2{,}46 \times 10^{-1}\,\mathrm{mbar}$ (Xe$^+$) bzw.\
+$4{,}50\,\mathrm{mbar}$ (Xe$^{2+}$) angegeben.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Vergleich der gemessenen und natürlichen Isotopenhäufigkeiten
+        für einfach geladene Xe$^+$-Ionen. Beste Einzelmessung bei
+        $p = 2{,}46 \times 10^{-1}\,\mathrm{mbar}$.}
+    \label{tab:xe1}
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{c r r r r r r r}
+        \toprule
+        & \multicolumn{2}{c}{Gemessene RA [\%]}
+        & {Theorie [\%]}
+        & \multicolumn{2}{c}{Absoluter Fehler [\%]}
+        & \multicolumn{2}{c}{Relativer Fehler [\%]} \\
+        \cmidrule(lr){2-3}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+        $A$ & Durchschn. & $0{,}246\,\mathrm{mbar}$ &
+        & Durchschn. & $0{,}246\,\mathrm{mbar}$
+        & Durchschn. & $0{,}246\,\mathrm{mbar}$ \\
+        \midrule
+        124 &  0.156 &  0.041 &  0.095 & $+$0.061 & $-$0.054 &  $+$64.1 &  $-$56.8 \\
+        126 &  0.279 &  0.048 &  0.089 & $+$0.190 & $-$0.041 & $+$213.0 &  $-$46.3 \\
+        128 &  2.364 &  2.242 &  1.910 & $+$0.454 & $+$0.332 &  $+$23.8 &  $+$17.4 \\
+        129 & 30.588 & 29.478 & 26.401 & $+$4.187 & $+$3.078 &  $+$15.9 &  $+$11.7 \\
+        130 &  4.086 &  4.337 &  4.071 & $+$0.015 & $+$0.266 &   $+$0.4 &   $+$6.5 \\
+        131 & 21.652 & 21.672 & 21.232 & $+$0.419 & $+$0.440 &   $+$2.0 &   $+$2.1 \\
+        132 & 25.757 & 26.571 & 26.909 & $-$1.152 & $-$0.337 &   $-$4.3 &   $-$1.3 \\
+        134 &  8.549 &  8.963 & 10.436 & $-$1.887 & $-$1.473 &  $-$18.1 &  $-$14.1 \\
+        136 &  6.570 &  6.647 &  8.857 & $-$2.288 & $-$2.210 &  $-$25.8 &  $-$25.0 \\
+        \midrule
+        $\sum$ & 100.000 & 100.000 & 100.000 & & & & \\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Vergleich der gemessenen und natürlichen Isotopenhäufigkeiten
+        für doppelt geladene Xe$^{2+}$-Ionen. Beste Einzelmessung bei
+        $p = 4{,}50\,\mathrm{mbar}$. $^\dagger$: durch Peak-Überlagerung
+        verfälscht.}
+    \label{tab:xe2}
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{c c r r r r r r r}
+        \toprule
+        & & \multicolumn{2}{c}{Gemessene RA [\%]}
+        & {Theorie [\%]}
+        & \multicolumn{2}{c}{Absoluter Fehler [\%]}
+        & \multicolumn{2}{c}{Relativer Fehler [\%]} \\
+        \cmidrule(lr){3-4}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+        $A$ & $m/z$ & Durchschn. & $4{,}5\,\mathrm{mbar}$ &
+        & Durchschn. & $4{,}5\,\mathrm{mbar}$
+        & Durchschn. & $4{,}5\,\mathrm{mbar}$ \\
+        \midrule
+        124 & 62             &  0.233 &  0.063 &  0.095 & $+$0.138 & $-$0.032 & $+$144.5 &  $-$33.6 \\
+        126 & 63             &  0.218 &  0.147 &  0.089 & $+$0.129 & $+$0.058 & $+$144.8 &  $+$64.9 \\
+        128 & 64$^\dagger$   & 16.649 & 18.261 &  1.910 & $+$14.739 & $+$16.350 & $+$771.6 & $+$856.0 \\
+        129 & 64.5$^\dagger$ & 19.992 & 18.744 & 26.401 & $-$6.409 & $-$7.656 &  $-$24.3 &  $-$29.0 \\
+        130 & 65$^\dagger$   & 13.479 & 14.280 &  4.071 & $+$9.408 & $+$10.209 & $+$231.1 & $+$250.8 \\
+        131 & 65.5$^\dagger$ & 17.805 & 17.440 & 21.232 & $-$3.427 & $-$3.793 &  $-$16.1 &  $-$17.9 \\
+        132 & 66             & 19.742 & 18.262 & 26.909 & $-$7.167 & $-$8.647 &  $-$26.6 &  $-$32.1 \\
+        134 & 67             &  6.076 &  6.993 & 10.436 & $-$4.360 & $-$3.443 &  $-$41.8 &  $-$33.0 \\
+        136 & 68             &  5.807 &  5.812 &  8.857 & $-$3.050 & $-$3.046 &  $-$34.4 &  $-$34.4 \\
+        \midrule
+        $\sum$ & & 100.000 & 100.000 & 100.000 & & & & \\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+\end{table}
+
+\subsection*{Fehleranalyse}
+
+Die Xe$^+$-Messung (Tabelle~\ref{tab:xe1}) stimmt für die häufigen
+Isotope gut mit den Literaturwerten überein: $^{129}$Xe, $^{130}$Xe,
+$^{131}$Xe und $^{132}$Xe weichen für die beste Einzelmessung um
+weniger als $12\,\%$ ab, $^{131}$Xe und $^{132}$Xe sogar um weniger
+als $3\,\%$.
+Die größten relativen Abweichungen treten bei den sehr seltenen
+Isotopen $^{124}$Xe und $^{126}$Xe auf (Literaturwerte unter $0{,}1\,\%$).
+Diese liegen so nah an der Nachweisgrenze, dass schon kleine
+Schwankungen im Untergrund zu großen relativen Fehlern führen.
+Die schweren Isotope $^{134}$Xe und $^{136}$Xe werden systematisch zu
+niedrig gemessen ($-14\,\%$ bzw.\ $-25\,\%$), was auf eine mit der
+Masse abnehmende Transmissions- bzw.\ Nachweiseffizienz des Quadrupols
+hindeutet (Massendiskriminierung).
+
+Die Xe$^{2+}$-Auswertung (Tabelle~\ref{tab:xe2}) zeigt deutlich
+größere Abweichungen, deren Hauptursache Peak-Überlagerungen sind:
+
+\begin{itemize}
+    \item \textbf{$m/z = 64$ ($^{128}$Xe$^{2+}$):}
+        Der relative Fehler von über $+770\,\%$ entsteht durch
+        Überlagerung mehrerer Beiträge: zum einen läuft der dominante
+        $^{129}$Xe$^{2+}$-Peak bei $m/z = 64{,}5$ in den Nachbarkanal,
+        zum anderen kann bei $m/z = 64$ auch O$_2^+$ aus dem
+        Restgas beitragen.
+    \item \textbf{$m/z = 65$ ($^{130}$Xe$^{2+}$):}
+        Ähnlich überlagert sich hier der Ausläufer des starken
+        $^{131}$Xe$^{2+}$-Peaks bei $m/z = 65{,}5$, was zu einem
+        Fehler von $+231\,\%$ führt.
+    \item \textbf{Halbzahlige Peaks ($m/z = 64{,}5$ und $65{,}5$):}
+        Die ungeraden Isotope $^{129}$Xe und $^{131}$Xe liegen bei
+        halbzahligen $m/z$-Werten und werden durch das Peak-Tailing
+        der benachbarten ganzzahligen Peaks beeinflusst, was die
+        Normierung der gesamten Verteilung verzerrt.
+\end{itemize}
+
+Zusammenfassend ist die Xe$^+$-Messung für die häufigen Isotope
+($^{129}$Xe bis $^{132}$Xe) zuverlässig, während die seltenen und
+schweren Isotope größere Fehler aufweisen.
+Die Xe$^{2+}$-Auswertung ist aufgrund der starken Überlagerungen --
+insbesondere durch die halbzahligen $m/z$-Werte der ungeraden Isotope --
+nur eingeschränkt aussagekräftig.
+
+\subsection*{Signalintensität in Abhängigkeit vom Druck}
+
+Abbildung~\ref{fig:int_kr_xe} zeigt die Signalintensität des jeweils
+intensivsten Isotops -- $^{84}$Kr$^+$ und $^{132}$Xe$^+$ -- als Funktion
+des Drucks, gemeinsam dargestellt.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{xenon_files/fig_intensity_kr_xe}
+    \caption{Signalintensität des intensivsten Isotops von Krypton
+        ($^{84}$Kr$^+$) und Xenon ($^{132}$Xe$^+$) als Funktion des
+        Kammerdrucks (BG-korrigiert). Die gepunkteten Linien markieren
+        die jeweiligen Hintergrundniveaus.
+        (a) Lineare Druckachse; (b) doppelt-logarithmisch.}
+    \label{fig:int_kr_xe}
+\end{figure}
+
+Beide Elemente zeigen den gleichen qualitativen Verlauf: die Intensität
+steigt mit dem Druck zunächst annähernd proportional an und sättigt
+bei hohen Drücken ($p \geq 5\,\mathrm{mbar}$), wo die mittlere freie
+Weglänge zu kurz wird und Raumladungseffekte im Quadrupol auftreten.
+Auffällig ist, dass das Xe-Signal bei gleichem Druck systematisch
+schwächer ist als das Kr-Signal.
+Dies liegt vor allem daran, dass sich die Häufigkeit des intensivsten
+Isotops auf zwei nahezu gleich starke Isotope verteilt ($^{129}$Xe und
+$^{132}$Xe mit je $\approx 26\,\%$), während bei Krypton ein einzelnes
+Isotop ($^{84}$Kr) mit $57\,\%$ klar dominiert.
+Das Xe-Signal verschwindet daher auch früher im Hintergrund:
+das Hintergrundniveau bei $m/z = 132$ liegt mit
+$\approx 1{,}2 \times 10^{-9}\,\mathrm{Torr}$ zwar niedriger als bei
+Krypton, aber die niedrigste Xe-Messstufe nähert sich diesem Wert bereits
+deutlich an.
+
+
+
 \section{Aufgabe 3}
 \section{Aufgabe 4}
 \section{Aufgabe 5}

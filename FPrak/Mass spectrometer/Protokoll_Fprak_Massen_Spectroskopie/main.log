@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  1 JUN 2026 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  1 JUN 2026 16:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -83,7 +83,60 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count276
 \@lastruleclass=\count277
 \@thisrulewidth=\dimen164
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+)
+\XKV@depth=\count278
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box52
+)
+\tc@llx=\dimen165
+\tc@lly=\dimen166
+\tc@urx=\dimen167
+\tc@ury=\dimen168
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen169
+\adjbox@Height=\dimen170
+\adjbox@Depth=\dimen171
+\adjbox@Totalheight=\dimen172
+\adjbox@pwidth=\dimen173
+\adjbox@pheight=\dimen174
+\adjbox@pdepth=\dimen175
+\adjbox@ptotalheight=\dimen176
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count279
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box53
+\sift@deathcycles=\count280
+\@vwid@loff=\dimen177
+\@vwid@roff=\dimen178
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
@@ -99,14 +152,14 @@ Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count278
+\etb@tempcnta=\count281
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count279
+\lrq@indent=\count282
  (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
@@ -115,49 +168,49 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count280
-\c@listtotal=\count281
-\c@listcount=\count282
-\c@liststart=\count283
-\c@liststop=\count284
-\c@citecount=\count285
-\c@citetotal=\count286
-\c@multicitecount=\count287
-\c@multicitetotal=\count288
-\c@instcount=\count289
-\c@maxnames=\count290
-\c@minnames=\count291
-\c@maxitems=\count292
-\c@minitems=\count293
-\c@citecounter=\count294
-\c@maxcitecounter=\count295
-\c@savedcitecounter=\count296
-\c@uniquelist=\count297
-\c@uniquename=\count298
-\c@refsection=\count299
-\c@refsegment=\count300
-\c@maxextratitle=\count301
-\c@maxextratitleyear=\count302
-\c@maxextraname=\count303
-\c@maxextradate=\count304
-\c@maxextraalpha=\count305
-\c@abbrvpenalty=\count306
-\c@highnamepenalty=\count307
-\c@lownamepenalty=\count308
-\c@maxparens=\count309
-\c@parenlevel=\count310
-\blx@tempcnta=\count311
-\blx@tempcntb=\count312
-\blx@tempcntc=\count313
-\c@blx@maxsection=\count314
-\blx@maxsegment@0=\count315
-\blx@notetype=\count316
-\blx@parenlevel@text=\count317
-\blx@parenlevel@foot=\count318
-\blx@sectionciteorder@0=\count319
-\blx@sectionciteorderinternal@0=\count320
-\blx@entrysetcounter=\count321
-\blx@biblioinstance=\count322
+\c@tabx@nest=\count283
+\c@listtotal=\count284
+\c@listcount=\count285
+\c@liststart=\count286
+\c@liststop=\count287
+\c@citecount=\count288
+\c@citetotal=\count289
+\c@multicitecount=\count290
+\c@multicitetotal=\count291
+\c@instcount=\count292
+\c@maxnames=\count293
+\c@minnames=\count294
+\c@maxitems=\count295
+\c@minitems=\count296
+\c@citecounter=\count297
+\c@maxcitecounter=\count298
+\c@savedcitecounter=\count299
+\c@uniquelist=\count300
+\c@uniquename=\count301
+\c@refsection=\count302
+\c@refsegment=\count303
+\c@maxextratitle=\count304
+\c@maxextratitleyear=\count305
+\c@maxextraname=\count306
+\c@maxextradate=\count307
+\c@maxextraalpha=\count308
+\c@abbrvpenalty=\count309
+\c@highnamepenalty=\count310
+\c@lownamepenalty=\count311
+\c@maxparens=\count312
+\c@parenlevel=\count313
+\blx@tempcnta=\count314
+\blx@tempcntb=\count315
+\blx@tempcntc=\count316
+\c@blx@maxsection=\count317
+\blx@maxsegment@0=\count318
+\blx@notetype=\count319
+\blx@parenlevel@text=\count320
+\blx@parenlevel@foot=\count321
+\blx@sectionciteorder@0=\count322
+\blx@sectionciteorderinternal@0=\count323
+\blx@entrysetcounter=\count324
+\blx@biblioinstance=\count325
 \labelnumberwidth=\skip51
 \labelalphawidth=\skip52
 \biblabelsep=\skip53
@@ -169,9 +222,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read2
 \blx@bcfout=\write3
 \blx@langwohyphens=\language90
-\c@mincomprange=\count323
-\c@maxcomprange=\count324
-\c@mincompwidth=\count325
+\c@mincomprange=\count326
+\c@maxcomprange=\count327
+\c@mincompwidth=\count328
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -181,74 +234,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count326
-\c@savedafterword=\count327
-\c@annotator=\count328
-\c@savedannotator=\count329
-\c@author=\count330
-\c@savedauthor=\count331
-\c@bookauthor=\count332
-\c@savedbookauthor=\count333
-\c@commentator=\count334
-\c@savedcommentator=\count335
-\c@editor=\count336
-\c@savededitor=\count337
-\c@editora=\count338
-\c@savededitora=\count339
-\c@editorb=\count340
-\c@savededitorb=\count341
-\c@editorc=\count342
-\c@savededitorc=\count343
-\c@foreword=\count344
-\c@savedforeword=\count345
-\c@holder=\count346
-\c@savedholder=\count347
-\c@introduction=\count348
-\c@savedintroduction=\count349
-\c@namea=\count350
-\c@savednamea=\count351
-\c@nameb=\count352
-\c@savednameb=\count353
-\c@namec=\count354
-\c@savednamec=\count355
-\c@translator=\count356
-\c@savedtranslator=\count357
-\c@shortauthor=\count358
-\c@savedshortauthor=\count359
-\c@shorteditor=\count360
-\c@savedshorteditor=\count361
-\c@labelname=\count362
-\c@savedlabelname=\count363
-\c@institution=\count364
-\c@savedinstitution=\count365
-\c@lista=\count366
-\c@savedlista=\count367
-\c@listb=\count368
-\c@savedlistb=\count369
-\c@listc=\count370
-\c@savedlistc=\count371
-\c@listd=\count372
-\c@savedlistd=\count373
-\c@liste=\count374
-\c@savedliste=\count375
-\c@listf=\count376
-\c@savedlistf=\count377
-\c@location=\count378
-\c@savedlocation=\count379
-\c@organization=\count380
-\c@savedorganization=\count381
-\c@origlocation=\count382
-\c@savedoriglocation=\count383
-\c@origpublisher=\count384
-\c@savedorigpublisher=\count385
-\c@publisher=\count386
-\c@savedpublisher=\count387
-\c@language=\count388
-\c@savedlanguage=\count389
-\c@origlanguage=\count390
-\c@savedoriglanguage=\count391
-\c@pageref=\count392
-\c@savedpageref=\count393
+\c@afterword=\count329
+\c@savedafterword=\count330
+\c@annotator=\count331
+\c@savedannotator=\count332
+\c@author=\count333
+\c@savedauthor=\count334
+\c@bookauthor=\count335
+\c@savedbookauthor=\count336
+\c@commentator=\count337
+\c@savedcommentator=\count338
+\c@editor=\count339
+\c@savededitor=\count340
+\c@editora=\count341
+\c@savededitora=\count342
+\c@editorb=\count343
+\c@savededitorb=\count344
+\c@editorc=\count345
+\c@savededitorc=\count346
+\c@foreword=\count347
+\c@savedforeword=\count348
+\c@holder=\count349
+\c@savedholder=\count350
+\c@introduction=\count351
+\c@savedintroduction=\count352
+\c@namea=\count353
+\c@savednamea=\count354
+\c@nameb=\count355
+\c@savednameb=\count356
+\c@namec=\count357
+\c@savednamec=\count358
+\c@translator=\count359
+\c@savedtranslator=\count360
+\c@shortauthor=\count361
+\c@savedshortauthor=\count362
+\c@shorteditor=\count363
+\c@savedshorteditor=\count364
+\c@labelname=\count365
+\c@savedlabelname=\count366
+\c@institution=\count367
+\c@savedinstitution=\count368
+\c@lista=\count369
+\c@savedlista=\count370
+\c@listb=\count371
+\c@savedlistb=\count372
+\c@listc=\count373
+\c@savedlistc=\count374
+\c@listd=\count375
+\c@savedlistd=\count376
+\c@liste=\count377
+\c@savedliste=\count378
+\c@listf=\count379
+\c@savedlistf=\count380
+\c@location=\count381
+\c@savedlocation=\count382
+\c@organization=\count383
+\c@savedorganization=\count384
+\c@origlocation=\count385
+\c@savedoriglocation=\count386
+\c@origpublisher=\count387
+\c@savedorigpublisher=\count388
+\c@publisher=\count389
+\c@savedpublisher=\count390
+\c@language=\count391
+\c@savedlanguage=\count392
+\c@origlanguage=\count393
+\c@savedoriglanguage=\count394
+\c@pageref=\count395
+\c@savedpageref=\count396
 \shorthandwidth=\skip59
 \shortjournalwidth=\skip60
 \shortserieswidth=\skip61
@@ -272,19 +325,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count394
-\c@textcitetotal=\count395
-\c@textcitemaxnames=\count396
-\c@biburlbigbreakpenalty=\count397
-\c@biburlbreakpenalty=\count398
-\c@biburlnumpenalty=\count399
-\c@biburlucpenalty=\count400
-\c@biburllcpenalty=\count401
+\c@textcitecount=\count397
+\c@textcitetotal=\count398
+\c@textcitemaxnames=\count399
+\c@biburlbigbreakpenalty=\count400
+\c@biburlbreakpenalty=\count401
+\c@biburlnumpenalty=\count402
+\c@biburlucpenalty=\count403
+\c@biburllcpenalty=\count404
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count402
+\c@smartand=\count405
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -294,8 +347,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count403
-\c@bbx:relatedtotal=\count404
+\c@bbx:relatedcount=\count406
+\c@bbx:relatedtotal=\count407
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -324,8 +377,8 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2025-01-18 L3 programming layer (loader) 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count405
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count408
+\l__pdf_internal_box=\box54
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2025-01-18 L3 programming layer (loader) 
@@ -336,38 +389,38 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
-\@quotelevel=\count406
-\@quotereset=\count407
+\@quotelevel=\count409
+\@quotereset=\count410
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count408
-\scratchdimen=\dimen165
-\scratchbox=\box53
-\nofMPsegments=\count409
-\nofMParguments=\count410
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count411
-\MPscratchDim=\dimen166
-\MPnumerator=\count412
-\makeMPintoPDFobject=\count413
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count411
+\scratchdimen=\dimen179
+\scratchbox=\box55
+\nofMPsegments=\count412
+\nofMParguments=\count413
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count414
+\MPscratchDim=\dimen180
+\MPnumerator=\count415
+\makeMPintoPDFobject=\count416
+\everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -389,82 +442,78 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 29.
-Package biblatex Info: Reference segment=0 on input line 29.
+Package biblatex Info: Reference section=0 on input line 31.
+Package biblatex Info: Reference segment=0 on input line 31.
 <uni_logo.png, id=1, 339.2675pt x 142.5325pt>
 File: uni_logo.png Graphic file (type png)
 <use uni_logo.png>
-Package pdftex.def Info: uni_logo.png  used on input line 33.
+Package pdftex.def Info: uni_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 258.75pt x 108.71075pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 36.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uni_logo.png>] (./main.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
-)
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uni_logo.png>] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
 
 
 [2]
-Overfull \hbox (5.35245pt too wide) in paragraph at lines 68--70
+Overfull \hbox (5.35245pt too wide) in paragraph at lines 70--72
 \OT1/cmr/m/n/10 an-deren Teilchen zusam-menst^^?o^^Yt. Zur Bes-tim-mung der mit-tleren freien Wegl^^?ange
  []
 
 
 
 [3]
-Overfull \hbox (1.88948pt too wide) in paragraph at lines 95--96
+Overfull \hbox (1.88948pt too wide) in paragraph at lines 97--98
 \OT1/cmr/m/n/10 Das Ion-isierungspo-ten-tial (auch Ion-isierungsen-ergie genannt) beze-ich-net die min-
  []
 
 
-Overfull \hbox (6.5699pt too wide) in paragraph at lines 102--103
+Overfull \hbox (6.5699pt too wide) in paragraph at lines 104--105
 \OT1/cmr/m/n/10 Die meis-ten chemis-chen El-e-mente kom-men in der Natur als Gemisch ver-schiedener
  []
 
 
 
 [4]
-Overfull \hbox (12.88017pt too wide) in paragraph at lines 105--106
+Overfull \hbox (12.88017pt too wide) in paragraph at lines 107--108
 \OT1/cmr/m/n/10 En-ergie zugef^^?uhrt, als f^^?ur die reine Ion-isierung notwendig w^^?are. Diese ^^?ubersch^^?ussige
  []
 
 
-Overfull \hbox (3.52823pt too wide) in paragraph at lines 105--106
+Overfull \hbox (3.52823pt too wide) in paragraph at lines 107--108
 \OT1/cmr/m/n/10 weit-erer Peaks bei kleineren Masse-zu-Ladungs-Verh^^?altnissen, die den ver-schiede-
  []
 
 
-Overfull \hbox (0.24133pt too wide) in paragraph at lines 105--106
+Overfull \hbox (0.24133pt too wide) in paragraph at lines 107--108
 \OT1/cmr/m/n/10 nen Fragment-Ionen zuzuord-nen sind. Das re-sul-tierende Frag-men-tierungsmuster
  []
 
 <QMS_schematic.png, id=29, 812.03375pt x 334.24875pt>
 File: QMS_schematic.png Graphic file (type png)
 <use QMS_schematic.png>
-Package pdftex.def Info: QMS_schematic.png  used on input line 119.
+Package pdftex.def Info: QMS_schematic.png  used on input line 121.
 (pdftex.def)             Requested size: 345.0pt x 142.00537pt.
 
 
 [5]
-Overfull \hbox (7.76443pt too wide) in paragraph at lines 142--157
+Overfull \hbox (7.76443pt too wide) in paragraph at lines 143--158
 \OT1/cmr/m/n/10 bei neun ver-schiede-nen Dr^^?ucken zwis-chen $3\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 81 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[] []$ und $25 []$ aufgenom-
  []
 
 
-Overfull \hbox (3.96307pt too wide) in paragraph at lines 142--157
+Overfull \hbox (3.96307pt too wide) in paragraph at lines 143--158
 \OT1/cmr/m/n/10 bei den hal-ben Massen-zahlen $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A=\OT1/cmr/m/n/10 2$, also bei $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 39\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 40\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 41\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 41[]5\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 42\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 43$,
  []
 
@@ -474,7 +523,7 @@ Overfull \hbox (3.96307pt too wide) in paragraph at lines 142--157
 <krypton_files/fig_background.pdf, id=37, 787.74298pt x 499.3857pt>
 File: krypton_files/fig_background.pdf Graphic file (type pdf)
 <use krypton_files/fig_background.pdf>
-Package pdftex.def Info: krypton_files/fig_background.pdf  used on input line 160.
+Package pdftex.def Info: krypton_files/fig_background.pdf  used on input line 161.
 (pdftex.def)             Requested size: 345.0pt x 218.71692pt.
 
 
@@ -482,7 +531,7 @@ Package pdftex.def Info: krypton_files/fig_background.pdf  used on input line 16
 <krypton_files/fig_all_single.pdf, id=112, 1003.8664pt x 836.20407pt>
 File: krypton_files/fig_all_single.pdf Graphic file (type pdf)
 <use krypton_files/fig_all_single.pdf>
-Package pdftex.def Info: krypton_files/fig_all_single.pdf  used on input line 192.
+Package pdftex.def Info: krypton_files/fig_all_single.pdf  used on input line 193.
 (pdftex.def)             Requested size: 345.0pt x 287.38065pt.
 
 
@@ -490,60 +539,135 @@ Package pdftex.def Info: krypton_files/fig_all_single.pdf  used on input line 19
 <krypton_files/fig_all_overlay.pdf, id=173, 860.01299pt x 570.21031pt>
 File: krypton_files/fig_all_overlay.pdf Graphic file (type pdf)
 <use krypton_files/fig_all_overlay.pdf>
-Package pdftex.def Info: krypton_files/fig_all_overlay.pdf  used on input line 231.
+Package pdftex.def Info: krypton_files/fig_all_overlay.pdf  used on input line 228.
 (pdftex.def)             Requested size: 345.0pt x 228.74133pt.
 
-Overfull \hbox (25.37079pt too wide) in paragraph at lines 242--249
+Overfull \hbox (25.37079pt too wide) in paragraph at lines 239--246
 \OT1/cmr/m/n/10 ein-fach gelade-nen Kr$[]$-Ionen bei den ganzen Massen-zahlen $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 78\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 80\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 82\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 83\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 84\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 86$,
  []
 
 
-Overfull \hbox (0.32932pt too wide) in paragraph at lines 242--249
+Overfull \hbox (0.32932pt too wide) in paragraph at lines 239--246
 \OT1/cmr/m/n/10 Panel (b) die dop-pelt gelade-nen Kr$[]$-Ionen bei den hal-ben Massen-zahlen $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 =
+ []
+
+<krypton_files/fig_kr_zoom.pdf, id=174, 932.28299pt x 393.14879pt>
+File: krypton_files/fig_kr_zoom.pdf Graphic file (type pdf)
+<use krypton_files/fig_kr_zoom.pdf>
+Package pdftex.def Info: krypton_files/fig_kr_zoom.pdf  used on input line 249.
+(pdftex.def)             Requested size: 345.0pt x 145.49277pt.
+
+Overfull \hbox (10.86176pt too wide) in paragraph at lines 260--266
+\OT1/cmr/m/n/10 den besten Kom-pro-miss zwis-chen Signal-Rausch-Verh^^?altnis und S^^?attigungseffekten
  []
 
 
 
 [9 <./krypton_files/fig_all_overlay.pdf>]
-<krypton_files/fig_kr_zoom.pdf, id=239, 932.28299pt x 393.14879pt>
-File: krypton_files/fig_kr_zoom.pdf Graphic file (type pdf)
-<use krypton_files/fig_kr_zoom.pdf>
-Package pdftex.def Info: krypton_files/fig_kr_zoom.pdf  used on input line 252.
-(pdftex.def)             Requested size: 345.0pt x 145.49277pt.
-
-Overfull \hbox (22.28333pt too wide) in paragraph at lines 278--298
- [][] 
- []
-
-
-Overfull \hbox (48.45004pt too wide) in paragraph at lines 310--330
- [][] 
+Overfull \hbox (4.27846pt too wide) in paragraph at lines 340--352
+\OT1/cmr/m/n/10 was auf die Kr-Kontamination im Hin-ter-grund-spek-trum zur^^?uckzuf^^?uhren ist (siehe
  []
 
 
 
 [10 <./krypton_files/fig_kr_zoom.pdf>]
+Overfull \hbox (9.30614pt too wide) in paragraph at lines 354--362
+\OT1/cmr/m/n/10 +229 %$ f^^?ur den besten Wert) ist auf eine Peak-[]Uberlagerung zur^^?uckzuf^^?uhren.
+ []
 
-[11]
-Overfull \hbox (12.70442pt too wide) in paragraph at lines 374--380
-[]$\OT1/cmr/m/n/10 Kr und $[]$Kr m^^?oglich; die ^^?ubrigen Iso-tope sind zu stark von []Uberlagerungseffekten
+
+Overfull \hbox (11.57932pt too wide) in paragraph at lines 354--362
+\OT1/cmr/m/n/10 Tailing), die den be-nach-barten $[]$Kr$[]$-Peak bei $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 41[]5$ stark ^^?uberlagern.
  []
 
 
 
-[12{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (3.31404pt too wide) in paragraph at lines 393--393
+[11{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<krypton_files/fig_intensity_vs_pressure.pdf, id=310, 860.01299pt x 357.7365pt>
+File: krypton_files/fig_intensity_vs_pressure.pdf Graphic file (type pdf)
+<use krypton_files/fig_intensity_vs_pressure.pdf>
+Package pdftex.def Info: krypton_files/fig_intensity_vs_pressure.pdf  used on input line 398.
+(pdftex.def)             Requested size: 345.0pt x 143.50691pt.
+
+Overfull \hbox (15.00394pt too wide) in paragraph at lines 406--415
+\OT1/cmr/m/n/10 Druck-bere-ich ($\OML/cmm/m/it/10 p \U/msa/m/n/10 . \OT1/cmr/m/n/10 1 []$) ist dieser Zusam-men-hang in der doppelt-logarithmischen
+ []
+
+
+Overfull \hbox (4.43117pt too wide) in paragraph at lines 406--415
+\OT1/cmr/m/n/10 Darstel-lung ann^^?ahernd eine Ger-ade, was auf einen n^^?aherungsweise pro-por-tionalen
+ []
+
+
+Overfull \hbox (0.33835pt too wide) in paragraph at lines 444--461
+\OT1/cmr/m/n/10 Xe$[]$ auch hal-bzahlige $\OML/cmm/m/it/10 m=z$\OT1/cmr/m/n/10 -Werte auf: $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 62\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 63\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 64\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 64[]5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 65\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 65[]5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 66\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 67\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 68$. 
+ []
+
+
+
+[12 <./krypton_files/fig_intensity_vs_pressure.pdf>]
+<xenon_files/fig_background.pdf, id=376, 787.74298pt x 499.3857pt>
+File: xenon_files/fig_background.pdf Graphic file (type pdf)
+<use xenon_files/fig_background.pdf>
+Package pdftex.def Info: xenon_files/fig_background.pdf  used on input line 473.
+(pdftex.def)             Requested size: 345.0pt x 218.71692pt.
+<xenon_files/fig_all_single.pdf, id=377, 1003.78548pt x 836.20407pt>
+File: xenon_files/fig_all_single.pdf Graphic file (type pdf)
+<use xenon_files/fig_all_single.pdf>
+Package pdftex.def Info: xenon_files/fig_all_single.pdf  used on input line 495.
+(pdftex.def)             Requested size: 345.0pt x 287.3934pt.
+
+Underfull \hbox (badness 1178) in paragraph at lines 499--499
+[]\OT1/cmr/m/n/10 Figure 8: |Xenon-Massenspektren bei allen neun Dr^^?ucken, log-a-rith-misch
+ []
+
+<xenon_files/fig_all_overlay.pdf, id=378, 860.01299pt x 570.21031pt>
+File: xenon_files/fig_all_overlay.pdf Graphic file (type pdf)
+<use xenon_files/fig_all_overlay.pdf>
+Package pdftex.def Info: xenon_files/fig_all_overlay.pdf  used on input line 505.
+(pdftex.def)             Requested size: 345.0pt x 228.74133pt.
+<xenon_files/fig_xe_zoom.pdf, id=379, 932.28299pt x 393.14879pt>
+File: xenon_files/fig_xe_zoom.pdf Graphic file (type pdf)
+<use xenon_files/fig_xe_zoom.pdf>
+Package pdftex.def Info: xenon_files/fig_xe_zoom.pdf  used on input line 522.
+(pdftex.def)             Requested size: 345.0pt x 145.49277pt.
+
+
+[13]
+
+[14 <./xenon_files/fig_background.pdf>]
+
+[15 <./xenon_files/fig_all_single.pdf>]
+
+[16 <./xenon_files/fig_all_overlay.pdf> <./xenon_files/fig_xe_zoom.pdf>]
+
+[17]
+Overfull \hbox (1.47285pt too wide) in paragraph at lines 645--651
+[]\OT1/cmr/m/n/10 Zusammenfassend ist die Xe$[]$-Messung f^^?ur die h^^?aufigen Iso-tope ($[]$Xe bis $[]$Xe)
+ []
+
+<xenon_files/fig_intensity_kr_xe.pdf, id=644, 860.01299pt x 357.7365pt>
+File: xenon_files/fig_intensity_kr_xe.pdf Graphic file (type pdf)
+<use xenon_files/fig_intensity_kr_xe.pdf>
+Package pdftex.def Info: xenon_files/fig_intensity_kr_xe.pdf  used on input line 660.
+(pdftex.def)             Requested size: 345.0pt x 143.50691pt.
+
+
+[18]
+
+[19 <./xenon_files/fig_intensity_kr_xe.pdf>]
+Overfull \hbox (3.31404pt too wide) in paragraph at lines 695--695
 []\OT1/cmr/m/n/10 Wikipedia con-trib-u-tors. \OT1/cmr/m/it/10 Mit-tlere freie Wegl^^?ange\OT1/cmr/m/n/10 . Ac-cessed: 2026-04-27. 2024.
  []
 
 
-Overfull \hbox (58.9718pt too wide) in paragraph at lines 393--393
+Overfull \hbox (58.9718pt too wide) in paragraph at lines 695--695
 \OT1/cmr/m/n/10 04-27. 2024. \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : $\OT1/cmtt/m/n/10 https : / / de . wikipedia . org / wiki / Quadrupol -[] Massenspektrometer$\OT1/cmr/m/n/10 . 
  []
 
 
 
-[13] (./main.aux)
+[20] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -553,18 +677,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11190 strings out of 473190
- 216113 string characters out of 5715800
- 1033241 words of memory out of 5000000
- 34369 multiletter control sequences out of 15000+600000
- 564849 words of font info for 56 fonts, out of 8000000 for 9000
+ 12907 strings out of 473190
+ 244651 string characters out of 5715800
+ 1062594 words of memory out of 5000000
+ 36031 multiletter control sequences out of 15000+600000
+ 568457 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,10n,81p,1214b,1269s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (13 pages, 595317 bytes).
+ 67i,11n,81p,1214b,1287s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (20 pages, 968161 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
+ 792 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
