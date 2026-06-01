@@ -9,7 +9,8 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Setup of the QMS}{5}{}%
 \contentsline {subsubsection}{\numberline {1.2.2}Funktionsweise des QMS}{5}{}%
 \contentsline {section}{\numberline {2}Aufgabe 1}{7}{}%
-\contentsline {section}{\numberline {3}Aufgabe 2}{7}{}%
-\contentsline {section}{\numberline {4}Aufgabe 3}{7}{}%
-\contentsline {section}{\numberline {5}Aufgabe 4}{7}{}%
-\contentsline {section}{\numberline {6}Aufgabe 5}{7}{}%
+\contentsline {subsection}{\numberline {2.1}Aufgabe 1 -- Krypton-Isotopenmuster}{7}{}%
+\contentsline {section}{\numberline {3}Aufgabe 2}{12}{}%
+\contentsline {section}{\numberline {4}Aufgabe 3}{12}{}%
+\contentsline {section}{\numberline {5}Aufgabe 4}{12}{}%
+\contentsline {section}{\numberline {6}Aufgabe 5}{12}{}%
