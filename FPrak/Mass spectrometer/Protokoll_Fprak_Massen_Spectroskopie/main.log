@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  7 JUN 2026 23:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  7 JUN 2026 23:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -628,19 +628,19 @@ Overfull \hbox (10.86176pt too wide) in paragraph at lines 261--267
 
 
 [9 <./krypton_files/fig_all_overlay.pdf>]
-Overfull \hbox (4.27846pt too wide) in paragraph at lines 341--353
+Overfull \hbox (4.27846pt too wide) in paragraph at lines 341--352
 \OT1/cmr/m/n/10 was auf die Kr-Kontamination im Hin-ter-grund-spek-trum zur^^?uckzuf^^?uhren ist (siehe
  []
 
 
 
 [10 <./krypton_files/fig_kr_zoom.pdf>]
-Overfull \hbox (9.30614pt too wide) in paragraph at lines 355--363
+Overfull \hbox (9.30614pt too wide) in paragraph at lines 357--365
 \OT1/cmr/m/n/10 +229 %$ f^^?ur den besten Wert) ist auf eine Peak-[]Uberlagerung zur^^?uckzuf^^?uhren.
  []
 
 
-Overfull \hbox (11.57932pt too wide) in paragraph at lines 355--363
+Overfull \hbox (11.57932pt too wide) in paragraph at lines 357--365
 \OT1/cmr/m/n/10 Tailing), die den be-nach-barten $[]$Kr$[]$-Peak bei $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 41[]5$ stark ^^?uberlagern.
  []
 
@@ -650,20 +650,20 @@ Overfull \hbox (11.57932pt too wide) in paragraph at lines 355--363
 <krypton_files/fig_intensity_vs_pressure.pdf, id=310, 860.01299pt x 357.7365pt>
 File: krypton_files/fig_intensity_vs_pressure.pdf Graphic file (type pdf)
 <use krypton_files/fig_intensity_vs_pressure.pdf>
-Package pdftex.def Info: krypton_files/fig_intensity_vs_pressure.pdf  used on input line 399.
+Package pdftex.def Info: krypton_files/fig_intensity_vs_pressure.pdf  used on input line 401.
 (pdftex.def)             Requested size: 345.0pt x 143.50691pt.
 
-Overfull \hbox (15.00394pt too wide) in paragraph at lines 407--416
+Overfull \hbox (15.00394pt too wide) in paragraph at lines 409--418
 \OT1/cmr/m/n/10 Druck-bere-ich ($\OML/cmm/m/it/10 p \U/msa/m/n/10 . \OT1/cmr/m/n/10 1 []$) ist dieser Zusam-men-hang in der doppelt-logarithmischen
  []
 
 
-Overfull \hbox (4.43117pt too wide) in paragraph at lines 407--416
+Overfull \hbox (4.43117pt too wide) in paragraph at lines 409--418
 \OT1/cmr/m/n/10 Darstel-lung ann^^?ahernd eine Ger-ade, was auf einen n^^?aherungsweise pro-por-tionalen
  []
 
 
-Overfull \hbox (0.33835pt too wide) in paragraph at lines 445--462
+Overfull \hbox (0.33835pt too wide) in paragraph at lines 447--464
 \OT1/cmr/m/n/10 Xe$[]$ auch hal-bzahlige $\OML/cmm/m/it/10 m=z$\OT1/cmr/m/n/10 -Werte auf: $\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 62\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 63\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 64\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 64[]5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 65\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 65[]5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 66\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 67\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 68$. 
  []
 
@@ -673,27 +673,27 @@ Overfull \hbox (0.33835pt too wide) in paragraph at lines 445--462
 <xenon_files/fig_background.pdf, id=376, 787.74298pt x 499.3857pt>
 File: xenon_files/fig_background.pdf Graphic file (type pdf)
 <use xenon_files/fig_background.pdf>
-Package pdftex.def Info: xenon_files/fig_background.pdf  used on input line 474.
+Package pdftex.def Info: xenon_files/fig_background.pdf  used on input line 476.
 (pdftex.def)             Requested size: 345.0pt x 218.71692pt.
 <xenon_files/fig_all_single.pdf, id=377, 1003.78548pt x 836.20407pt>
 File: xenon_files/fig_all_single.pdf Graphic file (type pdf)
 <use xenon_files/fig_all_single.pdf>
-Package pdftex.def Info: xenon_files/fig_all_single.pdf  used on input line 496.
+Package pdftex.def Info: xenon_files/fig_all_single.pdf  used on input line 498.
 (pdftex.def)             Requested size: 345.0pt x 287.3934pt.
 
-Underfull \hbox (badness 1178) in paragraph at lines 500--500
+Underfull \hbox (badness 1178) in paragraph at lines 502--502
 []\OT1/cmr/m/n/10 Figure 8: |Xenon-Massenspektren bei allen neun Dr^^?ucken, log-a-rith-misch
  []
 
 <xenon_files/fig_all_overlay.pdf, id=378, 860.01299pt x 570.21031pt>
 File: xenon_files/fig_all_overlay.pdf Graphic file (type pdf)
 <use xenon_files/fig_all_overlay.pdf>
-Package pdftex.def Info: xenon_files/fig_all_overlay.pdf  used on input line 506.
+Package pdftex.def Info: xenon_files/fig_all_overlay.pdf  used on input line 508.
 (pdftex.def)             Requested size: 345.0pt x 228.74133pt.
 <xenon_files/fig_xe_zoom.pdf, id=379, 932.28299pt x 393.14879pt>
 File: xenon_files/fig_xe_zoom.pdf Graphic file (type pdf)
 <use xenon_files/fig_xe_zoom.pdf>
-Package pdftex.def Info: xenon_files/fig_xe_zoom.pdf  used on input line 523.
+Package pdftex.def Info: xenon_files/fig_xe_zoom.pdf  used on input line 525.
 (pdftex.def)             Requested size: 345.0pt x 145.49277pt.
 
 
@@ -706,17 +706,17 @@ Package pdftex.def Info: xenon_files/fig_xe_zoom.pdf  used on input line 523.
 [16 <./xenon_files/fig_all_overlay.pdf> <./xenon_files/fig_xe_zoom.pdf>]
 
 [17]
-Overfull \hbox (1.47285pt too wide) in paragraph at lines 646--652
+Overfull \hbox (1.47285pt too wide) in paragraph at lines 648--654
 []\OT1/cmr/m/n/10 Zusammenfassend ist die Xe$[]$-Messung f^^?ur die h^^?aufigen Iso-tope ($[]$Xe bis $[]$Xe)
  []
 
 <xenon_files/fig_intensity_kr_xe.pdf, id=644, 860.01299pt x 357.7365pt>
 File: xenon_files/fig_intensity_kr_xe.pdf Graphic file (type pdf)
 <use xenon_files/fig_intensity_kr_xe.pdf>
-Package pdftex.def Info: xenon_files/fig_intensity_kr_xe.pdf  used on input line 661.
+Package pdftex.def Info: xenon_files/fig_intensity_kr_xe.pdf  used on input line 663.
 (pdftex.def)             Requested size: 345.0pt x 143.50691pt.
 
-Overfull \hbox (31.14305pt too wide) in paragraph at lines 687--687
+Overfull \hbox (31.14305pt too wide) in paragraph at lines 689--689
 []\OT1/cmr/bx/n/14.4 Aufgabe 3 -- Massen-spek-tren or-gan-is-cher Molek^^?ule 
  []
 
@@ -725,17 +725,17 @@ Overfull \hbox (31.14305pt too wide) in paragraph at lines 687--687
 [18]
 
 [19 <./xenon_files/fig_intensity_kr_xe.pdf>]
-Overfull \hbox (12.96356pt too wide) in paragraph at lines 728--734
+Overfull \hbox (12.96356pt too wide) in paragraph at lines 730--736
 \OT1/cmr/m/n/10 (Fragment-Ionen) und neu-trale Teilchen. Das re-sul-tierende Frag-men-tierungsmuster
  []
 
 <organik_files/fig_aceton_log.pdf, id=713, 787.74298pt x 390.25798pt>
 File: organik_files/fig_aceton_log.pdf Graphic file (type pdf)
 <use organik_files/fig_aceton_log.pdf>
-Package pdftex.def Info: organik_files/fig_aceton_log.pdf  used on input line 753.
+Package pdftex.def Info: organik_files/fig_aceton_log.pdf  used on input line 755.
 (pdftex.def)             Requested size: 345.0pt x 170.92204pt.
 
-Underfull \hbox (badness 1019) in paragraph at lines 756--756
+Underfull \hbox (badness 1019) in paragraph at lines 758--758
 []\OT1/cmr/m/n/10 Figure 12: |Massen-spek-trum von Ace-ton (C$[]$H$[]$O, $\OML/cmm/m/it/10 M \OT1/cmr/m/n/10 = 58$) und Hin-
  []
 
@@ -747,27 +747,27 @@ Underfull \hbox (badness 1019) in paragraph at lines 756--756
 <organik_files/fig_chloroform_log.pdf, id=781, 787.74298pt x 390.25798pt>
 File: organik_files/fig_chloroform_log.pdf Graphic file (type pdf)
 <use organik_files/fig_chloroform_log.pdf>
-Package pdftex.def Info: organik_files/fig_chloroform_log.pdf  used on input line 828.
+Package pdftex.def Info: organik_files/fig_chloroform_log.pdf  used on input line 830.
 (pdftex.def)             Requested size: 345.0pt x 170.92204pt.
 <organik_files/fig_chlor_isotope.pdf, id=782, 860.01299pt x 322.32419pt>
 File: organik_files/fig_chlor_isotope.pdf Graphic file (type pdf)
 <use organik_files/fig_chlor_isotope.pdf>
-Package pdftex.def Info: organik_files/fig_chlor_isotope.pdf  used on input line 848.
+Package pdftex.def Info: organik_files/fig_chlor_isotope.pdf  used on input line 850.
 (pdftex.def)             Requested size: 345.0pt x 129.30118pt.
 
 
 [22 <./organik_files/fig_chloroform_log.pdf>]
-Overfull \hbox (32.67656pt too wide) in paragraph at lines 893--898
+Overfull \hbox (32.67656pt too wide) in paragraph at lines 895--900
 \OT1/cmr/m/n/10 80$) die Er-fas-sung des Molek^^?ulions CHCl$[]$ ($\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 119$) und des CHCl$[]$-Hauptfragments
  []
 
 
-Overfull \hbox (19.27452pt too wide) in paragraph at lines 900--900
+Overfull \hbox (19.27452pt too wide) in paragraph at lines 902--902
 []\OT1/cmr/bx/n/14.4 Aufgabe 4 -- Iden-ti-fika-tion un-bekan-nter Molek^^?ule 
  []
 
 
-Overfull \hbox (1.02838pt too wide) in paragraph at lines 905--912
+Overfull \hbox (1.02838pt too wide) in paragraph at lines 907--914
 \OT1/cmr/m/n/10 cher oder anor-gan-is-cher Sub-stanzen (ver-dampfte Fl^^?ussigkeiten) aus den Flaschen
  []
 
@@ -777,12 +777,12 @@ Overfull \hbox (1.02838pt too wide) in paragraph at lines 905--912
 <unbekannt_files/fig_f12.pdf, id=906, 787.74298pt x 390.25798pt>
 File: unbekannt_files/fig_f12.pdf Graphic file (type pdf)
 <use unbekannt_files/fig_f12.pdf>
-Package pdftex.def Info: unbekannt_files/fig_f12.pdf  used on input line 935.
+Package pdftex.def Info: unbekannt_files/fig_f12.pdf  used on input line 937.
 (pdftex.def)             Requested size: 345.0pt x 170.92204pt.
 <unbekannt_files/fig_f15.pdf, id=907, 787.74298pt x 390.25798pt>
 File: unbekannt_files/fig_f15.pdf Graphic file (type pdf)
 <use unbekannt_files/fig_f15.pdf>
-Package pdftex.def Info: unbekannt_files/fig_f15.pdf  used on input line 944.
+Package pdftex.def Info: unbekannt_files/fig_f15.pdf  used on input line 946.
 (pdftex.def)             Requested size: 345.0pt x 170.92204pt.
 
 
@@ -790,17 +790,17 @@ Package pdftex.def Info: unbekannt_files/fig_f15.pdf  used on input line 944.
 <unbekannt_files/fig_vergleich.pdf, id=967, 787.74298pt x 390.25798pt>
 File: unbekannt_files/fig_vergleich.pdf Graphic file (type pdf)
 <use unbekannt_files/fig_vergleich.pdf>
-Package pdftex.def Info: unbekannt_files/fig_vergleich.pdf  used on input line 993.
+Package pdftex.def Info: unbekannt_files/fig_vergleich.pdf  used on input line 995.
 (pdftex.def)             Requested size: 345.0pt x 170.92204pt.
 
 
 [25 <./unbekannt_files/fig_f15.pdf>]
-Overfull \hbox (3.39851pt too wide) in paragraph at lines 1013--1022
+Overfull \hbox (3.39851pt too wide) in paragraph at lines 1015--1024
 []\OT1/cmr/m/n/10 Die Fragment-Serie ($\OML/cmm/m/it/10 m=z \OT1/cmr/m/n/10 = 27\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 29\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 39\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 41\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 43\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 56$) ist charak-ter-is-tisch f^^?ur aliphatis-
  []
 
 
-Overfull \hbox (7.62897pt too wide) in paragraph at lines 1013--1022
+Overfull \hbox (7.62897pt too wide) in paragraph at lines 1015--1024
 \OML/cmm/m/it/10 M \OT1/cmr/m/n/10 = 100$), bei de-nen der Basis-Peak durch $\OML/cmm/m/it/10 $\OT1/cmr/m/n/10 -Spaltung zum Acylium-Ion CH$[]$CO$[]$
  []
 
@@ -813,19 +813,19 @@ Overfull \hbox (7.62897pt too wide) in paragraph at lines 1013--1022
 [28]
 
 [29]
-Overfull \hbox (3.38945pt too wide) in paragraph at lines 1209--1212
+Overfull \hbox (3.38945pt too wide) in paragraph at lines 1211--1214
 \OT1/cmr/m/n/10 Innerhalb von etwa $41 []$ bleiben die Mess-be-din-gun-gen also n^^?aherungsweise
  []
 
 
 
 [30]
-Overfull \hbox (3.31404pt too wide) in paragraph at lines 1218--1218
+Overfull \hbox (3.31404pt too wide) in paragraph at lines 1220--1220
 []\OT1/cmr/m/n/10 Wikipedia con-trib-u-tors. \OT1/cmr/m/it/10 Mit-tlere freie Wegl^^?ange\OT1/cmr/m/n/10 . Ac-cessed: 2026-04-27. 2024.
  []
 
 
-Overfull \hbox (58.9718pt too wide) in paragraph at lines 1218--1218
+Overfull \hbox (58.9718pt too wide) in paragraph at lines 1220--1220
 \OT1/cmr/m/n/10 04-27. 2024. \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : $\OT1/cmtt/m/n/10 https : / / de . wikipedia . org / wiki / Quadrupol -[] Massenspektrometer$\OT1/cmr/m/n/10 . 
  []
 
@@ -849,7 +849,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  67i,11n,81p,1214b,1287s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (31 pages, 1159057 bytes).
+Output written on main.pdf (31 pages, 1159175 bytes).
 PDF statistics:
  1180 PDF objects out of 1200 (max. 8388607)
  294 compressed objects within 3 object streams

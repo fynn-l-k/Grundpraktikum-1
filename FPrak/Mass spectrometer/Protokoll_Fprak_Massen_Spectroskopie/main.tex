@@ -265,6 +265,7 @@ Als bester Einzelwert wird die Messung bei $0{,}4\,\mathrm{mbar}$ (Kr$^+$)
 bzw.\ $5\,\mathrm{mbar}$ (Kr$^{2+}$) angegeben, da diese den besten
 Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
 
+% Benötigt in der Präambel: \usepackage{adjustbox}
 
 % ── Tabelle 1: Kr+ ───────────────────────────────────────────────────────────
 \begin{table}[htbp]
@@ -274,27 +275,27 @@ Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
         $p = 0{,}4\,\mathrm{mbar}$.}
     \label{tab:kr1}
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{c r r r r r r r}
+    \begin{tabular}{c r r r r r r r r}
         \toprule
-        & \multicolumn{2}{c}{Gemessene RA [\%]}
+        & \multicolumn{3}{c}{Gemessene RA [\%]}
         & {Theorie [\%]}
         & \multicolumn{2}{c}{Absoluter Fehler [\%]}
         & \multicolumn{2}{c}{Relativer Fehler [\%]} \\
-        \cmidrule(lr){2-3}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+        \cmidrule(lr){2-4}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
         $A$
-        & Durchschn. & $0{,}4\,\mathrm{mbar}$
+        & Durchschn. & $\sigma$ & $0{,}4\,\mathrm{mbar}$
         &
         & Durchschn. & $0{,}4\,\mathrm{mbar}$
         & Durchschn. & $0{,}4\,\mathrm{mbar}$ \\
         \midrule
-        78 &  0.411 &  0.334 &  0.355 & $+$0.056 & $-$0.021 & $+$15.77 &  $-$5.92 \\
-        80 &  2.630 &  2.427 &  2.286 & $+$0.344 & $+$0.141 & $+$15.05 &  $+$6.17 \\
-        82 & 13.036 & 11.819 & 11.593 & $+$1.443 & $+$0.226 & $+$12.45 &  $+$1.95 \\
-        83 & 10.538 & 11.780 & 11.500 & $-$0.962 & $+$0.280 &  $-$8.37 &  $+$2.43 \\
-        84 & 56.203 & 57.295 & 56.987 & $-$0.784 & $+$0.308 &  $-$1.38 &  $+$0.54 \\
-        86 & 17.182 & 16.346 & 17.279 & $-$0.097 & $-$0.933 &  $-$0.56 &  $-$5.40 \\
+        78 &  0.411 & 0.179 &  0.334 &  0.355 & $+$0.056 & $-$0.021 & $+$15.77 &  $-$5.92 \\
+        80 &  2.630 & 0.380 &  2.427 &  2.286 & $+$0.344 & $+$0.141 & $+$15.05 &  $+$6.17 \\
+        82 & 13.036 & 0.817 & 11.819 & 11.593 & $+$1.443 & $+$0.226 & $+$12.45 &  $+$1.95 \\
+        83 & 10.538 & 2.955 & 11.780 & 11.500 & $-$0.962 & $+$0.280 &  $-$8.37 &  $+$2.43 \\
+        84 & 56.203 & 2.941 & 57.295 & 56.987 & $-$0.784 & $+$0.308 &  $-$1.38 &  $+$0.54 \\
+        86 & 17.182 & 0.782 & 16.346 & 17.279 & $-$0.097 & $-$0.933 &  $-$0.56 &  $-$5.40 \\
         \midrule
-        $\sum$ & 100.000 & 100.001 & 100.000 & & & & \\
+        $\sum$ & 100.000 & & 100.001 & 100.000 & & & & \\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -335,7 +336,6 @@ Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
 \end{table}
 
 
-
 \subsubsection*{Fehleranalyse}
 
 Die Kr$^+$-Messung (Tabelle~\ref{tab:kr1}) zeigt f\"ur die beste
@@ -348,7 +348,9 @@ der $^{84}$Kr-Peak in S\"attigung geht, wird seine Peakh\"ohe
 unterschätzt, und die Normierung verschiebt alle anderen Werte nach oben.
 Die gr\"o\ss{}te Standardabweichung zeigt $^{83}$Kr mit $\sigma = 2{,}955\,\%$,
 was auf die Kr-Kontamination im Hintergrundspektrum zur\"uckzuf\"uhren
-ist (siehe Abschnitt zur Hintergrundmessung). Die Kr$^{2+}$-Auswertung (Tabelle~\ref{tab:kr2}) zeigt deutlich gr\"o\ss{}ere
+ist (siehe Abschnitt zur Hintergrundmessung).
+
+Die Kr$^{2+}$-Auswertung (Tabelle~\ref{tab:kr2}) zeigt deutlich gr\"o\ss{}ere
 Abweichungen. Die Ursachen sind:
 
 \begin{itemize}
@@ -372,10 +374,10 @@ Abweichungen. Die Ursachen sind:
     \item \textbf{$^{78}$Kr$^{2+}$, $^{80}$Kr$^{2+}$, $^{86}$Kr$^{2+}$:}
         Diese Isotope sind im Kr$^{2+}$-Spektrum sehr schwach und
         verschwinden bei niedrigen Dr\"ucken im Grundrauschen.
-        Die Mittelwerte weichen stark von der Theorie ab; der beste
-        Einzelwert bei $5\,\mathrm{mbar}$ liefert f\"ur $^{82}$Kr und
-        $^{86}$Kr noch akzeptable Ergebnisse ($-4{,}7\,\%$ und
-        $-33{,}2\,\%$).
+        Die Mittelwerte weichen stark von der Theorie ab; lediglich
+        der beste Einzelwert bei $5\,\mathrm{mbar}$ liefert f\"ur
+        $^{82}$Kr ein noch akzeptables Ergebnis ($-4{,}7\,\%$),
+        w\"ahrend $^{86}$Kr mit $-33{,}2\,\%$ deutlich abweicht.
 \end{itemize}
 
 Zusammenfassend ist die Kr$^+$-Messung bei mittleren Dr\"ucken
