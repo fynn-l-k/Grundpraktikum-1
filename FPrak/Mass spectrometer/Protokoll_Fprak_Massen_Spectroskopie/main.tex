@@ -4,6 +4,7 @@
 \usepackage{booktabs}
 \usepackage{adjustbox}
 \usepackage{amssymb}
+\usepackage{amsmath}
 
 \title{Mass Spectroscopy on Gases and simple Organic Molecules \\
 Advanced Physics Laboratory}
@@ -683,10 +684,532 @@ Krypton, aber die niedrigste Xe-Messstufe nähert sich diesem Wert bereits
 deutlich an.
 
 
+\section{Aufgabe 3 -- Massenspektren organischer Moleküle}
 
-\section{Aufgabe 3}
-\section{Aufgabe 4}
-\section{Aufgabe 5}
+% Dieser Abschnitt gehört VOR Aufgabe 3 (Massenspektren organischer Moleküle)
+
+\subsection*{Anmerkung zum gewählten Massenbereich}
+
+Im Praktikum wurde uns die Vorgabe gemacht, die Massenspektren der
+organischen Moleküle nur bis zu einem Masse-zu-Ladungs-Verhältnis von
+$m/z = 80$ aufzunehmen.
+Erst im Nachhinein, bei der Auswertung, ist uns aufgefallen, dass
+dieser Bereich für mehrere der untersuchten Substanzen nicht ausreicht:
+Das Molekülion sowie wichtige hochmassige Fragment-Ionen können bei
+organischen Molekülen durchaus oberhalb von $m/z = 80$ liegen.
+So besitzt beispielsweise Chloroform (CHCl$_3$) ein Molekülion bei
+$m/z = 119$ und ein Hauptfragment CHCl$_2^+$ bei $m/z = 83$--$87$;
+beide liegen vollständig außerhalb des gemessenen Bereichs.
+
+Diese Einschränkung betrifft insbesondere die Identifikation der
+unbekannten Substanzen (Abschnitt~\ref{sec:unbekannt}): Fehlt das
+Molekülion, so geht eine zentrale Information für die eindeutige
+Zuordnung verloren, und die Identifikation muss sich allein auf die
+niedermassigen Fragment-Ionen stützen.
+Für eine vollständige Charakterisierung hätte der Scan-Bereich bis
+mindestens $m/z = 120$--$150$ reichen müssen.
+Wir weisen an den betreffenden Stellen ausdrücklich auf diese
+Limitierung hin.
+
+
+
+\subsection*{Aufgabenstellung}
+
+In diesem Versuchsteil werden die Massenspektren zweier bekannter
+organischer Moleküle aufgenommen und ausgewertet.
+Zu bestimmen sind die Schlüsselionen (charakteristische Fragment-Ionen),
+die sonstigen Fragment-Ionen sowie gegebenenfalls auftretende
+Isotopenmuster.
+Untersucht wurden die Substanzen aus Flasche~Nr.~20 (\textbf{Aceton},
+C$_3$H$_6$O) und Flasche~Nr.~4 (\textbf{Chloroform}, CHCl$_3$).
+Beide wurden bei einem Druck von $\approx 10\,\mathrm{mbar}$ gemessen;
+vor jeder Messung wurde ein Hintergrundspektrum aufgenommen.
+
+Bei der Elektronenstoß-Ionisation wird den Molekülen deutlich mehr
+Energie zugeführt als zur reinen Ionisation nötig ist. Diese
+Überschussenergie führt zur Fragmentierung: das Molekülion M$^+$
+zerfällt in kleinere geladene Bruchstücke (Fragment-Ionen) und
+neutrale Teilchen. Das resultierende Fragmentierungsmuster ist für
+jede Substanz charakteristisch und erlaubt ihre Identifikation.
+
+% ═══════════════════════════════════════════════════════════════════
+\subsection{Aceton (C$_3$H$_6$O)}
+
+\subsubsection*{Messung}
+
+Abbildung~\ref{fig:aceton_log} zeigt das gemessene Aceton-Spektrum
+(rot) gemeinsam mit dem zuvor aufgenommenen Hintergrundspektrum (grau,
+gestrichelt) in logarithmischer Darstellung.
+Das Aceton-Signal übersteigt den Hintergrund über den gesamten
+relevanten Bereich um mehrere Größenordnungen, sodass die
+charakteristischen Peaks klar erkennbar sind.
+Der Hintergrund trägt im Wesentlichen nur die üblichen Residualgas-Peaks
+(H$_2$O bei $m/z = 18$, N$_2$ bei $m/z = 28$, O$_2$ bei $m/z = 32$) bei.
+Das Molekülion liegt bei $m/z = 58$, der intensivste Peak (Basis-Peak)
+bei $m/z = 43$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{organik_files/fig_aceton_log}
+    \caption{Massenspektrum von Aceton (C$_3$H$_6$O, $M = 58$) und
+        Hintergrundspektrum, logarithmisch dargestellt. Markiert sind
+        die wichtigsten Schlüsselionen.}
+    \label{fig:aceton_log}
+\end{figure}
+
+\subsubsection*{Isotopenmuster}
+
+Aceton enthält drei Kohlenstoffatome. Da $^{13}$C mit einer natürlichen
+Häufigkeit von etwa $1{,}1\,\%$ vorkommt, erscheint neben jedem
+kohlenstoffhaltigen Peak ein schwacher Satellitenpeak bei $m/z + 1$
+(das sogenannte M+1-Isotopenmuster).
+Für das Molekülion erwartet man bei drei C-Atomen ein Verhältnis von
+$\approx 3 \times 1{,}1\,\% = 3{,}3\,\%$, für das Acylium-Fragment
+(zwei C-Atome) entsprechend $\approx 2{,}2\,\%$.
+Gemessen wurde für den Acylium-Peak ein Verhältnis
+$I_{44}/I_{43} = 3{,}4\,\%$, was die Größenordnung gut bestätigt.
+Das $^{13}$C-Muster ist allerdings deutlich schwächer ausgeprägt als
+das Chlor-Isotopenmuster (siehe unten) und spielt für die
+Identifikation eine untergeordnete Rolle.
+
+\subsubsection*{Schlüssel- und Fragment-Ionen}
+
+Das Fragmentierungsmuster lässt sich vollständig erklären.
+Der \textbf{Basis-Peak} bei $m/z = 43$ entsteht durch Abspaltung einer
+Methylgruppe (CH$_3$, $\Delta m = 15$) vom Molekülion und entspricht
+dem besonders stabilen Acylium-Kation CH$_3$CO$^+$.
+Dieses kann durch weitere Abspaltung von CO ($\Delta m = 28$) zum
+Methyl-Kation CH$_3^+$ bei $m/z = 15$ zerfallen.
+Der Peak bei $m/z = 42$ entspricht dem Verlust von CH$_4$ aus dem
+Molekülion (Keten-Kation CH$_2$CO$^+$).
+Die weiteren, schwächeren Fragmente bei $m/z = 26$--$39$ entstehen
+durch Abspaltung von Wasserstoff und weiteren Umlagerungen der
+Kohlenwasserstoff-Reste.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Schlüssel- und Fragment-Ionen von Aceton, normiert auf den
+        Basis-Peak ($m/z = 43$).}
+    \label{tab:aceton}
+    \begin{tabular}{c l r}
+        \toprule
+        $m/z$ & Ion / Zuordnung & Rel.\ Intensität [\%] \\
+        \midrule
+        15 & CH$_3^+$ (Methyl-Kation)                       &  34.2 \\
+        26 & C$_2$H$_2^+$                                    &   5.7 \\
+        27 & C$_2$H$_3^+$                                    &   8.8 \\
+        38 & C$_3$H$_2^+$                                    &  13.3 \\
+        39 & C$_3$H$_3^+$                                    &  17.6 \\
+        42 & CH$_2$CO$^+$ (Keten, Verlust von CH$_4$)        &  10.6 \\
+        43 & CH$_3$CO$^+$ (Acylium, \textbf{Basis-Peak})     & 100.0 \\
+        44 & $^{13}$C-Satellit von $m/z = 43$                &   3.4 \\
+        58 & C$_3$H$_6$O$^+$ (\textbf{Molekülion})           &  31.4 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ═══════════════════════════════════════════════════════════════════
+\subsection{Chloroform (CHCl$_3$)}
+
+\subsubsection*{Messung}
+
+Abbildung~\ref{fig:chloroform_log} zeigt das gemessene
+Chloroform-Spektrum (blau) gemeinsam mit dem Hintergrundspektrum (grau,
+gestrichelt) in logarithmischer Darstellung.
+Hier ist zu beachten, dass der gewählte Scan-Bereich nur bis
+$m/z = 80$ reichte. Das Molekülion CHCl$_3^+$ ($M = 119$) sowie das
+wichtigste Fragment CHCl$_2^+$ ($m/z = 83/85/87$) liegen daher
+außerhalb des Messbereichs und konnten nicht erfasst werden.
+Im gemessenen Bereich dominieren die Fragmente CCl$^+$ und CHCl$^+$
+sowie das freie Cl$^+$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{organik_files/fig_chloroform_log}
+    \caption{Massenspektrum von Chloroform (CHCl$_3$, $M = 119$) und
+        Hintergrundspektrum, logarithmisch dargestellt. Der Scan reichte
+        nur bis $m/z = 80$, sodass das Molekülion nicht erfasst wurde.}
+    \label{fig:chloroform_log}
+\end{figure}
+
+\subsubsection*{Isotopenmuster}
+
+Das auffälligste Merkmal des Chloroform-Spektrums ist das
+charakteristische Chlor-Isotopenmuster.
+Chlor besitzt zwei stabile Isotope, $^{35}$Cl ($75{,}8\,\%$) und
+$^{37}$Cl ($24{,}2\,\%$), deren natürliches Häufigkeitsverhältnis
+$^{35}$Cl$\,:\,^{37}$Cl $\approx 3{,}13\,:\,1$ beträgt.
+Jedes chlorhaltige Fragment erscheint daher als Doppelpeak im Abstand
+von zwei Masseneinheiten, dessen Intensitätsverhältnis dieses
+Isotopenverhältnis widerspiegelt (Abbildung~\ref{fig:chlor_isotope}).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{organik_files/fig_chlor_isotope}
+    \caption{Chlor-Isotopenmuster im Chloroform-Spektrum.
+        (a) CCl$^+$/CHCl$^+$-Bereich; (b) Cl$^+$-Bereich.
+        Die gemessenen Intensitätsverhältnisse stimmen gut mit dem
+        theoretischen Wert von $3{,}13$ überein.}
+    \label{fig:chlor_isotope}
+\end{figure}
+
+Für das CCl$^+$-Fragment ergibt sich ein gemessenes Verhältnis von
+$I_{47}/I_{49} = 3{,}03$, für das freie Cl$^+$ ein Verhältnis von
+$I_{35}/I_{37} = 3{,}16$ -- beide stimmen sehr gut mit dem
+theoretischen Wert von $3{,}13$ überein und bestätigen damit die
+Zuordnung der Peaks zu chlorhaltigen Fragmenten.
+
+\subsubsection*{Schlüssel- und Fragment-Ionen}
+
+Da das Molekülion und das CHCl$_2^+$-Hauptfragment außerhalb des
+Messbereichs lagen, ist der intensivste erfasste Peak das
+CCl$^+$-Fragment bei $m/z = 47$, das hier als Basis-Peak dient.
+Es entsteht durch Abspaltung von H und zwei Cl-Atomen.
+Das CHCl$^+$-Fragment bei $m/z = 48$ trägt zusätzlich ein
+Wasserstoffatom.
+Bei kleineren Massen tritt das freie Cl$^+$ bei $m/z = 35$ auf.
+Alle chlorhaltigen Fragmente zeigen das oben beschriebene
+Isotopen-Doppelpeak-Muster.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Schlüssel- und Fragment-Ionen von Chloroform im gemessenen
+        Bereich, normiert auf den Basis-Peak ($m/z = 47$).}
+    \label{tab:chloroform}
+    \begin{tabular}{c l r}
+        \toprule
+        $m/z$ & Ion / Zuordnung & Rel.\ Intensität [\%] \\
+        \midrule
+        35 & $^{35}$Cl$^+$                              &  42.1 \\
+        37 & $^{37}$Cl$^+$                              &  13.3 \\
+        47 & C$^{35}$Cl$^+$ (\textbf{Basis-Peak})       & 100.0 \\
+        48 & CH$^{35}$Cl$^+$                            &  43.7 \\
+        49 & C$^{37}$Cl$^+$                             &  33.0 \\
+        50 & CH$^{37}$Cl$^+$                            &  13.9 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Einschränkend ist anzumerken, dass der zu klein gewählte Scan-Bereich
+($m/z \leq 80$) die Erfassung des Molekülions CHCl$_3^+$ ($m/z = 119$)
+und des CHCl$_2^+$-Hauptfragments ($m/z = 83$) verhinderte; für eine
+vollständige Charakterisierung hätte der Bereich bis mindestens
+$m/z = 120$ reichen müssen.
+
+
+\section{Aufgabe 4 -- Identifikation unbekannter Moleküle}
+\label{sec:unbekannt}
+
+\subsection*{Aufgabenstellung}
+
+In diesem Versuchsteil werden die Massenspektren zweier unbekannter
+organischer oder anorganischer Substanzen (verdampfte Flüssigkeiten)
+aus den Flaschen Nr.~12 und Nr.~15 aufgenommen.
+Ziel ist die Identifikation der Moleküle anhand ihrer Schlüssel- und
+Fragment-Ionen.
+Zur Auswertung wurde jeweils ein Hintergrundspektrum aufgenommen und
+abgezogen, und die Spektren wurden auf ihren intensivsten Peak normiert.
+
+\textbf{Wichtige Einschränkung:} Wie im einleitenden Hinweis zum
+Massenbereich erläutert, wurde nur bis $m/z = 80$ gemessen.
+Wie sich zeigt, liegen die entscheidenden hochmassigen Fragmente und
+das Molekülion beider Substanzen vermutlich oberhalb dieser Grenze,
+sodass eine \emph{eindeutige} Identifikation aus den vorliegenden Daten
+nicht möglich ist. Wir geben daher die wahrscheinlichste Zuordnung an
+und begründen, warum die Daten nicht ausreichen.
+
+\subsection*{Messung}
+
+Die Abbildungen~\ref{fig:f12} und \ref{fig:f15} zeigen die Spektren
+der Flaschen 12 und 15 jeweils gemeinsam mit dem Hintergrundspektrum.
+Beide Substanzen liefern ein nahezu identisches Fragmentierungsmuster
+mit dem Basis-Peak bei $m/z = 43$ und weiteren deutlichen Peaks bei
+$m/z = 15, 27, 39, 41, 42, 56$ und $58$.
+Auffällig ist, dass oberhalb von $m/z \approx 60$ praktisch kein Signal
+mehr auftritt -- entweder besitzt die Substanz dort tatsächlich keine
+Fragmente, oder das Molekülion liegt jenseits der Messgrenze von
+$m/z = 80$ und wurde nicht erfasst.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{unbekannt_files/fig_f12}
+    \caption{Massenspektrum der Substanz aus Flasche 12 und
+        Hintergrundspektrum, logarithmisch. Die rote gepunktete Linie
+        markiert das Ende des gemessenen Bereichs ($m/z = 80$).}
+    \label{fig:f12}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{unbekannt_files/fig_f15}
+    \caption{Massenspektrum der Substanz aus Flasche 15 und
+        Hintergrundspektrum, logarithmisch. Die rote gepunktete Linie
+        markiert das Ende des gemessenen Bereichs ($m/z = 80$).}
+    \label{fig:f15}
+\end{figure}
+
+\subsection*{Analyse der Schlüssel- und Fragment-Ionen}
+
+Der Basis-Peak bei $m/z = 43$ ist mehrdeutig: er kann sowohl dem
+Acylium-Kation CH$_3$CO$^+$ (charakteristisch für Ketone) als auch dem
+Propyl-Kation C$_3$H$_7^+$ (charakteristisch für Alkane/Alkylketten)
+zugeordnet werden.
+Die Peakserie bei $m/z = 39$ (C$_3$H$_3^+$), $41$ (C$_3$H$_5^+$,
+Allyl-Kation) und $27$ (C$_2$H$_3^+$) ist typisch für
+Kohlenwasserstoff-Fragmente.
+Der deutliche Peak bei $m/z = 56$ (C$_4$H$_8^+$) deutet auf ein
+Molekül mit einer C$_4$-Einheit hin.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Schlüssel- und Fragment-Ionen der unbekannten Substanzen,
+        normiert auf den Basis-Peak ($m/z = 43$).}
+    \label{tab:unbekannt}
+    \begin{tabular}{c l r r}
+        \toprule
+        $m/z$ & mögliche Zuordnung & Flasche 12 [\%] & Flasche 15 [\%] \\
+        \midrule
+        15 & CH$_3^+$                       &  34.2 &  39.1 \\
+        27 & C$_2$H$_3^+$                    &  15.4 &  13.2 \\
+        29 & C$_2$H$_5^+$ / CHO$^+$          &   9.7 &   8.8 \\
+        39 & C$_3$H$_3^+$                    &  23.1 &  22.6 \\
+        41 & C$_3$H$_5^+$ (Allyl)            &  22.4 &  15.3 \\
+        42 & C$_3$H$_6^+$ / C$_2$H$_2$O$^+$  &  16.9 &  15.2 \\
+        43 & C$_3$H$_7^+$ / CH$_3$CO$^+$ (\textbf{Basis}) & 100.0 & 100.0 \\
+        56 & C$_4$H$_8^+$                    &  28.7 &  16.9 \\
+        58 & C$_3$H$_6$O$^+$ / C$_4$H$_{10}^+$ &  28.1 &  28.0 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection*{Diskussion der Identifikation}
+
+Zum Vergleich zeigt Abbildung~\ref{fig:vergleich} die beiden
+unbekannten Spektren gemeinsam mit dem zuvor gemessenen Aceton-Spektrum
+(Flasche 20).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{unbekannt_files/fig_vergleich}
+    \caption{Vergleich der Spektren von Flasche 12, Flasche 15 und
+        Aceton (Flasche 20), normiert auf $m/z = 43$.
+        Der Peak bei $m/z = 56$ ist bei den unbekannten Substanzen
+        deutlich stärker als bei Aceton.}
+    \label{fig:vergleich}
+\end{figure}
+
+Auf den ersten Blick ähneln die Spektren dem von Aceton (Basis-Peak bei
+$m/z = 43$, Peak bei $m/z = 58$).
+Ein genauerer Vergleich zeigt jedoch einen wesentlichen Unterschied:
+Der Peak bei $m/z = 56$ ist bei den unbekannten Substanzen mit
+$17$--$29\,\%$ deutlich ausgeprägt, während er bei reinem Aceton mit
+unter $1\,\%$ praktisch fehlt.
+Ebenso sind die Peaks bei $m/z = 39$ und $41$ deutlich stärker als bei
+Aceton.
+Dies schließt reines Aceton als Erklärung aus und deutet auf einen
+gesättigten oder ungesättigten Kohlenwasserstoff bzw.\ ein größeres
+Keton hin, dessen Molekülion oberhalb von $m/z = 80$ liegt.
+
+Die Fragment-Serie ($m/z = 27, 29, 39, 41, 43, 56$) ist charakteristisch
+für aliphatische C$_4$--C$_6$-Verbindungen.
+Eine plausible Zuordnung wäre ein Keton der Methyl-Ketonen-Reihe
+(z.\,B.\ 2-Pentanon C$_5$H$_{10}$O, $M = 86$, oder 2-Hexanon
+C$_6$H$_{12}$O, $M = 100$), bei denen der Basis-Peak durch
+$\alpha$-Spaltung zum Acylium-Ion CH$_3$CO$^+$ ($m/z = 43$) entsteht
+und der McLafferty-Umlagerung ein Fragment bei $m/z = 58$ liefert.
+Das Molekülion läge in beiden Fällen oberhalb von $m/z = 80$ und wurde
+daher nicht erfasst.
+
+Die beiden Substanzen unterscheiden sich nur geringfügig: Flasche~15
+zeigt einen erhöhten Wasser-Peak ($m/z = 18$) und einen etwas
+schwächeren $m/z = 56$-Peak als Flasche~12, was auf leicht
+unterschiedliche Verbindungen oder Verunreinigungen hindeutet.
+
+\subsection*{Fazit}
+
+Eine eindeutige Identifikation der beiden unbekannten Substanzen ist
+mit den vorliegenden Daten \textbf{nicht möglich}, da der auf
+$m/z = 80$ begrenzte Messbereich das Molekülion und die hochmassigen
+Fragmente nicht erfasst hat.
+Anhand des Fragmentierungsmusters (Basis-Peak $m/z = 43$, Serie bei
+$39, 41, 56, 58$) lässt sich jedoch mit hoher Wahrscheinlichkeit
+ausschließen, dass es sich um reines Aceton handelt; die Daten deuten
+vielmehr auf ein größeres aliphatisches Keton oder einen
+Kohlenwasserstoff hin.
+Für eine sichere Bestimmung wäre eine Wiederholung der Messung mit
+einem erweiterten Massenbereich (mindestens bis $m/z = 120$--$150$)
+erforderlich.
+
+
+
+
+\section{Aufgabe 5 -- Theoretische Aufgaben}
+
+\subsection*{Aufgabenstellung}
+
+Zum Verständnis des Funktionsprinzips des Quadrupol-Massenspektrometers
+und des Gaseinlasssystems sind die folgenden theoretischen Aufgaben zu
+lösen. Gegeben sind die Parameter:
+\begin{align*}
+    r_0 &= \frac{10}{\sqrt{2}}\,\mathrm{mm}, &
+    \frac{U_{\mathrm{DC}}}{U_{\mathrm{AC}}} &= 0{,}166, &
+    \nu &= 3\,\mathrm{MHz}, &
+    U_{\mathrm{bi}} &= 100\,\mathrm{V}.
+\end{align*}
+
+\subsection{Teil a}
+
+\subsubsection*{Maximale Massenauflösung $q$}
+
+Die Bewegung der Ionen im Quadrupol wird durch die Mathieu'sche
+Differentialgleichung beschrieben, deren Stabilitätsparameter
+\begin{equation}
+    a = \frac{8eU_{\mathrm{DC}}}{m\,\omega^2 r_0^2}, \qquad
+    q = \frac{4eU_{\mathrm{AC}}}{m\,\omega^2 r_0^2}
+\end{equation}
+lauten. Das Verhältnis von Gleich- zu Wechselspannung legt die Steigung
+der Arbeitsgeraden im Stabilitätsdiagramm fest:
+\begin{equation}
+    \frac{a}{q} = \frac{2U_{\mathrm{DC}}}{U_{\mathrm{AC}}}
+    = 2 \cdot 0{,}166 = 0{,}332.
+\end{equation}
+Die Arbeitsgerade schneidet die Spitze der ersten Stabilitätszone, die
+bei $q_{\mathrm{max}} \approx 0{,}706$ (mit $a \approx 0{,}237$) liegt.
+Dies ist der Wert maximaler Massenauflösung.
+
+\subsubsection*{Notwendige Wechselspannung $U_{\mathrm{AC}}$ pro Massenzahl}
+
+Mit $m = M \cdot u$ (atomare Masseneinheit $u = 1{,}66 \times 10^{-27}\,
+\mathrm{kg}$) und $\omega = 2\pi\nu$ folgt aus der Definition von $q$:
+\begin{equation}
+    \frac{U_{\mathrm{AC}}}{M}
+    = \frac{q_{\mathrm{max}}\,u\,\omega^2 r_0^2}{4e}
+    \approx 32{,}5\,\mathrm{V}.
+\end{equation}
+Pro Massenzahl muss die Amplitude der Wechselspannung also um etwa
+$32{,}5\,\mathrm{V}$ erhöht werden, um das entsprechende Ion zu
+selektieren.
+
+\subsubsection*{Minimale Quadrupollänge für 20 Perioden (Masse 4)}
+
+Die Ionen werden durch die Beschleunigungsspannung $U_{\mathrm{bi}}$ auf
+\begin{equation}
+    v = \sqrt{\frac{2eU_{\mathrm{bi}}}{m}}
+      = \sqrt{\frac{2eU_{\mathrm{bi}}}{M u}}
+\end{equation}
+beschleunigt. Für Masse $M = 4$ ergibt sich
+$v = 6{,}95 \times 10^{4}\,\mathrm{m/s}$.
+Die Anzahl der Feldperioden, die ein Ion beim Durchlaufen der Länge $L$
+erfährt, ist $N = \nu L / v$. Aufgelöst nach $L$ für $N = 20$:
+\begin{equation}
+    L = \frac{N v}{\nu}
+      = \frac{20 \cdot 6{,}95 \times 10^4\,\mathrm{m/s}}{3 \times 10^6\,\mathrm{Hz}}
+      \approx 0{,}463\,\mathrm{m} = 46{,}3\,\mathrm{cm}.
+\end{equation}
+
+\subsubsection*{Anzahl der Perioden für verschiedene Ionen}
+
+Mit der oben bestimmten Länge $L = 0{,}463\,\mathrm{m}$ und
+\begin{equation}
+    N = \frac{\nu L}{v}
+      = \nu L \sqrt{\frac{M u}{2 N_c e U_{\mathrm{bi}}}}
+\end{equation}
+(wobei $N_c$ die Ladungszahl ist) ergeben sich die in
+Tabelle~\ref{tab:perioden} aufgelisteten Werte.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Geschwindigkeit und Anzahl der durchlaufenen Feldperioden
+        für verschiedene Ionen bei $L = 0{,}463\,\mathrm{m}$.}
+    \label{tab:perioden}
+    \begin{tabular}{l c c r r}
+        \toprule
+        Ion & $M$ & $N_c$ & $v$ [km/s] & Perioden $N$ \\
+        \midrule
+        Ne$^+$   &  20 & 1 & 31.06 &  44.72 \\
+        Ne$^{++}$ & 20 & 2 & 43.93 &  31.62 \\
+        Ar$^+$   &  40 & 1 & 21.96 &  63.25 \\
+        Ar$^{++}$ & 40 & 2 & 31.06 &  44.72 \\
+        Kr$^+$   &  84 & 1 & 15.16 &  91.65 \\
+        Xe$^+$   & 131 & 1 & 12.14 & 114.46 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Schwerere Ionen durchlaufen mehr Perioden, da sie langsamer sind und
+sich länger im Feld aufhalten. Bei gleicher Masse durchläuft das
+doppelt geladene Ion weniger Perioden, da es stärker beschleunigt wird
+und daher schneller ist.
+
+\subsection{Teil b}
+
+Gegeben sind das Volumen der Probennahmekammer $V = 10^{-3}\,\mathrm{m^3}$,
+der Druck $P = 133\,\mathrm{Pa}$ und die Gaseinlassrate
+$Q = 2{,}7 \times 10^{-6}\,\mathrm{Pa\,m^3/s}$ (gleich der Pumprate am
+Analysator).
+
+\subsubsection*{Anzahl der Gasteilchen pro Sekunde}
+
+Aus der idealen Gasgleichung $PV = N k_B T$ und der Definition der
+Gaseinlassrate $Q = PV/t$ folgt bei Raumtemperatur
+($T = 293{,}15\,\mathrm{K}$):
+\begin{equation}
+    \frac{N}{t} = \frac{Q}{k_B T}
+    = \frac{2{,}7 \times 10^{-6}\,\mathrm{Pa\,m^3/s}}
+           {1{,}38 \times 10^{-23}\,\mathrm{J/K} \cdot 293{,}15\,\mathrm{K}}
+    \approx 6{,}67 \times 10^{14}\,\mathrm{s^{-1}}.
+\end{equation}
+Es gelangen also etwa $6{,}7 \times 10^{14}$ Gasteilchen pro Sekunde in
+die Ionenquelle.
+
+\subsubsection*{Gasdruck im Analysator}
+
+Im Gleichgewicht ist die Gaseinlassrate gleich dem Produkt aus
+Saugleistung $S = 2 \times 10^{-3}\,\mathrm{m^3/s}$ und dem Druck im
+Analysator:
+\begin{equation}
+    P_{\mathrm{ana}} = \frac{Q}{S}
+    = \frac{2{,}7 \times 10^{-6}\,\mathrm{Pa\,m^3/s}}
+           {2 \times 10^{-3}\,\mathrm{m^3/s}}
+    = 1{,}35 \times 10^{-3}\,\mathrm{Pa}
+    \approx 1{,}0 \times 10^{-5}\,\mathrm{Torr}.
+\end{equation}
+Dies entspricht dem erwarteten Hochvakuum im Quadrupol.
+
+\subsubsection*{Mittlere freie Weglänge}
+
+Die Teilchenzahldichte im Analysator beträgt
+\begin{equation}
+    n = \frac{P_{\mathrm{ana}}}{k_B T}
+    = 3{,}34 \times 10^{17}\,\mathrm{m^{-3}}.
+\end{equation}
+Mit dem Stoßquerschnitt $\sigma = \pi d^2$ (Teilchendurchmesser
+$d \approx 2\,\text{\AA} = 2 \times 10^{-10}\,\mathrm{m}$,
+also $\sigma \approx 1{,}26 \times 10^{-19}\,\mathrm{m^2}$) und unter
+Berücksichtigung der Maxwell-Verteilung (Faktor $\sqrt{2}$):
+\begin{equation}
+    \Lambda = \frac{1}{\sqrt{2}\,n\,\sigma}
+    \approx 16{,}9\,\mathrm{m}.
+\end{equation}
+Die mittlere freie Weglänge ist damit deutlich größer als die
+Quadrupollänge ($\approx 0{,}46\,\mathrm{m}$), sodass die Ionen den
+Analysator praktisch stoßfrei durchqueren -- eine notwendige Bedingung
+für die korrekte Massentrennung.
+
+\subsubsection*{Maximale Messzeit}
+
+Soll sich der Druck in der Probennahmekammer um höchstens $5\,\%$
+ändern, so darf maximal die Gasmenge $\Delta P \cdot V$ mit
+$\Delta P = 0{,}05 \cdot P$ entweichen:
+\begin{equation}
+    t_{\mathrm{max}} = \frac{\Delta P \cdot V}{Q}
+    = \frac{0{,}05 \cdot 133\,\mathrm{Pa} \cdot 10^{-3}\,\mathrm{m^3}}
+           {2{,}7 \times 10^{-6}\,\mathrm{Pa\,m^3/s}}
+    \approx 2463\,\mathrm{s} \approx 41\,\mathrm{min}.
+\end{equation}
+Innerhalb von etwa $41\,\mathrm{Minuten}$ bleiben die Messbedingungen
+also näherungsweise konstant.
+
 
 
 

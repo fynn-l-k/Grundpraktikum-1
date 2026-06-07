@@ -10,6 +10,10 @@
 \contentsline {subsubsection}{\numberline {1.2.2}Funktionsweise des QMS}{5}{}%
 \contentsline {section}{\numberline {2}Aufgabe 1 -- Krypton-Isotopenmuster}{6}{}%
 \contentsline {section}{\numberline {3}Aufgabe 2 -- Xenon-Isotopenmuster}{13}{}%
-\contentsline {section}{\numberline {4}Aufgabe 3}{19}{}%
-\contentsline {section}{\numberline {5}Aufgabe 4}{19}{}%
-\contentsline {section}{\numberline {6}Aufgabe 5}{19}{}%
+\contentsline {section}{\numberline {4}Aufgabe 3 -- Massenspektren organischer Moleküle}{19}{}%
+\contentsline {subsection}{\numberline {4.1}Aceton (C$_3$H$_6$O)}{20}{}%
+\contentsline {subsection}{\numberline {4.2}Chloroform (CHCl$_3$)}{21}{}%
+\contentsline {section}{\numberline {5}Aufgabe 4 -- Identifikation unbekannter Moleküle}{23}{}%
+\contentsline {section}{\numberline {6}Aufgabe 5 -- Theoretische Aufgaben}{27}{}%
+\contentsline {subsection}{\numberline {6.1}Teil a}{27}{}%
+\contentsline {subsection}{\numberline {6.2}Teil b}{29}{}%
