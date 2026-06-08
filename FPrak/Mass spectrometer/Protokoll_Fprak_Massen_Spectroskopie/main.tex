@@ -39,9 +39,35 @@ Gruppe O43
 \end{figure}
 
 \maketitle
-
+\newpage
 
 \begin{abstract}
+
+In diesem Versuch wurde mit einem Quadrupol-Massenspektrometer die
+Massenspektrometrie an Edelgasen und einfachen organischen Molekülen
+untersucht. Nach Elektronenstoß-Ionisation wurden die Ionen nach ihrem
+Masse-zu-Ladungs-Verhältnis getrennt; vor jeder Messung wurde ein
+Hintergrundspektrum aufgenommen und abgezogen. Für Krypton und Xenon
+wurde das Isotopenmuster der einfach und doppelt geladenen Ionen bei je
+neun Drücken bestimmt. Die Kr$^+$- und Xe$^+$-Verteilungen stimmen für
+die häufigen Isotope gut mit den Literaturwerten überein (beste
+Einzelmessung bei Kr$^+$: alle relativen Abweichungen unter $6\,\%$),
+während die zweifach geladenen Ionen durch Peak-Überlagerungen bei
+halbzahligen $m/z$-Werten nur eingeschränkt auswertbar sind. Bei den
+schweren Xe-Isotopen zeigt sich zusätzlich eine Massendiskriminierung
+des Quadrupols. Die Signalintensität des intensivsten Isotops steigt mit
+dem Kammerdruck zunächst näherungsweise proportional an und sättigt
+oberhalb von etwa $5\,\mathrm{mbar}$ infolge der verkürzten freien
+Weglänge und von Raumladungseffekten. Für Aceton ließ sich das
+Fragmentierungsmuster (Basis-Peak $m/z = 43$, Acylium-Ion) vollständig
+erklären; bei Chloroform bestätigte das gemessene Chlor-Isotopenverhältnis
+($3{,}03$--$3{,}16$) den Literaturwert $3{,}13$. Der auf $m/z \leq 80$
+begrenzte Scan-Bereich verhinderte allerdings die Erfassung der
+Molekülionen und damit die eindeutige Identifikation der beiden
+unbekannten Substanzen, die anhand ihres Fragmentmusters einem größeren
+aliphatischen Methylketon zugeordnet werden. Abschließende theoretische
+Betrachtungen zu Stabilitätsparametern, Auflösung und freier Weglänge
+bestätigen die für den stoßfreien Betrieb nötigen Vakuumbedingungen.
 
 \end{abstract}
 \newpage
@@ -1182,8 +1208,11 @@ und begründen, warum die Daten nicht ausreichen.
 
 \subsection*{Messung}
 
-Die Abbildungen~\ref{fig:f12} und \ref{fig:f15} zeigen die Spektren
-der Flaschen 12 und 15 jeweils gemeinsam mit dem Hintergrundspektrum.
+Die Abbildungen~\ref{fig:f12} und \ref{fig:f15} zeigen die Spektren der
+Flaschen 12 und 15 jeweils gemeinsam mit dem Hintergrundspektrum; die
+Abbildungen~\ref{fig:f12bg} und \ref{fig:f15bg} zeigen unmittelbar
+darunter das jeweils hintergrundkorrigierte Spektrum. Erst nach Abzug
+des Untergrunds treten die substanzeigenen Peaks klar hervor.
 Beide Substanzen liefern ein nahezu identisches Fragmentierungsmuster
 mit dem Basis-Peak bei $m/z = 43$ und weiteren deutlichen Peaks bei
 $m/z = 15, 27, 39, 41, 42, 56$ und $58$.
@@ -1203,6 +1232,15 @@ $m/z = 80$ und wurde nicht erfasst.
 
 \begin{figure}[htbp]
     \centering
+    \includegraphics[width=\textwidth]{unbekannt_files/fig_f12_bgsub}
+    \caption{Spektrum aus Flasche 12 nach Abzug des Hintergrunds
+        (logarithmisch). Dargestellt ist allein das substanzeigene
+        Signal ohne Zuordnung der Ionen.}
+    \label{fig:f12bg}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
     \includegraphics[width=\textwidth]{unbekannt_files/fig_f15}
     \caption{Massenspektrum der Substanz aus Flasche 15 und
         Hintergrundspektrum, logarithmisch. Die rote gepunktete Linie
@@ -1210,17 +1248,42 @@ $m/z = 80$ und wurde nicht erfasst.
     \label{fig:f15}
 \end{figure}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{unbekannt_files/fig_f15_bgsub}
+    \caption{Spektrum aus Flasche 15 nach Abzug des Hintergrunds
+        (logarithmisch). Dargestellt ist allein das substanzeigene
+        Signal ohne Zuordnung der Ionen.}
+    \label{fig:f15bg}
+\end{figure}
+
 \subsection*{Analyse der Schlüssel- und Fragment-Ionen}
 
-Der Basis-Peak bei $m/z = 43$ ist mehrdeutig: er kann sowohl dem
-Acylium-Kation CH$_3$CO$^+$ (charakteristisch für Ketone) als auch dem
-Propyl-Kation C$_3$H$_7^+$ (charakteristisch für Alkane/Alkylketten)
-zugeordnet werden.
-Die Peakserie bei $m/z = 39$ (C$_3$H$_3^+$), $41$ (C$_3$H$_5^+$,
-Allyl-Kation) und $27$ (C$_2$H$_3^+$) ist typisch für
-Kohlenwasserstoff-Fragmente.
-Der deutliche Peak bei $m/z = 56$ (C$_4$H$_8^+$) deutet auf ein
-Molekül mit einer C$_4$-Einheit hin.
+Beide Flaschen liefern ein nahezu identisches Fragmentierungsmuster,
+was auf dieselbe bzw.\ eine sehr ähnliche Substanz hindeutet. Da das
+Molekülion oberhalb der Scan-Grenze von $m/z = 80$ liegt, stützt sich
+die Auswertung allein auf die niedermassigen Fragment-Ionen.
+
+Der Basis-Peak bei $m/z = 43$ ist die zentrale, aber zweideutige
+Information: Er entspricht entweder dem Acylium-Kation CH$_3$CO$^+$, das
+in Methylketonen durch $\alpha$-Spaltung entsteht, oder dem
+Propyl-Kation C$_3$H$_7^+$ eines Alkylrests. Entscheidend für die
+Unterscheidung ist der deutliche Peak bei $m/z = 58$: Ein Methylketon
+mit $\gamma$-ständigem Wasserstoff liefert über die
+McLafferty-Umlagerung das Enol-Fragment CH$_2{=}$C(OH)CH$_3^+$ bei genau
+$m/z = 58$. Das gleichzeitige Auftreten eines starken Basis-Peaks bei
+$43$ \emph{und} eines ausgeprägten Peaks bei $58$ ist daher ein
+typischer Fingerabdruck eines aliphatischen Methylketons vom Typ
+CH$_3$--CO--R.
+
+Die übrigen Peaks bestätigen einen zugehörigen Alkylrest: $m/z = 41$
+(C$_3$H$_5^+$, Allyl) und $m/z = 39$ (C$_3$H$_3^+$) sind typische
+ungesättigte Kohlenwasserstoff-Fragmente, $m/z = 27$ (C$_2$H$_3^+$),
+$29$ (C$_2$H$_5^+$) und $15$ (CH$_3^+$) die üblichen kleinen
+Alkyl-Bruchstücke. Auffällig ist der vergleichsweise starke Peak bei
+$m/z = 56$ (C$_4$H$_8^+$), der eine intakte C$_4$-Einheit anzeigt und
+damit auf eine Kettenlänge von mindestens vier Kohlenstoffatomen
+schließen lässt.
 
 \begin{table}[htbp]
     \centering
@@ -1236,7 +1299,7 @@ Molekül mit einer C$_4$-Einheit hin.
         29 & C$_2$H$_5^+$ / CHO$^+$          &   9.7 &   8.8 \\
         39 & C$_3$H$_3^+$                    &  23.1 &  22.6 \\
         41 & C$_3$H$_5^+$ (Allyl)            &  22.4 &  15.3 \\
-        42 & C$_3$H$_6^+$ / C$_2$H$_2$O$^+$  &  16.9 &  15.2 \\
+        42 & C$_3$H$_6^+$ / C$_2$H$_2$O$^+$  &  16.9 &  14.1 \\
         43 & C$_3$H$_7^+$ / CH$_3$CO$^+$ (\textbf{Basis}) & 100.0 & 100.0 \\
         56 & C$_4$H$_8^+$                    &  28.7 &  16.9 \\
         58 & C$_3$H$_6$O$^+$ / C$_4$H$_{10}^+$ &  28.1 &  28.0 \\
@@ -1244,63 +1307,52 @@ Molekül mit einer C$_4$-Einheit hin.
     \end{tabular}
 \end{table}
 
-\subsection*{Diskussion der Identifikation}
-
-Zum Vergleich zeigt Abbildung~\ref{fig:vergleich} die beiden
-unbekannten Spektren gemeinsam mit dem zuvor gemessenen Aceton-Spektrum
-(Flasche 20).
+Abbildung~\ref{fig:labeled} fasst beide hintergrundkorrigierten
+Spektren überlagert zusammen und ordnet den charakteristischen Peaks die
+diskutierten Fragment-Ionen zu. Die nahezu deckungsgleichen Kurven
+unterstreichen, dass beide Flaschen dieselbe Stoffklasse enthalten.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{unbekannt_files/fig_vergleich}
-    \caption{Vergleich der Spektren von Flasche 12, Flasche 15 und
-        Aceton (Flasche 20), normiert auf $m/z = 43$.
-        Der Peak bei $m/z = 56$ ist bei den unbekannten Substanzen
-        deutlich stärker als bei Aceton.}
-    \label{fig:vergleich}
+    \includegraphics[width=\textwidth]{unbekannt_files/fig_unbekannt_labeled}
+    \caption{Überlagerung der hintergrundkorrigierten Spektren von
+        Flasche 12 und 15, normiert auf den Basis-Peak ($m/z = 43$),
+        mit Zuordnung der charakteristischen Fragment-Ionen.}
+    \label{fig:labeled}
 \end{figure}
 
-Auf den ersten Blick ähneln die Spektren dem von Aceton (Basis-Peak bei
-$m/z = 43$, Peak bei $m/z = 58$).
-Ein genauerer Vergleich zeigt jedoch einen wesentlichen Unterschied:
-Der Peak bei $m/z = 56$ ist bei den unbekannten Substanzen mit
-$17$--$29\,\%$ deutlich ausgeprägt, während er bei reinem Aceton mit
-unter $1\,\%$ praktisch fehlt.
-Ebenso sind die Peaks bei $m/z = 39$ und $41$ deutlich stärker als bei
-Aceton.
-Dies schließt reines Aceton als Erklärung aus und deutet auf einen
-gesättigten oder ungesättigten Kohlenwasserstoff bzw.\ ein größeres
-Keton hin, dessen Molekülion oberhalb von $m/z = 80$ liegt.
+\subsection*{Diskussion der Identifikation}
 
-Die Fragment-Serie ($m/z = 27, 29, 39, 41, 43, 56$) ist charakteristisch
-für aliphatische C$_4$--C$_6$-Verbindungen.
-Eine plausible Zuordnung wäre ein Keton der Methyl-Ketonen-Reihe
-(z.\,B.\ 2-Pentanon C$_5$H$_{10}$O, $M = 86$, oder 2-Hexanon
-C$_6$H$_{12}$O, $M = 100$), bei denen der Basis-Peak durch
-$\alpha$-Spaltung zum Acylium-Ion CH$_3$CO$^+$ ($m/z = 43$) entsteht
-und der McLafferty-Umlagerung ein Fragment bei $m/z = 58$ liefert.
-Das Molekülion läge in beiden Fällen oberhalb von $m/z = 80$ und wurde
-daher nicht erfasst.
+In der Summe deutet das Muster (Basis-Peak $43$, McLafferty-Fragment
+$58$, C$_4$H$_8^+$ bei $56$, Kohlenwasserstoff-Serie $39/41$) am ehesten
+auf ein unverzweigtes Methylketon der C$_5$--C$_6$-Reihe hin, etwa
+2-Pentanon (C$_5$H$_{10}$O, $M = 86$) oder 2-Hexanon (C$_6$H$_{12}$O,
+$M = 100$). Bei beiden läge das Molekülion ($m/z = 86$ bzw.\ $100$)
+oberhalb des gemessenen Bereichs und wurde daher nicht erfasst. Ein
+größeres aliphatisches Kohlenwasserstoff-Molekül lässt sich aufgrund
+desselben niedermassigen Fragmentmusters nicht vollständig ausschließen,
+ist wegen des deutlichen Peaks bei $m/z = 58$ aber weniger
+wahrscheinlich.
 
-Die beiden Substanzen unterscheiden sich nur geringfügig: Flasche~15
-zeigt einen erhöhten Wasser-Peak ($m/z = 18$) und einen etwas
-schwächeren $m/z = 56$-Peak als Flasche~12, was auf leicht
-unterschiedliche Verbindungen oder Verunreinigungen hindeutet.
+Die beiden Substanzen unterscheiden sich nur geringfügig: Flasche 12
+zeigt einen stärkeren C$_4$H$_8^+$-Peak ($28.7\,\%$ gegenüber
+$16.9\,\%$), Flasche 15 einen leicht erhöhten Wasser-Untergrund. Dies
+deutet auf eng verwandte Verbindungen oder unterschiedliche
+Verunreinigungsgrade hin.
 
 \subsection*{Fazit}
 
-Eine eindeutige Identifikation der beiden unbekannten Substanzen ist
-mit den vorliegenden Daten \textbf{nicht möglich}, da der auf
-$m/z = 80$ begrenzte Messbereich das Molekülion und die hochmassigen
-Fragmente nicht erfasst hat.
-Anhand des Fragmentierungsmusters (Basis-Peak $m/z = 43$, Serie bei
-$39, 41, 56, 58$) lässt sich jedoch mit hoher Wahrscheinlichkeit
-ausschließen, dass es sich um reines Aceton handelt; die Daten deuten
-vielmehr auf ein größeres aliphatisches Keton oder einen
-Kohlenwasserstoff hin.
-Für eine sichere Bestimmung wäre eine Wiederholung der Messung mit
-einem erweiterten Massenbereich (mindestens bis $m/z = 120$--$150$)
-erforderlich.
+Eine eindeutige Identifikation der beiden unbekannten Substanzen ist mit
+den vorliegenden Daten \textbf{nicht möglich}, da der auf $m/z = 80$
+begrenzte Messbereich das Molekülion und die hochmassigen Fragmente
+nicht erfasst hat. Anhand des Fragmentierungsmusters (Basis-Peak
+$m/z = 43$, McLafferty-Fragment $58$, C$_4$H$_8^+$ bei $56$, Serie bei
+$39$ und $41$) lässt sich jedoch mit hoher Wahrscheinlichkeit ein
+größeres aliphatisches Methylketon zuordnen und reines Aceton
+ausschließen. Für eine sichere Bestimmung wäre eine Wiederholung der
+Messung mit einem erweiterten Massenbereich (mindestens bis
+$m/z = 120$--$150$) erforderlich.
+
 
 
 
