@@ -50,8 +50,7 @@ Masse-zu-Ladungs-Verhältnis getrennt; vor jeder Messung wurde ein
 Hintergrundspektrum aufgenommen und abgezogen. Für Krypton und Xenon
 wurde das Isotopenmuster der einfach und doppelt geladenen Ionen bei je
 neun Drücken bestimmt. Die Kr$^+$- und Xe$^+$-Verteilungen stimmen für
-die häufigen Isotope gut mit den Literaturwerten überein (beste
-Einzelmessung bei Kr$^+$: alle relativen Abweichungen unter $6\,\%$),
+die häufigen Isotope gut mit den Literaturwerten überein (beste Einzelmessung bei Kr$^+$: alle relativen Abweichungen unter $6{,}2\,\%$),
 während die zweifach geladenen Ionen durch Peak-Überlagerungen bei
 halbzahligen $m/z$-Werten nur eingeschränkt auswertbar sind. Bei den
 schweren Xe-Isotopen zeigt sich zusätzlich eine Massendiskriminierung
@@ -233,7 +232,7 @@ ein günstiger Preis. \emph{Nachteile:} im Vergleich zu Sektorfeld- oder
 Orbitrap-Geräten nur moderate Massenauflösung und ein begrenzter
 Massenbereich (typischerweise bis einige hundert $m/z$). Aufgrund dieser
 Eigenschaften eignet sich das QMS besonders für Praktikums- und
-Routineanwendungen~\cite{Wiki_Quadrupol}.
+Routineanwendungen~\cite{gross2017}.
 
 \subsection{Funktionsweise des Quadrupol-Massenspektrometers}
 
@@ -276,7 +275,7 @@ mit den dimensionslosen Stabilitätsparametern
 \end{equation}
 Die Lösungen dieser Gleichung sind je nach Wahl von $a$ und $q$ entweder
 stabil (begrenzte Amplitude) oder instabil (exponentiell anwachsende
-Amplitude)~\cite{Wiki_Mathiu_func}. Nur Ionen mit einem
+Amplitude)~\cite{gross2017}. Nur Ionen mit einem
 $m/z$-Verhältnis, das auf eine stabile Bahn führt, durchqueren den
 Quadrupol auf einer beschränkten, oszillierenden Trajektorie und
 erreichen den Detektor. Ionen mit abweichendem $m/z$-Verhältnis werden
@@ -353,7 +352,7 @@ man $N = 1$ setzt, woraus
 folgt. Eine genauere Beschreibung der mittleren freien Weglänge
 berücksichtigt die Maxwell'sche Geschwindigkeitsverteilung der
 Gasteilchen. In diesem Fall verringert sich die mittlere freie Weglänge
-um einen Faktor $\sqrt{2}$~\cite{Wiki_MFP}, sodass sich
+um einen Faktor $\sqrt{2}$~\cite{demtroeder2018}, sodass sich
 \begin{equation}
     \Lambda_{\mathrm{Ion}} = \frac{1}{\sqrt{2}\, \pi d^2 N_v}
     \label{eq:mfp_maxwell}
@@ -464,15 +463,9 @@ Dieses zeigt die Restgaszusammensetzung der Kammer: prominente Peaks
 bei $m/z = 2$ (H$_2$), $m/z = 18$ (H$_2$O), $m/z = 28$ (N$_2$/CO),
 $m/z = 32$ (O$_2$) und $m/z = 44$ (CO$_2$), die auf eine geringe
 Luftkontamination der Kammer zur\"uckzuf\"uhren sind.
-Das Hintergrundspektrum wird von allen Krypton-Messungen abgezogen,
-da es alle Signale beschreibt, die nicht vom eingef\"ullten Krypton
-stammen. Dadurch heben sich Residualgas-Peaks heraus und die
-Kr-Isotopenmuster treten klarer hervor.
 Anzumerken ist, dass das Hintergrundspektrum im Kr-Bereich bereits
 schwache Peaks bei $m/z = 83$ und $84$ zeigt. Diese stammen
 wahrscheinlich von Kr-R\"uckst\"anden eines fr\"uheren Experiments.
-Infolgedessen wird $^{83}$Kr nach dem Hintergrundabzug leicht
-untersch\"atzt, was bei der Fehleranalyse zu ber\"ucksichtigen ist.
 
 
 \begin{figure}[h]
@@ -542,6 +535,19 @@ farbkodiert nach dem Druck.
     \label{fig:kr_zoom}
 \end{figure}
 
+\subsection*{Herkunft der Literaturwerte}
+
+Die in dieser Arbeit verwendeten natürlichen Isotopenhäufigkeiten --
+für Krypton und Xenon (Aufgaben~1 und~2) ebenso wie das
+Chlor-Isotopenverhältnis $^{35}$Cl$\,:\,^{37}$Cl und die
+$^{13}$C-Häufigkeit (Aufgabe~3) -- entstammen den repräsentativen
+Isotopenzusammensetzungen der IUPAC-Kommission für Isotopenhäufigkeiten
+und Atomgewichte (CIAAW)~\cite{iupac2013}.
+Die zum Vergleich herangezogenen Fragmentierungs- bzw.\ Referenzspektren
+der organischen Moleküle (Aufgaben~3 und~4) stammen aus dem
+NIST Chemistry WebBook~\cite{nist_webbook}.
+
+
 \subsubsection*{Auswertung der Isotopenverteilung}
 
 Die relativen H\"aufigkeiten werden aus den Peakh\"ohen aller sechs Isotope
@@ -551,7 +557,6 @@ Als bester Einzelwert wird die Messung bei $0{,}4\,\mathrm{mbar}$ (Kr$^+$)
 bzw.\ $5\,\mathrm{mbar}$ (Kr$^{2+}$) angegeben, da diese den besten
 Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
 
-% Benötigt in der Präambel: \usepackage{adjustbox}
 
 % ── Tabelle 1: Kr+ ───────────────────────────────────────────────────────────
 \begin{table}[htbp]
@@ -620,6 +625,7 @@ Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
     \end{tabular}
     \end{adjustbox}
 \end{table}
+
 
 
 \subsubsection*{Fehleranalyse}
@@ -999,6 +1005,24 @@ mindestens $m/z = 120$--$150$ reichen müssen.
 Wir weisen an den betreffenden Stellen ausdrücklich auf diese
 Limitierung hin.
 
+\subsection*{Anmerkung zur Normierung}
+
+Bei den Edelgasen Krypton und Xenon (Aufgaben~1 und~2) konnte der
+gesamte relevante Bereich des Spektrums erfasst werden: Alle stabilen
+Isotope liegen innerhalb des gemessenen $m/z$-Bereichs, und oberhalb
+des schwersten Isotops treten keine weiteren relevanten Signale auf.
+Daher lassen sich die relativen Häufigkeiten so normieren, dass ihre
+Summe über alle Isotope $100\,\%$ ergibt -- entsprechend der natürlichen
+Definition der Isotopenzusammensetzung, bei der die Anteile aller Isotope
+eines Elements zusammen die gesamte Stoffmenge ausmachen.
+
+Ab Aufgabe~3 (organische Moleküle) ist dies nicht mehr möglich: Wie im
+Hinweis zum Massenbereich erläutert, liegen dort wichtige hochmassige
+Fragmente und teilweise das Molekülion oberhalb der Messgrenze von
+$m/z = 80$. Eine Normierung auf eine Summe von $100\,\%$ wäre dort
+sinnlos, da ein Teil der Intensität gar nicht erfasst wird. Die
+Fragment-Intensitäten werden deshalb in den Aufgaben~3 und~4 stets
+\emph{relativ zum intensivsten Peak} (Basis-Peak $= 100\,\%$) angegeben.
 
 
 \subsection*{Aufgabenstellung}
@@ -1528,6 +1552,7 @@ also näherungsweise konstant.
 
 
 \newpage
+\nocite{ainotice}
 \printbibliography %[heading=none]
 
 \end{document}

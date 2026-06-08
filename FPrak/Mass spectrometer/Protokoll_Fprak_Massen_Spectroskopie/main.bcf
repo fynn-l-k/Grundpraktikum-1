@@ -2372,12 +2372,15 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">quellen.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">Wiki_Quadrupol</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">gross2017</bcf:citekey>
     <bcf:citekey order="2" intorder="1">Bild_Quadropol</bcf:citekey>
     <bcf:citekey order="3" intorder="1">Bild_Quadropol</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Wiki_Mathiu_func</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">gross2017</bcf:citekey>
     <bcf:citekey order="5" intorder="1">Frieser1979</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Wiki_MFP</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">demtroeder2018</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">iupac2013</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">nist_webbook</bcf:citekey>
+    <bcf:citekey order="9" intorder="1" nocite="1">ainotice</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
