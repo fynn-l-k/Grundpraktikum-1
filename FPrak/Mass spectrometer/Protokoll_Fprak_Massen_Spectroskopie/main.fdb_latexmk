@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1780932057.37451 "main.bcf" "main.bbl" "main" 1780932551.60956 0
-  "main.bcf" 1780932551.48951 109093 b106da17f29f0db4c2222c74e5afb6d1 "pdflatex"
+["biber main"] 1780932057.37451 "main.bcf" "main.bbl" "main" 1780934881.39237 0
+  "main.bcf" 1780934881.27617 109093 b106da17f29f0db4c2222c74e5afb6d1 "pdflatex"
   "quellen.bib" 1780931713.9925 2788 351df51b1200ef2f13c475b6a83916c3 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1780932550.23266 "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" "main.pdf" "main" 1780932551.60992 0
-  "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" 1780932549.9908 71224 1835b2ae02d7f6a99db60151cb5c619c ""
+["pdflatex"] 1780934880.05734 "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" "main.pdf" "main" 1780934881.39283 0
+  "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/Mass spectrometer/Protokoll_Fprak_Massen_Spectroskopie/main.tex" 1780934878.52037 72545 3f91f0809cf10e9822a0be6d6445563d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -129,11 +129,11 @@
   "krypton_files/fig_background.pdf" 1780253482 43256 ab6a33492eab1b1b41c650400f30639c ""
   "krypton_files/fig_intensity_vs_pressure.pdf" 1780324156.29362 23660 056620c78d09192ac567efe2bfabb5b2 ""
   "krypton_files/fig_kr_zoom.pdf" 1780314180.43208 37476 4a89aff00fa72a2080d266860aa429c2 ""
-  "main.aux" 1780932551.44751 14259 ba441635b71880920d66e37dc903e84e "pdflatex"
+  "main.aux" 1780934881.25313 14354 19d15c5e6db2fd526fcd1e516670f566 "pdflatex"
   "main.bbl" 1780932058.99972 10849 96948991b7a28040493ee64bd407cc34 "biber main"
-  "main.run.xml" 1780932551.49127 2302 32e9cf127949af3e6bd10c1f59875af9 "pdflatex"
-  "main.tex" 1780932549.9908 71224 1835b2ae02d7f6a99db60151cb5c619c ""
-  "main.toc" 1780932551.49142 1607 ea6431a8b7d02f55ba5f96ab92bb66f7 "pdflatex"
+  "main.run.xml" 1780934881.27767 2302 32e9cf127949af3e6bd10c1f59875af9 "pdflatex"
+  "main.tex" 1780934878.52037 72545 3f91f0809cf10e9822a0be6d6445563d ""
+  "main.toc" 1780934881.2778 1607 86716654116bcd05fd77c00fba81bcf6 "pdflatex"
   "organik_files/fig_aceton_log.pdf" 1780929556.94928 34747 25f1698febc458337c6289d47bb615df ""
   "organik_files/fig_chlor_isotope.pdf" 1780868083.67952 22723 33cef48efed476828bffc15603a8acbf ""
   "organik_files/fig_chloroform_log.pdf" 1780929556.97089 35219 e89b92be2730fe789f42906485218e51 ""

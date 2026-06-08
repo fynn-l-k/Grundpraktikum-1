@@ -17,5 +17,5 @@
 \contentsline {subsection}{\numberline {5.2}Chloroform (CHCl$_3$)}{26}{}%
 \contentsline {section}{\numberline {6}Aufgabe 4 -- Identifikation unbekannter Moleküle}{28}{}%
 \contentsline {section}{\numberline {7}Aufgabe 5 -- Theoretische Aufgaben}{33}{}%
-\contentsline {subsection}{\numberline {7.1}Teil a}{33}{}%
-\contentsline {subsection}{\numberline {7.2}Teil b}{34}{}%
+\contentsline {subsection}{\numberline {7.1}Teil a}{34}{}%
+\contentsline {subsection}{\numberline {7.2}Teil b}{35}{}%
