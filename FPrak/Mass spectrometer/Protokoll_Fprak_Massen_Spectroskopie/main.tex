@@ -53,87 +53,348 @@ Gruppe O43
 
 
 
-\section{Introduction}
-\subsection{Theoretical Overview}
+\section{Einleitung}
 
-\subsubsection{Massendefekt}
+\subsection{Grundidee der Massenspektrometrie}
 
-Eine wichtige Konsequenz der unterschiedlichen Neutronenzahl bei Isotopen ist ein Phänomen, das als Massendefekt bezeichnet wird. Aufgrund der anziehenden Kernkräfte ist Energie erforderlich, um einen Atomkern in seine einzelnen Nukleonen zu zerlegen. Diese Energie wird als gesamte Bindungsenergie $E_B$ definiert. Die mittlere Bindungsenergie pro Nukleon ergibt sich dann zu $\bar{E}_B = E_B/A$, wobei $A$ die Massenzahl bezeichnet.
+Die Massenspektrometrie ist ein analytisches Verfahren zur Bestimmung
+der Masse von Atomen und Molekülen. Die grundlegende Idee besteht darin,
+die zu untersuchende Probe zunächst zu ionisieren und die entstandenen
+Ionen anschließend nach ihrem Verhältnis von Masse zu Ladung ($m/z$)
+zu trennen. Da geladene Teilchen durch elektrische und magnetische
+Felder abgelenkt werden und das Ausmaß dieser Ablenkung von ihrer Masse
+und Ladung abhängt, lassen sich die Ionen räumlich oder zeitlich
+auftrennen und einzeln detektieren.
 
-Legt man das Minimum der potentiellen Energie auf den Zustand der vollständig voneinander getrennten Nukleonen fest, so erhält man für das System des zusammengesetzten Kerns eine negative Energie. Gemäß der Einstein'schen Beziehung $E = mc^2$ entspricht diese negative Bindungsenergie $-E_B$ einem Massendefekt
+Das Ergebnis einer Messung ist ein Massenspektrum, in dem die
+Signalintensität gegen das Masse-zu-Ladungs-Verhältnis aufgetragen
+wird. Jeder Peak entspricht dabei einem Ion mit einem bestimmten
+$m/z$-Wert. Aus der Lage und Höhe der Peaks lassen sich zahlreiche
+Informationen gewinnen: die Isotopenzusammensetzung eines Elements, die
+molare Masse einer Verbindung sowie -- über das charakteristische
+Fragmentierungsmuster -- die Struktur und Identität unbekannter
+Moleküle. Die Massenspektrometrie gehört damit zu den wichtigsten
+Methoden der analytischen Chemie und Physik.
+
+Ein Massenspektrometer besteht grundsätzlich aus drei Komponenten:
+\begin{itemize}
+    \item der \textbf{Ionenquelle}, in der die Probe verdampft und
+        ionisiert wird (meist durch Elektronenstoß),
+    \item dem \textbf{Analysator}, der die Ionen nach ihrem
+        $m/z$-Verhältnis trennt, und
+    \item dem \textbf{Detektor}, der die eintreffenden Ionen registriert
+        und in ein elektrisches Signal umwandelt.
+\end{itemize}
+Da die Ionen auf ihrem Weg durch das Gerät nicht mit Restgasteilchen
+zusammenstoßen dürfen, muss der gesamte Aufbau unter Hochvakuum
+betrieben werden.
+
+\subsection{Experimenteller Aufbau vor Ort}
+
+Der in diesem Versuch verwendete Aufbau ist in Abbildung~\ref{fig:aufbau}
+gezeigt. Als Analysator dient ein Quadrupol-Massenspektrometer (QMS).
+Der gesamte Aufbau ist auf einem fahrbaren Gestell montiert und gliedert
+sich in zwei getrennt bepumpte Vakuumbereiche: die Probennahmekammer
+(mit dem Gaseinlasssystem) und das eigentliche Spektrometer.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{quadropol_files/quadropol_vor_ort}
+    \caption{Fotografie des verwendeten Versuchsaufbaus. Links die
+        Drehschieber-Vorpumpe (Edwards) mit Ölnebelfilter, in der Mitte
+        die Vakuumkammer mit Ionenquelle und Quadrupol (SRS), rechts
+        die zweite Pumpe sowie die Steuereinheit (Pfeiffer Vacuum DCU)
+        mit den Schaltern für das Spektrometer- und das
+        Probenkammer-Vakuum. Unten in der Mitte ist die
+        Edelgas-Druckflasche (Linde Minican) zu erkennen.}
+    \label{fig:aufbau}
+\end{figure}
+
+Das zu untersuchende Gas (Krypton bzw.\ Xenon) wird aus einer
+Druckflasche über ein Feindosierventil in die Probennahmekammer
+eingelassen. Der Druck in dieser Kammer wird mit einem mechanischen
+Membran-Vakuummeter vom Typ \emph{Leybold DIAVAC DV1000}
+(Abbildung~\ref{fig:druck}) abgelesen. Wichtig für die Auswertung ist,
+dass dieses Messgerät den Druck in der Einheit \textbf{mbar} anzeigt
+(die Skala trägt zusätzlich den Hinweis $\times 100 = \mathrm{Pa}$).
+Alle in dieser Arbeit angegebenen Probenkammer-Drücke beziehen sich
+daher auf mbar.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.55\textwidth]{quadropol_files/druck_messung}
+    \caption{Membran-Vakuummeter Leybold DIAVAC DV1000 zur Ablesung
+        des Drucks in der Probennahmekammer. Die Skala ist in mbar
+        kalibriert ($\times 100 = \mathrm{Pa}$).}
+    \label{fig:druck}
+\end{figure}
+
+Das DIAVAC DV1000 deckt allerdings nur den Druckbereich oberhalb von
+etwa $1\,\mathrm{mbar}$ zuverlässig ab. Für die niedrigeren Drücke
+(bis hinunter zu einigen $10^{-2}\,\mathrm{mbar}$) wurde daher ein
+zweites Vakuummeter verwendet, das auf den Feinvakuum-Bereich
+ausgelegt ist. Beide Messgeräte zeigen den Druck in mbar an, sodass
+sich alle in dieser Arbeit angegebenen Probenkammer-Drücke konsistent
+auf dieselbe Einheit beziehen.
+
+Über das Gaseinlasssystem gelangt ein kleiner Teil des Gases aus der
+Probennahmekammer in die Ionenquelle des Spektrometers. Dort werden die
+Atome bzw.\ Moleküle durch Elektronenstoß ionisiert. Die erzeugten Ionen
+werden anschließend in den Quadrupol-Analysator beschleunigt, nach ihrem
+$m/z$-Verhältnis getrennt und vom Detektor registriert. Die
+Datenaufnahme und Steuerung des Spektrometers erfolgt über die zugehörige
+Software (Residual Gas Analyzer, SRS).
+
+\subsection{Versuchsdurchführung}
+
+Um Verunreinigungen durch zuvor untersuchte Gase oder Restgase zu
+vermeiden, wurde die Probennahmekammer vor jeder eigentlichen Messung
+gründlich gespült. Dazu wurde das jeweilige Gas in die Kammer
+eingelassen und anschließend wieder vollständig abgepumpt
+(,,Flushen``). Dieser Vorgang -- Einlassen und Abpumpen -- wurde
+viermal wiederholt, sodass mögliche Reste vorheriger Gase weitgehend
+aus der Kammer entfernt wurden.
+
+Nach dem vierten Spülvorgang wurde -- bei evakuierter Kammer -- ein
+Hintergrundspektrum aufgenommen. Dieses erfasst alle Signale, die
+nicht vom später eingelassenen Probengas stammen (Restgase wie H$_2$O,
+N$_2$, O$_2$, CO$_2$ sowie eventuelle Verunreinigungen), und wird bei
+der Auswertung von den Messungen abgezogen. Erst danach wurde das
+Probengas erneut in die Kammer eingelassen und das eigentliche
+Massenspektrum aufgenommen.
+
+Jede Messung wurde zweimal durchgeführt; die in dieser Arbeit
+angegebenen Werte sind der Mittelwert der beiden Einzelmessungen. Diese
+Mittelung erfolgte automatisch durch die Steuerungssoftware und
+reduziert den Einfluss statistischer Schwankungen auf das gemessene
+Spektrum.
+
+\subsection{Andere Typen von Massenanalysatoren}
+
+Neben dem hier verwendeten Quadrupol-Analysator existieren weitere
+Bauarten von Massenspektrometern, die sich im Trennprinzip
+unterscheiden. Jede Bauart bietet dabei einen eigenen Kompromiss aus
+Massenauflösung, Massenbereich, Geschwindigkeit und technischem Aufwand:
+\begin{itemize}
+    \item \textbf{Sektorfeld-Massenspektrometer:} Die Ionen werden in
+        einem statischen magnetischen (und ggf.\ elektrischen) Feld auf
+        Kreisbahnen gelenkt, deren Radius vom $m/z$-Verhältnis abhängt.
+        \emph{Vorteile:} sehr hohe Massenauflösung und Massengenauigkeit.
+        \emph{Nachteile:} großer, schwerer Aufbau (Magnet), hoher
+        technischer Aufwand und vergleichsweise langsame Messung.
+    \item \textbf{Flugzeit-Massenspektrometer (Time-of-Flight, TOF):}
+        Alle Ionen werden mit derselben kinetischen Energie
+        beschleunigt; leichtere Ionen sind schneller und erreichen den
+        Detektor früher. Aus der Flugzeit über eine bekannte Strecke
+        wird das $m/z$-Verhältnis bestimmt.
+        \emph{Vorteile:} im Prinzip unbegrenzter Massenbereich, sehr
+        schnelle Messung und hohe Empfindlichkeit.
+        \emph{Nachteile:} benötigt eine gepulste Ionenquelle und eine
+        lange Driftstrecke; die Auflösung hängt empfindlich von der
+        Energieschärfe der Ionen ab.
+    \item \textbf{Ionenfallen (Ion Trap, Orbitrap):} Die Ionen werden in
+        einem elektrischen (und/oder magnetischen) Feld auf stabilen
+        Bahnen gefangen und über ihre charakteristischen
+        Schwingungsfrequenzen analysiert.
+        \emph{Vorteile:} sehr kompakt, hohe Empfindlichkeit und die
+        Möglichkeit mehrstufiger Messungen (MS/MS).
+        \emph{Nachteile:} begrenzte Ionenkapazität (Raumladungseffekte)
+        und ein eingeschränkter dynamischer Bereich.
+\end{itemize}
+Das Quadrupol-Massenspektrometer selbst bietet folgende Eigenschaften.
+\emph{Vorteile:} kompakter und robuster Aufbau, hohe Scangeschwindigkeit,
+geringer technischer Aufwand, moderate Anforderungen an das Vakuum sowie
+ein günstiger Preis. \emph{Nachteile:} im Vergleich zu Sektorfeld- oder
+Orbitrap-Geräten nur moderate Massenauflösung und ein begrenzter
+Massenbereich (typischerweise bis einige hundert $m/z$). Aufgrund dieser
+Eigenschaften eignet sich das QMS besonders für Praktikums- und
+Routineanwendungen~\cite{Wiki_Quadrupol}.
+
+\subsection{Funktionsweise des Quadrupol-Massenspektrometers}
+
+Der Analysator eines QMS besteht aus vier präzise gefertigten,
+parallel angeordneten Metallstäben (aus Edelstahl oder Molybdän), die
+im Abstand $r_0$ um die Symmetrieachse positioniert sind. Jeweils zwei
+gegenüberliegende Stäbe liegen auf demselben Potential.
+Abbildung~\ref{fig:quad_prinzip} zeigt das Funktionsprinzip schematisch.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{quadropol_files/Quadrupol_zeichnung}
+    \caption{Schematische Darstellung des Quadrupol-Analysators.
+        Nur Ionen mit dem passenden $m/z$-Verhältnis durchlaufen eine
+        stabile Flugbahn und erreichen den Detektor; Ionen mit
+        abweichendem Verhältnis werden auf instabile Bahnen gelenkt und
+        treffen auf die Stäbe. Quelle: \cite{Bild_Quadropol}.}
+    \label{fig:quad_prinzip}
+\end{figure}
+
+An die benachbarten Stäbe wird eine Überlagerung aus einer
+Gleichspannung $U$ und einer hochfrequenten Wechselspannung mit der
+Amplitude $V$ angelegt:
+\begin{equation}
+    u(t) = U + V \cos(\omega t).
+    \label{eq:quad_spannung}
+\end{equation}
+Die Bewegung der Ionen senkrecht zur Flugrichtung wird durch die
+Mathieu'sche Differentialgleichung beschrieben:
+\begin{equation}
+    \frac{\mathrm{d}^2 y}{\mathrm{d}\xi^2}
+    + \bigl(a - 2q \cos(2\xi)\bigr)\, y = 0,
+    \label{eq:mathieu}
+\end{equation}
+mit den dimensionslosen Stabilitätsparametern
+\begin{equation}
+    a = \frac{8eU}{m\,\omega^2 r_0^2}, \qquad
+    q = \frac{4eV}{m\,\omega^2 r_0^2}.
+    \label{eq:aq}
+\end{equation}
+Die Lösungen dieser Gleichung sind je nach Wahl von $a$ und $q$ entweder
+stabil (begrenzte Amplitude) oder instabil (exponentiell anwachsende
+Amplitude)~\cite{Wiki_Mathiu_func}. Nur Ionen mit einem
+$m/z$-Verhältnis, das auf eine stabile Bahn führt, durchqueren den
+Quadrupol auf einer beschränkten, oszillierenden Trajektorie und
+erreichen den Detektor. Ionen mit abweichendem $m/z$-Verhältnis werden
+zunehmend aus der Achse herausgelenkt, treffen auf die Stäbe und gehen
+verloren.
+
+Über die Frequenz $\omega$ sowie die Spannungen $U$ und $V$ lässt sich
+einstellen, welches $m/z$-Verhältnis gerade eine stabile Bahn besitzt.
+Indem man die Spannungen bei konstantem Verhältnis $U/V$ durchfährt,
+wird das gesamte Massenspektrum nacheinander abgetastet. Das Verhältnis
+$U/V$ bestimmt dabei die Massenauflösung des Geräts.
+
+\section{Theoretische Grundlagen}
+
+\subsection{Massendefekt}
+
+Eine wichtige Konsequenz der unterschiedlichen Neutronenzahl bei
+Isotopen ist ein Phänomen, das als Massendefekt bezeichnet wird.
+Aufgrund der anziehenden Kernkräfte ist Energie erforderlich, um einen
+Atomkern in seine einzelnen Nukleonen zu zerlegen. Diese Energie wird
+als gesamte Bindungsenergie $E_B$ definiert. Die mittlere
+Bindungsenergie pro Nukleon ergibt sich dann zu $\bar{E}_B = E_B/A$,
+wobei $A$ die Massenzahl bezeichnet.
+
+Legt man das Minimum der potentiellen Energie auf den Zustand der
+vollständig voneinander getrennten Nukleonen fest, so erhält man für das
+System des zusammengesetzten Kerns eine negative Energie. Gemäß der
+Einstein'schen Beziehung $E = mc^2$ entspricht diese negative
+Bindungsenergie $-E_B$ einem Massendefekt
 \begin{equation}
     \Delta M = \frac{E_B}{c^2}
+    \label{eq:massendefekt}
 \end{equation}
-des Kerns gegenüber der Summe der Massen aller seiner Nukleonen. Folglich ist die Masse des Atomkerns um den Betrag $\Delta M$ kleiner als die Summe der Massen aller in ihm enthaltenen Protonen und Neutronen.
+des Kerns gegenüber der Summe der Massen aller seiner Nukleonen.
+Folglich ist die Masse des Atomkerns um den Betrag $\Delta M$ kleiner
+als die Summe der Massen aller in ihm enthaltenen Protonen und Neutronen.
 
+\subsection{Mittlere freie Weglänge}
 
-\subsubsection{Mittlere freie Weglänge}
-Die mittlere freie Weglänge beschreibt die Strecke, die ein Teilchen in einem gegebenen Material zurücklegen kann, bevor es auf irgendeine Weise mit einem anderen Teilchen zusammenstößt. Zur Bestimmung der mittleren freien Weglänge betrachten wir zunächst ein vereinfachtes Modell, in dem alle übrigen Teilchen als ruhend angenommen werden. Diese Annahme ist gerechtfertigt, da bei einer Ionengeschwindigkeit, die einer Energie von $1\,\mathrm{eV}$ entspricht, die äquivalente Gastemperatur in der Größenordnung von $4 \cdot 10^4\,\mathrm{K}$ liegt \cite{Frieser1979}.
-Ein Stoß findet statt, wenn der Abstand zwischen zwei Teilchen kleiner als der Teilchendurchmesser $d$ ist. Dies definiert einen effektiven Stoßquerschnitt
+Die mittlere freie Weglänge beschreibt die Strecke, die ein Teilchen in
+einem gegebenen Material zurücklegen kann, bevor es auf irgendeine Weise
+mit einem anderen Teilchen zusammenstößt. Zur Bestimmung der mittleren
+freien Weglänge betrachten wir zunächst ein vereinfachtes Modell, in dem
+alle übrigen Teilchen als ruhend angenommen werden. Diese Annahme ist
+gerechtfertigt, da bei einer Ionengeschwindigkeit, die einer Energie von
+$1\,\mathrm{eV}$ entspricht, die äquivalente Gastemperatur in der
+Größenordnung von $4 \cdot 10^4\,\mathrm{K}$ liegt~\cite{Frieser1979}.
+Ein Stoß findet statt, wenn der Abstand zwischen zwei Teilchen kleiner
+als der Teilchendurchmesser $d$ ist. Dies definiert einen effektiven
+Stoßquerschnitt
 \begin{equation}
     \sigma = \pi d^2.
+    \label{eq:stossquerschnitt}
 \end{equation}
-Das bewegte Teilchen überstreicht entlang seiner Bahn ein Volumen, welches als Zylinder mit dem Querschnitt $\sigma$ interpretiert werden kann. Für eine Weglänge $\ell$ ergibt sich das überstrichene Volumen zu
+Das bewegte Teilchen überstreicht entlang seiner Bahn ein Volumen,
+welches als Zylinder mit dem Querschnitt $\sigma$ interpretiert werden
+kann. Für eine Weglänge $\ell$ ergibt sich das überstrichene Volumen zu
 \begin{equation}
     V = \pi d^2 \ell.
+    \label{eq:volumen}
 \end{equation}
-Mit der Teilchenzahldichte $N_v$ ergibt sich die Anzahl der Stöße in diesem Volumen zu
+Mit der Teilchenzahldichte $N_v$ ergibt sich die Anzahl der Stöße in
+diesem Volumen zu
 \begin{equation}
-    N = N_v \, V = N_v \pi d^2 \ell.
+    N = N_v V = N_v \pi d^2 \ell.
+    \label{eq:stosszahl}
 \end{equation}
-Die mittlere freie Weglänge $\Lambda_{Ion}$ erhält man, indem man $N = 1$ setzt, woraus
+Die mittlere freie Weglänge $\Lambda_{\mathrm{Ion}}$ erhält man, indem
+man $N = 1$ setzt, woraus
 \begin{equation}
-    \Lambda_{Ion} = \frac{1}{\pi d^2 N_v}
-    \label{eq:mean_free_path_simple}
+    \Lambda_{\mathrm{Ion}} = \frac{1}{\pi d^2 N_v}
+    \label{eq:mfp_einfach}
 \end{equation}
-folgt. Eine genauere Beschreibung der mittleren freien Weglänge berücksichtigt die Maxwell'sche Geschwindigkeitsverteilung der Gasteilchen. In diesem Fall verringert sich die mittlere freie Weglänge um einen Faktor $\sqrt{2}$ \cite{WikiMFP}, sodass sich
+folgt. Eine genauere Beschreibung der mittleren freien Weglänge
+berücksichtigt die Maxwell'sche Geschwindigkeitsverteilung der
+Gasteilchen. In diesem Fall verringert sich die mittlere freie Weglänge
+um einen Faktor $\sqrt{2}$~\cite{Wiki_MFP}, sodass sich
 \begin{equation}
-    \Lambda_{Ion} = \frac{1}{\sqrt{2}\,\pi d^2 N_v}
-    \label{eq:mean_free_path_maxwell}
+    \Lambda_{\mathrm{Ion}} = \frac{1}{\sqrt{2}\, \pi d^2 N_v}
+    \label{eq:mfp_maxwell}
 \end{equation}
 ergibt.
 
+\subsection{Ionisierungspotential}
 
-\subsubsection{Ionisierungspotential}
-Das Ionisierungspotential (auch Ionisierungsenergie genannt) bezeichnet die minimale Energie, die benötigt wird, um ein Elektron aus einem neutralen Atom oder Molekül im Grundzustand vollständig zu entfernen und so ein einfach positiv geladenes Ion zu erzeugen:
+Das Ionisierungspotential (auch Ionisierungsenergie genannt) bezeichnet
+die minimale Energie, die benötigt wird, um ein Elektron aus einem
+neutralen Atom oder Molekül im Grundzustand vollständig zu entfernen und
+so ein einfach positiv geladenes Ion zu erzeugen:
 \begin{equation}
     A + E_i \rightarrow A^+ + e^-.
+    \label{eq:ionisation}
 \end{equation}
-Die Ionisierungsenergie wird üblicherweise in Elektronenvolt ($\mathrm{eV}$) angegeben und hängt von der Elektronenkonfiguration des jeweiligen Atoms ab. Edelgase weisen aufgrund ihrer abgeschlossenen Elektronenschalen besonders hohe Ionisierungsenergien auf, während Alkalimetalle nur ein schwach gebundenes Valenzelektron besitzen und entsprechend niedrige Werte aufweisen. Für die Erzeugung mehrfach geladener Ionen sind die zweite, dritte usw.\ Ionisierungsenergien erforderlich, welche aufgrund der stärkeren Bindung der verbleibenden Elektronen sukzessive größer werden. In der Massenspektrometrie ist die Kenntnis des Ionisierungspotentials von Bedeutung, da die Energie der ionisierenden Elektronen in der Ionenquelle ausreichend hoch sein muss, um die Probenmoleküle effizient zu ionisieren.
+Die Ionisierungsenergie wird üblicherweise in Elektronenvolt (eV)
+angegeben und hängt von der Elektronenkonfiguration des jeweiligen Atoms
+ab. Edelgase weisen aufgrund ihrer abgeschlossenen Elektronenschalen
+besonders hohe Ionisierungsenergien auf, während Alkalimetalle nur ein
+schwach gebundenes Valenzelektron besitzen und entsprechend niedrige
+Werte aufweisen. Für die Erzeugung mehrfach geladener Ionen sind die
+zweite, dritte usw.\ Ionisierungsenergien erforderlich, welche aufgrund
+der stärkeren Bindung der verbleibenden Elektronen sukzessive größer
+werden. In der Massenspektrometrie ist die Kenntnis des
+Ionisierungspotentials von Bedeutung, da die Energie der ionisierenden
+Elektronen in der Ionenquelle ausreichend hoch sein muss, um die
+Probenmoleküle effizient zu ionisieren.
 
-\subsubsection{Isotopenmuster}
-Die meisten chemischen Elemente kommen in der Natur als Gemisch verschiedener Isotope vor, die sich in der Anzahl der Neutronen im Atomkern unterscheiden, bei identischer Protonenzahl. Da Isotope eines Elements nahezu dieselben chemischen Eigenschaften, aber unterschiedliche Massen besitzen, erscheinen sie im Massenspektrum als charakteristisches Muster mehrerer Peaks. Das Verhältnis der Peakhöhen entspricht dabei der natürlichen relativen Häufigkeit der jeweiligen Isotope. So besitzt beispielsweise Krypton sechs stabile Isotope mit den Massenzahlen 78, 80, 82, 83, 84 und 86, wobei $^{84}\mathrm{Kr}$ mit etwa $57\,\%$ die größte Häufigkeit aufweist. Das Isotopenmuster dient in der Massenspektrometrie als wichtiges Werkzeug zur Identifikation von Elementen und Molekülen, da es einen charakteristischen ,,Fingerabdruck`` darstellt. Bei Molekülen ergibt sich das beobachtete Muster aus der Faltung der Isotopenverteilungen aller im Molekül enthaltenen Elemente.
+\subsection{Isotopenmuster}
 
-\subsubsection{Fragmentierung}
-Bei der Ionisierung in der Ionenquelle wird den Molekülen häufig deutlich mehr Energie zugeführt, als für die reine Ionisierung notwendig wäre. Diese überschüssige Energie kann zum Aufbrechen chemischer Bindungen innerhalb des Moleküls führen, was als Fragmentierung bezeichnet wird. Aus einem Molekülion $M^+$ entstehen dabei kleinere geladene Bruchstücke (Fragment-Ionen) sowie neutrale Teilchen, die im Massenspektrometer nicht detektiert werden. Im Massenspektrum erscheint neben dem sogenannten Molekülpeak (auch Hauptpeak oder ,,parent peak``), der dem unfragmentierten Molekülion entspricht, eine Reihe weiterer Peaks bei kleineren Masse-zu-Ladungs-Verhältnissen, die den verschiedenen Fragment-Ionen zuzuordnen sind. Das resultierende Fragmentierungsmuster ist für jede Molekülsorte charakteristisch und kann mit Referenzspektren aus Datenbanken verglichen werden, wodurch eine eindeutige Identifikation auch unbekannter Substanzen ermöglicht wird. Die Fragmentierung liefert somit wertvolle Informationen über die Struktur des untersuchten Moleküls.
+Die meisten chemischen Elemente kommen in der Natur als Gemisch
+verschiedener Isotope vor, die sich in der Anzahl der Neutronen im
+Atomkern unterscheiden, bei identischer Protonenzahl. Da Isotope eines
+Elements nahezu dieselben chemischen Eigenschaften, aber unterschiedliche
+Massen besitzen, erscheinen sie im Massenspektrum als charakteristisches
+Muster mehrerer Peaks. Das Verhältnis der Peakhöhen entspricht dabei der
+natürlichen relativen Häufigkeit der jeweiligen Isotope. So besitzt
+beispielsweise Krypton sechs stabile Isotope mit den Massenzahlen
+78, 80, 82, 83, 84 und 86, wobei $^{84}$Kr mit etwa $57\,\%$ die größte
+Häufigkeit aufweist. Das Isotopenmuster dient in der Massenspektrometrie
+als wichtiges Werkzeug zur Identifikation von Elementen und Molekülen,
+da es einen charakteristischen ,,Fingerabdruck`` darstellt. Bei
+Molekülen ergibt sich das beobachtete Muster aus der Faltung der
+Isotopenverteilungen aller im Molekül enthaltenen Elemente.
+
+\subsection{Fragmentierung}
+
+Bei der Ionisierung in der Ionenquelle wird den Molekülen häufig deutlich
+mehr Energie zugeführt, als für die reine Ionisierung notwendig wäre.
+Diese überschüssige Energie kann zum Aufbrechen chemischer Bindungen
+innerhalb des Moleküls führen, was als Fragmentierung bezeichnet wird.
+Aus einem Molekülion M$^+$ entstehen dabei kleinere geladene Bruchstücke
+(Fragment-Ionen) sowie neutrale Teilchen, die im Massenspektrometer nicht
+detektiert werden. Im Massenspektrum erscheint neben dem sogenannten
+Molekülpeak (auch Hauptpeak oder ,,parent peak``), der dem
+unfragmentierten Molekülion entspricht, eine Reihe weiterer Peaks bei
+kleineren Masse-zu-Ladungs-Verhältnissen, die den verschiedenen
+Fragment-Ionen zuzuordnen sind. Das resultierende Fragmentierungsmuster
+ist für jede Molekülsorte charakteristisch und kann mit Referenzspektren
+aus Datenbanken verglichen werden, wodurch eine eindeutige Identifikation
+auch unbekannter Substanzen ermöglicht wird. Die Fragmentierung liefert
+somit wertvolle Informationen über die Struktur des untersuchten
+Moleküls.
 
 
-
-\subsection{Experimenteller Aufbau}
-Der allgemeine Aufbau eines Massenspektrometers besteht aus drei Komponenten. Die \textbf{Ionenquelle}, in der die Probe in einen gasförmigen Zustand überführt und ionisiert wird, meist durch das Entfernen eines Elektrons. Der \textbf{Analysator}, der in unserem Fall ein Quadrupol-Massenspektrometer (\textbf{QMS}) ist und für die Trennung der Atome nach ihrem Masse-zu-Ladungs-Verhältnis ($\frac{m}{q}$) verantwortlich ist, was häufig mithilfe eines magnetischen und elektrischen Feldes erfolgt. Und der \textbf{Detektor}, der die eintreffenden Teilchen registriert und in ein elektrisches Signal umwandelt, mit dem weiter gearbeitet werden kann. \label{core_comp_mass_spctrmtr}
-
-
-\subsubsection{Setup of the QMS}
-\textbf{! TODO !}
-
-\subsubsection{Funktionsweise des QMS}
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{QMS_schematic.png}
-    \caption{Schematische Darstellung des Quadrupol-Massenspektrometers mit den Kernkomponenten, die in Kapitel \ref{core_comp_mass_spctrmtr} erläutert werden, sowie dem Funktionsprinzip eines QMS.}
-    %Source: https://www.researchgate.net/figure/Scheme-of-quadrupole-mass-analyzer-Q_fig4_329040300
-    \label{fig:qms_schematic}
-\end{figure}
-Das Quadrupol-Massenspektrometer besitzt als Analysator einen Quadrupol, der aus vier präzise gefertigten, runden Stäben aus Edelstahl oder Molybdän besteht. Diese Pole sind parallel im Abstand $r$ um die Symmetrieachse angeordnet. Die gegenüberliegenden Stäbe liegen jeweils auf dem gleichen Potential. An den benachbarten Stäben liegt eine Gleichspannung ($U$) sowie eine Wechselspannung mit der Amplitude $V$ an:
-\begin{equation}
-    u(t) = U + V \cos(\omega t).
-\end{equation}
-Die Bahnen der Ionen im Inneren des Quadrupol-Massenspektrometers lassen sich durch die Mathieu'sche Differentialgleichung beschreiben:
-\begin{equation}
-    \frac{d^2 y}{dx^2} + (a - 2q \cos(2\xi))\, y = 0.
-\end{equation}
-Die Lösungen dieser Differentialgleichung weisen bekanntermaßen sowohl stabile als auch instabile Bahnen auf. Über die Parameter Frequenz $\omega$ und die Spannungen $U$ und $V$ lässt sich einstellen, welche Ionen mit dem passenden Masse-zu-Ladungs-Verhältnis den Detektor auf einer zentralen Trajektorie erreichen können. Die Bahn der Teilchen mit dem richtigen $\frac{m}{q}$-Verhältnis verläuft sinusförmig mit gleichen Abständen der Amplituden zur Symmetrieachse des Quadrupols. Teilchen mit einem abweichenden Verhältnis folgen zwar ebenfalls einer sinusförmigen Bahn, werden jedoch zunehmend aus dem Quadrupol heraus beschleunigt, bis sie das elektromagnetische Feld verlassen. Auf diese Weise erreichen nur Teilchen mit dem passenden Verhältnis den Detektor am Ende des Massenspektrometers.
-\cite{Wiki_Quadrupol} \cite{Wiki_Mathiu_func}
 
 
 

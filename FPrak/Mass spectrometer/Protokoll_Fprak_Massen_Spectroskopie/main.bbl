@@ -42,6 +42,32 @@
       \field{title}{Experimentbeschreibung zur freien Weglänge}
       \field{year}{1979}
     \endentry
+    \entry{Bild_Quadropol}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=550cc507917e5f7416a82f38fd8f76c5}{%
+           family={{Universität Stuttgart}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{550cc507917e5f7416a82f38fd8f76c5}
+      \strng{fullhash}{550cc507917e5f7416a82f38fd8f76c5}
+      \strng{fullhashraw}{550cc507917e5f7416a82f38fd8f76c5}
+      \strng{bibnamehash}{550cc507917e5f7416a82f38fd8f76c5}
+      \strng{authorbibnamehash}{550cc507917e5f7416a82f38fd8f76c5}
+      \strng{authornamehash}{550cc507917e5f7416a82f38fd8f76c5}
+      \strng{authorfullhash}{550cc507917e5f7416a82f38fd8f76c5}
+      \strng{authorfullhashraw}{550cc507917e5f7416a82f38fd8f76c5}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Methoden zur Massenspektrometrie}
+      \verb{urlraw}
+      \verb https://www.ioc.uni-stuttgart.de/institut/serviceabteilungen/analytik/massenspektrometrie/methoden/#id-9f9b3308
+      \endverb
+      \verb{url}
+      \verb https://www.ioc.uni-stuttgart.de/institut/serviceabteilungen/analytik/massenspektrometrie/methoden/#id-9f9b3308
+      \endverb
+    \endentry
     \entry{Wiki_Mathiu_func}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
@@ -71,7 +97,7 @@
       \verb https://en.wikipedia.org/wiki/Mathieu_function
       \endverb
     \endentry
-    \entry{WikiMFP}{misc}{}{}
+    \entry{Wiki_MFP}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
            family={{Wikipedia contributors}},
@@ -94,10 +120,10 @@
       \field{title}{Mittlere freie Weglänge}
       \field{year}{2024}
       \verb{urlraw}
-      \verb https://de.wikipedia.org/wiki/Mittlere_freie_Wegl%C3%A4nge
+      \verb https://de.wikipedia.org/wiki/Mittlere_freie_Wegl\%C3\%A4nge
       \endverb
       \verb{url}
-      \verb https://de.wikipedia.org/wiki/Mittlere_freie_Wegl%C3%A4nge
+      \verb https://de.wikipedia.org/wiki/Mittlere_freie_Wegl%5C%C3%5C%A4nge
       \endverb
     \endentry
     \entry{Wiki_Quadrupol}{misc}{}{}
