@@ -14,8 +14,8 @@
 \contentsline {section}{\numberline {4}Aufgabe 2 -- Xenon-Isotopenmuster}{17}{}%
 \contentsline {section}{\numberline {5}Aufgabe 3 -- Massenspektren organischer Moleküle}{23}{}%
 \contentsline {subsection}{\numberline {5.1}Aceton (C$_3$H$_6$O)}{24}{}%
-\contentsline {subsection}{\numberline {5.2}Chloroform (CHCl$_3$)}{25}{}%
-\contentsline {section}{\numberline {6}Aufgabe 4 -- Identifikation unbekannter Moleküle}{27}{}%
-\contentsline {section}{\numberline {7}Aufgabe 5 -- Theoretische Aufgaben}{32}{}%
-\contentsline {subsection}{\numberline {7.1}Teil a}{32}{}%
-\contentsline {subsection}{\numberline {7.2}Teil b}{33}{}%
+\contentsline {subsection}{\numberline {5.2}Chloroform (CHCl$_3$)}{26}{}%
+\contentsline {section}{\numberline {6}Aufgabe 4 -- Identifikation unbekannter Moleküle}{28}{}%
+\contentsline {section}{\numberline {7}Aufgabe 5 -- Theoretische Aufgaben}{33}{}%
+\contentsline {subsection}{\numberline {7.1}Teil a}{34}{}%
+\contentsline {subsection}{\numberline {7.2}Teil b}{35}{}%

@@ -50,8 +50,7 @@ Masse-zu-Ladungs-Verhältnis getrennt; vor jeder Messung wurde ein
 Hintergrundspektrum aufgenommen und abgezogen. Für Krypton und Xenon
 wurde das Isotopenmuster der einfach und doppelt geladenen Ionen bei je
 neun Drücken bestimmt. Die Kr$^+$- und Xe$^+$-Verteilungen stimmen für
-die häufigen Isotope gut mit den Literaturwerten überein (beste
-Einzelmessung bei Kr$^+$: alle relativen Abweichungen unter $6\,\%$),
+die häufigen Isotope gut mit den Literaturwerten überein (beste Einzelmessung bei Kr$^+$: alle relativen Abweichungen unter $6{,}2\,\%$),
 während die zweifach geladenen Ionen durch Peak-Überlagerungen bei
 halbzahligen $m/z$-Werten nur eingeschränkt auswertbar sind. Bei den
 schweren Xe-Isotopen zeigt sich zusätzlich eine Massendiskriminierung
@@ -233,7 +232,7 @@ ein günstiger Preis. \emph{Nachteile:} im Vergleich zu Sektorfeld- oder
 Orbitrap-Geräten nur moderate Massenauflösung und ein begrenzter
 Massenbereich (typischerweise bis einige hundert $m/z$). Aufgrund dieser
 Eigenschaften eignet sich das QMS besonders für Praktikums- und
-Routineanwendungen~\cite{Wiki_Quadrupol}.
+Routineanwendungen~\cite{gross2017}.
 
 \subsection{Funktionsweise des Quadrupol-Massenspektrometers}
 
@@ -276,7 +275,7 @@ mit den dimensionslosen Stabilitätsparametern
 \end{equation}
 Die Lösungen dieser Gleichung sind je nach Wahl von $a$ und $q$ entweder
 stabil (begrenzte Amplitude) oder instabil (exponentiell anwachsende
-Amplitude)~\cite{Wiki_Mathiu_func}. Nur Ionen mit einem
+Amplitude)~\cite{gross2017}. Nur Ionen mit einem
 $m/z$-Verhältnis, das auf eine stabile Bahn führt, durchqueren den
 Quadrupol auf einer beschränkten, oszillierenden Trajektorie und
 erreichen den Detektor. Ionen mit abweichendem $m/z$-Verhältnis werden
@@ -353,7 +352,7 @@ man $N = 1$ setzt, woraus
 folgt. Eine genauere Beschreibung der mittleren freien Weglänge
 berücksichtigt die Maxwell'sche Geschwindigkeitsverteilung der
 Gasteilchen. In diesem Fall verringert sich die mittlere freie Weglänge
-um einen Faktor $\sqrt{2}$~\cite{Wiki_MFP}, sodass sich
+um einen Faktor $\sqrt{2}$~\cite{demtroeder2018}, sodass sich
 \begin{equation}
     \Lambda_{\mathrm{Ion}} = \frac{1}{\sqrt{2}\, \pi d^2 N_v}
     \label{eq:mfp_maxwell}
@@ -464,15 +463,9 @@ Dieses zeigt die Restgaszusammensetzung der Kammer: prominente Peaks
 bei $m/z = 2$ (H$_2$), $m/z = 18$ (H$_2$O), $m/z = 28$ (N$_2$/CO),
 $m/z = 32$ (O$_2$) und $m/z = 44$ (CO$_2$), die auf eine geringe
 Luftkontamination der Kammer zur\"uckzuf\"uhren sind.
-Das Hintergrundspektrum wird von allen Krypton-Messungen abgezogen,
-da es alle Signale beschreibt, die nicht vom eingef\"ullten Krypton
-stammen. Dadurch heben sich Residualgas-Peaks heraus und die
-Kr-Isotopenmuster treten klarer hervor.
 Anzumerken ist, dass das Hintergrundspektrum im Kr-Bereich bereits
 schwache Peaks bei $m/z = 83$ und $84$ zeigt. Diese stammen
 wahrscheinlich von Kr-R\"uckst\"anden eines fr\"uheren Experiments.
-Infolgedessen wird $^{83}$Kr nach dem Hintergrundabzug leicht
-untersch\"atzt, was bei der Fehleranalyse zu ber\"ucksichtigen ist.
 
 
 \begin{figure}[h]
@@ -542,6 +535,19 @@ farbkodiert nach dem Druck.
     \label{fig:kr_zoom}
 \end{figure}
 
+\subsection*{Herkunft der Literaturwerte}
+
+Die in dieser Arbeit verwendeten natürlichen Isotopenhäufigkeiten --
+für Krypton und Xenon (Aufgaben~1 und~2) ebenso wie das
+Chlor-Isotopenverhältnis $^{35}$Cl$\,:\,^{37}$Cl und die
+$^{13}$C-Häufigkeit (Aufgabe~3) -- entstammen den repräsentativen
+Isotopenzusammensetzungen der IUPAC-Kommission für Isotopenhäufigkeiten
+und Atomgewichte (CIAAW)~\cite{iupac2013}.
+Die zum Vergleich herangezogenen Fragmentierungs- bzw.\ Referenzspektren
+der organischen Moleküle (Aufgaben~3 und~4) stammen aus dem
+NIST Chemistry WebBook~\cite{nist_webbook}.
+
+
 \subsubsection*{Auswertung der Isotopenverteilung}
 
 Die relativen H\"aufigkeiten werden aus den Peakh\"ohen aller sechs Isotope
@@ -551,7 +557,6 @@ Als bester Einzelwert wird die Messung bei $0{,}4\,\mathrm{mbar}$ (Kr$^+$)
 bzw.\ $5\,\mathrm{mbar}$ (Kr$^{2+}$) angegeben, da diese den besten
 Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
 
-% Benötigt in der Präambel: \usepackage{adjustbox}
 
 % ── Tabelle 1: Kr+ ───────────────────────────────────────────────────────────
 \begin{table}[htbp]
@@ -574,14 +579,14 @@ Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
         & Durchschn. & $0{,}4\,\mathrm{mbar}$
         & Durchschn. & $0{,}4\,\mathrm{mbar}$ \\
         \midrule
-        78 &  0.411 & 0.179 &  0.334 &  0.355 & $+$0.056 & $-$0.021 & $+$15.77 &  $-$5.92 \\
-        80 &  2.630 & 0.380 &  2.427 &  2.286 & $+$0.344 & $+$0.141 & $+$15.05 &  $+$6.17 \\
-        82 & 13.036 & 0.817 & 11.819 & 11.593 & $+$1.443 & $+$0.226 & $+$12.45 &  $+$1.95 \\
-        83 & 10.538 & 2.955 & 11.780 & 11.500 & $-$0.962 & $+$0.280 &  $-$8.37 &  $+$2.43 \\
-        84 & 56.203 & 2.941 & 57.295 & 56.987 & $-$0.784 & $+$0.308 &  $-$1.38 &  $+$0.54 \\
-        86 & 17.182 & 0.782 & 16.346 & 17.279 & $-$0.097 & $-$0.933 &  $-$0.56 &  $-$5.40 \\
+        78 &  0.249 & 0.245 &  0.334 &  0.355 & $-$0.106 & $-$0.021 & $-$29.86 & $-$5.92 \\
+        80 &  2.332 & 0.907 &  2.427 &  2.286 & $+$0.046 & $+$0.141 &  $+$2.01 & $+$6.17 \\
+        82 & 13.106 & 0.901 & 11.819 & 11.593 & $+$1.513 & $+$0.226 & $+$13.05 & $+$1.95 \\
+        83 & 10.536 & 2.976 & 11.780 & 11.500 & $-$0.964 & $+$0.280 &  $-$8.38 & $+$2.43 \\
+        84 & 56.502 & 3.354 & 57.295 & 56.987 & $-$0.485 & $+$0.308 &  $-$0.85 & $+$0.54 \\
+        86 & 17.275 & 0.970 & 16.346 & 17.279 & $-$0.004 & $-$0.933 &  $-$0.02 & $-$5.40 \\
         \midrule
-        $\sum$ & 100.000 & & 100.001 & 100.000 & & & & \\
+        $\sum$ & 100.000 & & 100.000 & 100.000 & & & & \\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -590,9 +595,10 @@ Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
 % ── Tabelle 2: Kr2+ ──────────────────────────────────────────────────────────
 \begin{table}[htbp]
     \centering
-    \caption{Vergleich der gemessenen und nat\"urlichen Isotopenh\"aufigkeiten
-        f\"ur doppelt geladene Kr$^{2+}$-Ionen. Beste Einzelmessung bei
-        $p = 5\,\mathrm{mbar}$. $^\dagger$: durch Peak-\"Uberlagerung verf\"alscht.}
+    \caption{$^\dagger$: $^{83}$Kr$^{2+}$ ($m/z=41{,}5$) ist durch die Überlagerung mit dem
+benachbarten $^{84}$Kr$^{2+}$-Peak (Maximum bei $m/z\approx 41{,}9$) nicht
+zuverlässig auswertbar; die Intensitäten wurden exakt an der jeweiligen
+Nominalmasse abgelesen. Beste Einzelmessung bei $p = 5\,\mathrm{mbar}$.}
     \label{tab:kr2}
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{c c r r r r r r r}
@@ -608,18 +614,19 @@ Kompromiss zwischen Signal-Rausch-Verh\"altnis und S\"attigungseffekten bietet.
         & Durchschn. & $5\,\mathrm{mbar}$
         & Durchschn. & $5\,\mathrm{mbar}$ \\
         \midrule
-        78 & 39             &  0.060 &  0.168 &  0.355 &  $-$0.295 &  $-$0.187 &  $-$83.10 &  $-$52.68 \\
-        80 & 40             &  0.831 &  1.560 &  2.286 &  $-$1.455 &  $-$0.726 &  $-$63.65 &  $-$31.76 \\
-        82 & 41$^\dagger$   &  7.163 & 11.053 & 11.593 &  $-$4.430 &  $-$0.540 &  $-$38.21 &   $-$4.66 \\
-        83 & 41.5$^\dagger$ & 42.607 & 37.841 & 11.500 & $+$31.107 & $+$26.341 & $+$270.50 & $+$229.05 \\
-        84 & 42             & 42.995 & 37.841 & 56.987 & $-$13.992 & $-$19.146 &  $-$24.55 &  $-$33.60 \\
-        86 & 43             &  6.344 & 11.537 & 17.279 & $-$10.935 &  $-$5.742 &  $-$63.28 &  $-$33.23 \\
+        78 & 39             &  0.080 &  0.242 &  0.355 &  $-$0.275 & $-$0.113 & $-$77.46 & $-$31.83 \\
+        80 & 40             &  1.235 &  2.184 &  2.286 &  $-$1.051 & $-$0.102 & $-$45.98 &  $-$4.46 \\
+        82 & 41             &  6.695 & 12.239 & 11.593 &  $-$4.898 & $+$0.646 & $-$42.25 &  $+$5.57 \\
+        83 & 41.5$^\dagger$ & 21.619 & 17.020 & 11.500 & $+$10.119 & $+$5.520 & $+$87.99 & $+$48.00 \\
+        84 & 42             & 61.743 & 52.352 & 56.987 &  $+$4.756 & $-$4.635 &  $+$8.35 &  $-$8.13 \\
+        86 & 43             &  8.627 & 15.963 & 17.279 &  $-$8.652 & $-$1.316 & $-$50.07 &  $-$7.62 \\
         \midrule
         $\sum$ & & 100.000 & 100.000 & 100.000 & & & & \\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
 \end{table}
+
 
 
 \subsubsection*{Fehleranalyse}
@@ -878,15 +885,15 @@ $4{,}50\,\mathrm{mbar}$ (Xe$^{2+}$) angegeben.
         & Durchschn. & $4{,}5\,\mathrm{mbar}$
         & Durchschn. & $4{,}5\,\mathrm{mbar}$ \\
         \midrule
-        124 & 62             &  0.233 &  0.063 &  0.095 & $+$0.138 & $-$0.032 & $+$144.5 &  $-$33.6 \\
-        126 & 63             &  0.218 &  0.147 &  0.089 & $+$0.129 & $+$0.058 & $+$144.8 &  $+$64.9 \\
-        128 & 64$^\dagger$   & 16.649 & 18.261 &  1.910 & $+$14.739 & $+$16.350 & $+$771.6 & $+$856.0 \\
-        129 & 64.5$^\dagger$ & 19.992 & 18.744 & 26.401 & $-$6.409 & $-$7.656 &  $-$24.3 &  $-$29.0 \\
-        130 & 65$^\dagger$   & 13.479 & 14.280 &  4.071 & $+$9.408 & $+$10.209 & $+$231.1 & $+$250.8 \\
-        131 & 65.5$^\dagger$ & 17.805 & 17.440 & 21.232 & $-$3.427 & $-$3.793 &  $-$16.1 &  $-$17.9 \\
-        132 & 66             & 19.742 & 18.262 & 26.909 & $-$7.167 & $-$8.647 &  $-$26.6 &  $-$32.1 \\
-        134 & 67             &  6.076 &  6.993 & 10.436 & $-$4.360 & $-$3.443 &  $-$41.8 &  $-$33.0 \\
-        136 & 68             &  5.807 &  5.812 &  8.857 & $-$3.050 & $-$3.046 &  $-$34.4 &  $-$34.4 \\
+        124 & 62           &  0.039 &  0.086 &  0.095 & $-$0.056 & $-$0.009 & $-$58.9 &  $-$9.5 \\
+        126 & 63           &  0.050 &  0.117 &  0.089 & $-$0.039 & $+$0.028 & $-$43.8 & $+$31.5 \\
+        128 & 64$^\dagger$ &  2.796 &  4.118 &  1.910 & $+$0.886 & $+$2.208 & $+$46.4 & $+$115.6 \\
+        129 & 64.5         & 27.429 & 25.576 & 26.401 & $+$1.028 & $-$0.825 &  $+$3.9 &  $-$3.1 \\
+        130 & 65$^\dagger$ &  5.231 &  5.795 &  4.071 & $+$1.160 & $+$1.724 & $+$28.5 & $+$42.3 \\
+        131 & 65.5         & 23.410 & 21.922 & 21.232 & $+$2.178 & $+$0.690 & $+$10.3 &  $+$3.2 \\
+        132 & 66           & 27.000 & 24.918 & 26.909 & $+$0.091 & $-$1.991 &  $+$0.3 &  $-$7.4 \\
+        134 & 67           &  7.084 &  9.538 & 10.436 & $-$3.352 & $-$0.898 & $-$32.1 &  $-$8.6 \\
+        136 & 68           &  6.962 &  7.930 &  8.857 & $-$1.895 & $-$0.927 & $-$21.4 & $-$10.5 \\
         \midrule
         $\sum$ & & 100.000 & 100.000 & 100.000 & & & & \\
         \bottomrule
@@ -999,6 +1006,24 @@ mindestens $m/z = 120$--$150$ reichen müssen.
 Wir weisen an den betreffenden Stellen ausdrücklich auf diese
 Limitierung hin.
 
+\subsection*{Anmerkung zur Normierung}
+
+Bei den Edelgasen Krypton und Xenon (Aufgaben~1 und~2) konnte der
+gesamte relevante Bereich des Spektrums erfasst werden: Alle stabilen
+Isotope liegen innerhalb des gemessenen $m/z$-Bereichs, und oberhalb
+des schwersten Isotops treten keine weiteren relevanten Signale auf.
+Daher lassen sich die relativen Häufigkeiten so normieren, dass ihre
+Summe über alle Isotope $100\,\%$ ergibt -- entsprechend der natürlichen
+Definition der Isotopenzusammensetzung, bei der die Anteile aller Isotope
+eines Elements zusammen die gesamte Stoffmenge ausmachen.
+
+Ab Aufgabe~3 (organische Moleküle) ist dies nicht mehr möglich: Wie im
+Hinweis zum Massenbereich erläutert, liegen dort wichtige hochmassige
+Fragmente und teilweise das Molekülion oberhalb der Messgrenze von
+$m/z = 80$. Eine Normierung auf eine Summe von $100\,\%$ wäre dort
+sinnlos, da ein Teil der Intensität gar nicht erfasst wird. Die
+Fragment-Intensitäten werden deshalb in den Aufgaben~3 und~4 stets
+\emph{relativ zum intensivsten Peak} (Basis-Peak $= 100\,\%$) angegeben.
 
 
 \subsection*{Aufgabenstellung}
@@ -1264,26 +1289,47 @@ was auf dieselbe bzw.\ eine sehr ähnliche Substanz hindeutet. Da das
 Molekülion oberhalb der Scan-Grenze von $m/z = 80$ liegt, stützt sich
 die Auswertung allein auf die niedermassigen Fragment-Ionen.
 
-Der Basis-Peak bei $m/z = 43$ ist die zentrale, aber zweideutige
-Information: Er entspricht entweder dem Acylium-Kation CH$_3$CO$^+$, das
-in Methylketonen durch $\alpha$-Spaltung entsteht, oder dem
-Propyl-Kation C$_3$H$_7^+$ eines Alkylrests. Entscheidend für die
-Unterscheidung ist der deutliche Peak bei $m/z = 58$: Ein Methylketon
-mit $\gamma$-ständigem Wasserstoff liefert über die
-McLafferty-Umlagerung das Enol-Fragment CH$_2{=}$C(OH)CH$_3^+$ bei genau
-$m/z = 58$. Das gleichzeitige Auftreten eines starken Basis-Peaks bei
-$43$ \emph{und} eines ausgeprägten Peaks bei $58$ ist daher ein
-typischer Fingerabdruck eines aliphatischen Methylketons vom Typ
-CH$_3$--CO--R.
+Der intensivste Peak (Basis-Peak), auf den alle anderen Intensitäten
+normiert werden, liegt bei $m/z = 43$. Dieser Wert ist allerdings
+nicht eindeutig, da zwei verschiedene Bruchstücke dieselbe Masse haben:
+\begin{itemize}
+  \item das \emph{Acylium-Kation} CH$_3$CO$^+$ -- ein Bruchstück, das
+    eine Kohlenstoff-Sauerstoff-Doppelbindung (eine sogenannte
+    Carbonylgruppe, $\mathrm{C{=}O}$) enthält. Es entsteht, wenn die
+    Bindung direkt neben dieser Carbonylgruppe bricht. Dieses Bruchstück
+    ist typisch für Ketone, also Moleküle mit einer $\mathrm{C{=}O}$-Gruppe
+    im Inneren der Kohlenstoffkette;
+  \item das \emph{Propyl-Kation} C$_3$H$_7^+$ -- ein reines
+    Kohlenwasserstoff-Bruchstück aus drei Kohlenstoff- und sieben
+    Wasserstoffatomen, das umgekehrt typisch für reine
+    Kohlenwasserstoffketten ist.
+\end{itemize}
 
-Die übrigen Peaks bestätigen einen zugehörigen Alkylrest: $m/z = 41$
-(C$_3$H$_5^+$, Allyl) und $m/z = 39$ (C$_3$H$_3^+$) sind typische
-ungesättigte Kohlenwasserstoff-Fragmente, $m/z = 27$ (C$_2$H$_3^+$),
-$29$ (C$_2$H$_5^+$) und $15$ (CH$_3^+$) die üblichen kleinen
-Alkyl-Bruchstücke. Auffällig ist der vergleichsweise starke Peak bei
-$m/z = 56$ (C$_4$H$_8^+$), der eine intakte C$_4$-Einheit anzeigt und
-damit auf eine Kettenlänge von mindestens vier Kohlenstoffatomen
-schließen lässt.
+Ob ein Keton oder ein Kohlenwasserstoff vorliegt, lässt sich am Peak bei
+$m/z = 58$ entscheiden. Methylketone (Moleküle vom Aufbau
+CH$_3${--}CO{--}R, bei denen eine Methylgruppe an die Carbonylgruppe
+gebunden ist und R für den restlichen Molekülteil steht) zeigen eine
+charakteristische Umlagerung, die McLafferty-Umlagerung: Dabei wandert
+ein Wasserstoffatom innerhalb des Ions an eine bestimmte Stelle, und ein
+neutrales Teilchen wird abgespalten. Übrig bleibt ein gut definiertes
+Bruchstück genau bei $m/z = 58$. Das gleichzeitige Auftreten eines
+starken Basis-Peaks bei $43$ \emph{und} eines deutlichen Peaks bei
+$58$ ist deshalb ein verlässlicher Hinweis auf ein Methylketon vom Typ
+CH$_3${--}CO{--}R und spricht gegen einen reinen Kohlenwasserstoff.
+
+Die übrigen Peaks lassen sich dem Kohlenwasserstoff-Teil des Moleküls
+(dem Alkylrest, also der reinen Kohlenstoff-Wasserstoff-Kette R)
+zuordnen. Die Peaks bei $m/z = 41$ (C$_3$H$_5^+$, auch Allyl-Kation
+genannt) und $m/z = 39$ (C$_3$H$_3^+$) sind typische Bruchstücke
+solcher Ketten; das ``ungesättigt'' bedeutet dabei lediglich, dass im
+Bruchstück eine Kohlenstoff-Doppelbindung steckt. Die Peaks bei
+$m/z = 27$ (C$_2$H$_3^+$), $29$ (C$_2$H$_5^+$) und $15$
+(CH$_3^+$, eine einzelne Methylgruppe) sind die üblichen kleinen
+Kohlenwasserstoff-Bruchstücke, die bei fast allen organischen Molekülen
+auftreten. Auffällig ist schließlich der vergleichsweise starke Peak bei
+$m/z = 56$ (C$_4$H$_8^+$): Er entspricht einem intakten Baustein aus
+vier Kohlenstoffatomen und zeigt damit, dass die Kohlenstoffkette des
+Moleküls mindestens vier Atome lang sein muss.
 
 \begin{table}[htbp]
     \centering
@@ -1528,6 +1574,7 @@ also näherungsweise konstant.
 
 
 \newpage
+\nocite{ainotice}
 \printbibliography %[heading=none]
 
 \end{document}
