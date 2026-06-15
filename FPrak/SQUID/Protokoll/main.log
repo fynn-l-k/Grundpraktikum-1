@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  15 JUN 2026 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  15 JUN 2026 21:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex
-(c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex
+**c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex
+(c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
 (c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -461,18 +461,6 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Runaway argument?
-{\url {https://home.uni-leipzig.de/\field {note}{Version 6.5, abgrufe\ETC.
-c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex:31: File ended while scanning use of \field.
-<inserted text> 
-                \par 
-l.31 \begin{document}
-                     
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
 Package biblatex Info: Reference section=0 on input line 31.
 Package biblatex Info: Reference segment=0 on input line 31.
 <uni_logo.png, id=1, 339.2675pt x 142.5325pt>
@@ -481,87 +469,159 @@ File: uni_logo.png Graphic file (type png)
 Package pdftex.def Info: uni_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 258.75pt x 108.71075pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
-(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex:41: Undefined control sequence.
-<argument> \blx@bbl@data 
-                         
-l.41 \begin{abstract}
-                     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (19.57481pt too wide) in paragraph at lines 43--44
-[]\OT1/cmr/m/n/9 In diesem Ex-per-i-ment wird mit einem SQUID gear-beitet um kle-in-ste Mag-net-feld^^?anderungen
- []
-
-[1
+) [1
 
 {c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uni_logo.png>] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
  [2]
-c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex:58: Illegal parameter number in definition of \NewCount.
-<to be read again> 
-                   1
-l.58 \begin{enumerate}
-                      
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+Overfull \hbox (7.95895pt too wide) in paragraph at lines 68--69
+[]\OT1/cmr/m/n/10 Shapiro-Stufen-Messung ($\OML/cmm/m/it/10 V$\OT1/cmr/m/n/10 -$\OML/cmm/m/it/10 I$\OT1/cmr/m/n/10 -Messung mit Mikrowellen-Einkopplung), Bes-
+ []
 
-c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex:58: Illegal parameter number in definition of \NewCount.
-<to be read again> 
-                   1
-l.58 \begin{enumerate}
-                      
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
 
-c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex:58: Undefined control sequence.
-<argument> \blx@bbl@data 
-                         
-l.58 \begin{enumerate}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (19.77852pt too wide) in paragraph at lines 72--73
+[]\OT1/cmr/m/n/10 Bestimmung der max-i-malen Span-nungsmod-u-la-tion $^^A\OML/cmm/m/it/10 V$ \OT1/cmr/m/n/10 f^^?ur ein Flussquant
+ []
+
+
+Overfull \hbox (6.92072pt too wide) in paragraph at lines 73--74
+[]\OT1/cmr/m/n/10 Bestimmung des Mod-u-la-tion-spa-ram-e-ters $\OML/cmm/m/it/10 ^^L[]$ \OT1/cmr/m/n/10 mit 2 ver-schiede-nen Meth-
+ []
+
+
+Overfull \hbox (3.3617pt too wide) in paragraph at lines 74--75
+[]\OT1/cmr/m/n/10 Flussquantisierung in supralei-t-en-den Rin-gen, Bes-tim-mung des Zusam-
+ []
+
+[3]
+Overfull \hbox (15.36168pt too wide) in paragraph at lines 92--93
+\OT1/cmr/m/n/10 He-lium, son-dern mit fl^^?ussigem Stock-stoff herun-tergek^^?uhlt wer-den welcher wesentlich
+ []
+
+
+Overfull \hbox (6.19499pt too wide) in paragraph at lines 98--99
+\OT1/cmr/m/n/10 aus dem In-neren des Supraleit-ers ent-fernt, bis auf deine d^^?unne Oberfl^^?achenschicht,
+ []
+
+<figures/meißner_ochsenfeld_effekt.png, id=27, 250.9375pt x 250.9375pt>
+File: figures/meißner_ochsenfeld_effekt.png Graphic file (type png)
+<use figures/meißner_ochsenfeld_effekt.png>
+Package pdftex.def Info: figures/meißner_ochsenfeld_effekt.png  used on input line 102.
+(pdftex.def)             Requested size: 172.5pt x 172.50761pt.
+[4]
+Overfull \hbox (15.68593pt too wide) in paragraph at lines 112--113
+\OT1/cmr/m/n/10 seiner neg-a-tiven Ladung die pos-i-tiv gelade-nen Atomr^^?umpfe ger-ingf^^?ugig an. Dadurch
+ []
+
+
+Overfull \hbox (19.90804pt too wide) in paragraph at lines 112--113
+\OT1/cmr/m/n/10 entsteht lokal f^^?ur kurze Zeit eine erh^^?ohte pos-i-tive Ladungs-dichte. Da die Atomr^^?umpfe
+ []
+
+
+Overfull \hbox (2.25058pt too wide) in paragraph at lines 116--117
+\OT1/cmr/m/n/10 gemein-samer quan-ten-mech-a-nis-cher Zu-s-tand, bei dem die Aufen-thaltswahrschein-
+ []
+
+[5 <./figures/meißner_ochsenfeld_effekt.png>] [6]
+Overfull \hbox (0.83392pt too wide) in paragraph at lines 143--145
+\OT1/cmr/m/n/10 siven, schmelz-tex-turi-erten Hochtemperatur-Supraleiter-Zylinder in ein, aus einer
+ []
+
+<figures/schematischer_versuchsaufbau.png, id=40, 615.29875pt x 457.71pt>
+File: figures/schematischer_versuchsaufbau.png Graphic file (type png)
+<use figures/schematischer_versuchsaufbau.png>
+Package pdftex.def Info: figures/schematischer_versuchsaufbau.png  used on input line 148.
+(pdftex.def)             Requested size: 172.5pt x 128.31856pt.
+
+Overfull \hbox (3.97224pt too wide) in paragraph at lines 155--155
+[]\OT1/cmr/bx/n/12 Hochtemperatur-Supraleiter im in-ho-mo-ge-nen Mag-net-
+ []
+
+
+Overfull \hbox (21.72305pt too wide) in paragraph at lines 157--157
+[]\OT1/cmr/bx/n/10 Ermittlung des hor-i-zon-talen und ver-tikalen Ver-lauf des Permanent-
+ []
+
+[7 <./figures/schematischer_versuchsaufbau.png>]
+<figures/magnetische_ausrichtugn_4magnete.png, id=46, 1811.76875pt x 1758.57pt>
+File: figures/magnetische_ausrichtugn_4magnete.png Graphic file (type png)
+<use figures/magnetische_ausrichtugn_4magnete.png>
+Package pdftex.def Info: figures/magnetische_ausrichtugn_4magnete.png  used on input line 163.
+(pdftex.def)             Requested size: 258.75pt x 251.1355pt.
+<figures/saphiero_stufen.png, id=47, 1475.5125pt x 873.2625pt>
+File: figures/saphiero_stufen.png Graphic file (type png)
+<use figures/saphiero_stufen.png>
+Package pdftex.def Info: figures/saphiero_stufen.png  used on input line 176.
+(pdftex.def)             Requested size: 258.75pt x 153.1297pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/krit_temp_alle.png, id=48, 1463.4675pt x 873.2625pt>
+File: figures/krit_temp_alle.png Graphic file (type png)
+<use figures/krit_temp_alle.png>
+Package pdftex.def Info: figures/krit_temp_alle.png  used on input line 185.
+(pdftex.def)             Requested size: 258.75pt x 154.39555pt.
+[8 <./figures/magnetische_ausrichtugn_4magnete.png>]
+<figures/krit_temp_klein.png, id=53, 752.8125pt x 451.6875pt>
+File: figures/krit_temp_klein.png Graphic file (type png)
+<use figures/krit_temp_klein.png>
+Package pdftex.def Info: figures/krit_temp_klein.png  used on input line 192.
+(pdftex.def)             Requested size: 172.5pt x 103.49997pt.
+ [9{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/saphiero_stufen.png> <./figures/krit_temp_alle.png>] (./main.lof
+Overfull \hbox (1.68587pt too wide) in paragraph at lines 4--4
+ [][] []\OT1/cmr/m/n/10 Shapiro-Stufen, ent-standen durch MW-Antenne. Hor-i-zon-tale Lin- 
+ []
 
 )
-! Incomplete \iffalse; all text was ignored after line 58.
-<inserted text> 
-                \fi 
-<*> .../FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex
-                                                  
-The file ended while I was skipping conditional text.
-This kind of error happens when you say `\if...' and forget
-the matching `\fi'. I've inserted a `\fi'; this might work.
+\tf@lof=\write5
+\openout5 = `main.lof'.
 
-! Emergency stop.
-<*> .../FPrak/SQUID/Protokoll_Fprak_SQUID/main.tex
-                                                  
-*** (job aborted, no legal \end found)
+ (./main.lot)
+\tf@lot=\write6
+\openout6 = `main.lot'.
 
- 
+ [10 <./figures/krit_temp_klein.png>]
+Overfull \hbox (13.20743pt too wide) in paragraph at lines 206--206
+[]\OT1/cmr/m/n/10 Contributors of Wikipedia. \OT1/cmr/m/it/10 Mei^^Yner-Ochsenfeld-Effekt\OT1/cmr/m/n/10 . Ver-sion vom 14.9.2025,
+ []
+
+
+Overfull \hbox (10.50546pt too wide) in paragraph at lines 206--206
+[]\OT1/cmr/m/n/10 Wolfgang Demtr^^?oder. \OT1/cmr/m/it/10 Ex-per-i-men-tal-physik 3\OT1/cmr/m/n/10 . Edi-tion 5, abgerufen am 2.6.2026.
+ []
+
+[11] (./main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-04-28>
+ ***********
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 12162 strings out of 467341
- 223772 string characters out of 5419596
- 1051185 words of memory out of 5000000
- 41154 multiletter control sequences out of 15000+600000
- 636191 words of font info for 73 fonts, out of 8000000 for 9000
+ 12470 strings out of 467341
+ 231191 string characters out of 5419596
+ 1057518 words of memory out of 5000000
+ 41446 multiletter control sequences out of 15000+600000
+ 637718 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,6n,77p,1043b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 67i,6n,77p,1050b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on main.pdf (11 pages, 650496 bytes).
+PDF statistics:
+ 156 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

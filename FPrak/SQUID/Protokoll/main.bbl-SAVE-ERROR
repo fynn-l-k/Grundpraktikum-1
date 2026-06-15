@@ -19,33 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{mr_squid}{manual}{}{}
-      \name{author}{1}{}{%
-        {{hash=1f873b9a7e57aa048b40f91fbb468a8d}{%
-           family={Cantor},
-           familyi={C\bibinitperiod},
-           given={Randy\bibnamedelimb W.\bibnamedelimi Simonand\bibnamedelimb Michael\bibnamedelimb J.\bibnamedelimi Burnsand\bibnamedelimb Mark\bibnamedelimb S.\bibnamedelimi Colcloughand\bibnamedelimb Greg\bibnamedelimb Zaharchukand\bibnamedelima Robin},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim Z\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {STAR Cryoelectronics, LLC}%
-      }
-      \strng{namehash}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \strng{fullhash}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \strng{fullhashraw}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \strng{bibnamehash}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \strng{authorbibnamehash}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \strng{authornamehash}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \strng{authorfullhash}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \strng{authorfullhashraw}{1f873b9a7e57aa048b40f91fbb468a8d}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://home.uni-leipzig.de/%7Ephysfp/manuals/MrSQUID%20Manual%206_5.pdf}}
-      \field{note}{Version 6.5, abgrufen am 24.5.2026}
-      \field{title}{Mr. SQUID® User's Guide}
-    \endentry
     \entry{demtroder_3}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=59654c899d48eff28a4d8063e886fb5f}{%
