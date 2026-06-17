@@ -140,8 +140,7 @@ Die Basis eines Squid Sensores ist ein Supraleitender Ring
 
 \subsection{Experimenteller Aufbau}
 
-Für den ersten Teil des Experimentes, wurde ein auf 77 K abgekühlten, massiven,
-schmelztexturierten Hochtemperatur-Supraleiter-Zylinder in ein, aus einer Fläche von 4 Paramagneten erzeugtes, inhomogenes Magnetfeld eingebracht. Für den zweiten Teil wurde ein mit flüssigem Stickstoff gefülltes Kryostat benutzt in dem der SQUID Sensor drin war.
+Für den ersten Teil des Experimentes, wurde ein auf 77 K abgekühlten, massiven, schmelztexturierten Hochtemperatur-Supraleiter-Zylinder in ein, aus einer Fläche von 4 Paramagneten erzeugtes, inhomogenes Magnetfeld eingebracht. Für den zweiten Teil wurde ein mit flüssigem Stickstoff gefülltes Kryostat benutzt in dem der SQUID Sensor drin war.
 
 \begin{figure}
     \centering
@@ -156,7 +155,7 @@ schmelztexturierten Hochtemperatur-Supraleiter-Zylinder in ein, aus einer Fläch
 
 \subsubsection{Ermittlung des horizontalen und vertikalen Verlauf des Permanent-Magnetfeldes}
 
-Mittels eine Hall Sonde wurde bevor der Supraleiter in dass inhomogene Feld kommt, gemessen wie die ausrichtugne  der einzelnen Magnete sind um die folgenden Effekte besser erklären zu können.
+Zu Beginn wurde das Magnetfeld der vier Permanentmagnetplatten mithilfe eines Hallsensors untersucht. Dazu wurde die magnetische Flussdichte einmal horizontal über die Magnetanordnung und einmal vertikal in Abhängigkeit vom Abstand zur Oberfläche aufgenommen. Das Magnetfeld ist, wie der horizontale Verlauf verdeutlicht, inhomogen und weist Bereiche mit unterschiedlicher Feldstärke und wechselnder Polarität auf. Der vertikale Verlauf zeigt erwartungsgemäß, dass die magnetische Flussdichte abnimmt, je weiter man sich von den Magnetplatten entfernt.
 
 \begin{figure}
     \centering
@@ -165,18 +164,99 @@ Mittels eine Hall Sonde wurde bevor der Supraleiter in dass inhomogene Feld komm
     \label{fig:mag_ausr_4mag}
 \end{figure}
 
-\subsubsection{}
+\subsubsection{Hochtemperatur-Supraleiter-Zylinder im inhomogneen Magnetfeld}
+
+Anschließend wurde ein auf 77 K gekühlter Hochtemperatur-Supraleiter-Zylinder von oben in das Magnetfeld eingebracht. Dabei konnte ein Schwebezustand beobachtet werden. Dieser lässt sich durch den Meißner-Ochsenfeld-Effekt erklären: Im supraleitenden Zustand werden Magnetfeldlinien aus dem Inneren des Supraleiters verdrängt, wodurch im inhomogenen Magnetfeld eine abstoßende bzw. stabilisierende Kraft entsteht. Da es sich um einen Typ-II-Supraleiter handelt, können zusätzlich Flussschläuche und Pinning-Effekte zur Stabilisierung beitragen. Beim Erwärmen überschreitet der Körper nach einiger Zeit die kritische Temperatur, sodass der supraleitende Zustand verloren geht und der Schwebezustand endet.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/magnetische_ausrichtugn_4magnete.png}
+    \caption{Supraleiter im inhomogenen Magnetfeld}
+    \label{fig:supraleiter_auf_inhom_magnetfeld}
+\end{figure}
+
+Auffällig war, dass der supraleitende Zylinder nicht an jeder Position über der Magnetanordnung stabil schwebte, sondern vor allem im zentralen Bereich des inhomogenen Magnetfeldes. Dies lässt sich durch die Symmetrie der vier Permanentmagnetplatten erklären. In der Mitte kompensieren sich die horizontalen Kraftkomponenten weitgehend, während die vertikale magnetische Kraft den Zylinder gegen die Gewichtskraft stabilisieren kann. An den Übergängen zwischen Bereichen positiver und negativer Feldrichtung ist das Magnetfeld dagegen stark inhomogen. Da verschiedene Bereiche des Supraleiters dort unterschiedlich gerichtete Magnetfeldkomponenten erfahren, entstehen neben der vertikalen Kraft auch Drehmomente. Diese führen dazu, dass der Zylinder eine schräge Gleichgewichtslage einnimmt. Die beobachtete Schrägstellung ist somit eine Folge der starken Feldgradienten und der unsymmetrischen Kraftverteilung an den Magnetübergängen. Der stabile Schwebezustand in der Mitte wird zusätzlich durch Flusspin­ning im Typ-II-Hochtemperatur-Supraleiter begünstigt.
 
 \subsection{Spannungs-Strom-Messungen an einem DC-SQUID}
 
+In dieser Aufgabe wurde die Spannungs-Strom-Kennlinie des DC-SQUIDs aufgenommen. Die Kennlinie zeigt im Bereich um $I=0$ einen nahezu spannungsfreien Zustand. Dies entspricht dem DC-Josephson-Effekt, bei dem ein Suprastrom ohne messbare Spannung durch die Josephson-Kontakte fließt. Erst bei Überschreiten des kritischen Stroms geht der SQUID in einen spannungsbehafteten, näherungsweise ohmschen Zustand über.
+
+Zur Bestimmung des kritischen Stroms wurden die linearen Bereiche der positiven $I_{0+}$ und negativen Flanke $I_{0-}$ separat gefittet. Aus den Schnittpunkten der Fitgeraden mit der Stromachse ergaben sich
+
+\begin{equation}
+    I_{0+} = 51.0 \mathrm{µA} \qquad \text{und} \qquad I_{0-} = -48.8 \mathrm{µA}
+\end{equation}
+
+Da der SQUID aus zwei parallelen Josephson-Kontakten besteht, entspricht der kritische Strom des gesamten SQUIDs dem Wert $2I_c$. Aus dem Mittelwert der Beträge folgt
+
+\begin{equation}
+    2I_C = \frac{|I_{0+} - I_{0-}|}{2} = \frac{|51.0 - (-48.8)|}{2} \mathrm{µA} = 49.9 \mathrm{µA}
+\end{equation}
+
+und so der finale Wert für $I_C = 24.95 \mathrm{µA}$.
+Aus der Steigung der linearen Kennlinienbereiche wurde der Widerstand im normalleitenden Zustand $R_N/2 = 2.29 \Omega$ bestimmt. Daraus ergibt sich für den normalleitenden Widerstand eines einzelnen Josephson-Kontaktes $R_N = 4.58 \Omega$. Die charakteristische Spannung des SQUIDs, beträgt somit
+
+\begin{equation}
+    I_C \cdot R_N = 24.95 \mathrm{µA} \cdot 4.58 \Omega = 114.4 \mathrm{µV}
+\end{equation}
+
+Der erhaltene Wert liegt im erwarteten Bereich von etwa $100 - 200 \mathrm{µV}$. Die Messung ist damit gut mit der erwarteten Größenordnung für den verwendeten SQUID-Sensor verträglich.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Aufgabe_B_Fit.png}
+    \caption{Spannungs-Strom-Kennlinie des DC-SQUIDs mit linearer Extrapolation der positiven und negativen Kennlinienäste zur Bestimmung des kritischen Stroms $2I_C$. Die roten Punkte markieren die Schnittpunkte der Fitgeraden mit der Stromachse.}
+    \label{fig:aufgabe_b_fit}
+\end{figure}
+
 \subsection{Shapiro-Stufen-Messung}
+
+In Aufgabe C wurde die U-I-Kennlinie des DC-SQUIDs unter Einkopplung einer Mikrowelle mit der Frequenz $f = 44 \mathrm{GHz}$ aufgenommen. Durch die Wechselwirkung der externen Mikrowellenfrequenz mit der Josephson-Oszillation der Weak Links entstehen diskrete Spannungsplateaus, die sogenannten Shapiro-Stufen. Diese treten auf, wenn die Josephson-Frequenz mit der eingestrahlten Mikrowellenfrequenz synchronisiert wird.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/saphiero_stufen.png}
-    \caption{Shapiro-Stufen, entstanden durch MW-Antenne. Horizontale Linien sind die einzelnen Stufen. Mittlerer Spannungsunterschied zwischen den Shapiro-Stufen: $\Delta U = 88.625  \pm  1.10$ µV}
+    \caption{U-I-Kennlinie des DC-SQUIDs bei Einkopplung einer Mikrowelle mit der Frequenz $f = 44 \mathrm{GHz}$. Die gestrichelten Linien markieren die bestimmten Shapiro-Stufen.}
     \label{fig:shapiro_stufen}
 \end{figure}
+
+Aus der U-I-Kennlinie \ref{fig:shapiro_stufen} wurden die Spannungspositionen der einzelnen Shapiro-Stufen bestimmt. Der mittlere Abstand benachbarter Stufen beträgt dabei $\Delta U = 88.625  \pm  1.10 \mathrm{µV}$. 
+
+Aus der gemessenen mittleren Stufenspannung und der bekannten Frequenz der eingestrahlten Mikrowelle lässt sich die fundamentale Konstante $e/h$ bestimmen mit der für die Shapiro-Stufen geltende der Zusammenhang
+
+\begin{equation}
+    \Delta U = \frac{hf}{2e} \qquad \Leftrightarrow \qquad \frac{e}{h} = \frac{f}{2\Delta U}
+\end{equation}
+
+Unter Berücksichtigung der Unsicherheit des mittleren Stufenabstands und mit $f = 44 \mathrm{GHz}$ ergibt sich
+
+\begin{equation}
+    \frac{e}{h} = \frac{44 \cdot 10^9 \mathrm{Hz}}{2 \cdot 88.625 \cdot 10^{-6} \mathrm{V}} = 2.48 \pm 0.03 \mathrm{Hz/mV}
+\end{equation}
+
+Damit weicht der experimentell bestimmte Wert um etwa 2.7\% vom Literaturwert ab. Die Abweichung ist plausibel und kann durch die endliche Breite der Shapiro-Stufen, Rauschen der Messkurve, Unsicherheiten bei der Bestimmung der Stufenpositionen sowie eine nicht ideale Mikrowellenkopplung erklärt werden.
+
+\subsection{$V$-$\Phi$ Charakterisierung}
+
+In Aufgabe D wurde die $U_{OUT}$-$I$-Kennlinie des DC-SQUIDs aufgenommen. Dabei wurde die Ausgangsspannung $U_{OUT}$ in Abhängigkeit vom Spulenstrom I gemessen. Da der Spulenstrom proportional zum magnetischen Fluss durch den SQUID-Ring ist, entspricht die periodische Modulation der Ausgangsspannung der $V$-$\Phi$-Charakteristik des SQUIDs. Eine vollständige Periode der Kurve entspricht dabei einer Änderung des magnetischen Flusses um ein Flussquant \Phi_0$.
+
+Die Messdaten \ref{fig:aufgabe_d} zeigen eine deutlich periodische Modulation der Ausgangsspannung. Aufgrund des sichtbaren Rauschens und eines leichten linearen Drifts wurde die Kennlinie nicht mit einer einfachen Sinusfunktion, sondern mit einer Sinusfunktion mit zusätzlichem linearen Driftterm gefittet wie in  \ref{fig:aufgabe_d} zu sehen ist.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Aufgabe_D.png}
+    \caption{$U_{OUT}$-$I$-Kennlinie des DC-SQUIDs zur $V$-$\Phi$-Charakterisierung. Aufgetragen ist die Ausgangsspannung $U_{OUT}$ gegen den Spulenstrom $I$, der proportional zum magnetischen Fluss $\Phi$ durch den SQUID-Ring ist.}
+    \label{fig:aufgabe_d}
+\end{figure}
+
+Aus dem Fit ergibt sich für die Periode $\Delta I = 93.3 \pm 0.4 \mathrm{\mu A}$. Als Spannungsmodulation ergab sich $\Delta U = 10.8 \pm 0.2 \mathrm{\mu V}$. Da eine Periode der Änderung des magnetischen Flusses um ein Flussquant entspricht, folgt für die Kopplungsinduktivität
+
+\begin{equation}
+    M = \frac{\Phi_0}{\Delta I} = \frac{2.07 \times 10^{-15} \mathrm{Vs}}{93.3 \times 10^{-6} \mathrm{A}} = 2.22 \cdot 10^{-11} \mathrm{H}
+\end{equation}
+
+Die Messung zeigt damit die erwartete periodische Abhängigkeit der SQUID-Ausgangsspannung vom magnetischen Fluss. Abweichungen vom ideal sinusförmigen Verlauf lassen sich durch Rauschen, Offsetdrift, eine nicht ideale Einstellung des Arbeitspunktes sowie durch Störungen bei der Flusseinkopplung erklären.
 
 \subsection{Bestimmung von $T_c$ des SQUID Sensors}
 
@@ -189,8 +269,8 @@ Mittels eine Hall Sonde wurde bevor der Supraleiter in dass inhomogene Feld komm
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/krit_temp_klein.png}
-    \caption{U-I-Kennlinie in Abhängigkeit der Temperatur $T \in [77K, 82K]$ in $1K$ Schritten. Wobei der genaue Schritt von Supraleitender Phase in Normalleitende Phase zu erkenne ist}
+    \includegraphics[width=0.75\linewidth]{figures/krit_temp_klein.png}
+    \caption{U-I-Kennlinie in Abhängigkeit der Temperatur $T \in [77K, 82K]$ in $1K$ Schritten. Wobei der grobe Schritt von Supraleitender Phase in Normalleitende Phase zu erkenne ist}
     \label{fig:krit_temp_klein}
 \end{figure}
 

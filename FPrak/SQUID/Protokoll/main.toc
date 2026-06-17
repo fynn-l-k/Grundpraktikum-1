@@ -12,7 +12,8 @@
 \contentsline {section}{\numberline {2}Ergebnisse und Diskussion}{8}{}%
 \contentsline {subsection}{\numberline {2.1}Hochtemperatur-Supraleiter im inhomogenen Magnetfeld}{8}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Ermittlung des horizontalen und vertikalen Verlauf des Permanent-Magnetfeldes}{8}{}%
-\contentsline {subsubsection}{\numberline {2.1.2}}{9}{}%
-\contentsline {subsection}{\numberline {2.2}Spannungs-Strom-Messungen an einem DC-SQUID}{9}{}%
-\contentsline {subsection}{\numberline {2.3}Shapiro-Stufen-Messung}{9}{}%
-\contentsline {subsection}{\numberline {2.4}Bestimmung von $T_c$ des SQUID Sensors}{9}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Hochtemperatur-Supraleiter-Zylinder im inhomogneen Magnetfeld}{9}{}%
+\contentsline {subsection}{\numberline {2.2}Spannungs-Strom-Messungen an einem DC-SQUID}{10}{}%
+\contentsline {subsection}{\numberline {2.3}Shapiro-Stufen-Messung}{11}{}%
+\contentsline {subsection}{\numberline {2.4}$V$-$\Phi $ Charakterisierung}{12}{}%
+\contentsline {subsection}{\numberline {2.5}Bestimmung von $T_c$ des SQUID Sensors}{13}{}%

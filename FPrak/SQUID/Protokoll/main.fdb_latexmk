@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1781551927.77453 "main.bcf" "main.bbl" "main" 1781552015.13555 0
-  "main.bcf" 1781552014 109932 9c2104ff3bea0cc2d251b3899571404a "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1781723765.20881 -1
+  "main.bcf" 1781723764 109932 9c2104ff3bea0cc2d251b3899571404a "pdflatex"
   "quellen.bib" 1781551926 1839 c5435a85ef3a265061aa10461ca9153c ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781552012.58866 "c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex" "main.pdf" "main" 1781552015.13654 0
-  "c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex" 1781551967 13643 88b58f591e6d943dd0edb9e83f5260b6 ""
+["pdflatex"] 1781723762.04355 "c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex" "main.pdf" "main" 1781723765.20986 2
+  "c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex" 1781723756 21740 c806bb1b450084284fda8b6bb0c80783 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1779630654 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1779631590 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1779631180 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -110,19 +110,21 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1779637589 5619402 ad1310ccf7f36101ef3e8f014a173c46 ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1779637860 3651065 6d667af4c953240afdff26af2ccfad59 ""
   "c:/texlive/2026/texmf.cnf" 1779637558 713 e69b156964470283e0530f5060668171 ""
+  "figures/Aufgabe_B_Fit.png" 1781719191 110263 344fd9a570bc6160f6e70fee2a64f039 ""
+  "figures/Aufgabe_D.png" 1781721445 593509 b5b9c27ed4d2c2e67820886bdb966480 ""
   "figures/krit_temp_alle.png" 1781551715 250773 2192cee087748a6bf130e40f2165bf88 ""
   "figures/krit_temp_klein.png" 1781551715 90621 52683169b86b442343e5478529e4f4d3 ""
   "figures/magnetische_ausrichtugn_4magnete.png" 1781551715 125581 3a69aea2e8219fdb972d70433b03194e ""
   "figures/meißner_ochsenfeld_effekt.png" 1781551715 29749 473e1d60459d0056e9df78d42faec85b ""
   "figures/saphiero_stufen.png" 1781551715 103660 50349e972d943c744ecc3a2ea0756d29 ""
   "figures/schematischer_versuchsaufbau.png" 1781551715 47487 386bad813a7f8c9f491909dadd3a0e75 ""
-  "main.aux" 1781552014 6289 46569e4a4769d3f213e25436d59cbba2 "pdflatex"
-  "main.bbl" 1781551930 10381 9cd1b3ba8f48e98130b1c80237a0408b "biber main"
-  "main.lof" 1781552014 1499 927e7329bf42ce2f1f597a9cfa1fd128 "pdflatex"
-  "main.lot" 1781552014 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1781552014 2302 32e9cf127949af3e6bd10c1f59875af9 "pdflatex"
-  "main.tex" 1781551967 13643 88b58f591e6d943dd0edb9e83f5260b6 ""
-  "main.toc" 1781552014 1337 94565f863c0b2ba20c5bf84f6609244c "pdflatex"
+  "main.aux" 1781723764 7434 cec9dcfe229456589e9b352d2523a08b "pdflatex"
+  "main.bbl" 1781719773 10381 9cd1b3ba8f48e98130b1c80237a0408b "biber main"
+  "main.lof" 1781723764 2164 fb5bdb506b5465b9b6dbafac4debed64 "pdflatex"
+  "main.lot" 1781723764 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1781723764 2302 fc434521058df150e8d89113bf2786c6 "pdflatex"
+  "main.tex" 1781723756 21740 c806bb1b450084284fda8b6bb0c80783 ""
+  "main.toc" 1781723764 1483 c831c2fdc9f506799c92e54bbb705311 "pdflatex"
   "uni_logo.png" 1781551715 18479 82083768b041aaaf23ea7bdd0f196aa8 ""
   (generated)
   "main.aux"

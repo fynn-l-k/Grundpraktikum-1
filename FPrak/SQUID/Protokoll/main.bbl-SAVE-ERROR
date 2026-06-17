@@ -19,6 +19,90 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{wiki-cooper}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0771c788e7612cd7b13d5ae1408fe9bd}{%
+           family={{Contributors of Wikipedia}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{fullhash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{fullhashraw}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{bibnamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorbibnamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authornamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorfullhash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorfullhashraw}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version vom 20.6.2025, abgerufen am 5.6.2026}
+      \field{title}{Cooper-Paar}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Cooper-Paar
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Cooper-Paar
+      \endverb
+    \endentry
+    \entry{wiki-meissner-ochsenfeld}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0771c788e7612cd7b13d5ae1408fe9bd}{%
+           family={{Contributors of Wikipedia}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{fullhash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{fullhashraw}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{bibnamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorbibnamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authornamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorfullhash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorfullhashraw}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version vom 14.9.2025, abgerufen am 5.6.2026}
+      \field{title}{Meißner-Ochsenfeld-Effekt}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Meißner-Ochsenfeld-Effekt
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Mei%C3%9Fner-Ochsenfeld-Effekt
+      \endverb
+    \endentry
+    \entry{wiki-superconducter}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0771c788e7612cd7b13d5ae1408fe9bd}{%
+           family={{Contributors of Wikipedia}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{fullhash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{fullhashraw}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{bibnamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorbibnamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authornamehash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorfullhash}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \strng{authorfullhashraw}{0771c788e7612cd7b13d5ae1408fe9bd}
+      \field{extraname}{3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version vom 3.12.2025, abgerufen am 2.6.2026}
+      \field{title}{Supraleitung}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Supraleiter
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Supraleiter
+      \endverb
+    \endentry
     \entry{demtroder_3}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=59654c899d48eff28a4d8063e886fb5f}{%
@@ -42,138 +126,119 @@
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://doi.org/10.1007/978-3-662-49094-5}}
       \field{note}{Edition 5, abgerufen am 2.6.2026}
       \field{title}{Experimentalphysik 3}
-    \endentry
-    \entry{liquid_he_na_prices}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=f532eb3e4041a85113de93118b9d627d}{%
-           family={Dresden},
-           familyi={D\bibinitperiod},
-           given={TU},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{f532eb3e4041a85113de93118b9d627d}
-      \strng{fullhash}{f532eb3e4041a85113de93118b9d627d}
-      \strng{fullhashraw}{f532eb3e4041a85113de93118b9d627d}
-      \strng{bibnamehash}{f532eb3e4041a85113de93118b9d627d}
-      \strng{authorbibnamehash}{f532eb3e4041a85113de93118b9d627d}
-      \strng{authornamehash}{f532eb3e4041a85113de93118b9d627d}
-      \strng{authorfullhash}{f532eb3e4041a85113de93118b9d627d}
-      \strng{authorfullhashraw}{f532eb3e4041a85113de93118b9d627d}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://tu-dresden.de/ing/maschinenwesen/iet/kkt/zentrale-heliumanlage/berechnungsgrundlage}}
-      \field{note}{Version vom 12.9.2023, abgerufen am 2.6.2026}
-      \field{title}{Flüssig Helium und flüssig Stickstoff Preisliste der TU Dresden}
+      \verb{doi}
+      \verb 10.1007/978-3-662-49094-5
+      \endverb
     \endentry
     \entry{fprak_manual}{misc}{}{}
       \name{author}{1}{}{%
-        {{hash=62fa2f1059e0857d2e4c527bbf914916}{%
+        {{hash=5ff57a10231fe037479ab6022a573fc0}{%
            family={Lorenz},
            familyi={L\bibinitperiod},
-           given={Prof.\bibnamedelimi Dr.\bibnamedelimi Michael},
-           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{62fa2f1059e0857d2e4c527bbf914916}
-      \strng{fullhash}{62fa2f1059e0857d2e4c527bbf914916}
-      \strng{fullhashraw}{62fa2f1059e0857d2e4c527bbf914916}
-      \strng{bibnamehash}{62fa2f1059e0857d2e4c527bbf914916}
-      \strng{authorbibnamehash}{62fa2f1059e0857d2e4c527bbf914916}
-      \strng{authornamehash}{62fa2f1059e0857d2e4c527bbf914916}
-      \strng{authorfullhash}{62fa2f1059e0857d2e4c527bbf914916}
-      \strng{authorfullhashraw}{62fa2f1059e0857d2e4c527bbf914916}
+      \strng{namehash}{5ff57a10231fe037479ab6022a573fc0}
+      \strng{fullhash}{5ff57a10231fe037479ab6022a573fc0}
+      \strng{fullhashraw}{5ff57a10231fe037479ab6022a573fc0}
+      \strng{bibnamehash}{5ff57a10231fe037479ab6022a573fc0}
+      \strng{authorbibnamehash}{5ff57a10231fe037479ab6022a573fc0}
+      \strng{authornamehash}{5ff57a10231fe037479ab6022a573fc0}
+      \strng{authorfullhash}{5ff57a10231fe037479ab6022a573fc0}
+      \strng{authorfullhashraw}{5ff57a10231fe037479ab6022a573fc0}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://home.uni-leipzig.de/%7Ephysfp/manuals/SQUID_FP.pdf}}
       \field{note}{Version 40 vom 04.05.2016, abgerufen am 24.5.2026}
       \field{title}{Flussquantisierung in supraleitenden Ringen: Experimente mit einem DC-SQUID}
+      \verb{urlraw}
+      \verb https://home.uni-leipzig.de/~physfp/manuals/SQUID_FP.pdf
+      \endverb
+      \verb{url}
+      \verb https://home.uni-leipzig.de/~physfp/manuals/SQUID_FP.pdf
+      \endverb
     \endentry
-    \entry{wiki-cooper}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=10b9bbe18ef9d69d056a33b2aed8a58b}{%
-           family={Wikipedia},
-           familyi={W\bibinitperiod},
-           given={Contributers},
-           giveni={C\bibinitperiod},
-           prefix={of},
-           prefixi={o\bibinitperiod}}}%
+    \entry{mr_squid}{manual}{}{}
+      \name{author}{5}{}{%
+        {{hash=6f7f29390e7ae5e9c73fcb34967ef50e}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Randy\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=593b01720ea8408211f877029f91b797}{%
+           family={Burns},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=22938601feb0d5d40ea85371a2a7f2bb}{%
+           family={Colclough},
+           familyi={C\bibinitperiod},
+           given={Mark\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=53f066cadd6590f0c9cab64d6847ece0}{%
+           family={Zaharchuk},
+           familyi={Z\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=19e2841f2a4af44f57c2a0af30267206}{%
+           family={Cantor},
+           familyi={C\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{fullhash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{fullhashraw}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{bibnamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorbibnamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authornamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorfullhash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorfullhashraw}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \field{extraname}{1}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \list{publisher}{1}{%
+        {STAR Cryoelectronics, LLC}%
+      }
+      \strng{namehash}{b9855961f2ee19c80f5935c921bea036}
+      \strng{fullhash}{4dee4540cb810ef11827eb33e56e1802}
+      \strng{fullhashraw}{4dee4540cb810ef11827eb33e56e1802}
+      \strng{bibnamehash}{b9855961f2ee19c80f5935c921bea036}
+      \strng{authorbibnamehash}{b9855961f2ee19c80f5935c921bea036}
+      \strng{authornamehash}{b9855961f2ee19c80f5935c921bea036}
+      \strng{authorfullhash}{4dee4540cb810ef11827eb33e56e1802}
+      \strng{authorfullhashraw}{4dee4540cb810ef11827eb33e56e1802}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://de.wikipedia.org/wiki/Cooper-Paar}}
-      \field{note}{Version vom 20.6.2025, abgerufen am 5.6.2026}
-      \field{title}{Cooper-Paar}
+      \field{note}{Version 6.5, abgrufen am 24.5.2026}
+      \field{title}{Mr. SQUID® User's Guide}
+      \verb{urlraw}
+      \verb https://home.uni-leipzig.de/~physfp/manuals/MrSQUID%20Manual%206_5.pdf
+      \endverb
+      \verb{url}
+      \verb https://home.uni-leipzig.de/~physfp/manuals/MrSQUID%20Manual%206_5.pdf
+      \endverb
     \endentry
-    \entry{wiki-meissner-ochsenfeld}{misc}{}{}
+    \entry{liquid_he_na_prices}{misc}{}{}
       \name{author}{1}{}{%
-        {{hash=10b9bbe18ef9d69d056a33b2aed8a58b}{%
-           family={Wikipedia},
-           familyi={W\bibinitperiod},
-           given={Contributers},
-           giveni={C\bibinitperiod},
-           prefix={of},
-           prefixi={o\bibinitperiod}}}%
+        {{hash=28100f67641e845e4566e768942ce016}{%
+           family={{TU Dresden}},
+           familyi={T\bibinitperiod}}}%
       }
-      \strng{namehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{fullhash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{fullhashraw}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{bibnamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorbibnamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authornamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorfullhash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorfullhashraw}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \field{extraname}{2}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \strng{namehash}{28100f67641e845e4566e768942ce016}
+      \strng{fullhash}{28100f67641e845e4566e768942ce016}
+      \strng{fullhashraw}{28100f67641e845e4566e768942ce016}
+      \strng{bibnamehash}{28100f67641e845e4566e768942ce016}
+      \strng{authorbibnamehash}{28100f67641e845e4566e768942ce016}
+      \strng{authornamehash}{28100f67641e845e4566e768942ce016}
+      \strng{authorfullhash}{28100f67641e845e4566e768942ce016}
+      \strng{authorfullhashraw}{28100f67641e845e4566e768942ce016}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://de.wikipedia.org/wiki/Mei%C3%9Fner-Ochsenfeld-Effekt}}
-      \field{note}{Version vom 14.9.2025, abgerufen am 5.6.2026}
-      \field{title}{Meißner-Ochsenfeld-Effekt}
-    \endentry
-    \entry{wiki-superconducter}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=10b9bbe18ef9d69d056a33b2aed8a58b}{%
-           family={Wikipedia},
-           familyi={W\bibinitperiod},
-           given={Contributers},
-           giveni={C\bibinitperiod},
-           prefix={of},
-           prefixi={o\bibinitperiod}}}%
-      }
-      \strng{namehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{fullhash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{fullhashraw}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{bibnamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorbibnamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authornamehash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorfullhash}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \strng{authorfullhashraw}{10b9bbe18ef9d69d056a33b2aed8a58b}
-      \field{extraname}{3}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://de.wikipedia.org/wiki/Supraleiter}}
-      \field{note}{Version vom 3.12.2025, abgerufen am 2.6.2026}
-      \field{title}{Supraleitung}
+      \field{note}{Version vom 12.9.2023, abgerufen am 2.6.2026}
+      \field{title}{Flüssig Helium und flüssig Stickstoff Preisliste der TU Dresden}
+      \verb{urlraw}
+      \verb https://tu-dresden.de/ing/maschinenwesen/iet/kkt/zentrale-heliumanlage/berechnungsgrundlage
+      \endverb
+      \verb{url}
+      \verb https://tu-dresden.de/ing/maschinenwesen/iet/kkt/zentrale-heliumanlage/berechnungsgrundlage
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

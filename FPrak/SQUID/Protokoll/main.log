@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  15 JUN 2026 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  17 JUN 2026 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,8 @@ Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
 \@quotelevel=\count432
 \@quotereset=\count433
- (./main.aux)
+
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -427,7 +428,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
- (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count434
 \scratchdimen=\dimen183
@@ -477,11 +478,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uni_logo.png>] (./main.toc)
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uni_logo.png>]
+No file main.toc.
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2]
+[2]
 Overfull \hbox (7.95895pt too wide) in paragraph at lines 68--69
 []\OT1/cmr/m/n/10 Shapiro-Stufen-Messung ($\OML/cmm/m/it/10 V$\OT1/cmr/m/n/10 -$\OML/cmm/m/it/10 I$\OT1/cmr/m/n/10 -Messung mit Mikrowellen-Einkopplung), Bes-
  []
@@ -507,11 +509,14 @@ Overfull \hbox (15.36168pt too wide) in paragraph at lines 92--93
  []
 
 
+LaTeX Warning: Reference `fig:mei√üner_ochsnefeld_effekt' on page 4 undefined on input line 98.
+
+
 Overfull \hbox (6.19499pt too wide) in paragraph at lines 98--99
 \OT1/cmr/m/n/10 aus dem In-neren des Supraleit-ers ent-fernt, bis auf deine d^^?unne Oberfl^^?achenschicht,
  []
 
-<figures/mei√üner_ochsenfeld_effekt.png, id=27, 250.9375pt x 250.9375pt>
+<figures/mei√üner_ochsenfeld_effekt.png, id=26, 250.9375pt x 250.9375pt>
 File: figures/mei√üner_ochsenfeld_effekt.png Graphic file (type png)
 <use figures/mei√üner_ochsenfeld_effekt.png>
 Package pdftex.def Info: figures/mei√üner_ochsenfeld_effekt.png  used on input line 102.
@@ -532,96 +537,249 @@ Overfull \hbox (2.25058pt too wide) in paragraph at lines 116--117
  []
 
 [5 <./figures/mei√üner_ochsenfeld_effekt.png>] [6]
-Overfull \hbox (0.83392pt too wide) in paragraph at lines 143--145
+Overfull \hbox (0.83392pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/10 siven, schmelz-tex-turi-erten Hochtemperatur-Supraleiter-Zylinder in ein, aus einer
  []
 
 <figures/schematischer_versuchsaufbau.png, id=40, 615.29875pt x 457.71pt>
 File: figures/schematischer_versuchsaufbau.png Graphic file (type png)
 <use figures/schematischer_versuchsaufbau.png>
-Package pdftex.def Info: figures/schematischer_versuchsaufbau.png  used on input line 148.
+Package pdftex.def Info: figures/schematischer_versuchsaufbau.png  used on input line 147.
 (pdftex.def)             Requested size: 172.5pt x 128.31856pt.
 
-Overfull \hbox (3.97224pt too wide) in paragraph at lines 155--155
+Overfull \hbox (3.97224pt too wide) in paragraph at lines 154--154
 []\OT1/cmr/bx/n/12 Hochtemperatur-Supraleiter im in-ho-mo-ge-nen Mag-net-
  []
 
 
-Overfull \hbox (21.72305pt too wide) in paragraph at lines 157--157
+Overfull \hbox (21.72305pt too wide) in paragraph at lines 156--156
 []\OT1/cmr/bx/n/10 Ermittlung des hor-i-zon-talen und ver-tikalen Ver-lauf des Permanent-
+ []
+
+
+Overfull \hbox (1.54684pt too wide) in paragraph at lines 158--159
+\OT1/cmr/m/n/10 Feldst^^?arke und wech-sel-nder Po-larit^^?at auf. Der ver-tikale Ver-lauf zeigt er-wartungs-
  []
 
 [7 <./figures/schematischer_versuchsaufbau.png>]
 <figures/magnetische_ausrichtugn_4magnete.png, id=46, 1811.76875pt x 1758.57pt>
 File: figures/magnetische_ausrichtugn_4magnete.png Graphic file (type png)
 <use figures/magnetische_ausrichtugn_4magnete.png>
-Package pdftex.def Info: figures/magnetische_ausrichtugn_4magnete.png  used on input line 163.
+Package pdftex.def Info: figures/magnetische_ausrichtugn_4magnete.png  used on input line 162.
 (pdftex.def)             Requested size: 258.75pt x 251.1355pt.
-<figures/saphiero_stufen.png, id=47, 1475.5125pt x 873.2625pt>
+
+Overfull \hbox (1.9162pt too wide) in paragraph at lines 169--170
+\OT1/cmr/m/n/10 Anschlie^^Yend wurde ein auf 77 K gek^^?uhlter Hochtemperatur-Supraleiter-Zylinder
+ []
+
+
+Overfull \hbox (12.85237pt too wide) in paragraph at lines 169--170
+\OT1/cmr/m/n/10 beobachtet wer-den. Dieser l^^?asst sich durch den Mei^^Yner-Ochsenfeld-Effekt erkl^^?aren:
+ []
+
+
+Overfull \hbox (12.27838pt too wide) in paragraph at lines 169--170
+\OT1/cmr/m/n/10 Im supralei-t-en-den Zu-s-tand wer-den Mag-net-feldlin-ien aus dem In-neren des Supraleit-
+ []
+
+[8 <./figures/magnetische_ausrichtugn_4magnete.png>]
+File: figures/magnetische_ausrichtugn_4magnete.png Graphic file (type png)
+<use figures/magnetische_ausrichtugn_4magnete.png>
+Package pdftex.def Info: figures/magnetische_ausrichtugn_4magnete.png  used on input line 173.
+(pdftex.def)             Requested size: 258.75pt x 251.1355pt.
+
+Overfull \hbox (3.27844pt too wide) in paragraph at lines 178--179
+\OT1/cmr/m/n/10 zus^^?atzlich durch Flusspin-ning im Typ-II-Hochtemperatur-Supraleiter beg^^?unstigt. 
+ []
+
+[9]
+Overfull \hbox (18.36176pt too wide) in paragraph at lines 182--183
+\OT1/cmr/m/n/10 In dieser Auf-gabe wurde die Spannungs-Strom-Kennlinie des DC-SQUIDs aufgenom-
+ []
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+Missing character: There is no µ in font cmr10!
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+Missing character: There is no µ in font cmr10!
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 196.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 196.
+
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+Missing character: There is no µ in font cmr10!
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 203.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 203.
+
+Missing character: There is no µ in font cmr10!
+<figures/Aufgabe_B_Fit.png, id=54, 534.5571pt x 354.123pt>
+File: figures/Aufgabe_B_Fit.png Graphic file (type png)
+<use figures/Aufgabe_B_Fit.png>
+Package pdftex.def Info: figures/Aufgabe_B_Fit.png  used on input line 208.
+(pdftex.def)             Requested size: 258.75pt x 171.41441pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+<figures/saphiero_stufen.png, id=58, 1475.5125pt x 873.2625pt>
 File: figures/saphiero_stufen.png Graphic file (type png)
 <use figures/saphiero_stufen.png>
-Package pdftex.def Info: figures/saphiero_stufen.png  used on input line 176.
+Package pdftex.def Info: figures/saphiero_stufen.png  used on input line 219.
 (pdftex.def)             Requested size: 258.75pt x 153.1297pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/krit_temp_alle.png, id=48, 1463.4675pt x 873.2625pt>
-File: figures/krit_temp_alle.png Graphic file (type png)
-<use figures/krit_temp_alle.png>
-Package pdftex.def Info: figures/krit_temp_alle.png  used on input line 185.
-(pdftex.def)             Requested size: 258.75pt x 154.39555pt.
-[8 <./figures/magnetische_ausrichtugn_4magnete.png>]
-<figures/krit_temp_klein.png, id=53, 752.8125pt x 451.6875pt>
-File: figures/krit_temp_klein.png Graphic file (type png)
-<use figures/krit_temp_klein.png>
-Package pdftex.def Info: figures/krit_temp_klein.png  used on input line 192.
-(pdftex.def)             Requested size: 172.5pt x 103.49997pt.
- [9{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/saphiero_stufen.png> <./figures/krit_temp_alle.png>] (./main.lof
-Overfull \hbox (1.68587pt too wide) in paragraph at lines 4--4
- [][] []\OT1/cmr/m/n/10 Shapiro-Stufen, ent-standen durch MW-Antenne. Hor-i-zon-tale Lin- 
+
+LaTeX Warning: Reference `fig:shapiro_stufen' on page 11 undefined on input line 224.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 224.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 224.
+
+Missing character: There is no µ in font cmr10!
+
+Overfull \hbox (3.6394pt too wide) in paragraph at lines 224--225
+[]\OT1/cmr/m/n/10 Aus der U-I-Kennlinie [] wur-den die Span-nungspo-si-tio-nen der einzel-nen Shapiro-
  []
 
-)
+[11 <./figures/Aufgabe_B_Fit.png>]
+c:/Users/vd01p/OneDrive/Desktop/Universit√§t/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex:242: Missing $ inserted.
+<inserted text> 
+                $
+l.242 ...gnetischen Flusses um ein Flussquant \Phi
+                                                  _0$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Reference `fig:aufgabe_d' on page 12 undefined on input line 244.
+
+
+LaTeX Warning: Reference `fig:aufgabe_d' on page 12 undefined on input line 244.
+
+<figures/Aufgabe_D.png, id=63, 570.933pt x 353.8821pt>
+File: figures/Aufgabe_D.png Graphic file (type png)
+<use figures/Aufgabe_D.png>
+Package pdftex.def Info: figures/Aufgabe_D.png  used on input line 248.
+(pdftex.def)             Requested size: 258.75pt x 160.38481pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./figures/saphiero_stufen.png>]
+Overfull \hbox (18.85255pt too wide) in paragraph at lines 259--260
+\OT1/cmr/m/n/10 Ausgangsspannung vom mag-netis-chen Fluss. Ab-we-ichun-gen vom ideal si-nusf^^?ormigen
+ []
+
+<figures/krit_temp_alle.png, id=69, 1463.4675pt x 873.2625pt>
+File: figures/krit_temp_alle.png Graphic file (type png)
+<use figures/krit_temp_alle.png>
+Package pdftex.def Info: figures/krit_temp_alle.png  used on input line 265.
+(pdftex.def)             Requested size: 258.75pt x 154.39555pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/krit_temp_klein.png, id=70, 752.8125pt x 451.6875pt>
+File: figures/krit_temp_klein.png Graphic file (type png)
+<use figures/krit_temp_klein.png>
+Package pdftex.def Info: figures/krit_temp_klein.png  used on input line 272.
+(pdftex.def)             Requested size: 258.75pt x 155.2534pt.
+[13 <./figures/Aufgabe_D.png>]
+No file main.lof.
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- (./main.lot)
+No file main.lot.
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [10 <./figures/krit_temp_klein.png>]
-Overfull \hbox (13.20743pt too wide) in paragraph at lines 206--206
+
+Overfull \hbox (13.20743pt too wide) in paragraph at lines 286--286
 []\OT1/cmr/m/n/10 Contributors of Wikipedia. \OT1/cmr/m/it/10 Mei^^Yner-Ochsenfeld-Effekt\OT1/cmr/m/n/10 . Ver-sion vom 14.9.2025,
  []
 
 
-Overfull \hbox (10.50546pt too wide) in paragraph at lines 206--206
+Overfull \hbox (10.50546pt too wide) in paragraph at lines 286--286
 []\OT1/cmr/m/n/10 Wolfgang Demtr^^?oder. \OT1/cmr/m/it/10 Ex-per-i-men-tal-physik 3\OT1/cmr/m/n/10 . Edi-tion 5, abgerufen am 2.6.2026.
  []
 
-[11] (./main.aux)
+[14{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/krit_temp_alle.png>] [15 <./figures/krit_temp_klein.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12470 strings out of 467341
- 231191 string characters out of 5419596
- 1057518 words of memory out of 5000000
- 41446 multiletter control sequences out of 15000+600000
+ 12476 strings out of 467341
+ 231526 string characters out of 5419596
+ 1055859 words of memory out of 5000000
+ 41460 multiletter control sequences out of 15000+600000
  637718 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,6n,77p,1050b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (11 pages, 650496 bytes).
+ 67i,6n,77p,1189b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on main.pdf (15 pages, 1242153 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 168 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
