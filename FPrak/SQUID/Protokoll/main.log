@@ -1,0 +1,785 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  17 JUN 2026 21:16
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/vd01p/OneDrive/Desktop/Universit√§t/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex
+(c:/Users/vd01p/OneDrive/Desktop/Universit√§t/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-04-28>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+) (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen153
+\captionmargin=\dimen154
+\caption@leftmargin=\dimen155
+\caption@rightmargin=\dimen156
+\caption@width=\dimen157
+\caption@indent=\dimen158
+\caption@parindent=\dimen159
+\caption@hangindent=\dimen160
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count284
+\c@continuedfloat=\count285
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count286
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count287
+) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen161
+)) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen162
+) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count288
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count289
+\leftroot@=\count290
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count291
+\DOTSCASE@=\count292
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen163
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count293
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count294
+\dotsspace@=\muskip17
+\c@parentequation=\count295
+\dspbrk@lvl=\count296
+\tag@help=\toks19
+\row@=\count297
+\column@=\count298
+\maxfields@=\count299
+\andhelp@=\toks20
+\eqnshift@=\dimen164
+\alignsep@=\dimen165
+\tagshift@=\dimen166
+\tagwidth@=\dimen167
+\totwidth@=\dimen168
+\lineht@=\dimen169
+\@envbody=\toks21
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen170
+\lightrulewidth=\dimen171
+\cmidrulewidth=\dimen172
+\belowrulesep=\dimen173
+\belowbottomsep=\dimen174
+\aboverulesep=\dimen175
+\abovetopsep=\dimen176
+\cmidrulesep=\dimen177
+\cmidrulekern=\dimen178
+\defaultaddspace=\dimen179
+\@cmidla=\count300
+\@cmidlb=\count301
+\@aboverulesep=\dimen180
+\@belowrulesep=\dimen181
+\@thisruleclass=\count302
+\@lastruleclass=\count303
+\@thisrulewidth=\dimen182
+) (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+ (c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count304
+) (c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count305
+ (c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count306
+\c@listtotal=\count307
+\c@listcount=\count308
+\c@liststart=\count309
+\c@liststop=\count310
+\c@citecount=\count311
+\c@citetotal=\count312
+\c@multicitecount=\count313
+\c@multicitetotal=\count314
+\c@instcount=\count315
+\c@maxnames=\count316
+\c@minnames=\count317
+\c@maxitems=\count318
+\c@minitems=\count319
+\c@citecounter=\count320
+\c@maxcitecounter=\count321
+\c@savedcitecounter=\count322
+\c@uniquelist=\count323
+\c@uniquename=\count324
+\c@refsection=\count325
+\c@refsegment=\count326
+\c@maxextratitle=\count327
+\c@maxextratitleyear=\count328
+\c@maxextraname=\count329
+\c@maxextradate=\count330
+\c@maxextraalpha=\count331
+\c@abbrvpenalty=\count332
+\c@highnamepenalty=\count333
+\c@lownamepenalty=\count334
+\c@maxparens=\count335
+\c@parenlevel=\count336
+\blx@tempcnta=\count337
+\blx@tempcntb=\count338
+\blx@tempcntc=\count339
+\c@blx@maxsection=\count340
+\blx@maxsegment@0=\count341
+\blx@notetype=\count342
+\blx@parenlevel@text=\count343
+\blx@parenlevel@foot=\count344
+\blx@sectionciteorder@0=\count345
+\blx@sectionciteorderinternal@0=\count346
+\blx@entrysetcounter=\count347
+\blx@biblioinstance=\count348
+\labelnumberwidth=\skip54
+\labelalphawidth=\skip55
+\biblabelsep=\skip56
+\bibitemsep=\skip57
+\bibnamesep=\skip58
+\bibinitsep=\skip59
+\bibparsep=\skip60
+\bibhang=\skip61
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language91
+\c@mincomprange=\count349
+\c@maxcomprange=\count350
+\c@mincompwidth=\count351
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count352
+\c@savedafterword=\count353
+\c@annotator=\count354
+\c@savedannotator=\count355
+\c@author=\count356
+\c@savedauthor=\count357
+\c@bookauthor=\count358
+\c@savedbookauthor=\count359
+\c@commentator=\count360
+\c@savedcommentator=\count361
+\c@editor=\count362
+\c@savededitor=\count363
+\c@editora=\count364
+\c@savededitora=\count365
+\c@editorb=\count366
+\c@savededitorb=\count367
+\c@editorc=\count368
+\c@savededitorc=\count369
+\c@foreword=\count370
+\c@savedforeword=\count371
+\c@holder=\count372
+\c@savedholder=\count373
+\c@introduction=\count374
+\c@savedintroduction=\count375
+\c@namea=\count376
+\c@savednamea=\count377
+\c@nameb=\count378
+\c@savednameb=\count379
+\c@namec=\count380
+\c@savednamec=\count381
+\c@translator=\count382
+\c@savedtranslator=\count383
+\c@shortauthor=\count384
+\c@savedshortauthor=\count385
+\c@shorteditor=\count386
+\c@savedshorteditor=\count387
+\c@labelname=\count388
+\c@savedlabelname=\count389
+\c@institution=\count390
+\c@savedinstitution=\count391
+\c@lista=\count392
+\c@savedlista=\count393
+\c@listb=\count394
+\c@savedlistb=\count395
+\c@listc=\count396
+\c@savedlistc=\count397
+\c@listd=\count398
+\c@savedlistd=\count399
+\c@liste=\count400
+\c@savedliste=\count401
+\c@listf=\count402
+\c@savedlistf=\count403
+\c@location=\count404
+\c@savedlocation=\count405
+\c@organization=\count406
+\c@savedorganization=\count407
+\c@origlocation=\count408
+\c@savedoriglocation=\count409
+\c@origpublisher=\count410
+\c@savedorigpublisher=\count411
+\c@publisher=\count412
+\c@savedpublisher=\count413
+\c@language=\count414
+\c@savedlanguage=\count415
+\c@origlanguage=\count416
+\c@savedoriglanguage=\count417
+\c@pageref=\count418
+\c@savedpageref=\count419
+\shorthandwidth=\skip62
+\shortjournalwidth=\skip63
+\shortserieswidth=\skip64
+\shorttitlewidth=\skip65
+\shortauthorwidth=\skip66
+\shorteditorwidth=\skip67
+\locallabelnumberwidth=\skip68
+\locallabelalphawidth=\skip69
+\localshorthandwidth=\skip70
+\localshortjournalwidth=\skip71
+\localshortserieswidth=\skip72
+\localshorttitlewidth=\skip73
+\localshortauthorwidth=\skip74
+\localshorteditorwidth=\skip75
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count420
+\c@textcitetotal=\count421
+\c@textcitemaxnames=\count422
+\c@biburlbigbreakpenalty=\count423
+\c@biburlbreakpenalty=\count424
+\c@biburlnumpenalty=\count425
+\c@biburlucpenalty=\count426
+\c@biburllcpenalty=\count427
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count428
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count429
+\c@bbx:relatedtotal=\count430
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-04-28 L3 programming layer (loader) 
+ (c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count431
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2026-04-28 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+))
+\@quotelevel=\count432
+\@quotereset=\count433
+
+No file main.aux.
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count434
+\scratchdimen=\dimen183
+\scratchbox=\box55
+\nofMPsegments=\count435
+\nofMParguments=\count436
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count437
+\MPscratchDim=\dimen184
+\MPnumerator=\count438
+\makeMPintoPDFobject=\count439
+\everyMPtoPDFconversion=\toks24
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 31.
+Package biblatex Info: Reference segment=0 on input line 31.
+<uni_logo.png, id=1, 339.2675pt x 142.5325pt>
+File: uni_logo.png Graphic file (type png)
+<use uni_logo.png>
+Package pdftex.def Info: uni_logo.png  used on input line 35.
+(pdftex.def)             Requested size: 258.75pt x 108.71075pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+ (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+ (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uni_logo.png>]
+No file main.toc.
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+[2]
+Overfull \hbox (7.95895pt too wide) in paragraph at lines 68--69
+[]\OT1/cmr/m/n/10 Shapiro-Stufen-Messung ($\OML/cmm/m/it/10 V$\OT1/cmr/m/n/10 -$\OML/cmm/m/it/10 I$\OT1/cmr/m/n/10 -Messung mit Mikrowellen-Einkopplung), Bes-
+ []
+
+
+Overfull \hbox (19.77852pt too wide) in paragraph at lines 72--73
+[]\OT1/cmr/m/n/10 Bestimmung der max-i-malen Span-nungsmod-u-la-tion $^^A\OML/cmm/m/it/10 V$ \OT1/cmr/m/n/10 f^^?ur ein Flussquant
+ []
+
+
+Overfull \hbox (6.92072pt too wide) in paragraph at lines 73--74
+[]\OT1/cmr/m/n/10 Bestimmung des Mod-u-la-tion-spa-ram-e-ters $\OML/cmm/m/it/10 ^^L[]$ \OT1/cmr/m/n/10 mit 2 ver-schiede-nen Meth-
+ []
+
+
+Overfull \hbox (3.3617pt too wide) in paragraph at lines 74--75
+[]\OT1/cmr/m/n/10 Flussquantisierung in supralei-t-en-den Rin-gen, Bes-tim-mung des Zusam-
+ []
+
+[3]
+Overfull \hbox (15.36168pt too wide) in paragraph at lines 92--93
+\OT1/cmr/m/n/10 He-lium, son-dern mit fl^^?ussigem Stock-stoff herun-tergek^^?uhlt wer-den welcher wesentlich
+ []
+
+
+LaTeX Warning: Reference `fig:mei√üner_ochsnefeld_effekt' on page 4 undefined on input line 98.
+
+
+Overfull \hbox (6.19499pt too wide) in paragraph at lines 98--99
+\OT1/cmr/m/n/10 aus dem In-neren des Supraleit-ers ent-fernt, bis auf deine d^^?unne Oberfl^^?achenschicht,
+ []
+
+<figures/mei√üner_ochsenfeld_effekt.png, id=26, 250.9375pt x 250.9375pt>
+File: figures/mei√üner_ochsenfeld_effekt.png Graphic file (type png)
+<use figures/mei√üner_ochsenfeld_effekt.png>
+Package pdftex.def Info: figures/mei√üner_ochsenfeld_effekt.png  used on input line 102.
+(pdftex.def)             Requested size: 172.5pt x 172.50761pt.
+[4]
+Overfull \hbox (15.68593pt too wide) in paragraph at lines 112--113
+\OT1/cmr/m/n/10 seiner neg-a-tiven Ladung die pos-i-tiv gelade-nen Atomr^^?umpfe ger-ingf^^?ugig an. Dadurch
+ []
+
+
+Overfull \hbox (19.90804pt too wide) in paragraph at lines 112--113
+\OT1/cmr/m/n/10 entsteht lokal f^^?ur kurze Zeit eine erh^^?ohte pos-i-tive Ladungs-dichte. Da die Atomr^^?umpfe
+ []
+
+
+Overfull \hbox (2.25058pt too wide) in paragraph at lines 116--117
+\OT1/cmr/m/n/10 gemein-samer quan-ten-mech-a-nis-cher Zu-s-tand, bei dem die Aufen-thaltswahrschein-
+ []
+
+[5 <./figures/mei√üner_ochsenfeld_effekt.png>] [6]
+Overfull \hbox (0.83392pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 siven, schmelz-tex-turi-erten Hochtemperatur-Supraleiter-Zylinder in ein, aus einer
+ []
+
+<figures/schematischer_versuchsaufbau.png, id=40, 615.29875pt x 457.71pt>
+File: figures/schematischer_versuchsaufbau.png Graphic file (type png)
+<use figures/schematischer_versuchsaufbau.png>
+Package pdftex.def Info: figures/schematischer_versuchsaufbau.png  used on input line 147.
+(pdftex.def)             Requested size: 172.5pt x 128.31856pt.
+
+Overfull \hbox (3.97224pt too wide) in paragraph at lines 154--154
+[]\OT1/cmr/bx/n/12 Hochtemperatur-Supraleiter im in-ho-mo-ge-nen Mag-net-
+ []
+
+
+Overfull \hbox (21.72305pt too wide) in paragraph at lines 156--156
+[]\OT1/cmr/bx/n/10 Ermittlung des hor-i-zon-talen und ver-tikalen Ver-lauf des Permanent-
+ []
+
+
+Overfull \hbox (1.54684pt too wide) in paragraph at lines 158--159
+\OT1/cmr/m/n/10 Feldst^^?arke und wech-sel-nder Po-larit^^?at auf. Der ver-tikale Ver-lauf zeigt er-wartungs-
+ []
+
+[7 <./figures/schematischer_versuchsaufbau.png>]
+<figures/magnetische_ausrichtugn_4magnete.png, id=46, 1811.76875pt x 1758.57pt>
+File: figures/magnetische_ausrichtugn_4magnete.png Graphic file (type png)
+<use figures/magnetische_ausrichtugn_4magnete.png>
+Package pdftex.def Info: figures/magnetische_ausrichtugn_4magnete.png  used on input line 162.
+(pdftex.def)             Requested size: 258.75pt x 251.1355pt.
+
+Overfull \hbox (1.9162pt too wide) in paragraph at lines 169--170
+\OT1/cmr/m/n/10 Anschlie^^Yend wurde ein auf 77 K gek^^?uhlter Hochtemperatur-Supraleiter-Zylinder
+ []
+
+
+Overfull \hbox (12.85237pt too wide) in paragraph at lines 169--170
+\OT1/cmr/m/n/10 beobachtet wer-den. Dieser l^^?asst sich durch den Mei^^Yner-Ochsenfeld-Effekt erkl^^?aren:
+ []
+
+
+Overfull \hbox (12.27838pt too wide) in paragraph at lines 169--170
+\OT1/cmr/m/n/10 Im supralei-t-en-den Zu-s-tand wer-den Mag-net-feldlin-ien aus dem In-neren des Supraleit-
+ []
+
+[8 <./figures/magnetische_ausrichtugn_4magnete.png>]
+File: figures/magnetische_ausrichtugn_4magnete.png Graphic file (type png)
+<use figures/magnetische_ausrichtugn_4magnete.png>
+Package pdftex.def Info: figures/magnetische_ausrichtugn_4magnete.png  used on input line 173.
+(pdftex.def)             Requested size: 258.75pt x 251.1355pt.
+
+Overfull \hbox (3.27844pt too wide) in paragraph at lines 178--179
+\OT1/cmr/m/n/10 zus^^?atzlich durch Flusspin-ning im Typ-II-Hochtemperatur-Supraleiter beg^^?unstigt. 
+ []
+
+[9]
+Overfull \hbox (18.36176pt too wide) in paragraph at lines 182--183
+\OT1/cmr/m/n/10 In dieser Auf-gabe wurde die Spannungs-Strom-Kennlinie des DC-SQUIDs aufgenom-
+ []
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 187.
+
+Missing character: There is no µ in font cmr10!
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 193.
+
+Missing character: There is no µ in font cmr10!
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 196.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 196.
+
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 200.
+
+Missing character: There is no µ in font cmr10!
+Missing character: There is no µ in font cmr10!
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 203.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 203.
+
+Missing character: There is no µ in font cmr10!
+<figures/Aufgabe_B_Fit.png, id=54, 534.5571pt x 354.123pt>
+File: figures/Aufgabe_B_Fit.png Graphic file (type png)
+<use figures/Aufgabe_B_Fit.png>
+Package pdftex.def Info: figures/Aufgabe_B_Fit.png  used on input line 208.
+(pdftex.def)             Requested size: 258.75pt x 171.41441pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+<figures/saphiero_stufen.png, id=58, 1475.5125pt x 873.2625pt>
+File: figures/saphiero_stufen.png Graphic file (type png)
+<use figures/saphiero_stufen.png>
+Package pdftex.def Info: figures/saphiero_stufen.png  used on input line 219.
+(pdftex.def)             Requested size: 258.75pt x 153.1297pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:shapiro_stufen' on page 11 undefined on input line 224.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 224.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 224.
+
+Missing character: There is no µ in font cmr10!
+
+Overfull \hbox (3.6394pt too wide) in paragraph at lines 224--225
+[]\OT1/cmr/m/n/10 Aus der U-I-Kennlinie [] wur-den die Span-nungspo-si-tio-nen der einzel-nen Shapiro-
+ []
+
+[11 <./figures/Aufgabe_B_Fit.png>]
+c:/Users/vd01p/OneDrive/Desktop/Universit√§t/Grundpraktikum-1/FPrak/SQUID/Protokoll/main.tex:242: Missing $ inserted.
+<inserted text> 
+                $
+l.242 ...gnetischen Flusses um ein Flussquant \Phi
+                                                  _0$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Reference `fig:aufgabe_d' on page 12 undefined on input line 244.
+
+
+LaTeX Warning: Reference `fig:aufgabe_d' on page 12 undefined on input line 244.
+
+<figures/Aufgabe_D.png, id=63, 570.933pt x 353.8821pt>
+File: figures/Aufgabe_D.png Graphic file (type png)
+<use figures/Aufgabe_D.png>
+Package pdftex.def Info: figures/Aufgabe_D.png  used on input line 248.
+(pdftex.def)             Requested size: 258.75pt x 160.38481pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./figures/saphiero_stufen.png>]
+Overfull \hbox (18.85255pt too wide) in paragraph at lines 259--260
+\OT1/cmr/m/n/10 Ausgangsspannung vom mag-netis-chen Fluss. Ab-we-ichun-gen vom ideal si-nusf^^?ormigen
+ []
+
+<figures/krit_temp_alle.png, id=69, 1463.4675pt x 873.2625pt>
+File: figures/krit_temp_alle.png Graphic file (type png)
+<use figures/krit_temp_alle.png>
+Package pdftex.def Info: figures/krit_temp_alle.png  used on input line 265.
+(pdftex.def)             Requested size: 258.75pt x 154.39555pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/krit_temp_klein.png, id=70, 752.8125pt x 451.6875pt>
+File: figures/krit_temp_klein.png Graphic file (type png)
+<use figures/krit_temp_klein.png>
+Package pdftex.def Info: figures/krit_temp_klein.png  used on input line 272.
+(pdftex.def)             Requested size: 258.75pt x 155.2534pt.
+[13 <./figures/Aufgabe_D.png>]
+No file main.lof.
+\tf@lof=\write5
+\openout5 = `main.lof'.
+
+No file main.lot.
+\tf@lot=\write6
+\openout6 = `main.lot'.
+
+
+Overfull \hbox (13.20743pt too wide) in paragraph at lines 286--286
+[]\OT1/cmr/m/n/10 Contributors of Wikipedia. \OT1/cmr/m/it/10 Mei^^Yner-Ochsenfeld-Effekt\OT1/cmr/m/n/10 . Ver-sion vom 14.9.2025,
+ []
+
+
+Overfull \hbox (10.50546pt too wide) in paragraph at lines 286--286
+[]\OT1/cmr/m/n/10 Wolfgang Demtr^^?oder. \OT1/cmr/m/it/10 Ex-per-i-men-tal-physik 3\OT1/cmr/m/n/10 . Edi-tion 5, abgerufen am 2.6.2026.
+ []
+
+[14{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/krit_temp_alle.png>] [15 <./figures/krit_temp_klein.png>] (./main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-04-28>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 12476 strings out of 467341
+ 231526 string characters out of 5419596
+ 1055859 words of memory out of 5000000
+ 41460 multiletter control sequences out of 15000+600000
+ 637718 words of font info for 78 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 67i,6n,77p,1189b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on main.pdf (15 pages, 1242153 bytes).
+PDF statistics:
+ 168 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+
