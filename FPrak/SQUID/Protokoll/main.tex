@@ -1,9 +1,23 @@
 \documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\newcommand{\safeincludegraphics}[2][]{%
+    \IfFileExists{#2}{%
+        \includegraphics[#1]{#2}%
+    }{%
+        \fbox{\parbox[c][0.23\textheight][c]{0.78\linewidth}{\centering Abbildung nicht gefunden:\\[0.5em]\texttt{\detokenize{#2}}}}%
+    }%
+}
 
 \title{SQUID \\
 Advanced Physics Laboratory}
@@ -19,6 +33,7 @@ Gruppe O43
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
+\emergencystretch=2em
 \usepackage[
     backend=biber,
     style=numeric,
@@ -32,17 +47,16 @@ Gruppe O43
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{uni_logo.png}
+    \safeincludegraphics[width=0.75\linewidth]{uni_logo.png}
 \end{figure}
 
 \maketitle
 
 
 \begin{abstract}
-
-In diesem Experiment wird mit einem SQUID gearbeitet um kleinste Magnetfeldänderungen zu detektieren
-
+In diesem Versuch wurde die Flussquantisierung in supraleitenden Ringen anhand eines DC-SQUIDs untersucht. Dazu wurden zunächst die Eigenschaften von Supraleitern, der Josephson-Effekt sowie die Funktionsweise eines SQUID-Sensors theoretisch betrachtet. Experimentell wurden ein Hochtemperatur-Supraleiter im inhomogenen Magnetfeld, die Spannungs-Strom-Kennlinie eines DC-SQUIDs, Shapiro-Stufen sowie die Spannungs-Fluss-Charakteristik analysiert. Aus den Messungen konnten zentrale Kenngrößen wie der kritische Strom, der Normalwiderstand, die charakteristische Spannung und die Periodizität bezüglich des magnetischen Flusses bestimmt werden. Die Beobachtung der Shapiro-Stufen bestätigte den Zusammenhang zwischen Spannung und Frequenz des AC-Josephson-Effekts. Zusätzlich wurde die kritische Temperatur von \(\mathrm{YBa_2Cu_3O_{7-\delta}}\) aus temperaturabhängigen Kennlinien abgeschätzt. Insgesamt bestätigen die Ergebnisse die Flussquantisierung als makroskopischen Quanteneffekt und zeigen die hohe Empfindlichkeit des SQUIDs gegenüber kleinsten Änderungen des magnetischen Flusses.
 \end{abstract}
+
 \newpage
 \begingroup
 \tableofcontents
@@ -52,9 +66,9 @@ In diesem Experiment wird mit einem SQUID gearbeitet um kleinste Magnetfeldände
 
 \newpage
 
-\section{Introduction}
+\section{Einleitung}
 
-\subsection{Aufgabestellung}
+\subsection{Aufgabenstellung}
 \begin{enumerate}
     \item Zusammen mit dem Betreuer führen Sie einen auf 77 K abgekühlten, massiven, schmelztexturierten Hochtemperatur-Supraleiter-Zylinder von oben in ein inhomogenes Magnetfeld aus 4 Permanentmagnetplatten ein. Beobachten Sie die Effekte bei der Erwärmung und erklären Sie diese anhand Ihrer Kenntnisse aus der Vorbereitung. Messen Sie den horizontalen und vertikalen Verlauf des Permanent-Magnetfeldes über den Platten mit einem Hallsensor.
     
@@ -74,7 +88,7 @@ In diesem Experiment wird mit einem SQUID gearbeitet um kleinste Magnetfeldände
         \item Flussquantisierung in supraleitenden Ringen, Bestimmung des Zusammenhangs zwischen $V_{OUT}$ (SQUID) und dem vorhandenen magnetischen Fluss (siehe Advanced Experiments Section 7) \cite{mr_squid} 
     \end{enumerate}
     
-    \item Bestimmen Sie die kritische Temperatur $T_c$ von $\text{YBa}_2\text{Cu}_3\text{O}_{7-\delta}$, dem Material des SQUID-Sensors näherungsweise, indem Sie die $I$-$V$-Kurve aus Aufgabe B) alle 1 K im Temperaturbereich von 77 K bis ca. 100 K aufnehmen. Die Temperatur wird mit einer Halbleiterdiode detektiert und ausgelesen. Die Variation der Temperatur erfolgt durch sehr langsames Herausziehen (und Fixieren) des SQUID-Stabes aus dem flüssigen Stickstoff. (Mr. SQUID guide S. 57-63 und S. 78-84) \cite{mr_squid}
+    \item Bestimmen Sie die kritische Temperatur $T_c$ von $\text{YBa}_2\text{Cu}_3\text{O}_{7-\delta}$, dem Material des SQUID-Sensors näherungsweise, indem Sie die $I$-$V$-Kurve aus Aufgabe B) alle 1 K im Temperaturbereich von 77 K bis ca. 100 K aufnehmen. Die Temperatur wird mit einer Halbleiterdiode detektiert und ausgelesen. Die Variation der Temperatur erfolgt durch sehr langsames Herausziehen (und Fixieren) des SQUID-Stabes aus dem flüssigem Stickstoff. (Mr. SQUID guide S. 57-63 und S. 78-84) \cite{mr_squid}
 \end{enumerate}
 
 
@@ -87,24 +101,24 @@ In diesem Experiment wird mit einem SQUID gearbeitet um kleinste Magnetfeldände
 
 \subsubsection{Supraleitung}
 
-Supraleitung ist ein makroskopisches Quantenphänomen, dass in Materialien auftritt, deren elektrischer Weiterstand bei einer bestimmten Sprungtemperatur $T_c$ praktisch null wird. Sie wurde von Heike Kamerlingh Onnes 1911 mittels einer stark gekühlten Quecksilber Probe ($T_C \gtrsim 0\mathrm{K}$) entdeckt. Wegen der Aufwendigkeit, die Probe so stark herunterzukühlen wurde erst ungefähr 20 Jahre später in 1933 der Meißner-Ochsenfeld-Effekt, von Walther Meißner und Robert Ochsenfeld, gezeigt. Nochmal 15 Jahre weiter, gab es eine theoretische Erklärung der Supraleitung mit der BCS-Theorie, welche 1957 von Bardeen, Cooper und Schrieffer aufgestellt wurde. Die Flussquantisierung in supraleitenden Ringen, welches, dass Hauptprinzip der SQUID Sensoren ist, nochmal gute 20 Jahre später theoretisch vorhergesagt und in 1961 experimentell bestätigt. \cite{mr_squid} \cite{fprak_manual}
+Supraleitung ist ein makroskopisches Quantenphänomen, das in Materialien auftritt, deren elektrischer Widerstand bei einer bestimmten Sprungtemperatur $T_c$ praktisch null wird. Sie wurde von Heike Kamerlingh Onnes 1911 mittels einer stark gekühlten Quecksilberprobe ($T_C \approx 4.2\,\mathrm{K}$) entdeckt. Wegen des Aufwands, die Probe so stark herunterzukühlen, wurde erst ungefähr 20 Jahre später im Jahr 1933 der Meißner-Ochsenfeld-Effekt, von Walther Meißner und Robert Ochsenfeld, gezeigt. Etwa 15 Jahre später gab es eine theoretische Erklärung der Supraleitung mit der BCS-Theorie, welche 1957 von Bardeen, Cooper und Schrieffer aufgestellt wurde. Die Flussquantisierung in supraleitenden Ringen, die ein wesentliches Prinzip von SQUID-Sensoren darstellt, wurde später theoretisch beschrieben und im Jahr 1961 experimentell bestätigt. \cite{mr_squid} \cite{fprak_manual}
 
-Nach der Entdeckung von Hochtemperatur-Supraleiter, wurden Supraleiter viel alltagstauglicher für, dass handelsübliche Labor, da sie nicht mehr mit flüssigem Helium, sondern mit flüssigem Stockstoff heruntergekühlt werden welcher wesentlich günstiger ist \cite{liquid_he_na_prices}.
+Nach der Entdeckung von Hochtemperatur-Supraleitern, wurden Supraleiter deutlich alltagstauglicher für das handelsübliche Labor, da sie nicht mehr ausschließlich mit flüssigem Helium, sondern auch mit flüssigem Stickstoff gekühlt werden können, der wesentlich günstiger ist \cite{liquid_he_na_prices}.
 
-In der heutigen Zeit gibt es tausende von Materialien welche supraleitende Eigenschaften besitzen. Grob kann man diese in Supraleiter Typ I und Typ II aufteilen. (Mittels des Meißner Effekts)
+Heute gibt es tausende von Materialien, die supraleitende Eigenschaften besitzen. Grob kann man diese in Supraleiter Typ I und Typ II unterteilen, insbesondere anhand ihres Verhaltens im Magnetfeld.
 
 \paragraph{Supraleiter Typ I}
 
-Bei diesem Typen wird ein äußeres Magnetfeld vollständig aus dem Inneren des Supraleiters entfernt, bis auf deine dünne Oberflächenschicht, des Materials. Dort nimmt das Magnetfeld stark exponentiell ab, die dicke dieser Oberflächenschicht wird (Londonsche) Eindringtiefe genannt und befindet sich in einem ungefähren Bereich von ungefähr $100 \mathrm{nm}$. \cite{wiki-superconducter}. Dieser Zustand wird als Meißner Phase bezeichnet, die unterhalb der kritischen Temperatur auftritt $T<T_c$ wie in Abbildung \ref{fig:meißner_ochsnefeld_effekt} zu sehen ist.
+Bei diesem Typ wird ein äußeres Magnetfeld vollständig aus dem Inneren des Supraleiters entfernt, bis auf eine dünne Oberflächenschicht des Materials. Dort nimmt das Magnetfeld stark exponentiell ab, die Dicke dieser Oberflächenschicht wird (Londonsche) Eindringtiefe genannt und befindet sich in einem Bereich von ungefähr $100 \mathrm{nm}$. \cite{wiki-superconducter}. Dieser Zustand wird als Meißner Phase bezeichnet, die unterhalb der kritischen Temperatur auftritt $T<T_c$ wie in Abb.~\ref{fig:meißner_ochsnefeld_effekt} zu sehen ist.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/meißner_ochsenfeld_effekt.png}
-    \caption{Der Meißner-Ochsenfeld-Effekt, als Eigenschaft von Supraleitern Typ. 1 in der Meißner Phase, ein von außen angelegtes magnetisches Feld vollständig aus dem Inneren zu verdrängen. Der Supraleiter ist somit nicht nur ein idealer Leiter ohne Widerstand, sondern auch ein idealer Diamagnet. \cite{wiki-meissner-ochsenfeld}}
+    \safeincludegraphics[width=0.5\linewidth]{figures/meißner_ochsenfeld_effekt.png}
+    \caption{Der Meißner-Ochsenfeld-Effekt beschreibt die Eigenschaft von Supraleitern des Typs I in der Meißner-Phase, ein von außen angelegtes magnetisches Feld nahezu vollständig aus dem Inneren zu verdrängen. Der Supraleiter ist somit nicht nur ein idealer Leiter ohne Widerstand, sondern auch ein idealer Diamagnet. \cite{wiki-meissner-ochsenfeld}}
     \label{fig:meißner_ochsnefeld_effekt}
 \end{figure}
 
-Wichtig zu erwähne ist, dass der Supraleitende Zustand nicht allein von der Temperatur abhängig ist. Auch unterhalb der kritischen Temperatur $T < T_c$ kann ein Supraleiter 1. Art normal leitend werden und so einen nicht vernachlässigbar kleinen Widerstand besitzen. Dazu kommt es, wenn entweder dass äußere Magnetfeld einen kritischen Wert $B_c$ oder die Stromdichte durch den Supraleiter einen kritischen Wert $J_c$ überschreitet. \cite{wiki-superconducter}
+Wichtig zu erwähnen ist, dass der supraleitende Zustand nicht allein von der Temperatur abhängig ist. Auch unterhalb der kritischen Temperatur $T < T_c$ kann ein Supraleiter 1. Art normal leitend werden und so einen nicht vernachlässigbar kleinen Widerstand besitzen. Dazu kommt es, wenn entweder das äußere Magnetfeld einen kritischen Wert $B_c$ oder die Stromdichte durch den Supraleiter einen kritischen Wert $J_c$ überschreitet. \cite{wiki-superconducter}
 
 \paragraph{Cooper-Paare}
 Die Supraleitung von Typ-I-Supraleitern wird durch die Bildung sogenannter Cooper-Paare erklärt. In einem gewöhnlichen elektrischen Leiter bewegen sich Elektronen durch das Kristallgitter des Materials. Dabei werden sie an Gitterfehlern und an thermischen Gitterschwingungen, den sogenannten Phononen, gestreut. Diese Streuprozesse verursachen den elektrischen Widerstand.
@@ -113,39 +127,94 @@ Unterhalb der kritischen Temperatur verändert sich dieses Verhalten grundlegend
 
 Ist diese Anziehung stärker als die elektrische Coulomb-Abstoßung, bilden die beiden Elektronen ein gebundenes Paar, das als Cooper-Paar bezeichnet wird. Die Elektronen eines Cooper-Paares besitzen entgegengesetzte Impulse und entgegengesetzten Spin. Dadurch beträgt der Gesamtimpuls und der Gesamtspin des Paares jeweils null.
 
-Mikroskopisch erstreckt sich ein Cooper-Paar nicht nur über wenige Atomabstände, sondern über viele tausend Gitterabstände. Die beiden Elektronen sind daher nicht als eng gebundenes Teilchenpaar zu verstehen, sondern als ein gemeinsamer quantenmechanischer Zustand, bei dem die Aufenthaltswahrscheinlichkeiten der Elektronen über einen großen Bereich des Kristallgitters verteilt sind. Obwohl die Elektronen räumlich weit voneinander entfernt sein können, bleiben sie durch die phonenvermittelte Wechselwirkung miteinander gekoppelt und verhalten sich wie eine Einheit.
+Mikroskopisch erstreckt sich ein Cooper-Paar nicht nur über wenige Atomabstände, sondern über viele tausend Gitterabstände. Die beiden Elektronen sind daher nicht als eng gebundenes Teilchenpaar zu verstehen, sondern als ein gemeinsamer quantenmechanischer Zustand, bei dem die Aufenthaltswahrscheinlichkeiten der Elektronen über einen großen Bereich des Kristallgitters verteilt sind. Obwohl die Elektronen räumlich weit voneinander entfernt sein können, bleiben sie durch die phononenvermittelte Wechselwirkung miteinander gekoppelt und verhalten sich wie eine Einheit.
 
 Da sich die Wellenfunktionen vieler Cooper-Paare stark überlappen, können sie nicht mehr als voneinander unabhängige Paare betrachtet werden. Stattdessen befinden sich sehr viele Cooper-Paare gleichzeitig im selben makroskopischen Quantenzustand und bilden ein gemeinsames Kondensat. Dieses Kondensat wird durch eine einzige kohärente Wellenfunktion beschrieben, sodass sich alle Cooper-Paare gemeinsam und geordnet durch das Kristallgitter bewegen. Gerade diese kollektive Bewegung ist eine wesentliche Voraussetzung für das widerstandsfreie Fließen des elektrischen Stroms.
  \cite{demtroder_3} \cite{fprak_manual} \cite{wiki-superconducter} \cite{wiki-cooper}
 
 \paragraph{Supraleiter Typ II}
 
-Supraleiter des Typs II verhalten sich bis zu einem \textit{unteren kritischen Magnetfeld} $B_{c1}$ in der Meißner Phase und verhalten sich somit analog zu Supraleiter des Typs I. Ist, dass äußere Magnetfeld aber höher als $B_{c1}$, so können die magnetischen Feldlinien in der Form von Flussschläuchen in, dass Material eindringen. Dabei kann der magnetischer Fluss $\Phi$, in solch einem Schlauch, immer nur gleich dem magnetischen Flussquants sein. \cite{fprak_manual} \cite{wiki-superconducter}
-Da durch den gesamten Supraleiter nur eine ganzzahlige Anzahl, solche Flussschläuche durchlaufen, ist der gesamte magnetische Fluss ein ganzzahliges Vielfaches des magnetischen Flussquants.
+Supraleiter des Typs II befinden sich bis zu einem unteren kritischen Magnetfeld $B_{c1}$ in der Meißner Phase und verhalten sich somit analog zu Supraleitern des Typs I. Ist das äußere Magnetfeld größer als $B_{c1}$, so können magnetische Feldlinien in Form von Flussschläuchen in das Material eindringen. Dabei entspricht der magnetische Fluss $\Phi$ in einem solchen Schlauch jeweils einem magnetischen Flussquant. \cite{fprak_manual} \cite{wiki-superconducter}
+Da den gesamten Supraleiter nur eine ganzzahlige Anzahl solcher Flussschläuche durchsetzt, ist der gesamte magnetische Fluss ein ganzzahliges Vielfaches des magnetischen Flussquants.
 
 \begin{equation}
-    \Phi_0 = \frac{h}{2e} \approx 2.07 \times 10^{-15} \mathrm{Vs}
+    \Phi_0 = \frac{h}{2e} \approx 2.07 \times 10^{-15}\,\mathrm{Vs}
 \end{equation}
 
-Ist das äußere Magnetfeld noch stärker und oberhalb des \textit{oberen kritischen Magnetfeldes} $B_{c2}$ ist der supraleitende Zustand nicht mehr vorhanden.
+Ist das äußere Magnetfeld noch stärker und oberhalb des oberen kritischen Magnetfeldes $B_{c2}$ ist der supraleitende Zustand nicht mehr vorhanden.
 
-Theoretisch sind Supraleiter zweiter Art nicht so gut verstanden wie die, der erster Art. Es wird angenommen, dass auch bei diesen Supraleitern es zur Bildung von Cooper Paaren kommt. Jedoch konnte noch kein allgemein akzeptiertes Modell gefunden werden, dass diese Supraleiter vollständig beschreiben kann. Die Entdeckung eines solchen Modells wäre sehr interessant, da alle Hochtemperatur-Supraleiter, die meisten supraleitenden Legierungen und Eisen-Pniktide Supraleiter der zweiten Art sind.
+Theoretisch sind Supraleiter zweiter Art nicht so vollständig verstanden wie Supraleiter erster Art. Es wird angenommen, dass es auch bei diesen Supraleitern zur Bildung von Cooper-Paaren kommt. Jedoch konnte noch kein allgemein akzeptiertes Modell gefunden werden, das diese Supraleiter vollständig beschreiben kann. Die Entdeckung eines solchen Modells wäre sehr interessant, da alle Hochtemperatur-Supraleiter, die meisten supraleitenden Legierungen und Eisen-Pniktide Supraleiter der zweiten Art sind.
+
 
 \subsubsection{Supraleitende Ringe}
-Die Basis eines Squid Sensores ist ein Supraleitender Ring
+
+Ein supraleitender Ring ist ein geschlossenes supraleitendes System, in dem die Cooper-Paare durch eine gemeinsame makroskopische Wellenfunktion beschrieben werden können. Diese Wellenfunktion muss nach einem vollständigen Umlauf um den Ring wieder eindeutig sein. Deshalb darf sich ihre Phase entlang eines geschlossenen Weges nur um ein ganzzahliges Vielfaches von $2\pi$ ändern. Aus dieser Randbedingung folgt die Quantisierung des magnetischen Flusses im Ring.
+
+Für den magnetischen Fluss $\Phi$ durch einen supraleitenden Ring gilt näherungsweise
+\begin{equation}
+    \Phi = n\Phi_0 \qquad \text{mit} \qquad n\in \mathbb{Z},
+\end{equation}
+
+wobei
+\begin{equation}
+    \Phi_0 = \frac{h}{2e} \approx 2.07 \times 10^{-15}\,\mathrm{Vs}
+\end{equation}
+
+das magnetische Flussquant ist. Der Faktor $2e$ tritt auf, weil nicht einzelne Elektronen, sondern Cooper-Paare mit der Ladung $2e$ die supraleitenden Ladungsträger bilden. Damit ist die Flussquantisierung ein direkter experimenteller Hinweis auf den Cooper-Paar-Charakter der Supraleitung.
+
+Wird ein äußerer magnetischer Fluss an den Ring angelegt, so entstehen Abschirmströme, die den Gesamtfluss im Ring auf einen erlaubten quantisierten Wert einstellen. Bei einem ideal geschlossenen supraleitenden Ring ist der Fluss daher nicht kontinuierlich beliebig, sondern nur in Schritten von $\Phi_0$ veränderlich. Beim SQUID wird dieses Prinzip ausgenutzt: Kleine Änderungen des äußeren magnetischen Flusses führen zu messbaren Änderungen der Phase und damit der elektrischen Eigenschaften des Sensors. \cite{mr_squid} 
 
 \subsubsection{Josephson-Effekt}
 
-\subsubsection{SQUID Sensor}
+Der Josephson-Effekt beschreibt den Tunnelstrom von Cooper-Paaren zwischen zwei Supraleitern, die durch eine dünne nicht-supraleitende Barriere getrennt sind. Eine solche Barriere kann ein Isolator, ein normalleitender Bereich oder bei Hochtemperatur-Supraleitern eine schwache Kopplungsstelle, ein sogenannter Weak Link, sein. Trotz der Unterbrechung können Cooper-Paare quantenmechanisch durch die Barriere tunneln.
+
+Die beiden wichtigsten Josephson-Gleichungen lauten
+\begin{equation}
+    I_S = I_C \sin(\Delta\varphi)
+\end{equation}
+
+und
+\begin{equation}
+    \frac{\mathrm{d}\Delta\varphi}{\mathrm{d}t}=\frac{2e}{\hbar}U.
+\end{equation}
+
+Hierbei ist $I_S$ der Suprastrom durch den Josephson-Kontakt, $I_C$ der kritische Strom, $\Delta\varphi$ die Phasendifferenz der beiden supraleitenden Wellenfunktionen und $U$ die Spannung über dem Kontakt.
+
+Beim Gleichstrom- oder DC-Josephson-Effekt kann für $U=0$ ein stationärer Tunnelstrom fließen. Dieser Strom ist verlustfrei und kann maximal den Betrag $I_C$ erreichen. Wird dieser kritische Strom überschritten, entsteht eine messbare Spannung über dem Kontakt.
+
+Beim Wechselstrom- oder AC-Josephson-Effekt führt eine konstante Spannung $U$ zu einer zeitlich veränderlichen Phasendifferenz. Dadurch oszilliert der Josephson-Strom mit der Frequenz
+\begin{equation}
+    f_J = \frac{2e}{h}U.
+\end{equation}
+
+Wird zusätzlich eine Mikrowelle mit der Frequenz $f$ eingekoppelt, kann die Josephson-Oszillation mit der äußeren Frequenz synchronisieren. In der Spannungs-Strom-Kennlinie entstehen dann diskrete Spannungsplateaus, die Shapiro-Stufen. Für deren Abstand gilt
+\begin{equation}
+    \Delta U = \frac{hf}{2e} = \Phi_0 f.
+\end{equation}
+
+Dieser Zusammenhang wird im Experiment zur Bestimmung von $e/h$ verwendet. \cite{fprak_manual} \cite{mr_squid}
+
+\subsubsection{SQUID-Sensor}
+
+Ein SQUID (\textit{Superconducting Quantum Interference Device}) ist ein extrem empfindlicher Sensor zur Messung magnetischer Flüsse. Beim hier verwendeten DC-SQUID besteht der Sensor aus einem supraleitenden Ring mit zwei Josephson-Kontakten. Die beiden Kontakte bilden zwei parallele Wege für den Suprastrom. Da die makroskopischen Wellenfunktionen entlang beider Wege interferieren, hängt der maximal mögliche Suprastrom vom magnetischen Fluss $\Phi$ durch den Ring ab.
+
+Für ein ideales symmetrisches DC-SQUID mit vernachlässigbarer Eigeninduktivität ergibt sich näherungsweise
+\begin{equation}
+    I_{C,\mathrm{SQUID}}(\Phi)=2I_C\left|\cos\left(\pi\frac{\Phi}{\Phi_0}\right)\right|.
+\end{equation}
+
+Der kritische Strom ist also periodisch vom magnetischen Fluss abhängig. Die Periode entspricht genau einem Flussquant $\Phi_0$. Betreibt man den SQUID mit einem konstanten Bias-Strom oberhalb des kritischen Stroms, so wird diese Flussabhängigkeit als periodische Ausgangsspannung sichtbar. Daraus entsteht die typische $V$-$\Phi$-Kennlinie des SQUIDs.
+
+In der Nähe eines geeigneten Arbeitspunktes ist die Änderung der Ausgangsspannung näherungsweise proportional zur Änderung des magnetischen Flusses. Für besonders genaue Messungen wird häufig eine Flux-Locked-Loop-Schaltung verwendet. Dabei wird ein Gegenfluss erzeugt, der den SQUID am gewählten Arbeitspunkt hält. Das benötigte Rückkopplungssignal ist dann ein Maß für den zu messenden magnetischen Fluss. Auf diese Weise können sehr kleine Magnetfeldänderungen detektiert werden. \cite{fprak_manual} \cite{mr_squid}
 
 \subsection{Experimenteller Aufbau}
 
-Für den ersten Teil des Experimentes, wurde ein auf 77 K abgekühlten, massiven, schmelztexturierten Hochtemperatur-Supraleiter-Zylinder in ein, aus einer Fläche von 4 Paramagneten erzeugtes, inhomogenes Magnetfeld eingebracht. Für den zweiten Teil wurde ein mit flüssigem Stickstoff gefülltes Kryostat benutzt in dem der SQUID Sensor drin war.
+Für den ersten Teil des Experiments wurde ein auf 77 K abgekühlter, massiver, schmelztexturierter Hochtemperatur-Supraleiter-Zylinder in ein inhomogenes Magnetfeld eingebracht, das von vier Permanentmagneten erzeugt wurde. Für den zweiten Teil wurde ein mit flüssigem Stickstoff gefüllter Kryostat verwendet, in dem der SQUID-Sensor eingesetzt war. Der Aufbau ist schematisch in Abb.~\ref{fig:versuchsaubau} dargestellt.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/schematischer_versuchsaufbau.png}
-    \caption{Schematischer Versuchsaufbau, der Aufgabe 3 zur Bestimmung der Shapiro-Stufen. Mit der Mr. Squid Probe und der verbundenen $\lambda/4$ Antenne im Kryostaten, der mit flüssigen Stickstoff gefüllt ist. Versuchsaubau für Aufgabe 2, 4 und 5 sehr analog, nur ohne die $\lambda/4$ Antenne.}
+    \safeincludegraphics[width=0.5\linewidth]{figures/schematischer_versuchsaufbau.png}
+    \caption{Schematischer Versuchsaufbau zur Bestimmung der Shapiro-Stufen mit der Mr.-SQUID-Probe und der verbundenen $\lambda/4$-Antenne im mit flüssigem Stickstoff gefüllten Kryostaten. Der Aufbau für die Aufgaben B, D und E ist analog, jedoch ohne $\lambda/4$-Antenne.}
     \label{fig:versuchsaubau}
 \end{figure}
 
@@ -157,25 +226,25 @@ Für den ersten Teil des Experimentes, wurde ein auf 77 K abgekühlten, massiven
 
 Zu Beginn wurde das Magnetfeld der vier Permanentmagnetplatten mithilfe eines Hallsensors untersucht. Dazu wurde die magnetische Flussdichte einmal horizontal über die Magnetanordnung und einmal vertikal in Abhängigkeit vom Abstand zur Oberfläche aufgenommen. Das Magnetfeld ist, wie der horizontale Verlauf verdeutlicht, inhomogen und weist Bereiche mit unterschiedlicher Feldstärke und wechselnder Polarität auf. Der vertikale Verlauf zeigt erwartungsgemäß, dass die magnetische Flussdichte abnimmt, je weiter man sich von den Magnetplatten entfernt.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/magnetische_ausrichtugn_4magnete.png}
-    \caption{Alle Zahlen, sind in den EInheiten mT gemessen wurden}
+    \safeincludegraphics[width=0.75\linewidth]{figures/magnetische_ausrichtugn_4magnete.png}
+    \caption{Alle Zahlen sind in der Einheit mT angegeben.}
     \label{fig:mag_ausr_4mag}
 \end{figure}
 
-\subsubsection{Hochtemperatur-Supraleiter-Zylinder im inhomogneen Magnetfeld}
+\subsubsection{Hochtemperatur-Supraleiter-Zylinder im inhomogenen Magnetfeld}
 
 Anschließend wurde ein auf 77 K gekühlter Hochtemperatur-Supraleiter-Zylinder von oben in das Magnetfeld eingebracht. Dabei konnte ein Schwebezustand beobachtet werden. Dieser lässt sich durch den Meißner-Ochsenfeld-Effekt erklären: Im supraleitenden Zustand werden Magnetfeldlinien aus dem Inneren des Supraleiters verdrängt, wodurch im inhomogenen Magnetfeld eine abstoßende bzw. stabilisierende Kraft entsteht. Da es sich um einen Typ-II-Supraleiter handelt, können zusätzlich Flussschläuche und Pinning-Effekte zur Stabilisierung beitragen. Beim Erwärmen überschreitet der Körper nach einiger Zeit die kritische Temperatur, sodass der supraleitende Zustand verloren geht und der Schwebezustand endet.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/magnetische_ausrichtugn_4magnete.png}
+    \safeincludegraphics[width=0.75\linewidth]{figures/magnetische_ausrichtugn_4magnete.png}
     \caption{Supraleiter im inhomogenen Magnetfeld}
     \label{fig:supraleiter_auf_inhom_magnetfeld}
 \end{figure}
 
-Auffällig war, dass der supraleitende Zylinder nicht an jeder Position über der Magnetanordnung stabil schwebte, sondern vor allem im zentralen Bereich des inhomogenen Magnetfeldes. Dies lässt sich durch die Symmetrie der vier Permanentmagnetplatten erklären. In der Mitte kompensieren sich die horizontalen Kraftkomponenten weitgehend, während die vertikale magnetische Kraft den Zylinder gegen die Gewichtskraft stabilisieren kann. An den Übergängen zwischen Bereichen positiver und negativer Feldrichtung ist das Magnetfeld dagegen stark inhomogen. Da verschiedene Bereiche des Supraleiters dort unterschiedlich gerichtete Magnetfeldkomponenten erfahren, entstehen neben der vertikalen Kraft auch Drehmomente. Diese führen dazu, dass der Zylinder eine schräge Gleichgewichtslage einnimmt. Die beobachtete Schrägstellung ist somit eine Folge der starken Feldgradienten und der unsymmetrischen Kraftverteilung an den Magnetübergängen. Der stabile Schwebezustand in der Mitte wird zusätzlich durch Flusspin­ning im Typ-II-Hochtemperatur-Supraleiter begünstigt.
+Auffällig war, dass der supraleitende Zylinder nicht an jeder Position über der Magnetanordnung stabil schwebte, sondern vor allem im zentralen Bereich des inhomogenen Magnetfeldes. Dies lässt sich durch die Symmetrie der vier Permanentmagnetplatten erklären. In der Mitte kompensieren sich die horizontalen Kraftkomponenten weitgehend, während die vertikale magnetische Kraft den Zylinder gegen die Gewichtskraft stabilisieren kann. An den Übergängen zwischen Bereichen positiver und negativer Feldrichtung ist das Magnetfeld dagegen stark inhomogen. Da verschiedene Bereiche des Supraleiters dort unterschiedlich gerichtete Magnetfeldkomponenten erfahren, entstehen neben der vertikalen Kraft auch Drehmomente. Diese führen dazu, dass der Zylinder eine schräge Gleichgewichtslage einnimmt. Die beobachtete Schrägstellung ist somit eine Folge der starken Feldgradienten und der unsymmetrischen Kraftverteilung an den Magnetübergängen. Der stabile Schwebezustand in der Mitte wird zusätzlich durch Flusspinning im Typ-II-Hochtemperatur-Supraleiter begünstigt.
 
 \subsection{Spannungs-Strom-Messungen an einem DC-SQUID}
 
@@ -184,28 +253,28 @@ In dieser Aufgabe wurde die Spannungs-Strom-Kennlinie des DC-SQUIDs aufgenommen.
 Zur Bestimmung des kritischen Stroms wurden die linearen Bereiche der positiven $I_{0+}$ und negativen Flanke $I_{0-}$ separat gefittet. Aus den Schnittpunkten der Fitgeraden mit der Stromachse ergaben sich
 
 \begin{equation}
-    I_{0+} = 51.0 \mathrm{µA} \qquad \text{und} \qquad I_{0-} = -48.8 \mathrm{µA}
+    I_{0+} = 51.0 \,\mu\mathrm{A} \qquad \text{und} \qquad I_{0-} = -48.8 \,\mu\mathrm{A}
 \end{equation}
 
 Da der SQUID aus zwei parallelen Josephson-Kontakten besteht, entspricht der kritische Strom des gesamten SQUIDs dem Wert $2I_c$. Aus dem Mittelwert der Beträge folgt
 
 \begin{equation}
-    2I_C = \frac{|I_{0+} - I_{0-}|}{2} = \frac{|51.0 - (-48.8)|}{2} \mathrm{µA} = 49.9 \mathrm{µA}
+    2I_C = \frac{|I_{0+} - I_{0-}|}{2} = \frac{|51.0 - (-48.8)|}{2} \,\mu\mathrm{A} = 49.9 \,\mu\mathrm{A}
 \end{equation}
 
-und so der finale Wert für $I_C = 24.95 \mathrm{µA}$.
+und so der finale Wert für $I_C = 24.95 \,\mu\mathrm{A}$.
 Aus der Steigung der linearen Kennlinienbereiche wurde der Widerstand im normalleitenden Zustand $R_N/2 = 2.29 \Omega$ bestimmt. Daraus ergibt sich für den normalleitenden Widerstand eines einzelnen Josephson-Kontaktes $R_N = 4.58 \Omega$. Die charakteristische Spannung des SQUIDs, beträgt somit
 
 \begin{equation}
-    I_C \cdot R_N = 24.95 \mathrm{µA} \cdot 4.58 \Omega = 114.4 \mathrm{µV}
+    I_C \cdot R_N = 24.95 \,\mu\mathrm{A} \cdot 4.58 \Omega = 114.4 \,\mu\mathrm{V}
 \end{equation}
 
-Der erhaltene Wert liegt im erwarteten Bereich von etwa $100 - 200 \mathrm{µV}$. Die Messung ist damit gut mit der erwarteten Größenordnung für den verwendeten SQUID-Sensor verträglich.
+Der erhaltene Wert liegt im erwarteten Bereich von etwa $100 - 200 \,\mu\mathrm{V}$. Die Messung ist damit gut mit der erwarteten Größenordnung für den verwendeten SQUID-Sensor verträglich.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/Aufgabe_B_Fit.png}
+    \safeincludegraphics[width=0.75\linewidth]{figures/Aufgabe_B_Fit.png}
     \caption{Spannungs-Strom-Kennlinie des DC-SQUIDs mit linearer Extrapolation der positiven und negativen Kennlinienäste zur Bestimmung des kritischen Stroms $2I_C$. Die roten Punkte markieren die Schnittpunkte der Fitgeraden mit der Stromachse.}
     \label{fig:aufgabe_b_fit}
 \end{figure}
@@ -214,14 +283,14 @@ Der erhaltene Wert liegt im erwarteten Bereich von etwa $100 - 200 \mathrm{µV}$
 
 In Aufgabe C wurde die U-I-Kennlinie des DC-SQUIDs unter Einkopplung einer Mikrowelle mit der Frequenz $f = 44 \mathrm{GHz}$ aufgenommen. Durch die Wechselwirkung der externen Mikrowellenfrequenz mit der Josephson-Oszillation der Weak Links entstehen diskrete Spannungsplateaus, die sogenannten Shapiro-Stufen. Diese treten auf, wenn die Josephson-Frequenz mit der eingestrahlten Mikrowellenfrequenz synchronisiert wird.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/saphiero_stufen.png}
+    \safeincludegraphics[width=0.75\linewidth]{figures/saphiero_stufen.png}
     \caption{U-I-Kennlinie des DC-SQUIDs bei Einkopplung einer Mikrowelle mit der Frequenz $f = 44 \mathrm{GHz}$. Die gestrichelten Linien markieren die bestimmten Shapiro-Stufen.}
     \label{fig:shapiro_stufen}
 \end{figure}
 
-Aus der U-I-Kennlinie \ref{fig:shapiro_stufen} wurden die Spannungspositionen der einzelnen Shapiro-Stufen bestimmt. Der mittlere Abstand benachbarter Stufen beträgt dabei $\Delta U = 88.625  \pm  1.10 \mathrm{µV}$. 
+Aus der $U$-$I$-Kennlinie in Abb.~\ref{fig:shapiro_stufen} wurden die Spannungspositionen der einzelnen Shapiro-Stufen bestimmt. Der mittlere Abstand benachbarter Stufen beträgt dabei $\Delta U = 88.625  \pm  1.10 \,\mu\mathrm{V}$. 
 
 Aus der gemessenen mittleren Stufenspannung und der bekannten Frequenz der eingestrahlten Mikrowelle lässt sich die fundamentale Konstante $e/h$ bestimmen mit der für die Shapiro-Stufen geltende der Zusammenhang
 
@@ -232,50 +301,93 @@ Aus der gemessenen mittleren Stufenspannung und der bekannten Frequenz der einge
 Unter Berücksichtigung der Unsicherheit des mittleren Stufenabstands und mit $f = 44 \mathrm{GHz}$ ergibt sich
 
 \begin{equation}
-    \frac{e}{h} = \frac{44 \cdot 10^9 \mathrm{Hz}}{2 \cdot 88.625 \cdot 10^{-6} \mathrm{V}} = 2.48 \pm 0.03 \mathrm{Hz/mV}
+    \frac{e}{h} = \frac{44 \cdot 10^9\,\mathrm{Hz}}{2 \cdot 88.625 \cdot 10^{-6}\,\mathrm{V}} = 2.48 \pm 0.03 \mathrm{Hz/mV}
 \end{equation}
 
 Damit weicht der experimentell bestimmte Wert um etwa 2.7\% vom Literaturwert ab. Die Abweichung ist plausibel und kann durch die endliche Breite der Shapiro-Stufen, Rauschen der Messkurve, Unsicherheiten bei der Bestimmung der Stufenpositionen sowie eine nicht ideale Mikrowellenkopplung erklärt werden.
 
 \subsection{$V$-$\Phi$ Charakterisierung}
 
-In Aufgabe D wurde die $U_{OUT}$-$I$-Kennlinie des DC-SQUIDs aufgenommen. Dabei wurde die Ausgangsspannung $U_{OUT}$ in Abhängigkeit vom Spulenstrom I gemessen. Da der Spulenstrom proportional zum magnetischen Fluss durch den SQUID-Ring ist, entspricht die periodische Modulation der Ausgangsspannung der $V$-$\Phi$-Charakteristik des SQUIDs. Eine vollständige Periode der Kurve entspricht dabei einer Änderung des magnetischen Flusses um ein Flussquant \Phi_0$.
+In Aufgabe D wurde die $U_{OUT}$-$I$-Kennlinie des DC-SQUIDs aufgenommen. Dabei wurde die Ausgangsspannung $U_{OUT}$ in Abhängigkeit vom Spulenstrom $I$ gemessen. Da der Spulenstrom proportional zum magnetischen Fluss durch den SQUID-Ring ist, entspricht die periodische Modulation der Ausgangsspannung der $V$-$\Phi$-Charakteristik des SQUIDs. Eine vollständige Periode der Kurve entspricht dabei einer Änderung des magnetischen Flusses um ein Flussquant $\Phi_0$.
 
-Die Messdaten \ref{fig:aufgabe_d} zeigen eine deutlich periodische Modulation der Ausgangsspannung. Aufgrund des sichtbaren Rauschens und eines leichten linearen Drifts wurde die Kennlinie nicht mit einer einfachen Sinusfunktion, sondern mit einer Sinusfunktion mit zusätzlichem linearen Driftterm gefittet wie in  \ref{fig:aufgabe_d} zu sehen ist.
+Die Messdaten in Abb.~\ref{fig:aufgabe_d} zeigen eine deutlich periodische Modulation der Ausgangsspannung. Aufgrund des sichtbaren Rauschens und eines leichten linearen Drifts wurde die Kennlinie nicht mit einer einfachen Sinusfunktion, sondern mit einer Sinusfunktion mit zusätzlichem linearen Driftterm gefittet wie in Abb.~\ref{fig:aufgabe_d} zu sehen ist.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/Aufgabe_D.png}
+    \safeincludegraphics[width=0.75\linewidth]{figures/Aufgabe_D.png}
     \caption{$U_{OUT}$-$I$-Kennlinie des DC-SQUIDs zur $V$-$\Phi$-Charakterisierung. Aufgetragen ist die Ausgangsspannung $U_{OUT}$ gegen den Spulenstrom $I$, der proportional zum magnetischen Fluss $\Phi$ durch den SQUID-Ring ist.}
     \label{fig:aufgabe_d}
 \end{figure}
 
-Aus dem Fit ergibt sich für die Periode $\Delta I = 93.3 \pm 0.4 \mathrm{\mu A}$. Als Spannungsmodulation ergab sich $\Delta U = 10.8 \pm 0.2 \mathrm{\mu V}$. Da eine Periode der Änderung des magnetischen Flusses um ein Flussquant entspricht, folgt für die Kopplungsinduktivität
+Aus dem Fit ergibt sich für die Periode $\Delta I = 93.3 \pm 0.4\,\mu\mathrm{A}$. Als Spannungsmodulation ergab sich $\Delta U = 10.8 \pm 0.2\,\mu\mathrm{V}$. Da eine Periode der Änderung des magnetischen Flusses um ein Flussquant entspricht, folgt für die Kopplungsinduktivität
 
 \begin{equation}
-    M = \frac{\Phi_0}{\Delta I} = \frac{2.07 \times 10^{-15} \mathrm{Vs}}{93.3 \times 10^{-6} \mathrm{A}} = 2.22 \cdot 10^{-11} \mathrm{H}
+    M = \frac{\Phi_0}{\Delta I} = \frac{2.07 \times 10^{-15}\,\mathrm{Vs}}{93.3 \times 10^{-6}\,\mathrm{A}} = 2.22 \times 10^{-11}\,\mathrm{H}
 \end{equation}
 
 Die Messung zeigt damit die erwartete periodische Abhängigkeit der SQUID-Ausgangsspannung vom magnetischen Fluss. Abweichungen vom ideal sinusförmigen Verlauf lassen sich durch Rauschen, Offsetdrift, eine nicht ideale Einstellung des Arbeitspunktes sowie durch Störungen bei der Flusseinkopplung erklären.
 
-\subsection{Bestimmung von $T_c$ des SQUID Sensors}
 
-\begin{figure}[h]
+\subsection{Bestimmung der kritischen Temperatur des SQUID-Sensors}
+
+Zur Bestimmung der kritischen Temperatur $T_c$ des SQUID-Sensors wurden die $U$-$I$-Kennlinien bei unterschiedlichen Temperaturen aufgenommen. Dabei wurde der SQUID-Stab langsam aus dem flüssigen Stickstoff herausgezogen, sodass sich der Sensor schrittweise erwärmte. Die Temperatur wurde in Schritten von etwa $1\,\mathrm{K}$ erfasst. Ziel war es, den Temperaturbereich zu bestimmen, in dem der supraleitende Zustand verschwindet und der Sensor in den normalleitenden Zustand übergeht.
+
+Im supraleitenden Zustand zeigt die Kennlinie um $I=0$ einen Bereich mit sehr kleiner Spannung. Dieser Bereich ist durch den Josephson-Strom und den kritischen Strom des SQUIDs geprägt. Mit steigender Temperatur nimmt der kritische Strom ab, weil die Supraleitung zunehmend geschwächt wird. In der Nähe von $T_c$ verschwindet der spannungsfreie Bereich schließlich fast vollständig. Oberhalb der kritischen Temperatur ist keine Josephson-Kennlinie mehr erkennbar; die Kennlinie zeigt dann im Wesentlichen normalleitendes Verhalten.
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/krit_temp_alle.png}
-    \caption{U-I-Kennlinie in Abhängigkeit der Temperatur $T \in [63K, 97K]$ in $1K$ Schritten }
+    \safeincludegraphics[width=0.75\linewidth]{figures/krit_temp_alle.png}
+    \caption{$U$-$I$-Kennlinien in Abhängigkeit von der Temperatur im Bereich $T\in[77\,\mathrm{K},107\,\mathrm{K}]$ in Schritten von etwa $1\,\mathrm{K}$.}
     \label{fig:krit_temp_alle}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/krit_temp_klein.png}
-    \caption{U-I-Kennlinie in Abhängigkeit der Temperatur $T \in [77K, 82K]$ in $1K$ Schritten. Wobei der grobe Schritt von Supraleitender Phase in Normalleitende Phase zu erkenne ist}
+    \safeincludegraphics[width=0.75\linewidth]{figures/krit_temp_klein.png}
+    \caption{Vergrößerter Temperaturbereich $T\in[89\,\mathrm{K},94\,\mathrm{K}]$. Der Übergang vom supraleitenden in den normalleitenden Zustand ist in der Umgebung von $92\,\mathrm{K}$ erkennbar.}
     \label{fig:krit_temp_klein}
 \end{figure}
 
+Aus der Gesamtdarstellung in Abb.~\ref{fig:krit_temp_alle} ist zu erkennen, dass die Kennlinien bei niedrigen Temperaturen noch deutlich vom Josephson-Verhalten geprägt sind. In der aufgeteilten Darstellung in Abb.~\ref{fig:krit_temp_klein} wird der Übergangsbereich erkennbar. Bei Temperaturen unterhalb von etwa $91\,\mathrm{K}$ ist noch ein supraleitender Anteil erkennbar, während die Kennlinien ab etwa $93\,\mathrm{K}$ überwiegend normalleitend erscheinen. Als Näherungswert für die kritische Temperatur ergibt sich daher
+
+\begin{equation}
+    T_c \approx (92 \pm 1)\,\mathrm{K}.
+\end{equation}
+
+Die Unsicherheit ergibt sich hauptsächlich aus der Schrittweite der Temperaturmessung, aus der endlichen Breite des Übergangs und aus der nicht idealen thermischen Stabilisierung während des langsamen Herausziehens des SQUID-Stabes. Der Wert stimmt innerhalb der Unsicherheit gut mit dem erwarteten Bereich für $\mathrm{YBa_2Cu_3O_{7-\delta}}$ überein.
 
 
+\section{Fazit}
+
+Im Versuch wurden zentrale Eigenschaften von Supraleitern und SQUID-Sensoren experimentell untersucht. Zunächst konnte am gekühlten Hochtemperatur-Supraleiter im inhomogenen Magnetfeld der Einfluss des Meißner-Ochsenfeld-Effekts und des Flusspinnings beobachtet werden. Der stabile Schwebezustand sowie die Lageabhängigkeit über den Permanentmagneten zeigen, dass sowohl die Feldverdrängung als auch die Feldgradienten des äußeren Magnetfeldes eine wichtige Rolle spielen.
+
+Die Spannungs-Strom-Messung am DC-SQUID zeigte das erwartete Josephson-Verhalten. Aus den Kennlinien wurde für den SQUID ein kritischer Strom von $2I_C=49.9\,\mu\mathrm{A}$ bestimmt. Daraus folgt $I_C=24.95\,\mu\mathrm{A}$. Zusammen mit dem normalleitenden Widerstand $R_N=4.58\,\Omega$ ergab sich die charakteristische Spannung
+\begin{equation}
+    I_C R_N = 114.4\,\mu\mathrm{V},
+\end{equation}
+
+was im erwarteten Bereich liegt.
+
+Bei der Shapiro-Stufen-Messung wurden durch die eingekoppelte Mikrowelle diskrete Spannungsstufen in der Kennlinie sichtbar. Aus dem mittleren Stufenabstand wurde
+\begin{equation}
+    \frac{e}{h}=(2.48\pm0.03)\times10^{14}\,\mathrm{Hz/V}
+\end{equation}
+
+bestimmt. Die Abweichung vom Literaturwert ist mit den experimentellen Unsicherheiten bei der Stufenbestimmung und der Mikrowellenkopplung vereinbar.
+
+Die $V$-$\Phi$-Charakterisierung zeigte die periodische Abhängigkeit der SQUID-Ausgangsspannung vom magnetischen Fluss. Aus der gemessenen Periodizität wurde eine Kopplungsinduktivität von
+\begin{equation}
+    M = 2.22\times10^{-11}\,\mathrm{H}
+\end{equation}
+
+bestimmt. Damit konnte die Flussquantisierung direkt über die periodische SQUID-Antwort nachgewiesen werden.
+
+Abschließend wurde aus den temperaturabhängigen $U$-$I$-Kennlinien die kritische Temperatur des SQUID-Materials bestimmt. Der Übergang vom supraleitenden in den normalleitenden Zustand liegt bei
+\begin{equation}
+    T_c \approx (92\pm1)\,\mathrm{K}.
+\end{equation}
+
+Dieser Wert passt gut zu dem für $\mathrm{YBa_2Cu_3O_{7-\delta}}$ erwarteten Temperaturbereich. Insgesamt bestätigen die Messungen die theoretischen Grundlagen der Supraleitung, des Josephson-Effekts und der Flussquantisierung und zeigen, warum ein DC-SQUID als sehr empfindlicher Magnetfeldsensor eingesetzt werden kann.
 
 \newpage
 \listoffigures

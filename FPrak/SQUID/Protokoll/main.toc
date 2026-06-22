@@ -1,19 +1,21 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{}%
-\contentsline {subsection}{\numberline {1.1}Aufgabestellung}{3}{}%
-\contentsline {subsection}{\numberline {1.2}Theoretische Grundlagen}{4}{}%
-\contentsline {subsubsection}{\numberline {1.2.1}Supraleitung}{4}{}%
-\contentsline {paragraph}{Supraleiter Typ I}{4}{}%
-\contentsline {paragraph}{Cooper-Paare}{4}{}%
-\contentsline {paragraph}{Supraleiter Typ II}{6}{}%
-\contentsline {subsubsection}{\numberline {1.2.2}Supraleitende Ringe}{7}{}%
-\contentsline {subsubsection}{\numberline {1.2.3}Josephson-Effekt}{7}{}%
-\contentsline {subsubsection}{\numberline {1.2.4}SQUID Sensor}{7}{}%
-\contentsline {subsection}{\numberline {1.3}Experimenteller Aufbau}{7}{}%
-\contentsline {section}{\numberline {2}Ergebnisse und Diskussion}{8}{}%
-\contentsline {subsection}{\numberline {2.1}Hochtemperatur-Supraleiter im inhomogenen Magnetfeld}{8}{}%
-\contentsline {subsubsection}{\numberline {2.1.1}Ermittlung des horizontalen und vertikalen Verlauf des Permanent-Magnetfeldes}{8}{}%
-\contentsline {subsubsection}{\numberline {2.1.2}Hochtemperatur-Supraleiter-Zylinder im inhomogneen Magnetfeld}{9}{}%
-\contentsline {subsection}{\numberline {2.2}Spannungs-Strom-Messungen an einem DC-SQUID}{10}{}%
-\contentsline {subsection}{\numberline {2.3}Shapiro-Stufen-Messung}{11}{}%
-\contentsline {subsection}{\numberline {2.4}$V$-$\Phi $ Charakterisierung}{12}{}%
-\contentsline {subsection}{\numberline {2.5}Bestimmung von $T_c$ des SQUID Sensors}{13}{}%
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Aufgabenstellung}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Theoretische Grundlagen}{4}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Supraleitung}{4}{subsubsection.1.2.1}%
+\contentsline {paragraph}{Supraleiter Typ I}{4}{section*.3}%
+\contentsline {paragraph}{Cooper-Paare}{5}{section*.5}%
+\contentsline {paragraph}{Supraleiter Typ II}{6}{section*.6}%
+\contentsline {subsubsection}{\numberline {1.2.2}Supraleitende Ringe}{7}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Josephson-Effekt}{7}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}SQUID-Sensor}{8}{subsubsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.3}Experimenteller Aufbau}{9}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Ergebnisse und Diskussion}{10}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Hochtemperatur-Supraleiter im inhomogenen Magnetfeld}{10}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Ermittlung des horizontalen und vertikalen Verlauf des Permanent-Magnetfeldes}{10}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Hochtemperatur-Supraleiter-Zylinder im inhomogenen Magnetfeld}{11}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Spannungs-Strom-Messungen an einem DC-SQUID}{12}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Shapiro-Stufen-Messung}{14}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}$V$-$\Phi $ Charakterisierung}{16}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Bestimmung der kritischen Temperatur des SQUID-Sensors}{17}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Fazit}{18}{section.3}%
