@@ -235,7 +235,11 @@ Zu Beginn wurde das Magnetfeld der vier Permanentmagnetplatten mithilfe eines Ha
 
 \subsubsection{Hochtemperatur-Supraleiter-Zylinder im inhomogenen Magnetfeld}
 
-Anschließend wurde ein auf 77 K gekühlter Hochtemperatur-Supraleiter-Zylinder von oben in das Magnetfeld eingebracht. Dabei konnte ein Schwebezustand beobachtet werden. Dieser lässt sich durch den Meißner-Ochsenfeld-Effekt erklären: Im supraleitenden Zustand werden Magnetfeldlinien aus dem Inneren des Supraleiters verdrängt, wodurch im inhomogenen Magnetfeld eine abstoßende bzw. stabilisierende Kraft entsteht. Da es sich um einen Typ-II-Supraleiter handelt, können zusätzlich Flussschläuche und Pinning-Effekte zur Stabilisierung beitragen. Beim Erwärmen überschreitet der Körper nach einiger Zeit die kritische Temperatur, sodass der supraleitende Zustand verloren geht und der Schwebezustand endet.
+Anschließend wurde ein auf $77\,\mathrm{K}$ gekühlter Hochtemperatur-Supraleiter-Zylinder von oben in das Magnetfeld eingebracht. Dabei konnte ein stabiler Schwebezustand beobachtet werden. Dieser lässt sich zunächst durch den Meißner-Ochsenfeld-Effekt erklären: Im supraleitenden Zustand werden Magnetfeldlinien aus dem Inneren des Supraleiters verdrängt. Dadurch entstehen Abschirmströme, deren Magnetfeld dem äußeren Magnetfeld entgegenwirkt. In einem inhomogenen Magnetfeld resultiert daraus eine Kraft, welche den Supraleiter entgegen der Gewichtskraft stabilisieren kann.
+
+Da es sich bei dem verwendeten Hochtemperatur-Supraleiter um einen Typ-II-Supraleiter handelt, reicht der reine Meißner-Effekt zur vollständigen Erklärung des stabilen Schwebezustands jedoch nicht aus. Oberhalb des unteren kritischen Magnetfeldes $B_{c,1}$ können magnetische Feldlinien in Form von Flussschläuchen in das Material eindringen. Diese Flussschläuche können an Defekten, Korngrenzen oder Inhomogenitäten des Materials festgehalten werden. Dieser Mechanismus wird als Flux-Pinning bezeichnet. Durch das Pinning wird eine Änderung der Lage des Supraleiters energetisch erschwert, da sich die im Material fixierten Flussschläuche relativ zum äußeren Magnetfeld verschieben müssten.
+
+Das Flux-Pinning erklärt insbesondere, warum der Zylinder nicht nur vertikal schwebt, sondern auch lateral stabilisiert werden kann. Beim reinen Meißner-Effekt wäre die Stabilität in seitlicher Richtung in einem realen Magnetfeld nicht selbstverständlich. Die Kombination aus Feldverdrängung, inhomogenem Magnetfeld und gepinnten Flussschläuchen führt dazu, dass der Supraleiter eine stabile Gleichgewichtslage einnimmt. Beim Erwärmen überschreitet der Körper nach einiger Zeit seine kritische Temperatur. Dadurch verschwindet der supraleitende Zustand, die Flussschläuche sind nicht mehr fixiert und der Schwebezustand bricht zusammen.
 
 \begin{figure}[H]
     \centering
@@ -244,32 +248,60 @@ Anschließend wurde ein auf 77 K gekühlter Hochtemperatur-Supraleiter-Zylinder 
     \label{fig:supraleiter_auf_inhom_magnetfeld}
 \end{figure}
 
-Auffällig war, dass der supraleitende Zylinder nicht an jeder Position über der Magnetanordnung stabil schwebte, sondern vor allem im zentralen Bereich des inhomogenen Magnetfeldes. Dies lässt sich durch die Symmetrie der vier Permanentmagnetplatten erklären. In der Mitte kompensieren sich die horizontalen Kraftkomponenten weitgehend, während die vertikale magnetische Kraft den Zylinder gegen die Gewichtskraft stabilisieren kann. An den Übergängen zwischen Bereichen positiver und negativer Feldrichtung ist das Magnetfeld dagegen stark inhomogen. Da verschiedene Bereiche des Supraleiters dort unterschiedlich gerichtete Magnetfeldkomponenten erfahren, entstehen neben der vertikalen Kraft auch Drehmomente. Diese führen dazu, dass der Zylinder eine schräge Gleichgewichtslage einnimmt. Die beobachtete Schrägstellung ist somit eine Folge der starken Feldgradienten und der unsymmetrischen Kraftverteilung an den Magnetübergängen. Der stabile Schwebezustand in der Mitte wird zusätzlich durch Flusspinning im Typ-II-Hochtemperatur-Supraleiter begünstigt.
+Auffällig war, dass der supraleitende Zylinder nicht an jeder Position über der Magnetanordnung stabil schwebte, sondern vor allem im zentralen Bereich des inhomogenen Magnetfeldes. Dies lässt sich durch die Symmetrie der vier Permanentmagnetplatten erklären. In der Mitte kompensieren sich die horizontalen Kraftkomponenten weitgehend, während die vertikale magnetische Kraft den Zylinder gegen die Gewichtskraft stabilisieren kann. An den Übergängen zwischen Bereichen positiver und negativer Feldrichtung ist das Magnetfeld dagegen stark inhomogen. Da verschiedene Bereiche des Supraleiters dort unterschiedlich gerichtete Magnetfeldkomponenten erfahren, entstehen neben der vertikalen Kraft auch Drehmomente. Diese führen dazu, dass der Zylinder eine schräge Gleichgewichtslage einnimmt. Die beobachtete Schrägstellung ist somit eine Folge der starken Feldgradienten, der unsymmetrischen Kraftverteilung und des Flux-Pinnings im Typ-II-Hochtemperatur-Supraleiter.
 
 \subsection{Spannungs-Strom-Messungen an einem DC-SQUID}
 
 In dieser Aufgabe wurde die Spannungs-Strom-Kennlinie des DC-SQUIDs aufgenommen. Die Kennlinie zeigt im Bereich um $I=0$ einen nahezu spannungsfreien Zustand. Dies entspricht dem DC-Josephson-Effekt, bei dem ein Suprastrom ohne messbare Spannung durch die Josephson-Kontakte fließt. Erst bei Überschreiten des kritischen Stroms geht der SQUID in einen spannungsbehafteten, näherungsweise ohmschen Zustand über.
 
-Zur Bestimmung des kritischen Stroms wurden die linearen Bereiche der positiven $I_{0+}$ und negativen Flanke $I_{0-}$ separat gefittet. Aus den Schnittpunkten der Fitgeraden mit der Stromachse ergaben sich
+Zur Bestimmung des kritischen Stroms wurden die linearen Bereiche der positiven und negativen Flanke separat gefittet. Aus den Schnittpunkten der Fitgeraden mit der Stromachse ergaben sich
 
 \begin{equation}
-    I_{0+} = 51.0 \,\mu\mathrm{A} \qquad \text{und} \qquad I_{0-} = -48.8 \,\mu\mathrm{A}
+    I_{0+} = (51.0 \pm 0.5)\,\mu\mathrm{A}
+    \qquad \text{und} \qquad
+    I_{0-} = (-48.8 \pm 0.5)\,\mu\mathrm{A}.
 \end{equation}
 
-Da der SQUID aus zwei parallelen Josephson-Kontakten besteht, entspricht der kritische Strom des gesamten SQUIDs dem Wert $2I_c$. Aus dem Mittelwert der Beträge folgt
+Da der DC-SQUID aus zwei parallel geschalteten Josephson-Kontakten besteht, entspricht der kritische Strom des gesamten SQUIDs dem Wert $2I_C$. Dieser wird aus dem Mittelwert der Beträge der beiden Achsenschnittpunkte bestimmt:
 
 \begin{equation}
-    2I_C = \frac{|I_{0+} - I_{0-}|}{2} = \frac{|51.0 - (-48.8)|}{2} \,\mu\mathrm{A} = 49.9 \,\mu\mathrm{A}
+    2I_C
+    = \frac{|I_{0+}|+|I_{0-}|}{2}
+    = \frac{51.0 + 48.8}{2}\,\mu\mathrm{A}
+    = (49.9 \pm 0.4)\,\mu\mathrm{A}.
 \end{equation}
 
-und so der finale Wert für $I_C = 24.95 \,\mu\mathrm{A}$.
-Aus der Steigung der linearen Kennlinienbereiche wurde der Widerstand im normalleitenden Zustand $R_N/2 = 2.29 \Omega$ bestimmt. Daraus ergibt sich für den normalleitenden Widerstand eines einzelnen Josephson-Kontaktes $R_N = 4.58 \Omega$. Die charakteristische Spannung des SQUIDs, beträgt somit
+Damit ergibt sich für den kritischen Strom eines einzelnen Josephson-Kontaktes
 
 \begin{equation}
-    I_C \cdot R_N = 24.95 \,\mu\mathrm{A} \cdot 4.58 \Omega = 114.4 \,\mu\mathrm{V}
+    I_C = \frac{2I_C}{2}
+    = (24.95 \pm 0.20)\,\mu\mathrm{A}.
 \end{equation}
 
-Der erhaltene Wert liegt im erwarteten Bereich von etwa $100 - 200 \,\mu\mathrm{V}$. Die Messung ist damit gut mit der erwarteten Größenordnung für den verwendeten SQUID-Sensor verträglich.
+Diese Schreibweise trennt klar zwischen dem kritischen Strom des gesamten SQUIDs, $2I_C$, und dem kritischen Strom eines einzelnen Josephson-Kontaktes, $I_C$. Die im Mr.-SQUID-Manual beschriebene Bestimmung über die Extrapolation der linearen Kennlinienbereiche liefert dabei den kritischen Strom des gesamten SQUIDs; bei näherungsweise identischen Josephson-Kontakten ist der kritische Strom eines einzelnen Kontaktes halb so groß \cite{mr_squid}.
+
+Aus der Steigung der linearen Kennlinienbereiche wurde der Widerstand des gesamten SQUIDs im normalleitenden Zustand bestimmt zu
+
+\begin{equation}
+    \frac{R_N}{2} = (2.29 \pm 0.03)\,\Omega.
+\end{equation}
+
+Da die beiden Josephson-Kontakte parallel geschaltet sind, ergibt sich für den Normalwiderstand eines einzelnen Kontaktes
+
+\begin{equation}
+    R_N = 2\cdot \frac{R_N}{2}
+    = (4.58 \pm 0.06)\Omega.
+\end{equation}
+
+Die charakteristische Spannung des SQUIDs folgt damit zu
+
+\begin{equation}
+    I_C R_N
+    = (24.95 \pm 0.20)\mu\mathrm{A}\cdot (4.58 \pm 0.06)\,\Omega
+    = (114.3 \pm 1.8)\mu\mathrm{V}.
+\end{equation}
+
+Der erhaltene Wert liegt im erwarteten Bereich von etwa $100$ bis $200\mu\mathrm{V}$. Die Messung ist damit gut mit der erwarteten Größenordnung für den verwendeten SQUID-Sensor verträglich. Die Unsicherheiten ergeben sich aus den Fit- bzw. Ableseunsicherheiten der Achsenschnittpunkte und der Steigung der linearen Kennlinienbereiche.
 
 
 \begin{figure}[H]
@@ -301,7 +333,7 @@ Aus der gemessenen mittleren Stufenspannung und der bekannten Frequenz der einge
 Unter Berücksichtigung der Unsicherheit des mittleren Stufenabstands und mit $f = 44 \mathrm{GHz}$ ergibt sich
 
 \begin{equation}
-    \frac{e}{h} = \frac{44 \cdot 10^9\,\mathrm{Hz}}{2 \cdot 88.625 \cdot 10^{-6}\,\mathrm{V}} = 2.48 \pm 0.03 \mathrm{Hz/mV}
+    \frac{e}{h} = \frac{44 \cdot 10^9\,\mathrm{Hz}}{2 \cdot 88.625 \cdot 10^{-6}\,\mathrm{V}} = 2.48 \pm 0.03 \cdot 10^{-14} \mathrm{Hz/V}
 \end{equation}
 
 Damit weicht der experimentell bestimmte Wert um etwa 2.7\% vom Literaturwert ab. Die Abweichung ist plausibel und kann durch die endliche Breite der Shapiro-Stufen, Rauschen der Messkurve, Unsicherheiten bei der Bestimmung der Stufenpositionen sowie eine nicht ideale Mikrowellenkopplung erklärt werden.
@@ -319,13 +351,86 @@ Die Messdaten in Abb.~\ref{fig:aufgabe_d} zeigen eine deutlich periodische Modul
     \label{fig:aufgabe_d}
 \end{figure}
 
-Aus dem Fit ergibt sich für die Periode $\Delta I = 93.3 \pm 0.4\,\mu\mathrm{A}$. Als Spannungsmodulation ergab sich $\Delta U = 10.8 \pm 0.2\,\mu\mathrm{V}$. Da eine Periode der Änderung des magnetischen Flusses um ein Flussquant entspricht, folgt für die Kopplungsinduktivität
+Aus dem Sinusfit ergibt sich für die Periode
 
 \begin{equation}
-    M = \frac{\Phi_0}{\Delta I} = \frac{2.07 \times 10^{-15}\,\mathrm{Vs}}{93.3 \times 10^{-6}\,\mathrm{A}} = 2.22 \times 10^{-11}\,\mathrm{H}
+    \Delta I = (93.3 \pm 0.4)\,\mu\mathrm{A}.
 \end{equation}
 
-Die Messung zeigt damit die erwartete periodische Abhängigkeit der SQUID-Ausgangsspannung vom magnetischen Fluss. Abweichungen vom ideal sinusförmigen Verlauf lassen sich durch Rauschen, Offsetdrift, eine nicht ideale Einstellung des Arbeitspunktes sowie durch Störungen bei der Flusseinkopplung erklären.
+Eine vollständige Periode der $V$-$\Phi$-Kennlinie entspricht einer Änderung des magnetischen Flusses um genau ein Flussquant $\Phi_0$. Damit folgt für die Kopplungsinduktivität der internen Rückkoppelspule bezüglich des SQUID-Rings
+
+\begin{equation}
+    M = \frac{\Phi_0}{\Delta I}
+    = \frac{2.07\times 10^{-15}\,\mathrm{Vs}}{93.3\times 10^{-6}\,\mathrm{A}}
+    = (22.16 \pm 0.10)\,\mathrm{pH}.
+\end{equation}
+
+Hierbei ist zu beachten, dass diese Größe $M$ nicht die Eigeninduktivität des SQUID-Rings ist, sondern die Kopplungsinduktivität zwischen Rückkoppelspule und SQUID. Für die Eigeninduktivität des SQUID-Rings wird im Mr.-SQUID-Manual näherungsweise $ L \approx 73\,\mathrm{pH} $ angegeben \cite{mr_squid}. Diese setzt sich aus der geometrischen Induktivität des SQUID-Schlitzes, der kinetischen Induktivität des supraleitenden Körpers und der Induktivität der Josephson-Brücken zusammen.
+
+Aus dem Sinusfit wurde für die Amplitude der Spannungsmodulation $A = (10.8 \pm 0.2)\,\mu\mathrm{V}$ bestimmt. Da die maximale Spannungsmodulation $\Delta V$ als Peak-to-Peak-Wert zu verstehen ist, gilt $\Delta V = 2A = (21.6 \pm 0.4)\mu\mathrm{V}$.
+
+Der Modulationsparameter $\beta_L$ kann nun mit zwei verschiedenen Methoden bestimmt werden. Zunächst ergibt sich aus der Definition
+
+\begin{equation}
+    \beta_{L,\mathrm{ind}}
+    = \frac{2LI_C}{\Phi_0}
+\end{equation}
+
+mit $L=73\,\mathrm{pH}$ und $I_C=(24.95\pm0.20)\,\mu\mathrm{A}$
+
+\begin{equation}
+    \beta_{L,\mathrm{ind}}
+    = \frac{2\cdot 73\times 10^{-12}\,\mathrm{H}\cdot 24.95\times 10^{-6}\,\mathrm{A}}
+    {2.07\times 10^{-15}\,\mathrm{Vs}}
+    = 1.76 \pm 0.01.
+\end{equation}
+
+Alternativ kann $\beta_L$ aus der gemessenen Spannungsmodulation $\Delta V$ bestimmt werden. Ohne Berücksichtigung thermischer Fluktuationen gilt näherungsweise
+
+\begin{equation}
+    \beta_{L,1}
+    = \frac{4I_C R_N}{\pi \Delta V} - 1.
+\end{equation}
+
+Damit folgt
+
+\begin{equation}
+    \beta_{L,1}
+    = \frac{4\cdot 24.95\times10^{-6}\,\mathrm{A}\cdot 4.58\,\Omega}
+    {\pi\cdot 21.6\times10^{-6}\,\mathrm{V}} - 1
+    = 5.74 \pm 0.16.
+\end{equation}
+
+Da der SQUID bei der relativ hohen Temperatur von etwa $77\mathrm{K}$ betrieben wird, sind thermische Fluktuationen nicht vernachlässigbar. Das Mr.-SQUID-Manual \cite{mr_squid} gibt hierfür eine korrigierte Näherung an:
+
+\begin{equation}
+    \beta_{L,2}
+    =
+    \frac{4I_C R_N}{\pi \Delta V}
+    \left(
+    1 - 3.57\frac{\sqrt{k_BTL}}{\Phi_0}
+    \right)
+    - 1.
+\end{equation}
+
+Mit $T=77\,\mathrm{K}$, $L=73\,\mathrm{pH}$ und $k_B=1.38\times10^{-23}\,\mathrm{J/K}$ ergibt sich
+
+\begin{equation}
+    \beta_{L,2}
+    =
+    \frac{4\cdot 24.95\times10^{-6}\,\mathrm{A}\cdot 4.58\,\Omega}
+    {\pi\cdot 21.6\times10^{-6}\,\mathrm{V}}
+    \left(
+    1 - 3.57
+    \frac{\sqrt{1.38\times10^{-23}\,\mathrm{J/K}\cdot 77\,\mathrm{K}\cdot 73\times10^{-12}\,\mathrm{H}}}
+    {2.07\times10^{-15}\,\mathrm{Vs}}
+    \right)
+    - 1
+    = 2.50 \pm 0.08.
+\end{equation}
+
+Die beiden aus der Spannungsmodulation bestimmten Werte liegen deutlich über dem aus $L$ und $I_C$ berechneten Wert. Dies ist plausibel, da die Näherungen ideale und symmetrische Josephson-Kontakte voraussetzen und die gemessene Spannungsmodulation stark von Rauschen, Drift, der Wahl des Arbeitspunktes und thermischen Fluktuationen beeinflusst wird. Die thermisch korrigierte Methode liefert dabei einen kleineren und physikalisch sinnvolleren Wert als die unkorregierte Näherung.
+
 
 
 \subsection{Bestimmung der kritischen Temperatur des SQUID-Sensors}
@@ -375,12 +480,39 @@ Bei der Shapiro-Stufen-Messung wurden durch die eingekoppelte Mikrowelle diskret
 
 bestimmt. Die Abweichung vom Literaturwert ist mit den experimentellen Unsicherheiten bei der Stufenbestimmung und der Mikrowellenkopplung vereinbar.
 
-Die $V$-$\Phi$-Charakterisierung zeigte die periodische Abhängigkeit der SQUID-Ausgangsspannung vom magnetischen Fluss. Aus der gemessenen Periodizität wurde eine Kopplungsinduktivität von
+Zusätzlich konnte aus der $V$-$\Phi$-Charakteristik die periodische Abhängigkeit der SQUID-Spannung vom magnetischen Fluss nachgewiesen werden. Für die Spannungsmodulation ergab sich ein Peak-to-Peak-Wert von
+
 \begin{equation}
-    M = 2.22\times10^{-11}\,\mathrm{H}
+    \Delta V = (21.6 \pm 0.4)\,\mu\mathrm{V}.
 \end{equation}
 
-bestimmt. Damit konnte die Flussquantisierung direkt über die periodische SQUID-Antwort nachgewiesen werden.
+Aus der Periodendauer der Modulation wurde die Kopplungsinduktivität der Rückkoppelspule zu
+
+\begin{equation}
+    M = (22.16 \pm 0.10)\,\mathrm{pH}
+\end{equation}
+
+bestimmt. Damit konnte gezeigt werden, dass bereits sehr kleine Stromänderungen in der Rückkoppelspule einer Änderung des magnetischen Flusses um ein Flussquant entsprechen. Unter Verwendung der Eigeninduktivität des SQUID-Rings von $L\approx 73\,\mathrm{pH}$ ergab sich für den Modulationsparameter zunächst
+
+\begin{equation}
+    \beta_{L,\mathrm{ind}} = 1.76 \pm 0.01.
+\end{equation}
+
+Aus der gemessenen Spannungsmodulation folgten außerdem
+
+\begin{equation}
+    \beta_{L,1}=5.74\pm0.16
+\end{equation}
+
+ohne thermische Korrektur sowie
+
+\begin{equation}
+    \beta_{L,2}=2.50\pm0.08
+\end{equation}
+
+mit Berücksichtigung thermischer Fluktuationen. Die Abweichung der verschiedenen $\beta_L$-Werte zeigt, dass die reale SQUID-Charakteristik deutlich durch thermisches Rauschen, Asymmetrien der Josephson-Kontakte und die Wahl des Arbeitspunktes beeinflusst wird. Der thermisch korrigierte Wert liegt näher an der aus $L$ und $I_C$ bestimmten Größenordnung und ist daher als physikalisch plausibler einzuschätzen.
+
+Insgesamt bestätigen die Messungen die zentralen Eigenschaften eines DC-SQUIDs: den Josephson-Effekt, die Flussquantisierung und die hohe Empfindlichkeit gegenüber kleinsten Änderungen des magnetischen Flusses. Die bestimmten Größen $I_C$, $R_N$, $I_CR_N$, $\Delta V$, $M$ und $\beta_L$ liegen in einer sinnvollen Größenordnung und zeigen, dass der verwendete Hochtemperatur-SQUID als empfindlicher Magnetfeldsensor arbeitet. Damit konnten sowohl die theoretischen Grundlagen der makroskopischen Quantenphänomene in Supraleitern als auch deren praktische Anwendung in Form eines SQUID-Sensors experimentell nachvollzogen werden.
 
 Abschließend wurde aus den temperaturabhängigen $U$-$I$-Kennlinien die kritische Temperatur des SQUID-Materials bestimmt. Der Übergang vom supraleitenden in den normalleitenden Zustand liegt bei
 \begin{equation}
