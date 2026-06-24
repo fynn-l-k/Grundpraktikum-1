@@ -1,0 +1,436 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------------------------------------------------
+%  Packages
+% ------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{physics}
+
+\graphicspath{{figures/}}
+
+\sisetup{
+    separate-uncertainty = true,
+    per-mode = symbol,
+}
+
+% ------------------------------------------------------------------
+%  Title
+% ------------------------------------------------------------------
+\title{%
+    \vspace{-1.0cm}
+    {\large University of Leipzig}\\[0.2cm]
+    {\normalsize Advanced Physics Laboratory}\\[1.5cm]
+    {\Huge \bfseries Digital RF-Receiving Technique\\[0.3cm] and Electron-Paramagnetic\\[0.3cm] Resonance (EPR)}\\[1.0cm]
+}
+
+\author{%
+    % TODO: Namen und Matrikelnummern eintragen
+    \begin{tabular}{c}
+        Fynn Kanja \\
+        % Matrikelnummer
+    \end{tabular}
+}
+
+\date{Experiment No.~5 \\[0.2cm] Leipzig, \today}
+
+% ------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ==================================================================
+\section{Theoretical Background}
+% ==================================================================
+
+\subsection{Electron Paramagnetic Resonance (EPR)}
+Electron paramagnetic resonance (EPR), also known as electron spin resonance
+(ESR), is a spectroscopic method used to study materials that contain
+\emph{unpaired electrons}. The paramagnetic sample is placed in a static
+magnetic field and irradiated with microwaves (GHz range). The microwave field
+interacts with the magnetic moments of the unpaired electrons, and from the
+resulting resonance one can obtain information about the structure and the
+dynamics of the substance. EPR is closely related to nuclear magnetic resonance
+(NMR); however, NMR addresses nuclei with non-zero spin, whereas EPR addresses
+the spins of unpaired electrons.
+
+\subsection{Zeeman Effect}
+An electron carries an intrinsic spin and an associated magnetic moment. When an
+external magnetic field $B$ is applied to a paramagnetic substance, the spin of
+an unpaired electron can align either parallel or anti-parallel to the field,
+corresponding to the spin states $m_s = \pm\tfrac{1}{2}$. These two orientations
+have different energies, so the field lifts the degeneracy of the electron spin
+states. This splitting is known as the \emph{Zeeman effect}
+(see Figure~\ref{fig:zeeman}). The energy difference between the two levels is
+
+\begin{equation}
+    \Delta E = g\,\mu_B\,B ,
+    \label{eq:zeeman}
+\end{equation}
+
+where $B$ is the external magnetic flux density, $\mu_B$ is the Bohr magneton and
+$g$ is the Land\'e $g$-factor, which relates the magnetic moment to the angular
+momentum of the electron system. For a free electron $g = 2.0023$.
+
+\begin{figure}[ht]
+    \centering
+    % TODO: Eigene Zeeman-Skizze einfügen (z.B. zeeman.pdf)
+    \fbox{\parbox[c][4cm][c]{0.6\textwidth}{\centering \itshape
+        Platzhalter: Skizze der Zeeman-Aufspaltung\\
+        ($m_s=+1/2$ und $m_s=-1/2$ als Funktion von $B$,\\
+        $\Delta E = g\mu_B B$ markiert).}}
+    \caption{Zeeman splitting of the spin states of a free electron in an
+             external magnetic field.}
+    \label{fig:zeeman}
+\end{figure}
+
+\subsection{Resonance Condition}
+An unpaired electron can change its spin state by absorbing or emitting a photon
+whose energy equals the level splitting, $h\nu = \Delta E$. Combining this with
+Equation~\eqref{eq:zeeman} yields the fundamental equation of EPR spectroscopy,
+
+\begin{equation}
+    h\nu_0 = g\,\mu_B\,B_0 ,
+    \label{eq:resonance}
+\end{equation}
+
+where $h$ is the Planck constant, $\nu_0$ the frequency of the high-frequency
+alternating ($B_1$) field, and $B_0$ the static magnetic flux density required
+for resonance. The $B_1$ field is oriented perpendicular to $B_0$. Solving
+Equation~\eqref{eq:resonance} for the $g$-factor gives the relation used in the
+evaluation of the measurements,
+
+\begin{equation}
+    g = \frac{h\,\nu_0}{\mu_B\,B_0} .
+    \label{eq:gfactor}
+\end{equation}
+
+\subsection{EPR Spectrum}
+The majority of EPR measurements are performed in the microwave range of
+\SIrange{9}{10}{\giga\hertz} (X-band), with resonance fields of approximately
+\SI{0.35}{\tesla}. In principle a spectrum can be obtained either by sweeping
+the microwave frequency at constant field or by sweeping the magnetic field at
+constant frequency. In practice the frequency is usually kept fixed and the
+field is swept through the resonance condition. Because the lower energy level is
+slightly more populated according to the Boltzmann distribution, there is a net
+absorption of microwave power at resonance. The detected EPR spectrum is commonly
+the first derivative of this absorption line; in the present experiment the
+\emph{dispersion} signal of the resonance is recorded (the characteristic
+S-shaped frequency shift of the down-converted signal across resonance).
+
+\subsection{Radio-Frequency Techniques}
+Since EPR uses radiation in the GHz range, it is useful to understand the
+RF techniques employed to generate and detect such signals. The two most
+relevant techniques for this experiment are frequency modulation and frequency
+mixing.
+
+\subsubsection{Frequency Modulation}
+Modulation is an RF technique in which a periodic carrier waveform is altered by a
+second (modulation) waveform. In frequency modulation the instantaneous
+frequency of the carrier is varied according to the modulation signal. This
+technique is fundamental to radio communication, as it allows a single carrier to
+be separated from other signals in the spectrum.
+
+\subsubsection{Frequency Mixing}
+Frequency mixing is a process in which two signals of frequencies $f_1$ and $f_2$
+are combined in a (nonlinear) mixer. At the output, new signals appear at the
+sum and difference frequencies,
+
+\begin{equation}
+    f_{\pm} = f_1 \pm f_2 ,
+    \label{eq:mixing}
+\end{equation}
+
+in addition to the original frequencies. In a real mixer higher-order
+combinations such as $f_1 \pm 2f_2$ may also appear. Mixing is the working
+principle of the low-noise block (LNB) used to down-convert the GHz EPR signal
+into the easily measurable range of a few hundred MHz (see
+Section~\ref{sec:lnb}).
+
+\subsection{Materials}
+EPR is sensitive to substances containing unpaired electrons, in particular
+\begin{itemize}
+    \item free radicals in solids, liquids or gases, and
+    \item paramagnetic transition-metal ions.
+\end{itemize}
+In this experiment DPPH and Ultramarine were used as samples at different
+concentrations / dilution levels.
+
+\subsubsection{DPPH}
+Diphenyl-Picryl-Hydrazyl (DPPH) is a stable organic radical and a standard
+reference material for EPR. It is a dark crystalline powder with one unpaired
+electron. Its $g$-factor is $g = 2.0036$, very close to that of the free
+electron, which makes it a convenient calibration standard.
+
+\subsubsection{Ultramarine}
+Ultramarine (UM) is another commonly used EPR substance owing to its strong
+paramagnetic character, which arises from sulfur radicals whose detailed
+structure is largely unknown. Its chemical formula is
+$\mathrm{Na_{8-10}Al_{6}Si_{6}O_{24}S_{2-4}}$. Its $g$-factor of $g = 2.0290$
+differs noticeably from that of the free electron ($g = 2.0023$).
+
+% ==================================================================
+\section{Experimental Set-up and Methodology}
+% ==================================================================
+In an EPR measurement the absorption (here: dispersion) of microwaves by the
+sample is recorded as a function of a slowly varying magnetic field, while the
+microwave frequency is kept constant. The main components of the set-up are
+described below.
+
+\subsection{Signal Sources and Mixing Stage}
+For the RF mixing and modulation experiments both channels of the RIGOL
+Dual-Channel Arbitrary / Waveform Generator DG1022 were used as signal sources.
+The signals were combined in a Hewlett-Packard Model 10514A double-balanced
+mixer. To protect the mixer, no more than \SI{40}{\milli\ampere} may flow into
+any of its ports, and the power in the \SI{50}{\ohm} system was always kept below
+\SI{5}{\milli\watt} (corresponding to a maximum of about \SI{1.4}{V_{pp}} or
+\SI{0.5}{V_{rms}}). The input signals and the mixed output $X$ were observed in
+the time domain with the TiePie Handyscope HS3 (used as a two-channel
+oscilloscope) and an analog oscilloscope, while the spectral content was measured
+with the SDRplay RSP1 radio spectrum processor in combination with the HDSDR
+software. A PRL~T5075 attenuator ($\geq \SI{-60}{\decibel}$ for mixing,
+$\geq \SI{40}{\decibel}$ for antenna reception) protected the RSP1 input.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.62\textwidth]{setup_mixing_scope.jpeg}
+    \caption{Measurement set-up for the frequency-mixing experiment: the RIGOL
+             DG1022 waveform generator (top, set to \SI{500}{mV_{rms}}) feeds the
+             HP\,10514A mixer; the analog oscilloscope (bottom) shows the
+             amplitude-modulated beat waveform of the mixed signals.}
+    \label{fig:setup-scope}
+\end{figure}
+
+\subsection{Microwave Bridge and Magnet System}
+In a classical EPR spectrometer the microwave bridge generates the microwaves
+(e.g.\ with a klystron) and detects the reflected EPR signal via a circulator
+and a detector diode. The sample sits in a high-$Q$ resonant cavity, defined by
+$Q = \omega \cdot (\text{energy stored}) / (\text{power dissipated})$, which is
+surrounded by a pair of magnet pole pieces / Helmholtz coils. The sample is
+placed at the position of maximum $B_1$ field and perpendicular to the static
+field $B_0$. Because the linearly polarised $B_1$ field can be decomposed into
+two counter-rotating circular components, only the component co-rotating with the
+electron precession drives the resonance transitions.
+
+\subsection{Magnetic Field Sweep}
+\label{sec:sweep}
+The static magnetic flux density is set by the output voltage of the PS2000 power
+supply and is displayed in millitesla. The field is swept through the resonance
+by a programmed voltage sequence on the controlling notebook (the PS2000 software
+must be started \emph{as administrator}). The sequence used here had the
+following parameters:
+\begin{itemize}
+    \item start voltage: \SI{26}{\volt};
+    \item one step per second (\SI{1}{\second} per segment);
+    \item voltage increment per step: \SI{0.05}{\volt};
+    \item number of steps: 81;
+    \item the final step resets the supply to \SI{10}{\volt}.
+\end{itemize}
+Before starting the sequence, the voltage is manually set close to the first
+value of the file. From this sequence the field gradient (in \si{Gs/s}) can be
+determined. The conversion from the supply voltage to the magnetic flux density
+$B_0$ is given by the calibration recorded in the supplementary video and will be
+inserted here.\footnote{TODO: Spannungs-zu-Magnetfeld-Umrechnung aus dem Video
+ergänzen (lineare Kalibrierung $B_0(U)$), anschließend die $x$-Achsen der
+Dispersionskurven in Tesla skalieren.}
+
+\subsection{Low-Noise Block (LNB)}
+\label{sec:lnb}
+The EPR signal of the DPPH and Ultramarine samples is detected with a modified
+satellite low-noise block (LNB) ``OSLSO''. It contains two local oscillators
+(LO) operating simultaneously at \SI{9.75}{\giga\hertz} and
+\SI{10.6}{\giga\hertz}. The sample is coupled to the dielectric resonator (DR,
+the small violet ring cylinder) at the \SI{10.6}{\giga\hertz} frequency. By
+mixing the two LO frequencies (Equation~\eqref{eq:mixing}) and down-converting,
+the dispersion signal of the resonance is shifted to the easily measurable region
+around \SI{800}{\mega\hertz} at the LNB output, where it is recorded with the
+RSP1 / HDSDR system. For Task~6 a calibrated PLL LNB with a single, exactly known
+LO frequency of \SI{9.75}{\giga\hertz} is used instead.
+
+\subsection{Data Processing}
+The HDSDR waterfall / spectrum display is captured as a snapshot during the field
+sweep. The image is rotated and the dispersion curve is digitised (e.g.\ with
+\texttt{engauge} or \texttt{WebPlotDigitizer}), yielding a \texttt{.csv} table of
+the output frequency $\nu$ versus the external magnetic field $B_0$. The
+resonance field $B_0$ is read off at the inflection / zero crossing of the
+dispersion curve and used in Equation~\eqref{eq:gfactor} to determine the
+$g$-factor.
+
+% ==================================================================
+\section{Measurements and Analysis}
+% ==================================================================
+\textit{Hinweis: Dieser Abschnitt enthält bereits die aufgenommenen
+Messbilder. Die quantitative Auswertung (Resonanzfelder, $g$-Faktoren) wird
+ergänzt, sobald die Spannungs-zu-Magnetfeld-Umrechnung aus dem Video vorliegt
+(siehe Abschnitt~\ref{sec:sweep}).}
+
+% ------------------------------------------------------------------
+\subsection{Task 1 -- Frequency Mixing and Modulation}
+% ------------------------------------------------------------------
+One channel of the DG1022 supplied a \SI{10}{\mega\hertz} sine wave at
+\SI{0.5}{V_{rms}} (\SI{5}{\milli\watt}) to input~$L$ of the mixer; the second
+channel supplied input~$R$ with a \SI{200}{\kilo\hertz} sine wave at
+\SI{1}{\milli\watt} (\SI{0.22}{V_{rms}}). The mixed output was observed in the
+time domain (Figure~\ref{fig:setup-scope}) and in the spectral domain with HDSDR
+(Figure~\ref{fig:task1}). As expected from Equation~\eqref{eq:mixing}, sum and
+difference signals appear symmetrically around the carrier; varying the second
+frequency shifts the sidebands accordingly, and higher-order mixing products
+($f_1 \pm 2f_2$, \dots) are visible as additional lines.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{task1_10mhz_hdsdr.png}
+    \caption{HDSDR spectrum of the \SI{10}{\mega\hertz} mixing signal
+             (waterfall and spectrum). % TODO: Seitenbänder markieren
+            }
+    \label{fig:task1}
+\end{figure}
+
+% ------------------------------------------------------------------
+\subsection{Task 2/3 -- Reception of VLF, FM and PMR Signals}
+% ------------------------------------------------------------------
+Using the laboratory antennas (active VLF antenna and VHF/FM wire antenna) and
+the RSP1/HDSDR receiver, signals in different bands were received and analysed.
+Figure~\ref{fig:fm} shows the FM broadcast band (local stations,
+e.g.\ \emph{Radio Sachsen} / \emph{Energy Sachsen}), and
+Figure~\ref{fig:pmr} shows the PMR walkie-talkie channels around
+\SI{445}{\mega\hertz}. % TODO: Kanalfrequenzen, Bandbreite und Modulationsart
+% bestimmen; DCF77 / EFR (DCF49, DCF39, HGA22) im VLF-Bereich ergänzen.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task3_fm_radio.png}
+        \caption{FM broadcast band.}
+        \label{fig:fm}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task3_pmr_445mhz.png}
+        \caption{PMR transceiver channels around \SI{445}{\mega\hertz}.}
+        \label{fig:pmr}
+    \end{subfigure}
+    \caption{HDSDR spectra of received radio signals.}
+    \label{fig:radio}
+\end{figure}
+
+% ------------------------------------------------------------------
+\subsection{Task 4 -- Dispersion Curves of DPPH}
+% ------------------------------------------------------------------
+The dispersion curves of the DPPH samples (\SI{1}{\micro\gram} and
+\SI{10}{\micro\gram}) were recorded with the direct-mixing LNB while sweeping the
+magnetic field (Section~\ref{sec:sweep}). The characteristic S-shaped dispersion
+signal near the LNB output frequency of $\approx \SI{800}{\mega\hertz}$ is clearly
+visible (Figure~\ref{fig:dpph}). The resonance field $B_0$ is read off at the
+centre of the dispersion feature.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task4_dpph_1ug.png}
+        \caption{DPPH, \SI{1}{\micro\gram}.}
+        \label{fig:dpph1}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task4_dpph_10ug.png}
+        \caption{DPPH, \SI{10}{\micro\gram}.}
+        \label{fig:dpph10}
+    \end{subfigure}
+    \caption{Dispersion signals of the DPPH samples (HDSDR).}
+    \label{fig:dpph}
+\end{figure}
+
+% TODO: Tabelle mit B_0, nu_0 und berechnetem g-Faktor für 1 und 10 ug,
+% Vergleich mit Theoriewert g = 2.0036.
+\begin{table}[ht]
+    \centering
+    \caption{Resonance field and $g$-factor of the DPPH samples.
+             \textit{(Werte ergänzen, sobald $B_0$ aus der Kalibrierung
+             vorliegt.)}}
+    \label{tab:dpph}
+    \begin{tabular}{lcccc}
+        \toprule
+        Sample & $\nu_0$ & $B_0$ & $g$ (exp.) & $g$ (theo.) \\
+        \midrule
+        DPPH \SI{1}{\micro\gram}  & --- & --- & --- & 2.0036 \\
+        DPPH \SI{10}{\micro\gram} & --- & --- & --- & 2.0036 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ------------------------------------------------------------------
+\subsection{Task 5 -- Dispersion Curves of Ultramarine}
+% ------------------------------------------------------------------
+The dispersion curves of the Ultramarine samples were measured at the dilution
+levels pure (undiluted), 1:10, 1:100 and 1:1000
+(Figure~\ref{fig:um}). With increasing dilution the amount of paramagnetic
+material -- and therefore the signal amplitude -- decreases.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_pure.png}
+        \caption{Pure (undiluted).}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_1_10.png}
+        \caption{1:10.}
+    \end{subfigure}
+
+    \vspace{0.4cm}
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_1_100.png}
+        \caption{1:100.}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_1_1000.png}
+        \caption{1:1000.}
+    \end{subfigure}
+    \caption{Dispersion signals of the Ultramarine samples at different dilution
+             levels (HDSDR).}
+    \label{fig:um}
+\end{figure}
+
+% TODO: g-Faktor der Ultramarin-Proben bestimmen, Vergleich mit g = 2.0290.
+
+% ------------------------------------------------------------------
+\subsection{Task 6 -- DPPH \texorpdfstring{\SI{10}{\micro\gram}}{10 ug} with a Calibrated LNB}
+% ------------------------------------------------------------------
+The \SI{10}{\micro\gram} DPPH sample was measured again, this time with a
+calibrated PLL LNB (single LO at exactly \SI{9.75}{\giga\hertz}) as the
+observation system (Figure~\ref{fig:task6}). The resonance frequency and the
+resulting $g$-factor are compared with the value obtained by the direct mixing
+method in Task~4 to assess the accuracy of the magnetic-flux-density display.
+% TODO: Vergleich der beiden Methoden, Diskussion der Messgenauigkeit.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{task6_dpph_calibrated.png}
+    \caption{Dispersion signal of DPPH \SI{10}{\micro\gram} measured with the
+             calibrated PLL LNB.}
+    \label{fig:task6}
+\end{figure}
+
+% ==================================================================
+\section{Conclusion}
+% ==================================================================
+% TODO: Zusammenfassung der Ergebnisse, Vergleich der g-Faktoren mit den
+% Literaturwerten (DPPH 2.0036, Ultramarin 2.0290), Diskussion der
+% Fehlerquellen und der Genauigkeit der Magnetfeldanzeige.
+\textit{Wird nach Abschluss der quantitativen Auswertung ergänzt.}
+
+\end{document}
