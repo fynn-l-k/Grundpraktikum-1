@@ -243,11 +243,56 @@ following parameters:
 \end{itemize}
 Before starting the sequence, the voltage is manually set close to the first
 value of the file. From this sequence the field gradient (in \si{Gs/s}) can be
-determined. The conversion from the supply voltage to the magnetic flux density
-$B_0$ is given by the calibration recorded in the supplementary video and will be
-inserted here.\footnote{TODO: Spannungs-zu-Magnetfeld-Umrechnung aus dem Video
-ergänzen (lineare Kalibrierung $B_0(U)$), anschließend die $x$-Achsen der
-Dispersionskurven in Tesla skalieren.}
+determined.
+
+\subsubsection{Magnetic Field Calibration}
+\label{sec:calibration}
+To convert the operating point of the power supply into the actual magnetic flux
+density $B_0$, a calibration data set was recorded from the supplementary video.
+For each step of the sweep, the supply voltage $U$, the coil current $I$ and the
+field $B_0$ displayed by the Hall sensor (in \si{\milli\tesla}) were read off,
+yielding 81 data points.
+
+A first inspection shows that the \emph{voltage} is not a suitable control
+variable: above $U \approx \SI{26}{\volt}$ the supply runs into its voltage
+limit, so $U$ saturates while the current and the field keep rising. A fit of
+$B_0$ against $U$ is correspondingly poor ($R^2 \approx 0.77$). This is expected
+physically, since the field of the electromagnet is set by the \emph{coil
+current}, not by the supply voltage. We therefore calibrate $B_0$ against the
+current $I$:
+
+\begin{equation}
+    B_0(I) = a\,I + b ,
+    \label{eq:cal}
+\end{equation}
+
+A linear least-squares fit (Figure~\ref{fig:cal}) gives
+
+\begin{align}
+    a &= \SI{99.6(14)}{\milli\tesla\per\ampere}, &
+    b &= \SI{-11.5(53)}{\milli\tesla}, &
+    R^2 &= 0.985 .
+\end{align}
+
+The first three points (supply settling) and a few obvious read-off errors in the
+current column were excluded from the fit (open circles in
+Figure~\ref{fig:cal}). The high $R^2$ confirms the expected linear relation
+between coil current and field. Equation~\eqref{eq:cal} is used to assign a
+magnetic flux density to every point of the recorded dispersion curves; the
+covered range $I = \SIrange{3.1}{4.0}{\ampere}$ corresponds to
+$B_0 \approx \SIrange{287}{383}{\milli\tesla}$, which brackets the expected DPPH
+resonance field of $\approx \SI{0.38}{\tesla}$.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.68\textwidth]{calibration_fit.pdf}
+    \caption{Magnet calibration: displayed magnetic flux density $B_0$ versus
+             coil current $I$, with the linear fit
+             $B_0 = a\,I + b$ (Equation~\eqref{eq:cal}). Open red circles mark
+             points excluded from the fit (initial supply settling and current
+             read-off errors).}
+    \label{fig:cal}
+\end{figure}
 
 \subsection{Low-Noise Block (LNB)}
 \label{sec:lnb}
@@ -264,20 +309,24 @@ LO frequency of \SI{9.75}{\giga\hertz} is used instead.
 
 \subsection{Data Processing}
 The HDSDR waterfall / spectrum display is captured as a snapshot during the field
-sweep. The image is rotated and the dispersion curve is digitised (e.g.\ with
-\texttt{engauge} or \texttt{WebPlotDigitizer}), yielding a \texttt{.csv} table of
-the output frequency $\nu$ versus the external magnetic field $B_0$. The
-resonance field $B_0$ is read off at the inflection / zero crossing of the
-dispersion curve and used in Equation~\eqref{eq:gfactor} to determine the
-$g$-factor.
+sweep. The image is rotated and the dispersion curve is digitised with
+\texttt{WebPlotDigitizer}, yielding a \texttt{.csv} table of the output frequency
+$\nu$ versus the swept variable. Using the calibration of
+Section~\ref{sec:calibration} (Equation~\eqref{eq:cal}) the swept variable is
+converted to the external magnetic flux density $B_0$. The resonance field $B_0$
+is read off at the inflection / zero crossing of the S-shaped dispersion curve
+(taken here as the point of steepest slope) and inserted into
+Equation~\eqref{eq:gfactor} to determine the $g$-factor.
 
 % ==================================================================
 \section{Measurements and Analysis}
 % ==================================================================
-\textit{Hinweis: Dieser Abschnitt enthält bereits die aufgenommenen
-Messbilder. Die quantitative Auswertung (Resonanzfelder, $g$-Faktoren) wird
-ergänzt, sobald die Spannungs-zu-Magnetfeld-Umrechnung aus dem Video vorliegt
-(siehe Abschnitt~\ref{sec:sweep}).}
+\textit{Hinweis: Die Magnetfeld-Kalibrierung (Abschnitt~\ref{sec:calibration})
+liegt vor. Dieser Abschnitt enthält die aufgenommenen Messbilder; die
+quantitative Auswertung (Resonanzfelder $B_0$, $g$-Faktoren) wird ergänzt, sobald
+die Dispersionskurven aus den Screenshots digitalisiert sind. Die digitalisierten
+\texttt{.csv}-Dateien werden in \texttt{figures/csv/} abgelegt und mit dem Skript
+\texttt{analysis.py} ausgewertet (Plot + $g$-Faktor pro Probe).}
 
 % ------------------------------------------------------------------
 \subsection{Task 1 -- Frequency Mixing and Modulation}
