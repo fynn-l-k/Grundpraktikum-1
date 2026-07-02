@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Einleitung}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Aufgabenstellung}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Theoretische Grundlagen}{4}{}%
+\contentsline {section}{\numberline {2}Ergebnisse und Diskussion}{6}{}%
+\contentsline {subsection}{\numberline {2.1}Überprüfung der Eichung der Wellenlängenskala}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Spektrum der weiß leuchtenden Diode}{8}{}%
+\contentsline {subsection}{\numberline {2.3}Spektrum der blau leuchtenden Diode}{9}{}%
+\contentsline {subsection}{\numberline {2.4}Spektrum der grün leuchtenden Diode}{10}{}%
+\contentsline {subsection}{\numberline {2.5}Spektrum der orange leuchtenden Diode}{11}{}%
+\contentsline {subsection}{\numberline {2.6}Spektrum der rot leuchtenden Diode}{12}{}%
+\contentsline {subsection}{\numberline {2.7}Spektrum der Infrarot emittierenden GaAs-Diode}{13}{}%
+\contentsline {subsection}{\numberline {2.8}Temperaturabhängigkeit der Photolumineszenz von $Ga_{1-x}Al_xAs$-Proben}{15}{}%
+\contentsline {section}{\numberline {3}Zusammenfassung}{17}{}%
