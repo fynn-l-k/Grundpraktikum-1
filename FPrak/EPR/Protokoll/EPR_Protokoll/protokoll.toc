@@ -1,0 +1,26 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Theoretical Background}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Electron Paramagnetic Resonance (EPR)}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Zeeman Effect}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Resonance Condition}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}EPR Spectrum}{4}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Radio-Frequency Techniques}{4}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Frequency Modulation}{4}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Frequency Mixing}{4}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}Materials}{4}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}DPPH}{4}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}Ultramarine}{5}{subsubsection.1.6.2}%
+\contentsline {section}{\numberline {2}Experimental Set-up and Methodology}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Signal Sources and Mixing Stage}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Microwave Bridge and Magnet System}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Magnetic Field Sweep}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Magnetic Field Calibration}{6}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}Low-Noise Block (LNB)}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Data Processing}{8}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Measurements and Analysis}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Task 1 -- Frequency Mixing and Modulation}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Task 2/3 -- Reception of VLF, FM and PMR Signals}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Task 4 -- Dispersion Curves of DPPH}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Task 5 -- Dispersion Curves of Ultramarine}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Task 6 -- DPPH \SI {10}{\micro \gram } with a Calibrated LNB}{10}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Conclusion}{10}{section.4}%

@@ -283,6 +283,22 @@ covered range $I = \SIrange{3.1}{4.0}{\ampere}$ corresponds to
 $B_0 \approx \SIrange{287}{383}{\milli\tesla}$, which brackets the expected DPPH
 resonance field of $\approx \SI{0.38}{\tesla}$.
 
+For the point-by-point conversion of the recorded dispersion sweeps, however,
+only the \emph{programmed supply voltage} is known for every data point (the
+coil current was not logged alongside the dispersion measurement). Each sweep
+follows the fixed voltage sequence of Section~\ref{sec:sweep}
+(\SI{26}{\volt} start, \SI{0.05}{\volt} per one-second step), so every sample
+can be assigned a nominal voltage $U(t)$. The magnetic field for that voltage
+is then obtained by piecewise-linear interpolation of the tabulated
+$(U, B_0)$ pairs from the calibration video (the same data set as above,
+restricted to $U \geq \SI{26}{\volt}$ to remove the settling transient) rather
+than the global current-based fit: since the calibration was recorded on the
+same \SI{0.05}{\volt} grid as the sweep sequence, direct interpolation avoids
+the residual scatter of a single straight-line fit and reproduces the local
+curvature of $B_0(U)$ visible in Figure~\ref{fig:cal}. The last sweep step
+(\SI{30}{\volt}) lies \SI{0.05}{\volt} beyond the calibrated range and is
+obtained by linear extrapolation from the last two calibration points.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.68\textwidth]{calibration_fit.pdf}
@@ -308,25 +324,33 @@ RSP1 / HDSDR system. For Task~6 a calibrated PLL LNB with a single, exactly know
 LO frequency of \SI{9.75}{\giga\hertz} is used instead.
 
 \subsection{Data Processing}
+\label{sec:processing}
 The HDSDR waterfall / spectrum display is captured as a snapshot during the field
-sweep. The image is rotated and the dispersion curve is digitised with
-\texttt{WebPlotDigitizer}, yielding a \texttt{.csv} table of the output frequency
-$\nu$ versus the swept variable. Using the calibration of
-Section~\ref{sec:calibration} (Equation~\eqref{eq:cal}) the swept variable is
-converted to the external magnetic flux density $B_0$. The resonance field $B_0$
-is read off at the inflection / zero crossing of the S-shaped dispersion curve
-(taken here as the point of steepest slope) and inserted into
-Equation~\eqref{eq:gfactor} to determine the $g$-factor.
+sweep. For Tasks~4 and~5 the software's own time-stamped frequency log was used
+directly instead of digitising the screenshot: each logged frequency sample is
+tagged with a wall-clock time, from which the corresponding point in the known
+voltage sequence (Section~\ref{sec:sweep}) -- and hence, via
+Section~\ref{sec:calibration}, the magnetic flux density $B_0$ -- follows
+directly. This yields the same output as digitising the waterfall image with
+\texttt{WebPlotDigitizer} (frequency $\nu$ versus $B_0$) but avoids the
+additional digitisation step. The resonance field $B_0$ is read off at the
+inflection / zero crossing of the S-shaped dispersion curve (taken here as the
+point of steepest slope, after averaging duplicate samples recorded within the
+same one-second voltage step) and inserted into Equation~\eqref{eq:gfactor},
+together with the nominal LNB coupling frequency $\nu_0 = \SI{10.6}{\giga\hertz}$
+(Section~\ref{sec:lnb}), to determine the $g$-factor.
 
 % ==================================================================
 \section{Measurements and Analysis}
 % ==================================================================
-\textit{Hinweis: Die Magnetfeld-Kalibrierung (Abschnitt~\ref{sec:calibration})
-liegt vor. Dieser Abschnitt enthält die aufgenommenen Messbilder; die
-quantitative Auswertung (Resonanzfelder $B_0$, $g$-Faktoren) wird ergänzt, sobald
-die Dispersionskurven aus den Screenshots digitalisiert sind. Die digitalisierten
-\texttt{.csv}-Dateien werden in \texttt{figures/csv/} abgelegt und mit dem Skript
-\texttt{analysis.py} ausgewertet (Plot + $g$-Faktor pro Probe).}
+\textit{Hinweis: Für Task~4 und Task~5 wurden die Dispersionskurven direkt aus der
+Software als zeitgestempelte Frequenz-Messreihen exportiert (statt aus
+Screenshots digitalisiert) und mit der Kalibrierung aus
+Abschnitt~\ref{sec:calibration} in Frequenz vs.\ Magnetfeld $B_0$ umgerechnet.
+Das Resonanzfeld $B_0$ wird an der Stelle der steilsten Steigung der
+S-förmigen Dispersionskurve bestimmt (Abschnitt~\ref{sec:processing}).
+Task~6 (kalibrierte LNB) steht noch aus, da hierfür noch keine entsprechend
+digitalisierten Messdaten vorliegen.}
 
 % ------------------------------------------------------------------
 \subsection{Task 1 -- Frequency Mixing and Modulation}
@@ -403,23 +427,59 @@ centre of the dispersion feature.
     \label{fig:dpph}
 \end{figure}
 
-% TODO: Tabelle mit B_0, nu_0 und berechnetem g-Faktor für 1 und 10 ug,
-% Vergleich mit Theoriewert g = 2.0036.
+Following Section~\ref{sec:processing}, the down-converted frequency was plotted
+against the calibrated magnetic flux density $B_0$ for both samples
+(Figure~\ref{fig:dpph-curve}); the resonance field is marked by the steepest
+point of the S-shaped dispersion feature.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task4_dpph_1ug_curve.png}
+        \caption{DPPH, \SI{1}{\micro\gram}: $B_0 = \SI{0.372}{\tesla}$.}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task4_dpph_10ug_curve.png}
+        \caption{DPPH, \SI{10}{\micro\gram}: $B_0 = \SI{0.345}{\tesla}$.}
+    \end{subfigure}
+    \caption{Down-converted frequency versus calibrated magnetic flux density
+             for the DPPH samples, with the resonance field $B_0$ marked
+             (dashed line).}
+    \label{fig:dpph-curve}
+\end{figure}
+
+Inserting the resonance fields $B_0$ together with the nominal LNB coupling
+frequency $\nu_0 = \SI{10.6}{\giga\hertz}$ into Equation~\eqref{eq:gfactor}
+gives the experimental $g$-factors listed in Table~\ref{tab:dpph}.
+
 \begin{table}[ht]
     \centering
-    \caption{Resonance field and $g$-factor of the DPPH samples.
-             \textit{(Werte ergänzen, sobald $B_0$ aus der Kalibrierung
-             vorliegt.)}}
+    \caption{Resonance field and $g$-factor of the DPPH samples
+             ($\nu_0 = \SI{10.6}{\giga\hertz}$).}
     \label{tab:dpph}
-    \begin{tabular}{lcccc}
+    \begin{tabular}{lccccc}
         \toprule
-        Sample & $\nu_0$ & $B_0$ & $g$ (exp.) & $g$ (theo.) \\
+        Sample & $B_0$ & $g$ (exp.) & $g$ (theo.) & rel.\ error \\
         \midrule
-        DPPH \SI{1}{\micro\gram}  & --- & --- & --- & 2.0036 \\
-        DPPH \SI{10}{\micro\gram} & --- & --- & --- & 2.0036 \\
+        DPPH \SI{1}{\micro\gram}  & \SI{0.372}{\tesla} & 2.036 & 2.0036 & +1.6\% \\
+        DPPH \SI{10}{\micro\gram} & \SI{0.345}{\tesla} & 2.196 & 2.0036 & +9.6\% \\
         \bottomrule
     \end{tabular}
 \end{table}
+
+Both experimental $g$-factors come out slightly above the free-radical value of
+DPPH, with the \SI{10}{\micro\gram} sample showing a noticeably larger
+deviation than the \SI{1}{\micro\gram} sample. This mirrors the systematic
+trend reported for this experiment: the larger amount of DPPH increases the
+sample's own dipolar broadening / interaction, which shifts the apparent
+resonance field slightly and increases the error in the $g$-factor. The
+dominant source of the remaining uncertainty, however, is the field
+calibration itself (Section~\ref{sec:calibration}): the voltage-to-field
+relation was interpolated from a single, video-digitised calibration run with
+$\SI{0.05}{\volt}$ steps, so a small misalignment between a calibration step
+and the corresponding point of the dispersion sweep translates directly into
+an error of several \si{\milli\tesla} in $B_0$ -- and, since
+$g \propto 1/B_0$, into a comparable relative error in $g$.
 
 % ------------------------------------------------------------------
 \subsection{Task 5 -- Dispersion Curves of Ultramarine}
@@ -454,7 +514,70 @@ material -- and therefore the signal amplitude -- decreases.
     \label{fig:um}
 \end{figure}
 
-% TODO: g-Faktor der Ultramarin-Proben bestimmen, Vergleich mit g = 2.0290.
+As for the DPPH samples (Section~\ref{sec:processing}), the down-converted
+frequency was plotted against the calibrated magnetic flux density $B_0$ for
+all four dilution levels (Figure~\ref{fig:um-curve}). The dispersion feature
+is clearly S-shaped and sharp for the undiluted sample and the 1:10 dilution,
+but becomes progressively weaker and broader for the more diluted 1:100 and
+1:1000 samples, consistent with the decreasing amount of paramagnetic
+material.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_pure_curve.png}
+        \caption{Pure (undiluted): $B_0 = \SI{0.358}{\tesla}$.}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_1_10_curve.png}
+        \caption{1:10: $B_0 = \SI{0.369}{\tesla}$.}
+    \end{subfigure}
+
+    \vspace{0.4cm}
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_1_100_curve.png}
+        \caption{1:100: $B_0 = \SI{0.334}{\tesla}$.}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{task5_um_1_1000_curve.png}
+        \caption{1:1000: $B_0 = \SI{0.353}{\tesla}$.}
+    \end{subfigure}
+    \caption{Down-converted frequency versus calibrated magnetic flux density
+             for the Ultramarine samples, with the resonance field $B_0$
+             marked (dashed line).}
+    \label{fig:um-curve}
+\end{figure}
+
+\begin{table}[ht]
+    \centering
+    \caption{Resonance field and $g$-factor of the Ultramarine samples
+             ($\nu_0 = \SI{10.6}{\giga\hertz}$).}
+    \label{tab:um}
+    \begin{tabular}{lccccc}
+        \toprule
+        Sample & $B_0$ & $g$ (exp.) & $g$ (theo.) & rel.\ error \\
+        \midrule
+        Undiluted & \SI{0.358}{\tesla} & 2.118 & 2.0290 & +4.4\% \\
+        1:10      & \SI{0.369}{\tesla} & 2.051 & 2.0290 & +1.1\% \\
+        1:100     & \SI{0.334}{\tesla} & 2.270 & 2.0290 & +11.9\% \\
+        1:1000    & \SI{0.353}{\tesla} & 2.147 & 2.0290 & +5.8\% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The 1:10 dilution gives the smallest deviation from the literature value,
+while the 1:100 sample shows the largest error -- consistent with
+Figure~\ref{fig:um-curve}, where the 1:100 dispersion feature is by far the
+weakest and least sharply defined, so the point of steepest slope is the most
+sensitive to noise in the underlying frequency log. The undiluted and 1:1000
+samples fall in between. There is no monotonic trend of the error with
+dilution: unlike a simple absorption measurement, the sharpness of the
+dispersion S-curve here depends on a combination of the remaining sample
+concentration and how closely the fixed field sweep happened to bracket the
+resonance, so the weakest and strongest signals are not necessarily found at
+the two ends of the dilution series. As with DPPH, the field calibration
+(Section~\ref{sec:calibration}) remains the main source of systematic
+uncertainty in $B_0$ and therefore in $g$.
 
 % ------------------------------------------------------------------
 \subsection{Task 6 -- DPPH \texorpdfstring{\SI{10}{\micro\gram}}{10 ug} with a Calibrated LNB}
@@ -477,9 +600,33 @@ method in Task~4 to assess the accuracy of the magnetic-flux-density display.
 % ==================================================================
 \section{Conclusion}
 % ==================================================================
-% TODO: Zusammenfassung der Ergebnisse, Vergleich der g-Faktoren mit den
-% Literaturwerten (DPPH 2.0036, Ultramarin 2.0290), Diskussion der
-% Fehlerquellen und der Genauigkeit der Magnetfeldanzeige.
-\textit{Wird nach Abschluss der quantitativen Auswertung ergänzt.}
+Task~1 confirmed the expected sum and difference frequencies of a mixed RF
+signal, and Tasks~2/3 demonstrated reception of VLF, FM and PMR signals with
+the RSP1/HDSDR system. For the EPR measurements (Tasks~4 and~5), the
+dispersion curves of the DPPH and Ultramarine samples all show the
+characteristic S-shaped feature of a dispersive resonance line, and the
+resulting $g$-factors (Tables~\ref{tab:dpph} and~\ref{tab:um}) lie within
+roughly \SIrange{1}{12}{\percent} of the literature values ($g_{\text{DPPH}} =
+2.0036$, $g_{\text{UM}} = 2.0290$), which is a reasonable agreement given the
+uncalibrated LNB frequency ($\nu_0 \approx \SI{10.6}{\giga\hertz}$, not
+independently measured) and the resolution of the video-based field
+calibration. As in the DPPH series, no strict monotonic trend between sample
+concentration/dilution and the error in $g$ was found; instead, the accuracy
+of $g$ tracks how sharply the resonance feature stands out from the
+background noise of the frequency log for that particular measurement -- the
+1:100 Ultramarine dilution, with the weakest and broadest dispersion feature,
+gives the largest error, while the sharply defined DPPH \SI{1}{\micro\gram}
+and UM 1:10 curves give the best agreement with theory.
+
+The main systematic uncertainty in all $g$-factors is the magnetic field
+calibration (Section~\ref{sec:calibration}): the field was not measured
+directly during the dispersion sweeps but reconstructed from the programmed
+supply voltage via a single video-digitised calibration curve, so the
+accuracy of $B_0$ is ultimately limited by how well that calibration
+represents the true field at each voltage step. Task~6, which will compare
+the direct-mixing result for DPPH \SI{10}{\micro\gram} to a measurement with a
+calibrated PLL LNB ($\nu_0 = \SI{9.75}{\giga\hertz}$ known exactly), is
+expected to directly quantify this uncertainty; it remains open pending the
+corresponding digitised measurement data.
 
 \end{document}
