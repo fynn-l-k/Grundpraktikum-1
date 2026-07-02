@@ -1,0 +1,27 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Aufgabenstellung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theoretische Grundlagen}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Elektronenparamagnetische Resonanz (EPR)}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Zeeman-Effekt}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Resonanzbedingung}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}EPR-Spektrum}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Hochfrequenztechniken}{5}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Frequenzmodulation}{5}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Frequenzmischung}{6}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}Materialien}{7}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}DPPH}{7}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Ultramarin}{7}{subsubsection.2.6.2}%
+\contentsline {section}{\numberline {3}Versuchsaufbau und Methodik}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Signalquellen und Mischstufe}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mikrowellenbrücke und Magnetsystem}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Magnetfeld-Sweep}{9}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Magnetfeld-Kalibrierung}{10}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}Low-Noise-Block (LNB)}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Datenverarbeitung}{11}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Messungen und Auswertung}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Aufgabe 1 -- Frequenzmischung und -modulation}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Aufgabe 2/3 -- Empfang von VLF-, FM- und PMR-Signalen}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Aufgabe 4 -- Bestimmung der Resonanzfrequenz und Dispersionskurven von DPPH}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Aufgabe 5 -- Bestimmung der Resonanzfrequenz und Dispersionskurven von Ultramarin}{14}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Aufgabe 6 -- DPPH \SI {10}{\micro \gram } mit kalibriertem LNB}{17}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Fazit}{18}{section.5}%
