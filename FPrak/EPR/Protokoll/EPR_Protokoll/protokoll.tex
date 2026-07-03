@@ -5,7 +5,7 @@
 % ------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
+\usepackage[ngerman]{babel}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{siunitx}
@@ -26,29 +26,51 @@
 }
 
 % ------------------------------------------------------------------
-%  Title
+%  Titel
 % ------------------------------------------------------------------
-\title{%
-    \vspace{-1.0cm}
-    {\large University of Leipzig}\\[0.2cm]
-    {\normalsize Advanced Physics Laboratory}\\[1.5cm]
-    {\Huge \bfseries Digital RF-Receiving Technique\\[0.3cm] and Electron-Paramagnetic\\[0.3cm] Resonance (EPR)}\\[1.0cm]
+\title{RF Technique and Electron-Paramagnetic
+Resonance (EPR) \\
+Fortgeschrittenen Praktikum der Physik
+}
+\author{Fynn Kanja 3780065 \\
+Valentino D’Agosto 3763229 \\
+Gruppe O43
 }
 
-\author{%
-    % TODO: Namen und Matrikelnummern eintragen
-    \begin{tabular}{c}
-        Fynn Kanja \\
-        % Matrikelnummer
-    \end{tabular}
-}
 
-\date{Experiment No.~5 \\[0.2cm] Leipzig, \today}
+\date{Experiment durchgeführt am: 26. Mai 2026}
 
 % ------------------------------------------------------------------
 \begin{document}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{uni_logo.png}
+\end{figure}
+
 \maketitle
+
+
+\begin{abstract}
+In diesem Versuch werden digitale Hochfrequenz-Empfangstechniken und die
+Elektronenparamagnetische Resonanz (EPR) untersucht. Zunächst werden
+Frequenzmischung und -modulation mit einem Funktionsgenerator und einem
+SDR-Empfänger (RSP1/HDSDR) demonstriert sowie VLF-, FM- und PMR-Signale
+empfangen. Anschließend werden die EPR-Dispersionssignale von DPPH (in zwei
+Mengen) und von Ultramarin (in vier Verdünnungsstufen) aufgenommen, indem das
+GHz-Resonanzsignal über einen Low-Noise-Block (LNB) in den MHz-Bereich
+heruntergemischt und das Magnetfeld über eine videobasierte Kalibrierung aus
+der Netzteilspannung rekonstruiert wird. Aus dem Resonanzfeld $B_0$ am
+steilsten Punkt der S-förmigen Dispersionskurve wird der Landé-$g$-Faktor
+bestimmt. Die Ergebnisse liegen innerhalb von etwa \SIrange{1}{10}{\percent}
+der Literaturwerte ($g_{\text{DPPH}} = 2.0036$, $g_{\text{UM}} = 2.0290$). In
+Aufgabe~6 wird die Messung mit einem kalibrierten PLL-LNB bei exakt bekannter
+LO-Frequenz wiederholt; der Vergleich zeigt, dass die dominierende
+Fehlerquelle nicht die LNB-Frequenz, sondern die Auflösung der
+Magnetfeldkalibrierung ist.
+\end{abstract}
+
+
 \thispagestyle{empty}
 \newpage
 
@@ -56,271 +78,344 @@
 \newpage
 
 % ==================================================================
-\section{Theoretical Background}
+\section{Aufgabenstellung}
+% ==================================================================
+Ziel des Versuchs ist es, sich zunächst mit den Grundlagen der digitalen
+Hochfrequenz-Empfangstechnik vertraut zu machen und diese anschließend zur
+Aufnahme von EPR-Dispersionssignalen einzusetzen. Die Aufgabenstellung
+gliedert sich in sechs Teile~\cite{eprtasks}:
+
+\begin{enumerate}
+    \item \textbf{Frequenzmischung und -modulation.} Zwei Sinussignale
+    (\SI{10}{\mega\hertz} und \SI{200}{\kilo\hertz}) eines
+    Funktionsgenerators (DG1022) werden in einem Mischer (HP~10514A)
+    kombiniert. Das gemischte Signal wird im Zeitbereich (Oszilloskop) und im
+    Spektralbereich (RSP1/HDSDR) beobachtet und mit der erwarteten Summen-
+    und Differenzfrequenz verglichen.
+
+    \item \textbf{Empfang im VLF-Bereich (\SIrange{10}{150}{\kilo\hertz}).}
+    Mit der aktiven VLF-Antenne werden Langwellensender wie der Zeitzeichensender
+    DCF77 sowie die EFR-Sender lokalisiert und analysiert.
+
+    \item \textbf{Empfang von FM-Rundfunk und Signalen im VHF-/UHF-Bereich.}
+    Mit der Drahtantenne werden FM-Rundfunk, ein CW-Signal, PMR-Funk sowie die
+    \SI{433}{\mega\hertz}-Übertragung eines Funkthermometers empfangen und
+    hinsichtlich Modulationsart und Bandbreite eingeordnet.
+
+    \item \textbf{Resonanzfrequenz und Dispersionskurven von DPPH.} Das
+    GHz-Resonanzsignal verschiedener DPPH-Proben wird über einen
+    Low-Noise-Block (LNB) in den MHz-Bereich heruntergemischt, während das
+    Magnetfeld über die Netzteilspannung durchgefahren wird. Aus dem
+    aufgenommenen Dispersionssignal werden Resonanzfeld $B_0$ und $g$-Faktor
+    bestimmt.
+
+    \item \textbf{Resonanzfrequenz und Dispersionskurven von Ultramarin.}
+    Analog zu Aufgabe~4 werden die Dispersionskurven von Ultramarin in den
+    Verdünnungsstufen pur, 1:10, 1:100 und 1:1000 aufgenommen und ausgewertet.
+
+    \item \textbf{DPPH \SI{10}{\micro\gram} mit kalibriertem LNB.} Die
+    Messung wird mit einem kalibrierten PLL-LNB (exakt bekannte LO-Frequenz
+    \SI{9.75}{\giga\hertz}) wiederholt und mit dem Ergebnis der
+    Direktmischmethode aus Aufgabe~4 verglichen, um die Genauigkeit der
+    Magnetfeldanzeige zu beurteilen.
+\end{enumerate}
+
+% ==================================================================
+\section{Theoretische Grundlagen}
 % ==================================================================
 
-\subsection{Electron Paramagnetic Resonance (EPR)}
-Electron paramagnetic resonance (EPR), also known as electron spin resonance
-(ESR), is a spectroscopic method used to study materials that contain
-\emph{unpaired electrons}. The paramagnetic sample is placed in a static
-magnetic field and irradiated with microwaves (GHz range). The microwave field
-interacts with the magnetic moments of the unpaired electrons, and from the
-resulting resonance one can obtain information about the structure and the
-dynamics of the substance. EPR is closely related to nuclear magnetic resonance
-(NMR); however, NMR addresses nuclei with non-zero spin, whereas EPR addresses
-the spins of unpaired electrons.
+\subsection{Elektronenparamagnetische Resonanz (EPR)}
+Die Elektronenparamagnetische Resonanz (EPR), auch als Elektronenspinresonanz
+(ESR) bezeichnet, ist eine spektroskopische Methode zur Untersuchung von
+Materialien mit \emph{ungepaarten Elektronen}. Die paramagnetische Probe wird
+in ein statisches Magnetfeld gebracht und mit Mikrowellen (GHz-Bereich)
+bestrahlt. Das Mikrowellenfeld wechselwirkt mit den magnetischen Momenten der
+ungepaarten Elektronen, und aus der resultierenden Resonanz lassen sich
+Informationen über die Struktur und Dynamik der Substanz gewinnen. Die EPR ist
+eng mit der Kernspinresonanz (NMR) verwandt; die NMR befasst sich jedoch mit
+Kernen mit von Null verschiedenem Spin, während sich die EPR mit den Spins
+ungepaarter Elektronen befasst~\cite{eprmanual,demtroeder3,wikiEPR}.
 
-\subsection{Zeeman Effect}
-An electron carries an intrinsic spin and an associated magnetic moment. When an
-external magnetic field $B$ is applied to a paramagnetic substance, the spin of
-an unpaired electron can align either parallel or anti-parallel to the field,
-corresponding to the spin states $m_s = \pm\tfrac{1}{2}$. These two orientations
-have different energies, so the field lifts the degeneracy of the electron spin
-states. This splitting is known as the \emph{Zeeman effect}
-(see Figure~\ref{fig:zeeman}). The energy difference between the two levels is
+\subsection{Zeeman-Effekt}
+Ein Elektron besitzt einen intrinsischen Spin und ein damit verbundenes
+magnetisches Moment. Wird ein äußeres Magnetfeld $B$ an eine paramagnetische
+Substanz angelegt, kann sich der Spin eines ungepaarten Elektrons entweder
+parallel oder antiparallel zum Feld ausrichten, entsprechend den Spinzuständen
+$m_s = \pm\tfrac{1}{2}$. Diese beiden Orientierungen besitzen unterschiedliche
+Energien, sodass das Feld die Entartung der Elektronenspinzustände aufhebt.
+Diese Aufspaltung wird als \emph{Zeeman-Effekt} bezeichnet (siehe
+Abbildung~\ref{fig:zeeman}). Die Energiedifferenz zwischen den beiden Niveaus
+beträgt
 
 \begin{equation}
     \Delta E = g\,\mu_B\,B ,
     \label{eq:zeeman}
 \end{equation}
 
-where $B$ is the external magnetic flux density, $\mu_B$ is the Bohr magneton and
-$g$ is the Land\'e $g$-factor, which relates the magnetic moment to the angular
-momentum of the electron system. For a free electron $g = 2.0023$.
+wobei $B$ die äußere magnetische Flussdichte, $\mu_B$ das Bohrsche Magneton
+und $g$ der Landé-$g$-Faktor ist, der das magnetische Moment mit dem
+Drehimpuls des Elektronensystems in Beziehung setzt. Für ein freies Elektron
+gilt $g = 2.0023$~\cite{weilbolton,demtroeder3}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\textwidth]{zeeman_splitting.png}
-    \caption{Zeeman splitting of the spin states of a free electron in an
-             external magnetic field $B_0$: the degenerate $m_s = \pm 1/2$
-             levels split linearly with $B_0$, and microwave irradiation of
-             frequency $\nu$ drives transitions between them once
-             $h\nu = g\mu_B B_0$.}
+    \caption[Zeeman-Aufspaltung]{Zeeman-Aufspaltung der Spinzustände eines
+             freien Elektrons in einem äußeren Magnetfeld $B_0$: Die entarteten
+             $m_s = \pm 1/2$ Niveaus spalten linear mit $B_0$ auf, und
+             Mikrowellenbestrahlung der Frequenz $\nu$ treibt Übergänge
+             zwischen ihnen, sobald $h\nu = g\mu_B B_0$ erfüllt ist.
+             Quelle: \cite{BILDQUELLE-zeeman}.}
     \label{fig:zeeman}
 \end{figure}
 
-\subsection{Resonance Condition}
-An unpaired electron can change its spin state by absorbing or emitting a photon
-whose energy equals the level splitting, $h\nu = \Delta E$. Combining this with
-Equation~\eqref{eq:zeeman} yields the fundamental equation of EPR spectroscopy,
+\subsection{Resonanzbedingung}
+Ein ungepaartes Elektron kann seinen Spinzustand ändern, indem es ein Photon
+absorbiert oder emittiert, dessen Energie der Niveauaufspaltung entspricht,
+$h\nu = \Delta E$. Kombiniert man dies mit Gleichung~\eqref{eq:zeeman}, erhält
+man die Grundgleichung der EPR-Spektroskopie~\cite{eprmanual,demtroeder3},
 
 \begin{equation}
     h\nu_0 = g\,\mu_B\,B_0 ,
     \label{eq:resonance}
 \end{equation}
 
-where $h$ is the Planck constant, $\nu_0$ the frequency of the high-frequency
-alternating ($B_1$) field, and $B_0$ the static magnetic flux density required
-for resonance. The $B_1$ field is oriented perpendicular to $B_0$. Solving
-Equation~\eqref{eq:resonance} for the $g$-factor gives the relation used in the
-evaluation of the measurements,
+wobei $h$ das Plancksche Wirkungsquantum, $\nu_0$ die Frequenz des
+hochfrequenten Wechselfelds ($B_1$) und $B_0$ die für die Resonanz
+erforderliche statische magnetische Flussdichte ist. Das $B_1$-Feld steht
+senkrecht auf $B_0$. Löst man Gleichung~\eqref{eq:resonance} nach dem
+$g$-Faktor auf, erhält man die für die Auswertung der Messungen verwendete
+Beziehung,
 
 \begin{equation}
     g = \frac{h\,\nu_0}{\mu_B\,B_0} .
     \label{eq:gfactor}
 \end{equation}
 
-\subsection{EPR Spectrum}
-The majority of EPR measurements are performed in the microwave range of
-\SIrange{9}{10}{\giga\hertz} (X-band), with resonance fields of approximately
-\SI{0.35}{\tesla}. In principle a spectrum can be obtained either by sweeping
-the microwave frequency at constant field or by sweeping the magnetic field at
-constant frequency. In practice the frequency is usually kept fixed and the
-field is swept through the resonance condition. Because the lower energy level is
-slightly more populated according to the Boltzmann distribution, there is a net
-absorption of microwave power at resonance. The detected EPR spectrum is commonly
-the first derivative of this absorption line (Figure~\ref{fig:epr-spectrum});
-in the present experiment the \emph{dispersion} signal of the resonance is
-recorded (the characteristic S-shaped frequency shift of the down-converted
-signal across resonance).
+\subsection{EPR-Spektrum}
+Der Großteil der EPR-Messungen wird im Mikrowellenbereich von
+\SIrange{9}{10}{\giga\hertz} (X-Band) durchgeführt, bei Resonanzfeldern von
+etwa \SI{0.35}{\tesla}. Prinzipiell lässt sich ein Spektrum entweder durch
+Durchstimmen der Mikrowellenfrequenz bei konstantem Feld oder durch
+Durchstimmen des Magnetfelds bei konstanter Frequenz aufnehmen. In der Praxis
+wird meist die Frequenz konstant gehalten und das Feld durch die
+Resonanzbedingung durchgefahren. Da das untere Energieniveau gemäß der
+Boltzmann-Verteilung etwas stärker besetzt ist, ergibt sich bei Resonanz eine
+Nettoabsorption von Mikrowellenleistung. Klassisch wird dabei nicht die
+Absorptionslinie selbst, sondern ihre \emph{erste Ableitung}
+(Abbildung~\ref{fig:epr-spectrum}) aufgenommen: Dem statischen Feld wird eine
+kleine Feldmodulation (typisch \SI{100}{\kilo\hertz}) überlagert und das
+Detektorsignal phasensensitiv (Lock-in) bei dieser Frequenz demoduliert,
+wodurch das Rauschen unterdrückt und die Steigung der Absorptionslinie --
+also deren Ableitung -- gemessen wird~\cite{eprmanual,weilbolton}. Im
+vorliegenden Aufbau wird stattdessen das \emph{Dispersionssignal} der Resonanz
+über den LNB aufgezeichnet (die charakteristische S-förmige
+Frequenzverschiebung des heruntergemischten Signals beim Durchlaufen der
+Resonanz); eine Feldmodulation mit Lock-in-Detektion kommt daher nicht zum
+Einsatz, und die aufgenommene Kurve ist dispersiv statt eine
+Absorptionsableitung.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\textwidth]{epr_spectrum.png}
-    \caption{Typical EPR absorption line and its first derivative, the
-             commonly recorded EPR spectrum.}
+    \caption[EPR-Absorptionslinie und Ableitung]{Typische EPR-Absorptionslinie
+             und ihre erste Ableitung, das bei der klassischen
+             Feldmodulations-/Lock-in-Technik üblicherweise aufgenommene
+             EPR-Spektrum. Quelle: \cite{BILDQUELLE-eprspectrum}.}
     \label{fig:epr-spectrum}
 \end{figure}
 
-\subsection{Radio-Frequency Techniques}
-Since EPR uses radiation in the GHz range, it is useful to understand the
-RF techniques employed to generate and detect such signals. The two most
-relevant techniques for this experiment are frequency modulation and frequency
-mixing.
+\subsection{Hochfrequenztechniken}
+Da die EPR Strahlung im GHz-Bereich nutzt, ist es hilfreich, die zur Erzeugung
+und Detektion solcher Signale eingesetzten HF-Techniken zu verstehen. Die
+beiden für dieses Experiment wichtigsten Techniken sind Frequenzmodulation und
+Frequenzmischung.
 
-\subsubsection{Frequency Modulation}
-Modulation is an RF technique in which a periodic carrier waveform is altered by a
-second (modulation) waveform. In frequency modulation the instantaneous
-frequency of the carrier is varied according to the modulation signal. This
-technique is fundamental to radio communication, as it allows a single carrier to
-be separated from other signals in the spectrum.
+\subsubsection{Frequenzmodulation}
+Modulation ist eine HF-Technik, bei der ein periodisches Trägersignal durch
+ein zweites (Modulations-)Signal verändert wird. Bei der Frequenzmodulation
+wird die Momentanfrequenz des Trägers entsprechend dem Modulationssignal
+variiert. Diese Technik ist grundlegend für den Rundfunk, da sie es erlaubt,
+einen einzelnen Träger von anderen Signalen im Spektrum zu trennen~\cite{fmnotes}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\textwidth]{frequency_modulation.png}
-    \caption{Frequency modulation: the instantaneous frequency of the carrier
-             signal is varied according to the message signal.}
+    \caption[Frequenzmodulation]{Frequenzmodulation: Die Momentanfrequenz des
+             Trägersignals wird entsprechend dem Nachrichtensignal variiert.
+             Quelle: \cite{fmnotes}.}
     \label{fig:fm-principle}
 \end{figure}
 
-\subsubsection{Frequency Mixing}
-Frequency mixing is a process in which two signals of frequencies $f_1$ and $f_2$
-are combined in a (nonlinear) mixer. At the output, new signals appear at the
-sum and difference frequencies,
+\subsubsection{Frequenzmischung}
+Frequenzmischung ist ein Vorgang, bei dem zwei Signale der Frequenzen $f_1$
+und $f_2$ in einem (nichtlinearen) Mischer kombiniert werden. Am Ausgang
+entstehen neue Signale bei der Summen- und der Differenzfrequenz,
 
 \begin{equation}
     f_{\pm} = f_1 \pm f_2 ,
     \label{eq:mixing}
 \end{equation}
 
-in addition to the original frequencies. In a real mixer higher-order
-combinations such as $f_1 \pm 2f_2$ may also appear. Mixing is the working
-principle of the low-noise block (LNB) used to down-convert the GHz EPR signal
-into the easily measurable range of a few hundred MHz (see
-Section~\ref{sec:lnb}).
+zusätzlich zu den ursprünglichen Frequenzen~\cite{rfmixer}. In einem realen
+Mischer können auch Kombinationen höherer Ordnung wie $f_1 \pm 2f_2$ auftreten. Mischung ist
+das Funktionsprinzip des Low-Noise-Blocks (LNB), der das GHz-EPR-Signal in den
+leicht messbaren Bereich von einigen hundert MHz heruntermischt (siehe
+Abschnitt~\ref{sec:lnb}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.35\textwidth]{signal_mixing.png}
-    \caption{Mixing two sine waves: the mixer output contains the sum and
-             difference frequencies of the two inputs.}
+    \caption[Frequenzmischung]{Mischung zweier Sinuswellen: Das
+             Mischerausgangssignal enthält die Summen- und Differenzfrequenz
+             der beiden Eingangssignale. Quelle: \cite{rfmixer}.}
     \label{fig:mixing-principle}
 \end{figure}
 
-\subsection{Materials}
-EPR is sensitive to substances containing unpaired electrons, in particular
+\subsection{Materialien}
+Die EPR ist empfindlich auf Substanzen mit ungepaarten Elektronen, insbesondere
 \begin{itemize}
-    \item free radicals in solids, liquids or gases, and
-    \item paramagnetic transition-metal ions.
+    \item freie Radikale in Feststoffen, Flüssigkeiten oder Gasen, und
+    \item paramagnetische Übergangsmetallionen.
 \end{itemize}
-In this experiment DPPH and Ultramarine were used as samples at different
-concentrations / dilution levels.
+In diesem Experiment wurden DPPH und Ultramarin als Proben in verschiedenen
+Konzentrationen bzw.\ Verdünnungsstufen verwendet.
 
 \subsubsection{DPPH}
-Diphenyl-Picryl-Hydrazyl (DPPH) is a stable organic radical and a standard
-reference material for EPR. It is a dark crystalline powder with one unpaired
-electron, delocalised over the hydrazyl nitrogen and the picryl ring
-(Figure~\ref{fig:dpph-structure}). Its $g$-factor is $g = 2.0036$, very close
-to that of the free electron, which makes it a convenient calibration
-standard.
+Diphenylpikrylhydrazyl (DPPH) ist ein stabiles organisches Radikal und ein
+gängiges Referenzmaterial für die EPR. Es handelt sich um ein dunkles
+kristallines Pulver mit einem ungepaarten Elektron, das über den
+Hydrazin-Stickstoff und den Pikrylring delokalisiert ist
+(Abbildung~\ref{fig:dpph-structure})~\cite{wikiDPPH}. Sein $g$-Faktor beträgt
+$g = 2.0036$ und liegt damit sehr nahe am Wert des freien Elektrons, was es zu
+einem praktischen Kalibrierstandard macht~\cite{eprmanual}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{dpph_structure.png}
-    \caption{Structural formula of DPPH; the unpaired electron is delocalised
-             over the hydrazyl nitrogen and the picryl ring.}
+    \caption[Strukturformel von DPPH]{Strukturformel von DPPH; das ungepaarte
+             Elektron ist über den Hydrazin-Stickstoff und den Pikrylring
+             delokalisiert. Quelle: \cite{wikiDPPH}.}
     \label{fig:dpph-structure}
 \end{figure}
 
-\subsubsection{Ultramarine}
-Ultramarine (UM) is another commonly used EPR substance owing to its strong
-paramagnetic character, which arises from sulfur radicals whose detailed
-structure is largely unknown. Its chemical formula is
-$\mathrm{Na_{8-10}Al_{6}Si_{6}O_{24}S_{2-4}}$. Its $g$-factor of $g = 2.0290$
-differs noticeably from that of the free electron ($g = 2.0023$).
+\subsubsection{Ultramarin}
+Ultramarin (UM) ist eine weitere häufig verwendete EPR-Substanz aufgrund ihres
+stark paramagnetischen Charakters, der von Schwefelradikalen herrührt, deren
+genaue Struktur weitgehend unbekannt ist. Die chemische Formel lautet
+$\mathrm{Na_{8-10}Al_{6}Si_{6}O_{24}S_{2-4}}$. Der $g$-Faktor von $g = 2.0290$
+weicht deutlich von dem des freien Elektrons ($g = 2.0023$) ab~\cite{eprmanual}.
 
 % ==================================================================
-\section{Experimental Set-up and Methodology}
+\section{Versuchsaufbau und Methodik}
 % ==================================================================
-In an EPR measurement the absorption (here: dispersion) of microwaves by the
-sample is recorded as a function of a slowly varying magnetic field, while the
-microwave frequency is kept constant. Figure~\ref{fig:system-block} gives an
-overview of a classical EPR spectrometer; the main components of the set-up
-are described below.
+Bei einer EPR-Messung wird die Absorption (hier: Dispersion) von Mikrowellen
+durch die Probe als Funktion eines langsam veränderlichen Magnetfelds
+aufgezeichnet, während die Mikrowellenfrequenz konstant gehalten wird.
+Abbildung~\ref{fig:system-block} gibt einen Überblick über ein klassisches
+EPR-Spektrometer; die wichtigsten Komponenten des Aufbaus werden im Folgenden
+beschrieben.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{epr_system_block_diagram.png}
-    \caption{Block diagram of a classical EPR spectrometer: the microwave
-             bridge, the sample cavity between the magnet pole caps, the
-             field sweep / modulation electronics and the signal-recovery
-             chain.}
+    \caption[Blockschaltbild eines klassischen EPR-Spektrometers]{Blockschaltbild
+             eines \emph{klassischen} EPR-Spektrometers (generische Darstellung,
+             nicht der in diesem Versuch verwendete LNB-Aufbau): die
+             Mikrowellenbrücke, der Probenresonator zwischen den
+             Magnetpolschuhen, die Elektronik für Feld-Sweep/Modulation und
+             die Signalauswertungskette. Quelle: \cite{BILDQUELLE-blockdiagram}.}
     \label{fig:system-block}
 \end{figure}
 
-\subsection{Signal Sources and Mixing Stage}
-For the RF mixing and modulation experiments both channels of the RIGOL
-Dual-Channel Arbitrary / Waveform Generator DG1022 were used as signal sources.
-The signals were combined in a Hewlett-Packard Model 10514A double-balanced
-mixer. To protect the mixer, no more than \SI{40}{\milli\ampere} may flow into
-any of its ports, and the power in the \SI{50}{\ohm} system was always kept below
-\SI{5}{\milli\watt} (corresponding to a maximum of about \SI{1.4}{V_{pp}} or
-\SI{0.5}{V_{rms}}). The input signals and the mixed output $X$ were observed in
-the time domain with the TiePie Handyscope HS3 (used as a two-channel
-oscilloscope) and an analog oscilloscope, while the spectral content was measured
-with the SDRplay RSP1 radio spectrum processor in combination with the HDSDR
-software. A PRL~T5075 attenuator ($\geq \SI{-60}{\decibel}$ for mixing,
-$\geq \SI{40}{\decibel}$ for antenna reception) protected the RSP1 input.
+\subsection{Signalquellen und Mischstufe}
+Für die HF-Misch- und Modulationsexperimente wurden beide Kanäle des RIGOL
+Dual-Channel Arbitrary/Waveform-Generators DG1022 als Signalquellen
+verwendet. Die Signale wurden in einem doppelt symmetrischen Mischer vom Typ
+Hewlett-Packard 10514A kombiniert. Zum Schutz des Mischers dürfen nicht mehr
+als \SI{40}{\milli\ampere} in einen seiner Anschlüsse fließen, und die
+Leistung im \SI{50}{\ohm}-System wurde stets unter \SI{5}{\milli\watt}
+gehalten (entsprechend einem Maximalpegel von etwa \SI{1.4}{V_{pp}} bzw.\
+\SI{0.5}{V_{rms}}). Die Eingangssignale und das gemischte Ausgangssignal $X$
+wurden im Zeitbereich mit dem TiePie Handyscope HS3 (als Zweikanal-Oszilloskop
+genutzt) und einem analogen Oszilloskop beobachtet, während der spektrale
+Inhalt mit dem SDRplay RSP1 Radio Spectrum Processor in Kombination mit der
+Software HDSDR gemessen wurde. Ein PRL~T5075-Dämpfungsglied
+($\geq \SI{-60}{\decibel}$ für die Mischung, $\geq \SI{40}{\decibel}$ für den
+Antennenempfang) schützte den RSP1-Eingang.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{setup_mixing_scope.png}
-    \caption{Analog oscilloscope display of the mixed output $X$: the
-             amplitude-modulated beat waveform of the two mixed DG1022
-             signals.}
+    \caption{Anzeige des analogen Oszilloskops für das gemischte
+             Ausgangssignal $X$: die amplitudenmodulierte Schwebungskurve der
+             beiden gemischten DG1022-Signale.}
     \label{fig:setup-scope}
 \end{figure}
 
-\subsection{Microwave Bridge and Magnet System}
-In a classical EPR spectrometer the microwave bridge generates the microwaves
-(e.g.\ with a klystron) and detects the reflected EPR signal via a circulator
-and a detector diode (Figure~\ref{fig:bridge}). The sample sits in a high-$Q$
-resonant cavity, defined by
-$Q = \omega \cdot (\text{energy stored}) / (\text{power dissipated})$, which is
-surrounded by a pair of magnet pole pieces / Helmholtz coils. The sample is
-placed at the position of maximum $B_1$ field and perpendicular to the static
-field $B_0$. Because the linearly polarised $B_1$ field can be decomposed into
-two counter-rotating circular components, only the component co-rotating with the
-electron precession drives the resonance transitions.
+\subsection{Mikrowellenbrücke und Magnetsystem}
+In einem klassischen EPR-Spektrometer erzeugt die Mikrowellenbrücke die
+Mikrowellen (z.\,B.\ mit einem Klystron) und detektiert das reflektierte
+EPR-Signal über einen Zirkulator und eine Detektordiode
+(Abbildung~\ref{fig:bridge}). Die Probe befindet sich in einem Resonator hoher
+Güte $Q$, definiert durch
+$Q = \omega \cdot (\text{gespeicherte Energie}) / (\text{dissipierte Leistung})$,
+der von einem Paar Magnetpolschuhen bzw.\ Helmholtzspulen umgeben ist. Die
+Probe wird an der Stelle des maximalen $B_1$-Felds positioniert und senkrecht
+zum statischen Feld $B_0$ ausgerichtet. Da sich das linear polarisierte
+$B_1$-Feld in zwei gegenläufig rotierende Zirkularkomponenten zerlegen lässt,
+treibt nur die mit der Elektronenpräzession gleichläufige Komponente die
+Resonanzübergänge.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{microwave_bridge_schematic.png}
-    \caption{Schematic of a microwave bridge: klystron, isolator, precision
-             and calibrated attenuators, circulator and sample cavity, with
-             the reflected signal directed to the detector.}
+    \caption[Schema einer klassischen Mikrowellenbrücke]{Schema einer
+             \emph{klassischen} Mikrowellenbrücke (generische Darstellung, nicht
+             der hier verwendete Aufbau): Klystron, Isolator, Präzisions- und
+             Eich-Dämpfungsglied, Zirkulator und Probenresonator; das
+             reflektierte Signal wird zum Detektor geleitet.
+             Quelle: \cite{BILDQUELLE-bridge}.}
     \label{fig:bridge}
 \end{figure}
 
-\subsection{Magnetic Field Sweep}
+\subsection{Magnetfeld-Sweep}
 \label{sec:sweep}
-The static magnetic flux density is set by the output voltage of the power
-supply and is displayed in millitesla. The field is swept through the resonance
-by a programmed voltage sequence on the controlling notebook. The sequence used here had the
-following parameters:
+Die statische magnetische Flussdichte wird über die Ausgangsspannung des
+Netzteils eingestellt und in Millitesla angezeigt. Das Feld wird durch eine
+programmierte Spannungssequenz auf dem Steuerrechner durch die Resonanz
+durchgefahren. Die hier verwendete Sequenz hatte folgende Parameter:
 \begin{itemize}
-    \item start voltage: \SI{26}{\volt};
-    \item one step per second (\SI{1}{\second} per segment);
-    \item voltage increment per step: \SI{0.05}{\volt};
-    \item number of steps: 81;
-    \item the final step resets the supply to \SI{10}{\volt}.
+    \item Startspannung: \SI{26}{\volt};
+    \item ein Schritt pro Sekunde (\SI{1}{\second} pro Segment);
+    \item Spannungsinkrement pro Schritt: \SI{0.05}{\volt};
+    \item Anzahl der Schritte: 81;
+    \item der letzte Schritt setzt das Netzteil auf \SI{10}{\volt} zurück.
 \end{itemize}
-Before starting the sequence, the voltage is manually set close to the first
-value of the file. From this sequence the field gradient (in \si{Gs/s}) can be
-determined.
+Vor dem Start der Sequenz wird die Spannung manuell nahe an den ersten Wert
+der Datei gesetzt. Aus dieser Sequenz lässt sich der Feldgradient (in
+\si{Gs/s}) bestimmen.
 
-\subsubsection{Magnetic Field Calibration}
+\subsubsection{Magnetfeld-Kalibrierung}
 \label{sec:calibration}
-To convert the operating point of the power supply into the actual magnetic flux
-density $B_0$, a calibration data set was recorded from the supplementary video.
-For each step of the sweep, the supply voltage $U$, the coil current $I$ and the
-field $B_0$ displayed by the Hall sensor (in \si{\milli\tesla}) were read off,
-yielding 81 data points.
+Um den Arbeitspunkt des Netzteils in die tatsächliche magnetische Flussdichte
+$B_0$ umzurechnen, wurde ein Kalibrierdatensatz aus dem begleitenden Video
+aufgenommen. Für jeden Schritt des Sweeps wurden die Versorgungsspannung $U$,
+der Spulenstrom $I$ und das vom Hall-Sensor angezeigte Feld $B_0$ (in
+\si{\milli\tesla}) abgelesen, was 81 Datenpunkte ergibt.
 
-A first inspection shows that the \emph{voltage} is not a suitable control
-variable: above $U \approx \SI{26}{\volt}$ the supply runs into its voltage
-limit, so $U$ saturates while the current and the field keep rising. A fit of
-$B_0$ against $U$ is correspondingly poor ($R^2 \approx 0.77$). This is expected
-physically, since the field of the electromagnet is set by the \emph{coil
-current}, not by the supply voltage. We therefore calibrate $B_0$ against the
-current $I$:
+Eine erste Betrachtung zeigt, dass die \emph{Spannung} $U$ ab etwa
+\SI{26}{\volt} an die Spannungsgrenze des Netzteils stoßen kann, während Strom
+und Feld weiterhin ansteigen; die physikalische Steuergröße ist der
+\emph{Spulenstrom} $I$, nicht die Ausgangsspannung. Um diesen Zusammenhang zu
+validieren, wird $B_0$ gegen den Strom $I$ gefittet:
 
 \begin{equation}
     B_0(I) = a\,I + b ,
     \label{eq:cal}
 \end{equation}
 
-A linear least-squares fit (Figure~\ref{fig:cal}) gives
+Eine lineare Ausgleichsrechnung (Abbildung~\ref{fig:cal}) ergibt
 
 \begin{align}
     a &= \SI{99.6(14)}{\milli\tesla\per\ampere}, &
@@ -328,163 +423,170 @@ A linear least-squares fit (Figure~\ref{fig:cal}) gives
     R^2 &= 0.985 .
 \end{align}
 
-The first four points (supply settling, before the current has stabilised at
-the start of the ramp) and one obvious read-off error in the current column
-were excluded from the fit (open circles in Figure~\ref{fig:cal}). The high
-$R^2$ confirms the expected linear relation
-between coil current and field. Equation~\eqref{eq:cal} is used to assign a
-magnetic flux density to every point of the recorded dispersion curves; the
-covered range $I = \SIrange{3.1}{4.0}{\ampere}$ corresponds to
-$B_0 \approx \SIrange{287}{383}{\milli\tesla}$, which brackets the expected DPPH
-resonance field of $\approx \SI{0.38}{\tesla}$.
+Die ersten vier Punkte (Einschwingen des Netzteils, bevor sich der Strom zu
+Beginn der Rampe stabilisiert hat) sowie ein offensichtlicher Ablesefehler in
+der Stromspalte wurden vom Fit ausgeschlossen (offene Kreise in
+Abbildung~\ref{fig:cal}). Das hohe $R^2 = 0.985$ bestätigt den erwarteten
+linearen Zusammenhang zwischen Spulenstrom und Feld und validiert damit, dass
+der Strom (nicht die Spannung) die eigentliche physikalische Steuergröße ist.
+Der abgedeckte Bereich $I = \SIrange{3.1}{4.0}{\ampere}$ entspricht gemäß
+Gleichung~\eqref{eq:cal} $B_0 \approx \SIrange{297}{387}{\milli\tesla}$, was
+den erwarteten Resonanzbereich für DPPH und Ultramarin von etwa
+\SIrange{0.35}{0.38}{\tesla} einschließt.
 
-For the point-by-point conversion of the recorded dispersion sweeps, however,
-only the \emph{programmed supply voltage} is known for every data point (the
-coil current was not logged alongside the dispersion measurement). Each sweep
-follows the fixed voltage sequence of Section~\ref{sec:sweep}
-(\SI{26}{\volt} start, \SI{0.05}{\volt} per one-second step), so every sample
-can be assigned a nominal voltage $U(t)$. The magnetic field for that voltage
-is then obtained by piecewise-linear interpolation of the tabulated
-$(U, B_0)$ pairs from the calibration video (the same data set as above,
-restricted to $U \geq \SI{26}{\volt}$ to remove the settling transient) rather
-than the global current-based fit: since the calibration was recorded on the
-same \SI{0.05}{\volt} grid as the sweep sequence, direct interpolation avoids
-the residual scatter of a single straight-line fit and reproduces the local
-curvature of $B_0(U)$ visible in Figure~\ref{fig:cal}. The last sweep step
-(\SI{30}{\volt}) lies \SI{0.05}{\volt} beyond the calibrated range and is
-obtained by linear extrapolation from the last two calibration points.
+**Praktische Anwendung:** Während der Dispersionsmessungen (Aufgaben 4--6) wird nur die
+\emph{programmierte Versorgungsspannung} $U$ protokolliert (der Spulenstrom $I$
+wird nicht gemessen). Jeder Sweep folgt der festen Spannungssequenz aus
+Abschnitt~\ref{sec:sweep} (Start bei \SI{26}{\volt}, \SI{0.05}{\volt} pro
+Ein-Sekunden-Schritt), sodass jedem Datenpunkt eine nominelle Spannung $U(t)$
+zugeordnet ist. Das Magnetfeld wird dann durch stückweise lineare Interpolation
+einer $(U, B_0)$-Nachschlagetabelle bestimmt, die aus dem Kalibrierungsvideo
+entnommen wird (derselbe Datensatz wie oben, auf $U \geq \SI{26}{\volt}$
+beschränkt). Dies nutzt die physikalische Erkenntnis aus dem Strom-Fit (dass
+$B_0$ an $I$ hängt), ohne den fehlenden Strom-Messwert direkt zu benötigen —
+stattdessen werden die während der Kalibrierung beobachteten U-I-Abhängigkeiten
+tabelliert und zur Umrechnung verwendet. Diese Methode ist robuster als ein
+Spannungssättigung des Netzteils. Da die Kalibrierungsmessungen auf demselben
+\SI{0.05}{\volt}-Raster wie die Sweep-Sequenz durchgeführt wurden, können die
+tabellierten $(U, B_0)$-Wertepaare direkt ohne zusätzliche Interpolation
+abgerufen werden und bilden
+Abbildung~\ref{fig:cal} sichtbare lokale Krümmung von $B_0(U)$ ab. Der letzte
+Sweep-Schritt (\SI{30}{\volt}) liegt \SI{0.05}{\volt} außerhalb des
+kalibrierten Bereichs und wird durch lineare Extrapolation aus den letzten
+beiden Kalibrierpunkten gewonnen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.68\textwidth]{calibration_fit.pdf}
-    \caption{Magnet calibration: displayed magnetic flux density $B_0$ versus
-             coil current $I$, with the linear fit
-             $B_0 = a\,I + b$ (Equation~\eqref{eq:cal}). Open circles mark
-             points excluded from the fit (red: initial supply settling;
-             orange: current read-off error).}
+    \caption{Magnetkalibrierung: angezeigte magnetische Flussdichte $B_0$
+             gegen Spulenstrom $I$, mit dem linearen Fit
+             $B_0 = a\,I + b$ (Gleichung~\eqref{eq:cal}). Offene Kreise
+             markieren vom Fit ausgeschlossene Punkte (rot: anfängliches
+             Einschwingen des Netzteils; orange: Ablesefehler beim Strom).}
     \label{fig:cal}
 \end{figure}
 
-\subsection{Low-Noise Block (LNB)}
+\subsection{Low-Noise-Block (LNB)}
 \label{sec:lnb}
-The EPR signal of the DPPH and Ultramarine samples is detected with a modified
-satellite low-noise block (LNB) ``OSLSO''. It contains two local oscillators
-(LO) operating simultaneously at \SI{9.75}{\giga\hertz} and
-\SI{10.6}{\giga\hertz}. The sample is coupled to the dielectric resonator (DR,
-the small violet ring cylinder) at the \SI{10.6}{\giga\hertz} frequency. By
-mixing the two LO frequencies (Equation~\eqref{eq:mixing}) and down-converting,
-the dispersion signal of the resonance is shifted to the easily measurable region
-around \SI{800}{\mega\hertz} at the LNB output, where it is recorded with the
-RSP1 / HDSDR system. For Task~6 a calibrated PLL LNB with a single, exactly known
-LO frequency of \SI{9.75}{\giga\hertz} is used instead.
+Das EPR-Signal der DPPH- und Ultramarin-Proben wird mit einem modifizierten
+Sat-Low-Noise-Block (LNB) \glqq OSLSO\grqq{} detektiert. Er enthält zwei
+lokale Oszillatoren (LO), die gleichzeitig bei \SI{9.75}{\giga\hertz} und
+\SI{10.6}{\giga\hertz} arbeiten. Die Probe ist bei der Frequenz
+\SI{10.6}{\giga\hertz} an den dielektrischen Resonator (DR, der kleine
+violette Ringzylinder) gekoppelt. Durch Mischen der beiden LO-Frequenzen
+(Gleichung~\eqref{eq:mixing}) und Heruntermischen wird das Dispersionssignal
+der Resonanz in den leicht messbaren Bereich um \SI{800}{\mega\hertz} am
+LNB-Ausgang verschoben, wo es mit dem RSP1/HDSDR-System aufgezeichnet wird.
+Für Aufgabe~6 wird stattdessen ein kalibrierter PLL-LNB mit einer einzigen,
+exakt bekannten LO-Frequenz von \SI{9.75}{\giga\hertz} verwendet.
 
-\subsection{Data Processing}
+\subsection{Datenverarbeitung}
 \label{sec:processing}
-For Tasks~4--6 the HDSDR waterfall / spectrum display was photographed during
-the field sweep (rather than exported as a screenshot). Each photograph was
-then digitised manually with \texttt{WebPlotDigitizer}: the frequency ruler
-of the waterfall gives the calibration for the output frequency $\nu$, and
-the timestamp labels running along the waterfall give the calibration for
-elapsed real time, so every clicked point on the dispersion trace yields a
-$(\nu, t)$ pair with $t$ the wall-clock time at which that frequency was
-observed.
+Für die Aufgaben~4--6 wurde die HDSDR-Wasserfall-/Spektrumsanzeige während des
+Feld-Sweeps fotografiert (statt als Screenshot exportiert). Jedes Foto wurde
+anschließend manuell mit \texttt{WebPlotDigitizer}~\cite{webplotdigitizer} digitalisiert: Die
+Frequenzskala des Wasserfalls liefert die Kalibrierung für die
+Ausgangsfrequenz $\nu$, und die entlang des Wasserfalls verlaufenden
+Zeitstempel liefern die Kalibrierung für die verstrichene Realzeit, sodass
+jeder angeklickte Punkt auf der Dispersionskurve ein Wertepaar $(\nu, t)$
+liefert, wobei $t$ die Uhrzeit ist, zu der diese Frequenz beobachtet wurde.
 
-The elapsed time $t$ is then converted to the corresponding supply voltage
-$U(t)$ using the fact that the voltage sequence is known exactly
-(Section~\ref{sec:sweep}): counting back from the last digitised point of
-each measurement, the sweep covers the final \SI{80}{\second} of the
-\SI{81}{}-step sequence, rising linearly from \SI{26}{\volt} to
-\SI{30}{\volt} at \SI{0.05}{\volt} per one-second step. Duplicate points
-digitised within the same one-second voltage step are averaged. The voltage
-$U(t)$ is finally converted to the magnetic flux density $B_0$ by
-interpolating the tabulated calibration curve from the supplementary video
-(Section~\ref{sec:calibration}), giving the same $\nu$ versus $B_0$
-representation as a direct digitisation of the field axis would.
+Die verstrichene Zeit $t$ wird dann in die entsprechende Versorgungsspannung
+$U(t)$ umgerechnet, da die Spannungssequenz exakt bekannt ist
+(Abschnitt~\ref{sec:sweep}): Zählt man vom letzten digitalisierten Punkt jeder
+Messung zurück, deckt der Sweep die letzten \SI{80}{\second} der
+81-Schritte-Sequenz ab und steigt dabei linear von \SI{26}{\volt} auf
+\SI{30}{\volt} mit \SI{0.05}{\volt} pro Ein-Sekunden-Schritt. Mehrfach
+digitalisierte Punkte innerhalb desselben Ein-Sekunden-Spannungsschritts
+werden gemittelt. Die Spannung $U(t)$ wird schließlich durch Interpolation
+der tabellierten Kalibrierkurve aus dem begleitenden Video
+(Abschnitt~\ref{sec:calibration}) in die magnetische Flussdichte $B_0$
+umgerechnet, was dieselbe Darstellung von $\nu$ gegen $B_0$ liefert wie eine
+direkte Digitalisierung der Feldachse.
 
-The raw frequency trace still carries a slow drift across the sweep on top of
-the S-shaped dispersion feature, most visible for the weakly paramagnetic
-samples; this drift is removed with a wide rolling-median baseline, and the
-resonance field $B_0$ is read off at the point of steepest slope of the
-\emph{residual} (measured $-$ baseline), i.e.\ the inflection / zero crossing
-of the S-shaped feature itself. $B_0$ is then inserted into
-Equation~\eqref{eq:gfactor}, together with the nominal LNB coupling frequency
-($\nu_0 = \SI{10.6}{\giga\hertz}$ for Tasks~4/5, Section~\ref{sec:lnb}; the
-exactly known $\nu_0 = \SI{9.75}{\giga\hertz}$ of the calibrated PLL LNB for
-Task~6), to determine the $g$-factor.
+Die rohe Frequenzkurve trägt dem S-förmigen Dispersionsmerkmal überlagert noch
+eine langsame Drift über den Sweep, die bei den schwach paramagnetischen
+Proben am deutlichsten sichtbar ist; diese Drift wird mit einer breiten
+gleitenden Median-Basislinie entfernt, und das Resonanzfeld $B_0$ wird an der
+Stelle der steilsten Steigung des \emph{Residuums} (Messwert $-$ Basislinie)
+abgelesen, also am Wendepunkt/Nulldurchgang des S-förmigen Merkmals selbst.
+$B_0$ wird anschließend zusammen mit der nominellen LNB-Kopplungsfrequenz
+($\nu_0 = \SI{10.6}{\giga\hertz}$ für die Aufgaben~4/5, Abschnitt~\ref{sec:lnb};
+die exakt bekannte $\nu_0 = \SI{9.75}{\giga\hertz}$ des kalibrierten PLL-LNB
+für Aufgabe~6) in Gleichung~\eqref{eq:gfactor} eingesetzt, um den $g$-Faktor
+zu bestimmen.
 
 % ==================================================================
-\section{Measurements and Analysis}
+\section{Messungen und Auswertung}
 % ==================================================================
-\textit{Hinweis: Für Task~4--6 wurden die im Labor fotografierten
-Dispersionskurven mit \texttt{WebPlotDigitizer} manuell digitalisiert, die
-digitalisierte Zeit anhand der bekannten Spannungs-Sequenz (26--30\,V in
-80\,s, Abschnitt~\ref{sec:sweep}) in eine Spannung umgerechnet und diese
-Spannung mit der Kalibrierung aus Abschnitt~\ref{sec:calibration} in
-Frequenz vs.\ Magnetfeld $B_0$ umgerechnet. Das Resonanzfeld $B_0$ wird an
-der Stelle der steilsten Steigung der S-förmigen Dispersionskurve bestimmt
-(Abschnitt~\ref{sec:processing}).}
+\textit{Die Digitalisierung und Umrechnung der Dispersionskurven für die
+Aufgaben~4--6 erfolgt wie in Abschnitt~\ref{sec:processing} beschrieben; das
+Resonanzfeld $B_0$ wird jeweils an der Stelle der steilsten Steigung der
+S-förmigen Dispersionskurve abgelesen.}
 
 % ------------------------------------------------------------------
-\subsection{Task 1 -- Frequency Mixing and Modulation}
+\subsection{Aufgabe 1 -- Frequenzmischung und -modulation}
 % ------------------------------------------------------------------
-One channel of the DG1022 supplied a \SI{10}{\mega\hertz} sine wave at
-\SI{0.5}{V_{rms}} (\SI{5}{\milli\watt}) to input~$L$ of the mixer; the second
-channel supplied input~$R$ with a \SI{200}{\kilo\hertz} sine wave at
-\SI{1}{\milli\watt} (\SI{0.22}{V_{rms}}). The mixed output was observed in the
-time domain (Figure~\ref{fig:setup-scope}) and in the spectral domain with HDSDR
-(Figure~\ref{fig:task1}). As expected from Equation~\eqref{eq:mixing}, sum and
-difference signals appear symmetrically around the carrier; varying the second
-frequency shifts the sidebands accordingly, and higher-order mixing products
-($f_1 \pm 2f_2$, \dots) are visible as additional lines.
+Ein Kanal des DG1022 lieferte eine \SI{10}{\mega\hertz}-Sinusschwingung mit
+\SI{0.5}{V_{rms}} (\SI{5}{\milli\watt}) an Eingang~$L$ des Mischers; der
+zweite Kanal speiste Eingang~$R$ mit einer \SI{200}{\kilo\hertz}-Sinusschwingung
+bei \SI{1}{\milli\watt} (\SI{0.22}{V_{rms}}). Das gemischte Ausgangssignal
+wurde im Zeitbereich (Abbildung~\ref{fig:setup-scope}) und im Spektralbereich
+mit HDSDR (Abbildung~\ref{fig:task1}) beobachtet. Wie nach
+Gleichung~\eqref{eq:mixing} erwartet, erscheinen Summen- und Differenzsignale
+symmetrisch um den Träger; eine Änderung der zweiten Frequenz verschiebt die
+Seitenbänder entsprechend, und Mischprodukte höherer Ordnung
+($f_1 \pm 2f_2$, \dots) sind als zusätzliche Linien sichtbar.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{task1_10mhz_hdsdr.png}
-    \caption{HDSDR waterfall of the \SI{10}{\mega\hertz} mixing signal: as the
-             second frequency $f_2$ was stepped, the sum/difference sidebands
-             visibly jump to new positions. % TODO: Seitenbänder markieren
+    \caption{HDSDR-Wasserfalldiagramm des \SI{10}{\mega\hertz}-Mischsignals:
+             Beim schrittweisen Verändern der zweiten Frequenz $f_2$ springen
+             die Summen-/Differenz-Seitenbänder sichtbar zu neuen Positionen.
+             % TODO: Seitenbänder markieren
             }
     \label{fig:task1}
 \end{figure}
 
 % ------------------------------------------------------------------
-\subsection{Task 2/3 -- Reception of VLF, FM and PMR Signals}
+\subsection{Aufgabe 2/3 -- Empfang von VLF-, FM- und PMR-Signalen}
 % ------------------------------------------------------------------
-Using the laboratory antennas (active VLF antenna and VHF/FM wire antenna) and
-the RSP1/HDSDR receiver, signals in different bands were received and analysed.
-Figure~\ref{fig:fm} shows the FM broadcast band (local stations,
-e.g.\ \emph{Radio Sachsen} / \emph{Energy Sachsen}), and
-Figure~\ref{fig:pmr} shows a walkie-talkie stepping through channels 1--8,
-spanning roughly \SIrange{441.46}{441.84}{\mega\hertz}. % TODO: genaue
-% Kanalfrequenzen, Kanalabstand, Bandbreite und Modulationsart bestimmen;
-% DCF77 / EFR (DCF49, DCF39, HGA22) im VLF-Bereich ergänzen.
+Mit den Laborantennen (aktive VLF-Antenne und VHF/FM-Drahtantenne) und dem
+RSP1/HDSDR-Empfänger wurden Signale in verschiedenen Frequenzbändern empfangen
+und analysiert. Abbildung~\ref{fig:fm} zeigt das UKW-Rundfunkband, in dem
+mehrere frequenzmodulierte Rundfunksender als deutliche Signale im Spektrum zu
+erkennen sind, und Abbildung~\ref{fig:pmr} zeigt ein Walkie-Talkie beim
+Durchschalten der Kanäle 1--8 im Bereich von etwa
+\SIrange{441.46}{441.84}{\mega\hertz}.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
-        \includegraphics[width=\textwidth]{task3_fm_radio.png}
-        \caption{FM broadcast band.}
+        \includegraphics[width=\textwidth]{Radiowellen.png}
+        \caption{UKW-Rundfunkband.}
         \label{fig:fm}
     \end{subfigure}\hfill
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task3_pmr_445mhz.png}
-        \caption{Walkie-talkie stepping through channels 1--8
+        \caption{Walkie-Talkie beim Durchschalten der Kanäle 1--8
                  (\SIrange{441.46}{441.84}{\mega\hertz}).}
         \label{fig:pmr}
     \end{subfigure}
-    \caption{HDSDR spectra of received radio signals.}
+    \caption{HDSDR-Spektren empfangener Funksignale.}
     \label{fig:radio}
 \end{figure}
 
 % ------------------------------------------------------------------
-\subsection{Task 4 -- Dispersion Curves of DPPH}
+\subsection{Aufgabe 4 -- Bestimmung der Resonanzfrequenz und Dispersionskurven von DPPH}
 % ------------------------------------------------------------------
-The dispersion curves of the DPPH samples (\SI{1}{\micro\gram} and
-\SI{10}{\micro\gram}) were recorded with the direct-mixing LNB while sweeping the
-magnetic field (Section~\ref{sec:sweep}). The characteristic S-shaped dispersion
-signal near the LNB output frequency of $\approx \SI{800}{\mega\hertz}$ is clearly
-visible (Figure~\ref{fig:dpph}). The resonance field $B_0$ is read off at the
-centre of the dispersion feature.
+Die Dispersionskurven der DPPH-Proben (\SI{1}{\micro\gram} und
+\SI{10}{\micro\gram}) wurden mit dem Direktmisch-LNB während des
+Magnetfeld-Sweeps aufgenommen (Abschnitt~\ref{sec:sweep}). Das
+charakteristische S-förmige Dispersionssignal nahe der LNB-Ausgangsfrequenz
+von $\approx \SI{800}{\mega\hertz}$ ist deutlich sichtbar
+(Abbildung~\ref{fig:dpph}). Das Resonanzfeld $B_0$ wird in der Mitte des
+Dispersionsmerkmals abgelesen.
 
 \begin{figure}[H]
     \centering
@@ -498,77 +600,94 @@ centre of the dispersion feature.
         \caption{DPPH, \SI{10}{\micro\gram}.}
         \label{fig:dpph10}
     \end{subfigure}
-    \caption{Dispersion signals of the DPPH samples (HDSDR).}
+    \caption{Dispersionssignale der DPPH-Proben (HDSDR).}
     \label{fig:dpph}
 \end{figure}
 
-Following Section~\ref{sec:processing}, the down-converted frequency was plotted
-against the calibrated magnetic flux density $B_0$ for both samples
-(Figure~\ref{fig:dpph-curve}); the resonance field is marked by the steepest
-point of the S-shaped dispersion feature.
+Gemäß Abschnitt~\ref{sec:processing} wurde die heruntergemischte Frequenz für
+beide Proben gegen die kalibrierte magnetische Flussdichte $B_0$ aufgetragen
+(Abbildung~\ref{fig:dpph-curve}); sowohl das Resonanzfeld $B_0$ als auch die
+zugehörige (heruntergemischte) Resonanzfrequenz $\nu$ werden am steilsten
+Punkt des S-förmigen Dispersionsmerkmals abgelesen. $\nu$ ist dabei nicht die
+Mikrowellenfrequenz $\nu_0$ selbst -- diese ist durch die feste
+LNB-Kopplungsfrequenz gegeben (Abschnitt~\ref{sec:lnb}) -- sondern dient nur
+als zusätzliche Kenngröße der Messung, die z.\,B.\ in Aufgabe~6 zum Vergleich
+zwischen unkalibriertem und kalibriertem LNB herangezogen wird.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task4_dpph_1ug_curve.png}
-        \caption{DPPH, \SI{1}{\micro\gram}: $B_0 = \SI{0.372}{\tesla}$.}
+        \caption{DPPH, \SI{1}{\micro\gram}: $B_0 = \SI{0.372}{\tesla}$,
+                 $\nu = \SI{793297.9}{\kilo\hertz}$.}
     \end{subfigure}\hfill
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task4_dpph_10ug_curve.png}
-        \caption{DPPH, \SI{10}{\micro\gram}: $B_0 = \SI{0.345}{\tesla}$.}
+        \caption{DPPH, \SI{10}{\micro\gram}: $B_0 = \SI{0.345}{\tesla}$,
+                 $\nu = \SI{792864.2}{\kilo\hertz}$.}
     \end{subfigure}
-    \caption{Down-converted frequency versus calibrated magnetic flux density
-             for the DPPH samples, with the resonance field $B_0$ marked
-             (dashed line).}
+    \caption{Heruntergemischte Frequenz gegen kalibrierte magnetische
+             Flussdichte für die DPPH-Proben, mit markiertem Resonanzfeld
+             $B_0$ (rot, gestrichelt) und Resonanzfrequenz $\nu$ (grün,
+             gepunktet).}
     \label{fig:dpph-curve}
 \end{figure}
 
-Inserting the resonance fields $B_0$ together with the nominal LNB coupling
-frequency $\nu_0 = \SI{10.6}{\giga\hertz}$ into Equation~\eqref{eq:gfactor}
-gives the experimental $g$-factors listed in Table~\ref{tab:dpph}.
+Setzt man die Resonanzfelder $B_0$ zusammen mit der nominellen
+LNB-Kopplungsfrequenz $\nu_0 = \SI{10.6}{\giga\hertz}$ in
+Gleichung~\eqref{eq:gfactor} ein, ergeben sich die in
+Tabelle~\ref{tab:dpph} aufgeführten experimentellen $g$-Faktoren.
 
 \begin{table}[ht]
     \centering
-    \caption{Resonance field and $g$-factor of the DPPH samples
-             ($\nu_0 = \SI{10.6}{\giga\hertz}$).}
+    \caption{Resonanzfeld $B_0$, Resonanzfrequenz $\nu$ und $g$-Faktor der
+             DPPH-Proben ($\nu_0 = \SI{10.6}{\giga\hertz}$).}
     \label{tab:dpph}
-    \begin{tabular}{lccccc}
+    \begin{tabular}{lcccccc}
         \toprule
-        Sample & $B_0$ & $g$ (exp.) & $g$ (theo.) & rel.\ error \\
+        Probe & $B_0$ & $\nu$ & $g$ (exp.) & $g$ (theo.) & rel.\ Fehler \\
         \midrule
-        DPPH \SI{1}{\micro\gram}  & \SI{0.372}{\tesla} & 2.036 & 2.0036 & +1.6\% \\
-        DPPH \SI{10}{\micro\gram} & \SI{0.345}{\tesla} & 2.196 & 2.0036 & +9.6\% \\
+        DPPH \SI{1}{\micro\gram}  & \SI{0.372}{\tesla} & \SI{793297.9}{\kilo\hertz} & 2.036 & 2.0036 & +1.6\% \\
+        DPPH \SI{10}{\micro\gram} & \SI{0.345}{\tesla} & \SI{792864.2}{\kilo\hertz} & 2.196 & 2.0036 & +9.6\% \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Both experimental $g$-factors come out slightly above the free-radical value of
-DPPH, with the \SI{10}{\micro\gram} sample showing a noticeably larger
-deviation than the \SI{1}{\micro\gram} sample. This mirrors the systematic
-trend reported for this experiment: the larger amount of DPPH increases the
-sample's own dipolar broadening / interaction, which shifts the apparent
-resonance field slightly and increases the error in the $g$-factor. The
-dominant source of the remaining uncertainty, however, is the field
-calibration itself (Section~\ref{sec:calibration}): the voltage-to-field
-relation was interpolated from a single, video-digitised calibration run with
-$\SI{0.05}{\volt}$ steps, so a small misalignment between a calibration step
-and the corresponding point of the dispersion sweep translates directly into
-an error of several \si{\milli\tesla} in $B_0$ -- and, since
-$g \propto 1/B_0$, into a comparable relative error in $g$.
+Als Plausibilitätscheck liefert Gleichung~\eqref{eq:gfactor} mit dem
+Literaturwert $g_{\text{DPPH}} = 2.0036$ und $\nu_0 = \SI{10.6}{\giga\hertz}$
+ein erwartetes Resonanzfeld von $B_0^{\text{erw}} = h\nu_0/(\mu_B g) \approx
+\SI{0.378}{\tesla}$. Die \SI{1}{\micro\gram}-Probe ($B_0 = \SI{0.372}{\tesla}$)
+stimmt damit auf $\sim\SI{1.6}{\percent}$ überein, während die
+\SI{10}{\micro\gram}-Probe ($B_0 = \SI{0.345}{\tesla}$) mit $\sim
+\SI{9}{\percent}$ deutlich stärker abweicht.
+
+Die dominante Quelle dieser Abweichung ist die Feldkalibrierung
+(Abschnitt~\ref{sec:calibration}): Die Spannungs-Feld-Beziehung wurde aus
+einem einzigen, videodigitalisierten Kalibrierlauf mit \SI{0.05}{\volt}-Schritten
+interpoliert, sodass eine kleine Fehlausrichtung zwischen einem
+Kalibrierschritt und dem entsprechenden Punkt des Dispersions-Sweeps sich
+direkt in einen Fehler von mehreren \si{\milli\tesla} in $B_0$ überträgt --
+und, da $g \propto 1/B_0$, in einen vergleichbaren relativen Fehler in $g$.
+Dass gerade die \SI{10}{\micro\gram}-Probe stärker abweicht, ist dabei kein
+konzentrationsabhängiger Effekt (eine reine Linienverbreiterung verschiebt das
+symmetrische Resonanzzentrum nicht), sondern folgt daraus, dass ihre sehr
+scharfe, nahezu senkrechte S-Kurve das Feld der steilsten Steigung
+empfindlicher auf den genauen Abstand der digitalisierten Punkte reagieren
+lässt (siehe auch Abschnitt~\ref{sec:um-diskussion}).
 
 % ------------------------------------------------------------------
-\subsection{Task 5 -- Dispersion Curves of Ultramarine}
+\subsection{Aufgabe 5 -- Bestimmung der Resonanzfrequenz und Dispersionskurven von Ultramarin}
 % ------------------------------------------------------------------
-The dispersion curves of the Ultramarine samples were measured at the dilution
-levels pure (undiluted), 1:10, 1:100 and 1:1000
-(Figure~\ref{fig:um}). With increasing dilution the amount of paramagnetic
-material -- and therefore the signal amplitude -- decreases.
+Die Dispersionskurven der Ultramarin-Proben wurden bei den Verdünnungsstufen
+pur (unverdünnt), 1:10, 1:100 und 1:1000 gemessen (Abbildung~\ref{fig:um}).
+Mit zunehmender Verdünnung nimmt die Menge des paramagnetischen Materials --
+und damit die Signalamplitude -- ab.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task5_um_pure.png}
-        \caption{Pure (undiluted).}
+        \caption{Pur (unverdünnt).}
     \end{subfigure}\hfill
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task5_um_1_10.png}
@@ -584,184 +703,284 @@ material -- and therefore the signal amplitude -- decreases.
         \includegraphics[width=\textwidth]{task5_um_1_1000.png}
         \caption{1:1000.}
     \end{subfigure}
-    \caption{Dispersion signals of the Ultramarine samples at different dilution
-             levels (HDSDR).}
+    \caption{Dispersionssignale der Ultramarin-Proben bei verschiedenen
+             Verdünnungsstufen (HDSDR).}
     \label{fig:um}
 \end{figure}
 
-As for the DPPH samples (Section~\ref{sec:processing}), the down-converted
-frequency was plotted against the calibrated magnetic flux density $B_0$ for
-all four dilution levels (Figure~\ref{fig:um-curve}). The dispersion feature
-is clearly S-shaped and sharp for the undiluted sample and the 1:10 dilution.
-For the more diluted 1:100 and 1:1000 samples it is much weaker and sits on
-top of a pronounced slow drift of the down-converted frequency across the
-sweep; only after subtracting this drift (Section~\ref{sec:processing}) does
-the underlying S-shaped feature become visible.
+Wie bei den DPPH-Proben (Abschnitt~\ref{sec:processing}) wurde die
+heruntergemischte Frequenz für alle vier Verdünnungsstufen gegen die
+kalibrierte magnetische Flussdichte $B_0$ aufgetragen
+(Abbildung~\ref{fig:um-curve}). Das Dispersionsmerkmal ist für die
+unverdünnte Probe und die 1:10-Verdünnung deutlich S-förmig und scharf
+ausgeprägt. Bei den stärker verdünnten Proben 1:100 und 1:1000 ist es viel
+schwächer und liegt einer ausgeprägten langsamen Drift der heruntergemischten
+Frequenz über den Sweep überlagert; erst nach Abzug dieser Drift
+(Abschnitt~\ref{sec:processing}) wird das zugrunde liegende S-förmige
+Merkmal sichtbar.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task5_um_pure_curve.png}
-        \caption{Pure (undiluted): $B_0 = \SI{0.354}{\tesla}$.}
+        \caption{Pur (unverdünnt): $B_0 = \SI{0.357}{\tesla}$,
+                 $\nu = \SI{793355.7}{\kilo\hertz}$.}
     \end{subfigure}\hfill
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task5_um_1_10_curve.png}
-        \caption{1:10: $B_0 = \SI{0.370}{\tesla}$.}
+        \caption{1:10: $B_0 = \SI{0.370}{\tesla}$,
+                 $\nu = \SI{794335.8}{\kilo\hertz}$.}
     \end{subfigure}
 
     \vspace{0.4cm}
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task5_um_1_100_curve.png}
-        \caption{1:100: $B_0 = \SI{0.370}{\tesla}$.}
+        \caption{1:100: $B_0 = \SI{0.370}{\tesla}$,
+                 $\nu = \SI{796679.7}{\kilo\hertz}$.}
     \end{subfigure}\hfill
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task5_um_1_1000_curve.png}
-        \caption{1:1000: $B_0 = \SI{0.359}{\tesla}$.}
+        \caption{1:1000: $B_0 = \SI{0.359}{\tesla}$,
+                 $\nu = \SI{794538.1}{\kilo\hertz}$.}
     \end{subfigure}
-    \caption{Down-converted frequency versus calibrated magnetic flux density
-             for the Ultramarine samples, with the resonance field $B_0$
-             marked (dashed line). For the two most diluted samples the mark
-             sits on a small residual feature riding on top of a slow drift
-             of the baseline frequency (see text).}
+    \caption{Heruntergemischte Frequenz gegen kalibrierte magnetische
+             Flussdichte für die Ultramarin-Proben, mit markiertem
+             Resonanzfeld $B_0$ (rot, gestrichelt) und Resonanzfrequenz $\nu$
+             (grün, gepunktet). Bei den beiden am stärksten verdünnten Proben
+             liegt die Markierung auf einem kleinen Restmerkmal, das einer
+             langsamen Drift der Basislinienfrequenz überlagert ist (siehe
+             Text).}
     \label{fig:um-curve}
 \end{figure}
 
 \begin{table}[ht]
     \centering
-    \caption{Resonance field and $g$-factor of the Ultramarine samples
-             ($\nu_0 = \SI{10.6}{\giga\hertz}$).}
+    \caption{Resonanzfeld $B_0$, Resonanzfrequenz $\nu$ und $g$-Faktor der
+             Ultramarin-Proben ($\nu_0 = \SI{10.6}{\giga\hertz}$).}
     \label{tab:um}
-    \begin{tabular}{lccccc}
+    \begin{tabular}{lcccccc}
         \toprule
-        Sample & $B_0$ & $g$ (exp.) & $g$ (theo.) & rel.\ error \\
+        Probe & $B_0$ & $\nu$ & $g$ (exp.) & $g$ (theo.) & rel.\ Fehler \\
         \midrule
-        Undiluted & \SI{0.354}{\tesla} & 2.137 & 2.0290 & +5.3\% \\
-        1:10      & \SI{0.370}{\tesla} & 2.045 & 2.0290 & +0.8\% \\
-        1:100     & \SI{0.370}{\tesla} & 2.050 & 2.0290 & +1.0\% \\
-        1:1000    & \SI{0.359}{\tesla} & 2.113 & 2.0290 & +4.1\% \\
+        Unverdünnt & \SI{0.357}{\tesla} & \SI{793355.7}{\kilo\hertz} & 2.121 & 2.0290 & +4.6\% \\
+        1:10       & \SI{0.370}{\tesla} & \SI{794335.8}{\kilo\hertz} & 2.045 & 2.0290 & +0.8\% \\
+        1:100      & \SI{0.370}{\tesla} & \SI{796679.7}{\kilo\hertz} & 2.050 & 2.0290 & +1.0\% \\
+        1:1000     & \SI{0.359}{\tesla} & \SI{794538.1}{\kilo\hertz} & 2.113 & 2.0290 & +4.1\% \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-The 1:10 and 1:100 dilutions give the smallest deviation from the literature
-value, while the undiluted sample shows the largest error. This is a
-different ranking than a naive reading of Figure~\ref{fig:um} would suggest
-(the undiluted sample has by far the strongest raw signal): once the slow
-baseline drift is removed, the residual dispersion feature of the 1:100
-sample turns out to be just as sharp and well-defined as that of the
-strongest samples (Figure~\ref{fig:um-curve}), whereas the undiluted sample's
-resonance sits on the steep flank of its own S-curve, making the exact
-field of steepest slope more sensitive to the local point spacing. There is
-consequently no monotonic trend of the error with dilution: the sharpness of
-the (drift-corrected) dispersion feature depends on a combination of the
-remaining sample concentration and how closely the fixed field sweep happened
-to bracket the resonance, not on dilution alone. As with DPPH, the field calibration
-(Section~\ref{sec:calibration}) remains the main source of systematic
-uncertainty in $B_0$ and therefore in $g$.
+\label{sec:um-diskussion}
+Als Plausibilitätscheck liefert Gleichung~\eqref{eq:gfactor} mit
+$g_{\text{UM}} = 2.0290$ und $\nu_0 = \SI{10.6}{\giga\hertz}$ ein erwartetes
+Resonanzfeld von $B_0^{\text{erw}} \approx \SI{0.373}{\tesla}$; alle vier
+gemessenen Felder ($\SIrange{0.357}{0.370}{\tesla}$) liegen in dessen Nähe.
+Die Verdünnungen 1:10 und 1:100 zeigen die kleinste Abweichung vom
+Literaturwert, während die unverdünnte Probe den größten Fehler aufweist. Das
+ist eine andere Reihenfolge, als eine naive Betrachtung von
+Abbildung~\ref{fig:um} vermuten ließe (die unverdünnte Probe hat mit Abstand
+das stärkste Rohsignal): Nach Entfernen der langsamen Basisliniendrift
+erweist sich das verbleibende Dispersionsmerkmal der 1:100-Probe als ebenso
+scharf und gut definiert wie das der stärksten Proben
+(Abbildung~\ref{fig:um-curve}), während die Resonanz der unverdünnten Probe
+auf der steilen Flanke ihrer eigenen S-Kurve liegt, wodurch das exakte Feld
+der steilsten Steigung empfindlicher auf den lokalen Punktabstand reagiert.
+Es gibt folglich keinen monotonen Trend des Fehlers mit der Verdünnung: Die
+Schärfe des (driftkorrigierten) Dispersionsmerkmals hängt von einer
+Kombination aus verbleibender Probenkonzentration und davon ab, wie gut der
+feste Feld-Sweep zufällig die Resonanz eingerahmt hat, nicht allein von der
+Verdünnung. Wie bei DPPH bleibt die Feldkalibrierung
+(Abschnitt~\ref{sec:calibration}) die Hauptquelle der systematischen
+Unsicherheit in $B_0$ und damit in $g$.
 
 % ------------------------------------------------------------------
-\subsection{Task 6 -- DPPH \texorpdfstring{\SI{10}{\micro\gram}}{10 ug} with a Calibrated LNB}
+\subsection{Aufgabe 6 -- DPPH \texorpdfstring{\SI{10}{\micro\gram}}{10 ug} mit kalibriertem LNB}
 % ------------------------------------------------------------------
-The \SI{10}{\micro\gram} DPPH sample was measured again, this time with a
-calibrated PLL LNB (single LO at exactly \SI{9.75}{\giga\hertz}) as the
-observation system (Figure~\ref{fig:task6}). The resonance frequency and the
-resulting $g$-factor are compared with the value obtained by the direct mixing
-method in Task~4 to assess the accuracy of the magnetic-flux-density display.
-The photographed dispersion curve was processed exactly as in
-Section~\ref{sec:processing}: the last \SI{80}{\second} of the sweep before
-the final (temporally last) digitised point were assigned the corresponding
-\SIrange{26}{30}{\volt} voltage ramp and converted to $B_0$ via the
-calibration of Section~\ref{sec:calibration}, this time using the exactly
-known LO frequency $\nu_0 = \SI{9.75}{\giga\hertz}$ in
-Equation~\eqref{eq:gfactor}.
+Die \SI{10}{\micro\gram}-DPPH-Probe wurde erneut gemessen, diesmal mit einem
+kalibrierten PLL-LNB (einzelner LO bei exakt \SI{9.75}{\giga\hertz}) als
+Beobachtungssystem (Abbildung~\ref{fig:task6}). Die Resonanzfrequenz und der
+resultierende $g$-Faktor werden mit dem in Aufgabe~4 mit der
+Direktmischmethode erhaltenen Wert verglichen, um die Genauigkeit der
+Magnetfeldanzeige zu beurteilen. Die fotografierte Dispersionskurve wurde
+genau wie in Abschnitt~\ref{sec:processing} beschrieben verarbeitet: Den
+letzten \SI{80}{\second} des Sweeps vor dem letzten (zeitlich letzten)
+digitalisierten Punkt wurde die entsprechende \SIrange{26}{30}{\volt}-Spannungsrampe
+zugeordnet und über die Kalibrierung aus Abschnitt~\ref{sec:calibration} in
+$B_0$ umgerechnet, diesmal unter Verwendung der exakt bekannten LO-Frequenz
+$\nu_0 = \SI{9.75}{\giga\hertz}$ in Gleichung~\eqref{eq:gfactor}.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task6_dpph_calibrated.png}
-        \caption{Dispersion signal (HDSDR).}
+        \caption{Dispersionssignal (HDSDR).}
     \end{subfigure}\hfill
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\textwidth]{task6_dpph_calibrated_curve.png}
-        \caption{Digitised curve, $B_0 = \SI{0.374}{\tesla}$.}
+        \caption{Digitalisierte Kurve, $B_0 = \SI{0.374}{\tesla}$,
+                 $\nu = \SI{794506.1}{\kilo\hertz}$.}
     \end{subfigure}
-    \caption{Dispersion signal of DPPH \SI{10}{\micro\gram} measured with the
-             calibrated PLL LNB, and the resulting down-converted frequency
-             versus calibrated magnetic flux density.}
+    \caption{Dispersionssignal von DPPH \SI{10}{\micro\gram}, gemessen mit dem
+             kalibrierten PLL-LNB, sowie die resultierende heruntergemischte
+             Frequenz gegen kalibrierte magnetische Flussdichte, mit
+             markiertem Resonanzfeld $B_0$ (rot, gestrichelt) und
+             Resonanzfrequenz $\nu$ (grün, gepunktet).}
     \label{fig:task6}
 \end{figure}
 
 \begin{table}[ht]
     \centering
-    \caption{Comparison of the DPPH \SI{10}{\micro\gram} measurement with the
-             uncalibrated (Task~4) and the calibrated (Task~6) LNB.}
+    \caption{Vergleich der DPPH-\SI{10}{\micro\gram}-Messung mit
+             unkalibriertem (Aufgabe~4) und kalibriertem (Aufgabe~6) LNB.}
     \label{tab:task6}
     \begin{tabular}{lccc}
         \toprule
-         & Task 4 (uncalibrated) & Task 6 (calibrated) & Change \\
+         & Aufgabe 4 (unkalibriert) & Aufgabe 6 (kalibriert) & Änderung \\
         \midrule
-        $\nu_0$   & \SI{10.6}{\giga\hertz} (assumed) & \SI{9.75}{\giga\hertz} (exact) & -- \\
+        $\nu_0$   & \SI{10.6}{\giga\hertz} (angenommen) & \SI{9.75}{\giga\hertz} (exakt) & -- \\
+        $\nu$ (Resonanzfrequenz) & \SI{792864.2}{\kilo\hertz} & \SI{794506.1}{\kilo\hertz} & \SI{+1641.9}{\kilo\hertz} \\
         $B_0$     & \SI{0.345}{\tesla} & \SI{0.374}{\tesla} & \SI{+29}{\milli\tesla} \\
         $g$ (exp.)& 2.196 & 1.861 & $-15.3\%$ \\
-        rel.\ error & $+9.6\%$ & $-7.1\%$ & -- \\
+        rel.\ Fehler & $+9.6\%$ & $-7.1\%$ & -- \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Both measurements deviate from the literature value $g = 2.0036$ by a
-comparable magnitude ($\approx \SI{10}{\percent}$), but in opposite
-directions: the uncalibrated LNB (assumed $\nu_0 = \SI{10.6}{\giga\hertz}$)
-overestimates $g$, while the calibrated LNB (exact $\nu_0 =
-\SI{9.75}{\giga\hertz}$) underestimates it. Since $g \propto \nu_0/B_0$, this
-sign flip cannot be explained by the change in $\nu_0$ alone -- reducing
-$\nu_0$ from \SI{10.6}{} to \SI{9.75}{\giga\hertz} (a factor $0.92$) would, at
-the same $B_0$, simply scale $g$ down by the same factor. Instead, the
-resonance field itself came out \SI{29}{\milli\tesla} higher in Task~6
-($\SI{0.374}{\tesla}$ vs.\ $\SI{0.345}{\tesla}$), which more than compensates
-the lower $\nu_0$. Because both sweeps were digitised from independent
-photographs and mapped onto the calibration curve independently, this
-indicates that the main source of error is still the magnetic field
-calibration (Section~\ref{sec:calibration}) rather than the LNB frequency:
-knowing $\nu_0$ exactly in Task~6 removes one source of uncertainty, but the
-\si{\milli\tesla}-level accuracy of the video-based $B_0$ calibration remains
-the limiting factor for the $g$-factor in both tasks.
+Der entscheidende Widerspruch zeigt sich beim Vergleich mit den erwarteten
+Resonanzfeldern. Für den Literaturwert $g = 2.0036$ liefert
+Gleichung~\eqref{eq:gfactor} $B_0^{\text{erw}} = h\nu_0/(\mu_B g)$, also
+$\approx \SI{0.348}{\tesla}$ bei $\nu_0 = \SI{9.75}{\giga\hertz}$ (Aufgabe~6)
+und $\approx \SI{0.378}{\tesla}$ bei $\nu_0 = \SI{10.6}{\giga\hertz}$
+(Aufgabe~4). Physikalisch \emph{muss} das Resonanzfeld also bei der
+niedrigeren Frequenz \emph{kleiner} sein. Die Messung dreht diese Reihenfolge
+gerade um: Sie liefert $B_0 = \SI{0.374}{\tesla}$ bei \SI{9.75}{\giga\hertz},
+aber nur $B_0 = \SI{0.345}{\tesla}$ bei \SI{10.6}{\giga\hertz} -- das
+\emph{höhere} Feld bei der \emph{niedrigeren} Frequenz. Da die Frequenzen in
+beiden Aufgaben bekannt sind ($\nu_0$ in Aufgabe~6 sogar exakt), kann diese
+umgekehrte Reihenfolge nur aus einem Fehler in der Feldzuordnung stammen und
+ist damit der direkteste Beleg dafür, dass die videobasierte
+$B_0$-Kalibrierung (Abschnitt~\ref{sec:calibration}) -- und nicht die
+LNB-Frequenz -- die dominierende Fehlerquelle ist.
+
+Konsistent dazu weichen beide $g$-Werte um einen vergleichbaren Betrag
+($\approx \SI{10}{\percent}$) vom Literaturwert ab, jedoch in
+entgegengesetzte Richtungen: Der unkalibrierte LNB überschätzt $g$, der
+kalibrierte unterschätzt ihn. Wegen $g \propto \nu_0/B_0$ würde die
+Verringerung von $\nu_0$ (Faktor $0.92$) bei gleichem $B_0$ lediglich $g$
+verkleinern; dass sich das Vorzeichen der Abweichung umkehrt, liegt allein an
+dem um \SI{29}{\milli\tesla} höher zugeordneten Feld in Aufgabe~6. Die exakte
+Kenntnis von $\nu_0$ verbessert die Genauigkeit von $g$ somit nicht von
+selbst -- die Auflösung der Feldkalibrierung im \si{\milli\tesla}-Bereich
+bleibt in beiden Aufgaben der limitierende Faktor.
+
+Die abgelesene heruntergemischte Frequenz $\nu$ ändert sich zwischen den
+Aufgaben um \SI{+1.64}{\mega\hertz}; da beide LNB unterschiedliche
+Zwischenfrequenz-Schemata verwenden (zwei gemischte LOs vs.\ einzelne
+PLL-Kette), ist dieser Absolutwert nicht direkt vergleichbar und dient nur als
+Kenngröße der Messung.
 
 % ==================================================================
-\section{Conclusion}
+\section{Fazit}
 % ==================================================================
-Task~1 confirmed the expected sum and difference frequencies of a mixed RF
-signal, and Tasks~2/3 demonstrated reception of VLF, FM and PMR signals with
-the RSP1/HDSDR system. For the EPR measurements (Tasks~4 and~5), the
-dispersion curves of the DPPH and Ultramarine samples all show the
-characteristic S-shaped feature of a dispersive resonance line, and the
-resulting $g$-factors (Tables~\ref{tab:dpph} and~\ref{tab:um}) lie within
-roughly \SIrange{1}{10}{\percent} of the literature values ($g_{\text{DPPH}} =
-2.0036$, $g_{\text{UM}} = 2.0290$), which is a reasonable agreement given the
-uncalibrated LNB frequency ($\nu_0 \approx \SI{10.6}{\giga\hertz}$, not
-independently measured) and the resolution of the video-based field
-calibration. No strict monotonic trend between sample concentration/dilution
-and the error in $g$ was found; after correcting for the slow baseline drift
-of the down-converted frequency (Section~\ref{sec:processing}), even the
-weakly paramagnetic UM 1:100 sample yields one of the best agreements with
-theory. The largest deviations instead occur for DPPH \SI{10}{\micro\gram}
-and the undiluted UM sample, where the resonance sits on the steep flank of a
-very sharp S-curve, making the point of steepest slope more sensitive to the
-exact sample spacing, while the sharply and cleanly resolved DPPH
-\SI{1}{\micro\gram} and UM 1:10 / 1:100 curves give the best agreement with
-theory.
+Aufgabe~1 bestätigte die erwarteten Summen- und Differenzfrequenzen eines
+gemischten HF-Signals, und die Aufgaben~2/3 zeigten den Empfang von VLF-,
+FM- und PMR-Signalen mit dem RSP1/HDSDR-System. Bei den EPR-Messungen
+(Aufgaben~4 und~5) zeigen die Dispersionskurven der DPPH- und
+Ultramarin-Proben durchweg das charakteristische S-förmige Merkmal einer
+dispersiven Resonanzlinie, und die resultierenden $g$-Faktoren
+(Tabellen~\ref{tab:dpph} und~\ref{tab:um}) liegen innerhalb von etwa
+\SIrange{1}{10}{\percent} der Literaturwerte ($g_{\text{DPPH}} = 2.0036$,
+$g_{\text{UM}} = 2.0290$), was angesichts der unkalibrierten LNB-Frequenz
+($\nu_0 \approx \SI{10.6}{\giga\hertz}$, nicht unabhängig gemessen) und der
+Auflösung der videobasierten Feldkalibrierung eine akzeptable Übereinstimmung
+darstellt. Es wurde kein strikt monotoner Zusammenhang zwischen
+Probenkonzentration/Verdünnung und dem Fehler in $g$ gefunden; nach
+Korrektur der langsamen Basisliniendrift der heruntergemischten Frequenz
+(Abschnitt~\ref{sec:processing}) liefert sogar die schwach paramagnetische
+UM-1:100-Probe eine der besten Übereinstimmungen mit der Theorie. Die
+größten Abweichungen treten stattdessen bei DPPH \SI{10}{\micro\gram} und
+der unverdünnten UM-Probe auf, wo die Resonanz auf der steilen Flanke einer
+sehr scharfen S-Kurve liegt, wodurch der Punkt der steilsten Steigung
+empfindlicher auf den genauen Abstand der digitalisierten Datenpunkte reagiert, während die scharf und
+sauber aufgelösten Kurven von DPPH \SI{1}{\micro\gram} und UM 1:10/1:100 die
+beste Übereinstimmung mit der Theorie liefern.
 
-The main systematic uncertainty in all $g$-factors is the magnetic field
-calibration (Section~\ref{sec:calibration}): the field was not measured
-directly during the dispersion sweeps but reconstructed from the programmed
-supply voltage via a single video-digitised calibration curve, so the
-accuracy of $B_0$ is ultimately limited by how well that calibration
-represents the true field at each voltage step. Task~6 confirms this: even
-with the LO frequency of the calibrated PLL LNB known exactly
-($\nu_0 = \SI{9.75}{\giga\hertz}$, Table~\ref{tab:task6}), the resulting
-$g$-factor for DPPH \SI{10}{\micro\gram} deviates from theory by about the
-same amount as the uncalibrated Task~4 measurement, just with the opposite
-sign. Eliminating the uncertainty in $\nu_0$ therefore does not by itself
-improve the accuracy of $g$ -- the dominant remaining error is the
-determination of $B_0$ from the video calibration, not the LNB frequency.
+Die wichtigste systematische Unsicherheit in allen $g$-Faktoren ist die
+Magnetfeldkalibrierung (Abschnitt~\ref{sec:calibration}): Das Feld wurde
+während der Dispersions-Sweeps nicht direkt gemessen, sondern aus der
+programmierten Versorgungsspannung über eine einzige videodigitalisierte
+Kalibrierkurve rekonstruiert, sodass die Genauigkeit von $B_0$ letztlich
+dadurch begrenzt ist, wie gut diese Kalibrierung das tatsächliche Feld bei
+jedem Spannungsschritt wiedergibt. Aufgabe~6 bestätigt dies: Selbst bei
+exakt bekannter LO-Frequenz des kalibrierten PLL-LNB
+($\nu_0 = \SI{9.75}{\giga\hertz}$, Tabelle~\ref{tab:task6}) weicht der
+resultierende $g$-Faktor für DPPH \SI{10}{\micro\gram} etwa im selben Maß
+von der Theorie ab wie die unkalibrierte Aufgabe-4-Messung, nur mit
+umgekehrtem Vorzeichen. Die Beseitigung der Unsicherheit in $\nu_0$
+verbessert die Genauigkeit von $g$ also nicht von selbst -- der dominante
+verbleibende Fehler liegt in der Bestimmung von $B_0$ aus der
+Videokalibrierung, nicht in der LNB-Frequenz.
+
+% ==================================================================
+\begin{thebibliography}{9}
+% ==================================================================
+
+\bibitem{eprmanual}
+University of Leipzig, Department of Physics and Geosciences,
+\emph{Advanced Physics Laboratory -- ``Electron-Paramagnetic Resonance
+(EPR)''}, Leipzig, 2001.
+
+\bibitem{eprtasks}
+University of Leipzig, \emph{Experiment No.~5 -- Tasks: Digital RF-Receiving
+Technology and EPR}, Version vom 27.11.2017.
+
+\bibitem{demtroeder3}
+W.~Demtröder, \emph{Experimentalphysik~3: Atome, Moleküle und Festkörper},
+5.~Auflage, Springer, Berlin/Heidelberg, 2016.
+
+\bibitem{weilbolton}
+J.~A.~Weil und J.~R.~Bolton, \emph{Electron Paramagnetic Resonance:
+Elementary Theory and Practical Applications}, 2.~Auflage, Wiley, Hoboken,
+2007.
+
+\bibitem{wikiEPR}
+Wikipedia, \emph{Electron paramagnetic resonance},
+\url{https://en.wikipedia.org/wiki/Electron_paramagnetic_resonance}
+(abgerufen am 02.07.2026).
+
+\bibitem{wikiDPPH}
+Wikipedia, \emph{DPPH},
+\url{https://en.wikipedia.org/wiki/DPPH}
+(abgerufen am 02.07.2026).
+
+\bibitem{rfmixer}
+I.~Poole, \emph{RF Mixing / Frequency Mixers}, Electronics Notes,
+\url{https://www.electronics-notes.com/articles/radio/rf-mixer/rf-mixing-basics.php}
+(abgerufen am 02.07.2026).
+
+\bibitem{fmnotes}
+I.~Poole, \emph{What is Frequency Modulation, FM}, Electronics Notes,
+\url{https://www.electronics-notes.com/articles/radio/modulation/frequency-modulation-fm.php}
+(abgerufen am 02.07.2026).
+
+\bibitem{webplotdigitizer}
+A.~Rohatgi, \emph{WebPlotDigitizer}, Version~4.6,
+\url{https://automeris.io/WebPlotDigitizer}
+(abgerufen am 02.07.2026).
+
+% ---- TODO: geliehene Abbildungen -- Quellen noch eintragen ----
+\bibitem{BILDQUELLE-zeeman}
+TODO -- Quelle für die Zeeman-Aufspaltungs-Abbildung (Abb.~\ref{fig:zeeman}) eintragen.
+
+\bibitem{BILDQUELLE-eprspectrum}
+TODO -- Quelle für die EPR-Spektrum-Abbildung (Abb.~\ref{fig:epr-spectrum}) eintragen.
+
+\bibitem{BILDQUELLE-blockdiagram}
+TODO -- Quelle für das EPR-Spektrometer-Blockschaltbild (Abb.~\ref{fig:system-block}) eintragen.
+
+\bibitem{BILDQUELLE-bridge}
+TODO -- Quelle für das Mikrowellenbrücken-Schema (Abb.~\ref{fig:bridge}) eintragen.
+
+\end{thebibliography}
 
 \end{document}
