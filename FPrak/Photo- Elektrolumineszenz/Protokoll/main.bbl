@@ -19,6 +19,67 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{adachi1993}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3dcd9abe1016a5662aab881e2cf6a576}{%
+           family={Adachi},
+           familyi={A\bibinitperiod},
+           given={Sadao},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {INSPEC, The Institution of Electrical Engineers}%
+      }
+      \strng{namehash}{3dcd9abe1016a5662aab881e2cf6a576}
+      \strng{fullhash}{3dcd9abe1016a5662aab881e2cf6a576}
+      \strng{fullhashraw}{3dcd9abe1016a5662aab881e2cf6a576}
+      \strng{bibnamehash}{3dcd9abe1016a5662aab881e2cf6a576}
+      \strng{authorbibnamehash}{3dcd9abe1016a5662aab881e2cf6a576}
+      \strng{authornamehash}{3dcd9abe1016a5662aab881e2cf6a576}
+      \strng{authorfullhash}{3dcd9abe1016a5662aab881e2cf6a576}
+      \strng{authorfullhashraw}{3dcd9abe1016a5662aab881e2cf6a576}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{7}
+      \field{series}{EMIS Datareviews Series}
+      \field{title}{Properties of Aluminium Gallium Arsenide}
+      \field{year}{1993}
+    \endentry
+    \entry{grundmann2006}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b815c67d32eb9aac829f9b1fbf4f1bb8}{%
+           family={Grundmann},
+           familyi={G\bibinitperiod},
+           given={Marius},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Berlin}%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \strng{fullhash}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \strng{fullhashraw}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \strng{bibnamehash}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \strng{authorbibnamehash}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \strng{authornamehash}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \strng{authorfullhash}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \strng{authorfullhashraw}{b815c67d32eb9aac829f9b1fbf4f1bb8}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Physics of Semiconductors}
+      \field{year}{2006}
+    \endentry
     \entry{nist_sodium_2008}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=3890a878cf9ff4b382a676b5d7d51181}{%
@@ -46,6 +107,41 @@
       \endverb
       \verb{url}
       \verb https://www.nist.gov/system/files/documents/srd/jpcrd3720081763p.pdf
+      \endverb
+    \endentry
+    \entry{manual}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=952c478470ebcc5019b948bf7e6df9c1}{%
+           family={Riede},
+           familyi={R\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod}}}%
+        {{hash=185f874e0b28ca99d30a56d0d4881c8c}{%
+           family={Fritzsche},
+           familyi={F\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{fullhash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{fullhashraw}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{bibnamehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authorbibnamehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authornamehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authorfullhash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authorfullhashraw}{d362664222a55a4b6b70860dd36b3a3d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Praktikumsanleitung, zugegriffen am 2.7.2026}
+      \field{title}{Photo- und Elektrolumineszenz in Halbleitern}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://home.uni-leipzig.de/physfp/manuals/Lumi_2018_d.pdf
+      \endverb
+      \verb{url}
+      \verb https://home.uni-leipzig.de/physfp/manuals/Lumi_2018_d.pdf
       \endverb
     \endentry
   \enddatalist

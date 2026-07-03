@@ -48,6 +48,41 @@
       \verb https://www.nist.gov/system/files/documents/srd/jpcrd3720081763p.pdf
       \endverb
     \endentry
+    \entry{manual}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=952c478470ebcc5019b948bf7e6df9c1}{%
+           family={Riede},
+           familyi={R\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod}}}%
+        {{hash=185f874e0b28ca99d30a56d0d4881c8c}{%
+           family={Fritzsche},
+           familyi={F\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{fullhash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{fullhashraw}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{bibnamehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authorbibnamehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authornamehash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authorfullhash}{d362664222a55a4b6b70860dd36b3a3d}
+      \strng{authorfullhashraw}{d362664222a55a4b6b70860dd36b3a3d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Praktikumsanleitung, zugegriffen am 2.7.2026}
+      \field{title}{Photo- und Elektrolumineszenz in Halbleitern}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://home.uni-leipzig.de/physfp/manuals/Lumi_2018_d.pdf
+      \endverb
+      \verb{url}
+      \verb https://home.uni-leipzig.de/physfp/manuals/Lumi_2018_d.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
