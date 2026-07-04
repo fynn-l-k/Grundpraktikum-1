@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1783031389.39626 "protokoll.tex" "protokoll.pdf" "protokoll" 1783031400.43781 0
+["pdflatex"] 1783166650.47152 "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/EPR/Protokoll/EPR_Protokoll/protokoll.tex" "protokoll.pdf" "protokoll" 1783166661.08852 0
+  "/Users/fynnlucca/Documents/Grundpraktikum-1/FPrak/EPR/Protokoll/EPR_Protokoll/protokoll.tex" 1783166650.17634 48991 469a7d92c6dcc0791da7eb797bceac41 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -172,10 +173,10 @@
   "figures/task6_dpph_calibrated_curve.png" 1783029347.37816 51241 5804723bf23a9f7a60e77fefc0c49b14 ""
   "figures/uni_logo.png" 1783030647.05476 18479 30772fe26a5c47d3f54440bbbe4e57e7 ""
   "figures/zeeman_splitting.png" 1783012652.08637 313579 f7af8a871fbd504ab8fa5fbcd5a68432 ""
-  "protokoll.aux" 1783031400.25503 14193 afced33779279f19582f135faf5a6c9b "pdflatex"
-  "protokoll.out" 1783031400.27232 5107 e92dbbdb7148c76834ce7f7e01bed0b6 "pdflatex"
-  "protokoll.tex" 1783031298.97499 49039 d0bc92aabaeee01bfa37659fc0649c77 ""
-  "protokoll.toc" 1783031400.27417 2469 04331a16044f2e4d4289f7a82f91a001 "pdflatex"
+  "protokoll.aux" 1783166660.92911 14076 27e326338eb067ef500e0f57fd0106a5 "pdflatex"
+  "protokoll.out" 1783166660.94561 5107 e92dbbdb7148c76834ce7f7e01bed0b6 "pdflatex"
+  "protokoll.tex" 1783166650.17634 48991 469a7d92c6dcc0791da7eb797bceac41 ""
+  "protokoll.toc" 1783166660.94719 2469 04331a16044f2e4d4289f7a82f91a001 "pdflatex"
   (generated)
   "protokoll.aux"
   "protokoll.log"

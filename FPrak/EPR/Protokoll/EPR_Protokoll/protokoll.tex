@@ -165,7 +165,7 @@ gilt $g = 2.0023$~\cite{weilbolton,demtroeder3}.
              $m_s = \pm 1/2$ Niveaus spalten linear mit $B_0$ auf, und
              Mikrowellenbestrahlung der Frequenz $\nu$ treibt Übergänge
              zwischen ihnen, sobald $h\nu = g\mu_B B_0$ erfüllt ist.
-             Quelle: \cite{BILDQUELLE-zeeman}.}
+             Quelle: \cite{zeeman_splitting}.}
     \label{fig:zeeman}
 \end{figure}
 
@@ -324,7 +324,7 @@ beschrieben.
              nicht der in diesem Versuch verwendete LNB-Aufbau): die
              Mikrowellenbrücke, der Probenresonator zwischen den
              Magnetpolschuhen, die Elektronik für Feld-Sweep/Modulation und
-             die Signalauswertungskette. Quelle: \cite{BILDQUELLE-blockdiagram}.}
+             die Signalauswertungskette. Quelle: \cite{eprmanual}.}
     \label{fig:system-block}
 \end{figure}
 
@@ -375,7 +375,7 @@ Resonanzübergänge.
              der hier verwendete Aufbau): Klystron, Isolator, Präzisions- und
              Eich-Dämpfungsglied, Zirkulator und Probenresonator; das
              reflektierte Signal wird zum Detektor geleitet.
-             Quelle: \cite{BILDQUELLE-bridge}.}
+             Quelle: \cite{eprmanual}.}
     \label{fig:bridge}
 \end{figure}
 
@@ -434,8 +434,8 @@ Gleichung~\eqref{eq:cal} $B_0 \approx \SIrange{297}{387}{\milli\tesla}$, was
 den erwarteten Resonanzbereich für DPPH und Ultramarin von etwa
 \SIrange{0.35}{0.38}{\tesla} einschließt.
 
-**Praktische Anwendung:** Während der Dispersionsmessungen (Aufgaben 4--6) wird nur die
-\emph{programmierte Versorgungsspannung} $U$ protokolliert (der Spulenstrom $I$
+Praktische Anwendung: Während der Dispersionsmessungen (Aufgaben 4--6) wird nur die
+programmierte Versorgungsspannung $U$ protokolliert (der Spulenstrom $I$
 wird nicht gemessen). Jeder Sweep folgt der festen Spannungssequenz aus
 Abschnitt~\ref{sec:sweep} (Start bei \SI{26}{\volt}, \SI{0.05}{\volt} pro
 Ein-Sekunden-Schritt), sodass jedem Datenpunkt eine nominelle Spannung $U(t)$
@@ -445,11 +445,12 @@ entnommen wird (derselbe Datensatz wie oben, auf $U \geq \SI{26}{\volt}$
 beschränkt). Dies nutzt die physikalische Erkenntnis aus dem Strom-Fit (dass
 $B_0$ an $I$ hängt), ohne den fehlenden Strom-Messwert direkt zu benötigen —
 stattdessen werden die während der Kalibrierung beobachteten U-I-Abhängigkeiten
-tabelliert und zur Umrechnung verwendet. Diese Methode ist robuster als ein
-Spannungssättigung des Netzteils. Da die Kalibrierungsmessungen auf demselben
+tabelliert und zur Umrechnung verwendet. Diese Methode ist robuster gegen die Spannungssättigung des Netzteils, da sie
+die tatsächlich beobachtete $U$-$B_0$-Beziehung nutzt statt eine lineare
+Spannungsannahme. Da die Kalibrierungsmessungen auf demselben
 \SI{0.05}{\volt}-Raster wie die Sweep-Sequenz durchgeführt wurden, können die
 tabellierten $(U, B_0)$-Wertepaare direkt ohne zusätzliche Interpolation
-abgerufen werden und bilden
+abgerufen werden und bilden die in
 Abbildung~\ref{fig:cal} sichtbare lokale Krümmung von $B_0(U)$ ab. Der letzte
 Sweep-Schritt (\SI{30}{\volt}) liegt \SI{0.05}{\volt} außerhalb des
 kalibrierten Bereichs und wird durch lineare Extrapolation aus den letzten
@@ -969,17 +970,13 @@ A.~Rohatgi, \emph{WebPlotDigitizer}, Version~4.6,
 (abgerufen am 02.07.2026).
 
 % ---- TODO: geliehene Abbildungen -- Quellen noch eintragen ----
-\bibitem{BILDQUELLE-zeeman}
-TODO -- Quelle für die Zeeman-Aufspaltungs-Abbildung (Abb.~\ref{fig:zeeman}) eintragen.
+\bibitem{zeeman_splitting}
+Quelle für die Zeeman-Aufspaltung (Abb.~\ref{fig:zeeman}),
+\url{https://epr.ethz.ch/education/basic-concepts-of-epr/one-elect--in-the-magn--field/zeeman.html}
 
 \bibitem{BILDQUELLE-eprspectrum}
-TODO -- Quelle für die EPR-Spektrum-Abbildung (Abb.~\ref{fig:epr-spectrum}) eintragen.
-
-\bibitem{BILDQUELLE-blockdiagram}
-TODO -- Quelle für das EPR-Spektrometer-Blockschaltbild (Abb.~\ref{fig:system-block}) eintragen.
-
-\bibitem{BILDQUELLE-bridge}
-TODO -- Quelle für das Mikrowellenbrücken-Schema (Abb.~\ref{fig:bridge}) eintragen.
+Quelle für das EPR-Spektrum (Abb.~\ref{fig:epr-spectrum}),
+\url{https://www.bruker.com/en/resources/library/application-notes-mr/epr-101.html}
 
 \end{thebibliography}
 
