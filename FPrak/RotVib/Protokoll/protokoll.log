@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  4 JUL 2026 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  4 JUL 2026 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,7 +685,7 @@ Overfull \hbox (1.27924pt too wide) in paragraph at lines 141--145
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-<figures/hantelmodell.png, id=95, 556.0775pt x 292.09125pt>
+<figures/hantelmodell.png, id=105, 556.0775pt x 292.09125pt>
 File: figures/hantelmodell.png Graphic file (type png)
 <use figures/hantelmodell.png>
 Package pdftex.def Info: figures/hantelmodell.png  used on input line 225.
@@ -702,7 +702,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 res/hantelmodell.png>]
 
 [4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<figures/rotvibschema.png, id=132, 464.73625pt x 342.27875pt>
+<figures/rotvibschema.png, id=142, 464.73625pt x 342.27875pt>
 File: figures/rotvibschema.png Graphic file (type png)
 <use figures/rotvibschema.png>
 Package pdftex.def Info: figures/rotvibschema.png  used on input line 359.
@@ -712,7 +712,7 @@ Package pdftex.def Info: figures/rotvibschema.png  used on input line 359.
 [5 <./figures/rotvibschema.png>]
 
 [6]
-<figures/kuvette.png, id=169, 540.0175pt x 336.25626pt>
+<figures/kuvette.png, id=179, 540.0175pt x 336.25626pt>
 File: figures/kuvette.png Graphic file (type png)
 <use figures/kuvette.png>
 Package pdftex.def Info: figures/kuvette.png  used on input line 489.
@@ -722,44 +722,79 @@ Package pdftex.def Info: figures/kuvette.png  used on input line 489.
 [7 <./figures/kuvette.png>]
 
 [8]
+<figures/eich_spektren.png, id=206, 794.97pt x 289.08pt>
+File: figures/eich_spektren.png Graphic file (type png)
+<use figures/eich_spektren.png>
+Package pdftex.def Info: figures/eich_spektren.png  used on input line 608.
+(pdftex.def)             Requested size: 455.24411pt x 165.54922pt.
+<figures/eich_zoom_poly.png, id=209, 505.89pt x 578.16pt>
+File: figures/eich_zoom_poly.png Graphic file (type png)
+<use figures/eich_zoom_poly.png>
+Package pdftex.def Info: figures/eich_zoom_poly.png  used on input line 623.
+(pdftex.def)             Requested size: 327.7763pt x 374.60857pt.
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 598--601
+
+[9 <./figures/eich_spektren.png>]
+<figures/eich_zoom_water.png, id=219, 505.89pt x 578.16pt>
+File: figures/eich_zoom_water.png Graphic file (type png)
+<use figures/eich_zoom_water.png>
+Package pdftex.def Info: figures/eich_zoom_water.png  used on input line 633.
+(pdftex.def)             Requested size: 327.7763pt x 374.60857pt.
+
+
+[10 <./figures/eich_zoom_poly.png>]
+<figures/eich_abweichung.png, id=226, 794.97pt x 289.08pt>
+File: figures/eich_abweichung.png Graphic file (type png)
+<use figures/eich_abweichung.png>
+Package pdftex.def Info: figures/eich_abweichung.png  used on input line 661.
+(pdftex.def)             Requested size: 455.24411pt x 165.54922pt.
+
+
+[11 <./figures/eich_zoom_water.png>]
+<figures/eich_regression.png, id=234, 469.755pt x 303.534pt>
+File: figures/eich_regression.png Graphic file (type png)
+<use figures/eich_regression.png>
+Package pdftex.def Info: figures/eich_regression.png  used on input line 693.
+(pdftex.def)             Requested size: 318.66948pt x 205.90944pt.
+
+
+[12 <./figures/eich_abweichung.png> <./figures/eich_regression.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 714--717
 []\T1/lmr/m/n/10.95 W. Fin-keln-burg: \T1/lmr/m/it/10.95 Ein-füh-rung in die At
 om-phy-sik\T1/lmr/m/n/10.95 , Springer-Verlag, Ber-
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-26.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
+42.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5985) in paragraph at lines 624--628
+Underfull \hbox (badness 5985) in paragraph at lines 740--744
 []\T1/lmr/m/n/10.95 Universität Leip-zig, AG Op-tik/Spektroskopie: \T1/lmr/m/it
 /10.95 Ge-schich-te der FTIR-Spektroskopie\T1/lmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--628
+Underfull \hbox (badness 10000) in paragraph at lines 740--744
 []$\T1/lmtt/m/n/10.95 https : / / polariton . exphysik . uni-[]leipzig . de / s
 ubsites / staff / bundesmann / ftir /
  []
 
 
 
-[10] (./protokoll.aux)
+[13] (./protokoll.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: BF9486EBDCD2A1EEE4C40C108FDF884F;3015.
+(rerunfilecheck)             Checksum: C1DBD0D836171893210ED61512CE0962;3415.
  ) 
 Here is how much of TeX's memory you used:
- 18317 strings out of 473190
- 353330 string characters out of 5715800
- 735068 words of memory out of 5000000
- 41263 multiletter control sequences out of 15000+600000
+ 18400 strings out of 473190
+ 355423 string characters out of 5715800
+ 736453 words of memory out of 5000000
+ 41332 multiletter control sequences out of 15000+600000
  623016 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,13n,80p,547b,1078s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -778,10 +813,10 @@ ublic/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
 sy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on protokoll.pdf (11 pages, 659912 bytes).
+Output written on protokoll.pdf (14 pages, 1244557 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 252 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 361 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

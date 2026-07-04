@@ -14,3 +14,5 @@
 \contentsline {subsubsection}{\numberline {3.7.1}Funktionsweise}{8}{subsubsection.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.7.2}Diskrete Fourier-Transformation, Auflösung und Zerofilling}{8}{subsubsection.3.7.2}%
 \contentsline {subsubsection}{\numberline {3.7.3}Leakage-Effekt und Apodisation}{9}{subsubsection.3.7.3}%
+\contentsline {section}{\numberline {4}Auswertung}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Kalibrierung der Wellenzahlskala (Aufgabe 1.1)}{9}{subsection.4.1}%

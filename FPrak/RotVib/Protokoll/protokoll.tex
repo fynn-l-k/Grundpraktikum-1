@@ -583,6 +583,122 @@ liefert die Fourier-Transformation ein komplexwertiges Spektrum, aus dem mittels
 gewonnen wird.
 
 % ==================================================================
+%  4  AUSWERTUNG
+% ==================================================================
+\section{Auswertung}
+\label{sec:auswertung}
+
+% ------------------------------------------------------------------
+\subsection{Kalibrierung der Wellenzahlskala (Aufgabe 1.1)}
+\label{sec:eichung}
+
+Zur Überprüfung der Wellenzahlskala des Spektrometers Spectrum~100 wurden
+Einkanalspektren von Wasserdampf und einer Polystyrolfolie im Bereich
+$\bar\nu \in [200,4000]\,\si{cm^{-1}}$ mit einem Punktabstand von
+$\SI{0.125}{cm^{-1}}$ aufgenommen. Die Absorptionsbanden erscheinen in den
+Einkanalspektren als lokale Minima der detektierten Intensität. Für jede der in
+der Versuchsanleitung tabellierten Kalibrierbanden~\cite{Riede,Gupta} wurde die
+Lage des zugehörigen gemessenen Minimums bestimmt, indem in einem engen
+Suchfenster um den Referenzwert der tiefste Datenpunkt gesucht wurde. Die
+gemessenen Spektren mit den eingezeichneten Referenz-Wellenzahlen zeigt
+Abb.~\ref{fig:eich_spektren}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{eich_spektren}
+  \caption{Aufgenommene Einkanalspektren von Polystyrol (links) und Wasserdampf
+    (rechts). Die roten gepunkteten Linien markieren die zur Kalibrierung
+    verwendeten theoretischen Wellenzahlen der Absorptionsbanden.}
+  \label{fig:eich_spektren}
+\end{figure}
+
+Zur besseren Erkennbarkeit der einzelnen Banden zeigen die
+Abbildungen~\ref{fig:eich_zoom_poly} und \ref{fig:eich_zoom_water} vergrößerte
+Ausschnitte der Spektren. Die roten Punkte kennzeichnen die tiefsten Datenpunkte
+der jeweiligen Absorptionsbanden, die als gemessene Bandenwellenzahlen in die
+Auswertung eingehen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{eich_zoom_poly}
+  \caption{Vergrößerte Ausschnitte des Polystyrolspektrums. Rote Punkte
+    kennzeichnen die zur Kalibrierung verwendeten Bandenminima. Die scharfen
+    Einbrüche im mittleren Fenster stammen von Wasserdampflinien der Umgebungsluft
+    und überlagern die breiten Polystyrolbanden.}
+  \label{fig:eich_zoom_poly}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{eich_zoom_water}
+  \caption{Vergrößerte Ausschnitte des Wasserdampfspektrums. Im Fenster um
+    $\SI{1800}{cm^{-1}}$ ist erkennbar, dass die vier dicht benachbarten
+    Referenzlinien bei der vorliegenden Auflösung nicht alle eindeutig getrennt
+    werden können; markiert sind nur die verlässlich zuordenbaren Banden.}
+  \label{fig:eich_zoom_water}
+\end{figure}
+
+Nicht alle tabellierten Banden eignen sich als Kalibrierpunkte: Beim Wasserdampf
+liegen die vier Linien im Bereich um $\SI{1800}{cm^{-1}}$ so dicht beieinander,
+dass sie bei der vorliegenden Auflösung nicht eindeutig getrennt werden können;
+hier wurden nur die eindeutig zuordenbaren Banden verwendet. Beim Polystyrol
+wurden einige breite bzw. von scharfen Wasserdampflinien überlagerte Banden
+(u.\,a.\ bei $699{,}45$, $1368{,}5$ und $1583{,}1\,\si{cm^{-1}}$) verworfen,
+da ihr Minimum nicht verlässlich der Bande zuzuordnen ist. Insgesamt gingen
+$6$~Wasserdampf- und $17$~Polystyrolbanden in die Auswertung ein.
+
+Die relativen Abweichungen $(\bar\nu_\mathrm{mess}-\bar\nu_\mathrm{theo})/
+\bar\nu_\mathrm{theo}$ sind in Abb.~\ref{fig:eich_abweichung} über die gemessene
+Wellenzahl aufgetragen. Sie liegen betragsmäßig unterhalb von etwa
+$3\cdot10^{-3}$ und streuen ohne erkennbares Muster; ein grober systematischer
+Fehler ist damit auszuschließen. Der Mittelwert der relativen Abweichung beträgt
+$+8{,}8\cdot10^{-4}$ (Wasserdampf) bzw.\ $+4{,}9\cdot10^{-4}$ (Polystyrol), die
+gemessenen Wellenzahlen liegen also im Mittel geringfügig oberhalb der
+Literaturwerte.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{eich_abweichung}
+  \caption{Relative Abweichung der gemessenen von den theoretischen
+    Bandenwellenzahlen für Polystyrol (links) und Wasserdampf (rechts). Die
+    waagerechte Linie kennzeichnet die Nullabweichung.}
+  \label{fig:eich_abweichung}
+\end{figure}
+
+Zur Bestimmung einer möglichen Skalenkorrektur wurden die gemessenen
+Bandenwellenzahlen $\bar\nu_\mathrm{mess}$ gegen die theoretischen
+$\bar\nu_\mathrm{theo}$ aufgetragen und mittels linearer Regression durch
+\begin{equation}
+  \bar\nu_\mathrm{mess} = a\,\bar\nu_\mathrm{theo} + b
+\end{equation}
+angepasst (Abb.~\ref{fig:eich_regression}, aufgetragen ist die Residuendarstellung
+$\bar\nu_\mathrm{mess}-\bar\nu_\mathrm{theo}$). Die Regression liefert
+\begin{align}
+  a &= 1{,}00122 \pm 0{,}00035, \\
+  b &= (-1{,}03 \pm 0{,}71)\,\si{cm^{-1}}, \\
+  R^2 &= 0{,}999997 .
+\end{align}
+Der Anstieg weicht mit rund $0{,}12\,\%$ nur geringfügig von $1$ ab, der
+Ordinatenabschnitt ist im Rahmen seiner Unsicherheit mit $0$ verträglich. Die
+Wellenzahlskala des Spektrometers ist damit innerhalb der Messgenauigkeit korrekt
+kalibriert; die verbleibende Abweichung ist klein, aber statistisch signifikant
+im Anstieg. Für die folgenden Auswertungen kann diese Kalibriergerade zur
+Korrektur der gemessenen Wellenzahlen herangezogen werden, indem die gemessenen
+Werte gemäß $\bar\nu_\mathrm{korr} = (\bar\nu_\mathrm{mess}-b)/a$ umgerechnet
+werden. Wegen der Kleinheit der Korrektur ($<0{,}2\,\%$) ist ihr Einfluss auf die
+weiteren Ergebnisse jedoch gering.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{eich_regression}
+  \caption{Residuendarstellung der Eichung: Differenz aus gemessener und
+    theoretischer Wellenzahl über der theoretischen Wellenzahl. Die rote Gerade
+    entspricht der linearen Regression $\bar\nu_\mathrm{mess}=a\,
+    \bar\nu_\mathrm{theo}+b$.}
+  \label{fig:eich_regression}
+\end{figure}
+
+% ==================================================================
 %  LITERATUR
 % ==================================================================
 \newpage
