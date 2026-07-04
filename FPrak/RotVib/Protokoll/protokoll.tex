@@ -1,0 +1,643 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------------------------------------------------
+%  Rotations-Schwingungsspektren von Molekülen
+%  Physikalisches Fortgeschrittenenpraktikum, Universität Leipzig
+% ------------------------------------------------------------------
+
+% --- Sprache & Zeichenkodierung -----------------------------------
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% --- Mathematik ---------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\sisetup{
+  locale = DE,
+  separate-uncertainty = true,
+  per-mode = symbol,
+}
+
+% --- Grafik & Tabellen --------------------------------------------
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{float}
+
+% --- Layout -------------------------------------------------------
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+
+% --- Kopf-/Fußzeile ----------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Rotations-Schwingungsspektren von Molekülen}
+\fancyhead[R]{\small\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- eigene Abkürzungen -------------------------------------------
+\newcommand{\wz}{\ensuremath{\bar{\nu}}}          % Wellenzahl
+\newcommand{\wzs}{\ensuremath{\bar{\nu}_S}}        % Schwingungs-Wellenzahl
+\newcommand{\kB}{\ensuremath{k_\mathrm{B}}}        % Boltzmann-Konstante
+
+\begin{document}
+
+% ==================================================================
+%  DECKBLATT
+% ==================================================================
+\begin{titlepage}
+\centering
+\vspace*{1.5cm}
+
+% Falls das Uni-Logo vorliegt, hier einbinden:
+% \includegraphics[width=0.45\textwidth]{unilogo}\\[1.5cm]
+
+{\Huge\bfseries Rotations-Schwingungsspektren\\[0.4em] von Molekülen\par}
+\vspace{0.8cm}
+{\Large Physikalisches Fortgeschrittenenpraktikum\par}
+\vspace{2.5cm}
+
+\begin{tabular}{rl}
+  \textbf{Projektgruppe:} & Fynn Kanja (3780065)\\
+                          & Valentino D'Agosto (3763229)\\[0.6em]
+  \textbf{Versuchsleiter:} & Dr.\ Chris Sturm\\[0.6em]
+  \textbf{Versuchsdatum:}  & 23.06.2026\\
+\end{tabular}
+
+\vfill
+
+{\large Fakultät für Physik und Geowissenschaften\\ Universität Leipzig\par}
+\vspace{1cm}
+\end{titlepage}
+
+% ==================================================================
+%  ABSTRACT
+% ==================================================================
+\begin{abstract}
+\noindent
+Es werden spektroskopische Untersuchungen an Wasserdampf, Polystyrol, Glas,
+Natriumchlorid und Chlorwasserstoff im infraroten Spektralbereich durchgeführt.
+Als Messmethode dient die Fourier-Transformations-Infrarot-Spektroskopie (FTIR),
+bei der die als Interferogramme aufgenommenen Rohdaten durch eine
+Fourier-Transformation in ein Wellenzahlspektrum überführt werden. Zunächst wird
+die Wellenzahlskala des Spektrometers Perkin~Elmer~Spectrum~100 anhand der
+Kalibrierbanden von Wasserdampf und Polystyrol überprüft. Anschließend werden der
+Einfluss von Interferogrammlänge, Zerofilling und Apodisation auf das
+Spektrum sowie das theoretische Auflösungsvermögen diskutiert. Es folgen die
+Untersuchung des Sperrverhaltens von Glas- und NaCl-Filtern sowie die Bestimmung
+der Spaltbreite einer Küvette mit der Interferenzmethode. Kernstück ist die
+Analyse des Rotations-Schwingungsspektrums von Chlorwasserstoff (HCl), aus dem
+die molekülspezifischen Kenngrößen (Schwingungswellenzahl, Rotations- und
+Dehnungskonstante, Kernabstand, Trägheitsmoment) sowie das Isotopenverhältnis
+und die Gastemperatur bestimmt werden.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ==================================================================
+%  1  EINLEITUNG
+% ==================================================================
+\section{Einleitung}
+
+Die Infrarotspektroskopie ist eine der wichtigsten experimentellen Methoden zur
+Bestimmung von Materialeigenschaften in allen drei Aggregatzuständen. Neben der
+Untersuchung von Gitterschwingungen, Defekten und Ladungsträgern in Festkörpern
+gehört insbesondere die Charakterisierung von Molekülen in Gasen zu ihren
+Hauptanwendungsgebieten. Die Grundlage der IR-Spektroskopie wurde mit der
+Entdeckung der Infrarotstrahlung durch Friedrich~Wilhelm~Herschel um 1800 gelegt.
+Zwei weitere Meilensteine sind die Erfindung des Michelson-Interferometers 1891
+sowie die Erkenntnis von Lord~Rayleigh, dass sich das Spektrum durch eine
+Fourier-Transformation aus dem Interferogramm berechnen lässt. Wegen des hohen
+Rechenaufwands setzte sich die Fourier-Transformations-Infrarot-Spektroskopie
+(FTIR) zunächst nicht durch; erst die Entwicklung leistungsfähiger Computer und
+des schnellen Fourier-Transformations-Algorithmus (FFT) durch Cooley und Tukey
+1965 führte zu ihrem endgültigen Durchbruch~\cite{FTIRhist}.
+
+Im vorliegenden Versuch werden die physikalischen Eigenschaften eines der
+einfachsten Moleküle, des zweiatomigen Chlorwasserstoffs HCl, mit dem
+FTIR-Spektrometer Perkin~Elmer~Spectrum~100 untersucht. Die theoretische
+Beschreibung erfolgt anhand des Hantelmodells, aus dessen quantenmechanischer
+Behandlung sich die im infraroten Spektralbereich beobachtbaren
+Rotations-Schwingungsübergänge und damit die charakteristischen molekularen
+Kenngrößen ableiten lassen.
+
+% ==================================================================
+%  2  AUFGABENSTELLUNG
+% ==================================================================
+\section{Aufgabenstellung}
+\label{sec:aufgaben}
+
+\begin{enumerate}
+  \item[1.1] Überprüfung der Kalibrierung der Wellenzahlskala des
+        Infrarotspektrometers Spectrum~100 anhand der Kalibrierbanden von
+        Wasserdampf und Polystyrol. Die experimentell bestimmten Abweichungen
+        sind aufzutragen und zu diskutieren.
+
+  \item[1.2] Aufnahme von Interferogrammen des Wasserdampfspektrums mit
+        verschiedenen Spiegelwegen des Interferometers und Überführung in
+        Spektren mittels Fourier-Transformation. Kalibrierung der Wellenzahlskala
+        der so erhaltenen Spektren anhand der Wasserdampfbanden. Bestimmung der
+        Schrittweite des optischen Weges aus der Bandbreite des Spektrums.
+        Diskussion des Einflusses von Interferogrammlänge, Zerofilling und
+        Apodisation auf die Spektren. Angabe des theoretischen
+        Auflösungsvermögens in Abhängigkeit von der Zahl der aufgenommenen
+        Datenpunkte.
+
+  \item[1.3] Bestimmung der detektierten Signalstärke im Sperrbereich eines
+        Glas- und eines NaCl-Sperrfilters.
+
+  \item[1.4] Bestimmung der Spaltbreite einer Küvette mit der Interferenzmethode.
+        Dazu ist $\Delta N$ über \wz{} aufzutragen und die Spaltbreite samt
+        mittlerem quadratischem Fehler mittels linearer Regression zu bestimmen.
+
+  \item[1.5] Aufnahme des Rotations-Schwingungsspektrums von gasförmigem
+        Chlorwasserstoff (HCl) mit angemessenem Auflösungsvermögen und Bestimmung
+        der spektralen Lage der Absorptionsbanden. Berechnung der Wellenzahl des
+        reinen Schwingungsübergangs, der Kraftkonstante, der Rotationskonstante,
+        des Kernabstands und des Trägheitsmoments. Weiterhin sind die
+        schwingungsabhängige Rotationskonstante $B_n$, die Dehnungskonstante $D$
+        sowie die spektrale Aufspaltung durch die verschiedenen Isotope zu
+        bestimmen. Bestimmung des Häufigkeitsverhältnisses der Isotope mit Hilfe
+        des Lambert-Beer'schen Gesetzes.
+
+  \item[1.6] Modellierung der Intensitäten der Absorptionsminima im P-Zweig mit
+        Hilfe des theoretischen Absorptionskoeffizienten. Die Temperatur ist
+        dabei als freier Parameter des Modells zu bestimmen.
+\end{enumerate}
+
+% ==================================================================
+%  3  THEORIE
+% ==================================================================
+\section{Theoretische Grundlagen}
+\label{sec:theorie}
+
+Die zum Verständnis des Versuchs relevanten Konzepte stammen aus der
+Quantenmechanik, der Optik und der Thermodynamik. Zunächst werden die
+Freiheitsgrade der Molekül- und Atombewegung sowie deren Wechselwirkung
+behandelt, anschließend die theoretischen Hintergründe der Messmethoden. Die
+Darstellung folgt dem Hantelmodell: Die beiden Atome werden als Punktmassen
+aufgefasst, die durch Bindungskräfte auf einem bestimmten Abstand gehalten
+werden. Die Hantel kann rotieren und schwingen, wobei die Frequenzen von den
+Atommassen, den Bindungskräften und der Wechselwirkung zwischen Rotation und
+Schwingung abhängen und im infraroten Spektralbereich liegen. Da beim HCl-Molekül
+das periodische Schwingen des positiv geladenen Wasserstoffatoms gegen das
+negativ geladene Chloratom ein periodisch wechselndes Dipolmoment erzeugt, sind
+dessen Rotationen und Schwingungen \emph{infrarotaktiv} und können durch
+infrarotes Licht angeregt werden~\cite{Riede,Bruegel,Herzberg}.
+
+% ------------------------------------------------------------------
+\subsection{Rotation eines zweiatomigen Moleküls}
+\label{sec:rotation}
+
+Als Ausgangspunkt dient das Hantelmodell: Zwei punktförmige Massen $m_1$ und
+$m_2$ befinden sich im Abstand $r_0$ und werden durch eine masselose starre
+Stange auf konstantem Abstand gehalten (Abb.~\ref{fig:hantel}). Die
+Rotationsachse verläuft durch den Massenschwerpunkt $S$; der
+Schwerpunktsatz lautet
+\begin{equation}
+  m_1 \vec{r}_1 + m_2 \vec{r}_2 = 0 .
+\end{equation}
+Mit dem Abstand $r_0 = r_1 + r_2$ folgt für das Trägheitsmoment
+\begin{equation}
+  I = m_1 r_1^2 + m_2 r_2^2 = r_0^2\,\frac{m_1 m_2}{m_1 + m_2} = \mu\,r_0^2 ,
+  \label{eq:traegheit}
+\end{equation}
+wobei die \emph{reduzierte Masse} $\mu$ über
+\begin{equation}
+  \frac{1}{\mu} = \frac{1}{m_1} + \frac{1}{m_2}
+\end{equation}
+definiert ist. Das Problem ist damit äquivalent zur Rotation einer einzelnen
+Punktmasse $\mu$ im Abstand $r_0$ von der Drehachse.
+
+% --- Abbildung Hantelmodell (Platzhalter) ---
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{hantelmodell}
+  \caption{Hantelmodell eines zweiatomigen Moleküls. Die beiden Atome werden als
+    punktförmige Massen $m_1$ und $m_2$ betrachtet, die auf dem festen Abstand
+    $r_0$ gehalten werden. Die Rotationsachse geht durch den Massenschwerpunkt.}
+  \label{fig:hantel}
+\end{figure}
+
+Die Energieeigenwerte ergeben sich aus der Schrödinger-Gleichung. Da die
+Rotation potentialfrei ist ($U = 0$), lautet diese in Kugelkoordinaten für den
+starren Rotator
+\begin{equation}
+  \frac{1}{r_0^2}\left\{
+    \frac{1}{\sin\theta}\frac{\partial}{\partial\theta}
+      \left(\sin\theta\,\frac{\partial\psi}{\partial\theta}\right)
+    + \frac{1}{\sin^2\theta}\frac{\partial^2\psi}{\partial\phi^2}
+  \right\}
+  + \frac{8\pi^2\mu E}{h^2}\,\psi = 0 .
+\end{equation}
+Ihre Lösung liefert diskrete Energieeigenwerte
+\begin{equation}
+  E(J) = \frac{h^2}{8\pi^2\mu r_0^2}\,J(J+1), \qquad J = 0,1,2,\dots
+  \label{eq:erot}
+\end{equation}
+mit der ganzzahligen Rotationsquantenzahl $J$. Da in der IR-Spektroskopie mit
+Wellenzahlen gearbeitet wird und $[\wz] = [E/hc]$ gilt, fasst man die Konstanten
+zur \emph{Rotationskonstante}
+\begin{equation}
+  B = \frac{h}{8\pi^2 c\,\mu r_0^2} = \frac{h}{8\pi^2 c\,I}
+  \label{eq:B}
+\end{equation}
+zusammen. Der Rotationsterm $F(J) = E(J)/hc$ hat die Dimension einer Wellenzahl:
+\begin{equation}
+  F(J) = B\,J(J+1), \qquad J = 0,1,2,\dots
+  \label{eq:FJ}
+\end{equation}
+Quantenmechanisch sind nur Übergänge mit der Auswahlregel
+\begin{equation}
+  \Delta J = \pm 1
+  \label{eq:auswahlrot}
+\end{equation}
+erlaubt. Die zu einem Übergang $J \to J+1$ gehörende Wellenzahl beträgt somit
+\begin{equation}
+  \wz = F(J+1) - F(J) = 2B\,(J+1), \qquad J = 0,1,2,\dots
+  \label{eq:rotlinien}
+\end{equation}
+Das reine Rotationsspektrum besteht daher aus äquidistanten Linien mit dem
+Abstand $\wz = 2B$; es liegt im fernen Infrarot (FIR).
+
+% ------------------------------------------------------------------
+\subsection{Schwingung eines zweiatomigen Moleküls}
+\label{sec:schwingung}
+
+Im Gegensatz zur Annahme des starren Rotators sind die beiden Atome nicht durch
+eine starre Stange, sondern durch Bindungskräfte verbunden. In erster Ordnung
+lassen sich diese als \emph{harmonischer Oszillator} mit der Kraftkonstante $k$
+nähern. Mit den Auslenkungen $x_1$ und $x_2$ aus der Ruhelage und $x = x_1 - x_2$
+folgt aus den Bewegungsgleichungen die Schwingungsgleichung des harmonischen
+Oszillators,
+\begin{equation}
+  \ddot{x} = -\frac{k}{\mu}\,x ,
+\end{equation}
+mit der Resonanzwellenzahl
+\begin{equation}
+  \wzs = \frac{1}{2\pi c}\sqrt{\frac{k}{\mu}} .
+  \label{eq:nus}
+\end{equation}
+Die Kraftkonstante $k$ ist ein Maß für die Bindungskräfte im Molekül. Die
+quantenmechanische Behandlung über die Schrödinger-Gleichung liefert die
+diskreten, äquidistanten Energieeigenwerte
+\begin{equation}
+  E(n) = hc\,\wzs\left(n + \tfrac{1}{2}\right), \qquad n = 0,1,2,\dots
+  \label{eq:eschwing}
+\end{equation}
+mit der Schwingungsquantenzahl $n$; $E(0) = \tfrac{1}{2}hc\,\wzs$ ist die
+Nullpunktsenergie. Nach den quantenmechanischen Auswahlregeln sind nur
+Dipolübergänge mit
+\begin{equation}
+  \Delta n = \pm 1
+  \label{eq:auswahlschwing}
+\end{equation}
+erlaubt. Die zugehörige Übergangsenergie $E(n+1) - E(n) = hc\,\wzs$ ist
+unabhängig von $n$; im reinen Schwingungsspektrum tritt also nur eine einzige
+Absorptionslinie bei der Resonanzwellenzahl \wzs{} auf. Der Schwingungsterm
+lautet
+\begin{equation}
+  G(n) = \frac{E(n)}{hc} = \wzs\left(n + \tfrac{1}{2}\right) .
+  \label{eq:Gn}
+\end{equation}
+
+% ------------------------------------------------------------------
+\subsection{Rotations-Schwingungsspektren}
+\label{sec:rotvib}
+
+In der Realität treten Rotation und Schwingung gleichzeitig auf. Vernachlässigt
+man zunächst die Kopplung zwischen beiden, so ergibt sich die Gesamtenergie des
+rotierenden Oszillators durch Addition von \eqref{eq:erot} und
+\eqref{eq:eschwing},
+\begin{equation}
+  E(n,J) = hc\,B\,J(J+1) + hc\,\wzs\left(n + \tfrac{1}{2}\right),
+  \label{eq:enJ}
+\end{equation}
+und für den Rotations-Schwingungsterm $T(n,J) = E(n,J)/hc$
+\begin{equation}
+  T(n,J) = B\,J(J+1) + \wzs\left(n + \tfrac{1}{2}\right) .
+  \label{eq:TnJ}
+\end{equation}
+Die Auswahlregeln lauten nun
+\begin{equation}
+  \Delta J = \pm 1, \qquad \Delta n = 0, \pm 1 .
+\end{equation}
+Übergänge mit $\Delta n = 0$ liefern das reine Rotationsspektrum (FIR).
+Da beim HCl die Schwingungswellenzahl \wzs{} sehr viel größer ist als die
+Rotationskonstante $B$, spaltet sich die Schwingungsbande in zwei Zweige auf
+(Abb.~\ref{fig:rotvib}). Man unterscheidet zwei Fälle:
+
+\paragraph{R-Zweig ($\Delta n = 1$, $\Delta J = +1$).}
+Die Differenz der Rotations-Schwingungsterme liefert
+\begin{equation}
+  \wz_R(J) = T(n+1,J+1) - T(n,J) = \wzs + 2B\,(J+1), \qquad J = 0,1,2,\dots
+  \label{eq:rzweig}
+\end{equation}
+
+\paragraph{P-Zweig ($\Delta n = 1$, $\Delta J = -1$).}
+Analog ergibt sich
+\begin{equation}
+  \wz_P(J) = T(n+1,J-1) - T(n,J) = \wzs - 2B\,J, \qquad J = 1,2,3,\dots
+  \label{eq:pzweig}
+\end{equation}
+Wegen $\Delta J = -1$ existiert kein Übergang $P(0)$; der P-Zweig beginnt bei
+$J = 1$.
+
+% --- Abbildung Rotations-Schwingungsschema (Platzhalter) ---
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{rotvibschema}
+  \caption{Energieniveauschema der rotierenden Schwingungszustände. Die
+    Übergänge mit $\Delta J = \pm 1$ bilden für den Schwingungsmodenwechsel
+    $n=0 \to n=1$ den R- und den P-Zweig aus. Der Übergang mit $\Delta J = 0$
+    ist verboten.}
+  \label{fig:rotvib}
+\end{figure}
+
+Da der Übergang mit $\Delta J = 0$ verboten ist, kann bei $\wz = \wzs$ keine
+Linie beobachtet werden (Bandlücke). Aus den Übergangswellenzahlen lassen sich
+die Kenngrößen des Moleküls bestimmen: Für die Wellenzahl des reinen
+Schwingungsübergangs gilt
+\begin{equation}
+  \wz_R(0) + \wz_P(1) = 2\,\wzs ,
+  \label{eq:nusbest}
+\end{equation}
+und die Rotationskonstante erhält man aus
+\begin{equation}
+  \wz_R(0) - \wz_P(1) = 4B .
+  \label{eq:Bbest}
+\end{equation}
+Der Abstand zweier benachbarter Linien beträgt sowohl im P- als auch im R-Zweig
+$2B$.
+
+% ------------------------------------------------------------------
+\subsection{Wechselwirkung von Rotation und Schwingung}
+\label{sec:kopplung}
+
+Die hohe Präzision des Spectrum~100 erlaubt es, die Effekte der nicht-starren
+Molekülachse zu untersuchen. Am Gesamtterm $T(n,J)$ sind zwei Korrekturen
+anzubringen. Zum einen vergrößert die Zentrifugalkraft der Rotation den
+Atomabstand und damit das Trägheitsmoment, was zu einer Verringerung der
+Rotationskonstante führt. Dieser Effekt wird durch einen quadratischen Term mit
+der \emph{Dehnungskonstante} $D$ ($D \ll B$) berücksichtigt:
+\begin{equation}
+  F(J) = B\,J(J+1) - D\,J^2(J+1)^2 .
+  \label{eq:zentrifugal}
+\end{equation}
+Zum anderen bewirken Anharmonizitätseffekte, dass sich der mittlere Atomabstand
+zwischen den verschiedenen Schwingungszuständen ändert. Damit werden das
+Trägheitsmoment und die Konstanten $B$ und $D$ von der Schwingungsquantenzahl $n$
+abhängig, sodass der Rotationsterm
+\begin{equation}
+  F_n(J) = B_n\,J(J+1) - D_n\,J^2(J+1)^2
+\end{equation}
+lautet. Führt man einen laufenden Index $i$ ein ($i = -J$ für den P-Zweig,
+$i = J+1$ für den R-Zweig), so lassen sich die Wellenzahlen beider Zweige unter
+den Näherungen $D_n \ll B_n$ und $D_n \approx D_{n+1}$ in einer Gleichung
+zusammenfassen:
+\begin{equation}
+  \wz(i) = \wzs + (B_1 + B_0)\,i + (B_1 - B_0)\,i^2 - 2(D_1 + D_0)\,i^3 .
+  \label{eq:sammel}
+\end{equation}
+Der Index $i = 0$ entspricht dem verbotenen reinen Schwingungsübergang. Zur
+experimentellen Bestimmung der Konstanten bildet man die erste und zweite
+Differenz der Übergangswellenzahlen:
+\begin{align}
+  \Delta\wz(i)   &= \wz(i+1) - \wz(i)
+    = 2B_1 - 2(D_1 + D_0) + 2i\bigl(B_1 - B_0 - 3(D_1 + D_0)\bigr) - 6i^2(D_1+D_0),
+    \label{eq:diff1}\\
+  \Delta^2\wz(i) &= \Delta\wz(i+1) - \Delta\wz(i)
+    = 2(B_1 - B_0) - 12(D_1 + D_0) - 12\,i\,(D_1 + D_0) .
+    \label{eq:diff2}
+\end{align}
+Aus dem Anstieg der Geraden \eqref{eq:diff2} erhält man $D_1 + D_0$, aus dem
+Ordinatenabschnitt $B_1 - B_0$; mit \eqref{eq:diff1} können anschließend die
+Einzelgrößen $B_1$ und $B_0$ bestimmt werden.
+
+% ------------------------------------------------------------------
+\subsection{Intensität des Spektrums (Bjerrum'sche Doppelbande)}
+\label{sec:intensitaet}
+
+Die Einhüllende der Absorptionslinien hat die Form einer Doppelbande: Die
+Transmission durchläuft zwei Minima, die dem R- und dem P-Zweig entsprechen. Zur
+Beschreibung der Intensitäten wird der Absorptionskoeffizient $\alpha$ benötigt.
+Dieser ist proportional zur Übergangswahrscheinlichkeit, zur Teilchenzahl $N$ im
+Ausgangszustand und zur Wellenzahl \wz{}. Unter der Annahme gleicher
+Übergangswahrscheinlichkeiten für alle erlaubten Übergänge gilt
+\begin{equation}
+  \alpha = c_2\,N\,\wz .
+  \label{eq:alpha}
+\end{equation}
+Im thermodynamischen Gleichgewicht ist die Zahl der Moleküle mit der Energie $E$
+durch die Maxwell-Boltzmann-Verteilung gegeben:
+\begin{equation}
+  N(E) = \frac{\eta}{Q_r}\,e^{-E/\kB T},
+  \label{eq:boltzmann}
+\end{equation}
+mit der Gesamtteilchenzahl $\eta$, der Zustandssumme $Q_r$, der
+Boltzmann-Konstante \kB{} und der absoluten Temperatur $T$. Dabei ist zu
+berücksichtigen, dass jeder Zustand mit dem Gesamtdrehimpuls $J$ $(2J+1)$-fach
+entartet ist und bei Raumtemperatur nahezu alle Moleküle im
+Schwingungsgrundzustand ($n = 0$) vorliegen, da die thermische Energie
+$\kB T \approx \SI{26}{meV}$ deutlich kleiner ist als die Schwingungsenergie
+$hc\,\wzs \approx \SI{400}{meV}$. Einsetzen von \eqref{eq:enJ} in
+\eqref{eq:boltzmann} liefert für den Absorptionskoeffizienten
+\begin{equation}
+  \alpha = c_3\,\wz\,(2J+1)\,e^{-\frac{hc B J(J+1)}{\kB T}} .
+  \label{eq:alphaJ}
+\end{equation}
+Mit dem Lambert'schen Gesetz ergibt sich daraus für die relative Intensität der
+Absorptionslinien
+\begin{equation}
+  I(J) = I_0\,e^{-\alpha d}
+       = I_0\exp\!\left\{ c_4\,\wz\,(2J+1)\,
+         e^{-\frac{hc B J(J+1)}{\kB T}} \right\},
+  \label{eq:intensitaet}
+\end{equation}
+wobei der Zusammenhang zwischen $J$ und \wz{} aus \eqref{eq:sammel} bekannt ist.
+Über die Modellierung dieser Intensitätsverteilung lässt sich die Temperatur $T$
+als freier Parameter bestimmen.
+
+% ------------------------------------------------------------------
+\subsection{Interferenzmethode zur Schichtdickenbestimmung}
+\label{sec:interferenz}
+
+Wird ein Lichtstrahl durch eine leere Küvette geführt, so wird er an den
+Grenzflächen mehrfach reflektiert (Abb.~\ref{fig:kuvette}). Der transmittierte
+und der mehrfach reflektierte Strahl sind kohärent und interferieren; im Spektrum
+erscheint dies als periodische Modulation der Intensität. Für senkrechten Einfall
+($\beta = \SI{0}{\degree}$), wie er beim näherungsweise parallelen Strahl des
+Spectrum~100 vorliegt, beträgt der optische Gangunterschied zwischen dem
+transmittierten und dem zweifach reflektierten Strahl
+\begin{equation}
+  \Delta = 2 n_0 d ,
+\end{equation}
+mit der Schichtdicke $d$ und dem Brechungsindex $n_0$ des Mediums.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{kuvette}
+  \caption{Strahlengang durch eine Küvette. Die durch das zweite Fenster
+    austretenden Teilstrahlen $a$ und $b$ stammen aus demselben einfallenden
+    Strahl~1 und sind daher kohärent. Ob sie konstruktiv oder destruktiv
+    interferieren, hängt vom optischen Gangunterschied ab. Für den im Versuch
+    vorliegenden senkrechten Einfall ($\beta = \SI{0}{\degree}$) vereinfacht sich
+    dieser zu $\Delta = 2 n_0 d$.}
+  \label{fig:kuvette}
+\end{figure}
+
+Konstruktive
+Interferenz (Transmissionsmaximum) tritt auf, wenn $\Delta$ ein ganzzahliges
+Vielfaches der Vakuumwellenlänge $\lambda$ ist:
+\begin{equation}
+  2 n_0 d = N\lambda = \frac{N}{\wz}, \qquad N = 0,1,2,\dots
+\end{equation}
+Betrachtet man zwei Maxima der Ordnungen $N_i$ und $N_0$ bei den Wellenzahlen
+$\wz(N_i)$ und $\wz(N_0)$ und trägt die Ordnungsdifferenz $N_i - N_0$ über die
+Wellenzahldifferenz auf, so ergibt sich eine Gerade mit dem Anstieg
+\begin{equation}
+  2 n_0 d = \frac{N_i - N_0}{\wz(N_i) - \wz(N_0)} .
+  \label{eq:schichtdicke}
+\end{equation}
+Mit $n_0 = 1$ für Luft lässt sich die Schichtdicke $d$ aus einer linearen
+Regression bestimmen.
+
+% ------------------------------------------------------------------
+\subsection{Fourier-Transformations-Infrarot-Spektroskopie}
+\label{sec:ftir}
+
+\subsubsection{Funktionsweise}
+
+Ein FTIR-Spektrometer besteht aus einer Strahlungsquelle, einem
+Interferometer (typischerweise vom Michelson-Typ) und einem Detektor. Ein
+Strahlteiler spaltet das Licht der Quelle in zwei Teilstrahlen auf, die über
+einen beweglichen und einen festen Spiegel geführt und anschließend wieder
+vereinigt werden. Je nach optischem Wegunterschied $s = x_2 - x_1$ interferieren
+die Teilstrahlen konstruktiv oder destruktiv. Für eine monochromatische Welle der
+Wellenzahl \wz{} misst der Detektor die Intensität
+\begin{equation}
+  I(s) = I_1 + I_2 + 2\sqrt{I_1 I_2}\,\cos(2\pi\wz s) .
+\end{equation}
+Die als Funktion des Gangunterschieds $s$ gemessene Intensitätsverteilung $I(s)$
+wird als \emph{Interferogramm} bezeichnet. Für ein kontinuierliches Spektrum
+$S(\wz)$ ergibt sich das Interferogramm als Überlagerung aller
+monochromatischen Beiträge,
+\begin{equation}
+  I(s) = 2\int_0^\infty S(\wz)\,\cos(2\pi\wz s)\,\mathrm{d}\wz .
+\end{equation}
+Nach Erweiterung des Integrationsbereichs auf $[-\infty,\infty]$ mittels
+$S(-\wz) = S(\wz)$ folgt, dass das gesuchte Spektrum $S(\wz)$ die
+Fourier-Transformierte des Interferogramms ist:
+\begin{equation}
+  S(\wz) = \int_{-\infty}^{\infty} I(s)\,e^{-2\pi i \wz s}\,\mathrm{d}s .
+  \label{eq:ft}
+\end{equation}
+
+\subsubsection{Diskrete Fourier-Transformation, Auflösung und Zerofilling}
+
+In der Praxis wird das Interferogramm digitalisiert und ist endlich: Es liegen
+$n$ Messpunkte im konstanten Abstand $\Delta s$ vor. An die Stelle von
+\eqref{eq:ft} tritt daher die diskrete Fourier-Transformation, die üblicherweise
+mit dem Algorithmus der schnellen Fourier-Transformation (FFT) berechnet wird.
+Aus der endlichen Weglänge folgt eine begrenzte spektrale Auflösung. Die maximal
+erreichbare Wellenzahl hängt über
+\begin{equation}
+  \wz_{\max} \le \frac{n\,\Delta\wz}{2}
+\end{equation}
+mit dem Punktabstand $\Delta s$ zusammen, und der Abstand zweier Spektralpunkte
+beträgt
+\begin{equation}
+  \Delta\wz = \frac{1}{n\,\Delta s} .
+  \label{eq:aufloesung}
+\end{equation}
+Ein größerer Spiegelweg (mehr Datenpunkte $n$) verbessert somit das
+Auflösungsvermögen. Durch \emph{Zerofilling}, d.\,h. das Anhängen von Nullen an
+das Interferogramm, wird die Dichte der Spektralpunkte künstlich erhöht
+(Interpolation), ohne dass echte Information hinzukommt.
+
+\subsubsection{Leakage-Effekt und Apodisation}
+
+Die endliche Länge des Interferogramms lässt sich mathematisch als Multiplikation
+mit einer Rechteckfunktion beschreiben. Deren Fourier-Transformierte ist eine
+$\mathrm{sinc}$-Funktion, die im Spektrum als eine langsam abklingende
+Hintergrundschwingung um jede Spektrallinie erscheint. Dieser Effekt wird als
+\emph{Leakage} bezeichnet. Multipliziert man das Interferogramm stattdessen mit
+einer zu den Rändern hin sanfter abfallenden Funktion (z.\,B.
+Dreieck-, Happ-Genzel- oder Blackman-Funktion), so lässt sich das Leakage unter
+Einbußen bei der Maximalintensität und der Auflösung verringern. Dieser Vorgang
+heißt \emph{Apodisation}; für die Auswertung ist ein Kompromiss zwischen
+geringem Leakage und hohem Auflösungsvermögen zu finden. Da das gemessene
+Interferogramm im Allgemeinen unsymmetrisch zum Nullpunkt aufgenommen wird,
+liefert die Fourier-Transformation ein komplexwertiges Spektrum, aus dem mittels
+\emph{Phasenkorrektur} (z.\,B. nach der Mertz-Methode) das reelle Spektrum
+gewonnen wird.
+
+% ==================================================================
+%  LITERATUR
+% ==================================================================
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{Riede}
+  V.~Riede (Überarb.\ C.~Kranert):
+  \emph{Rotations-Schwingungsspektren von Molekülen},
+  Versuchsanleitung zum Fortgeschrittenenpraktikum,
+  Universität Leipzig.
+
+\bibitem{Finkelnburg}
+  W.~Finkelnburg:
+  \emph{Einführung in die Atomphysik},
+  Springer-Verlag, Berlin/Göttingen/Heidelberg 1958, S.~186\,ff und S.~351\,ff.
+
+\bibitem{Bruegel}
+  W.~Brügel:
+  \emph{Einführung in die Ultrarotspektroskopie},
+  Dr.\ Dietrich Steinkopff Verlag, Darmstadt 1969, S.~9--27.
+
+\bibitem{Herzberg}
+  G.~Herzberg:
+  \emph{Molecular Spectra and Molecular Structure},
+  Bd.~I (Spectra of Diatomic Molecules),
+  D.~van Nostrand Comp., Toronto/New York/London 1950.
+
+\bibitem{Geschke}
+  D.~Geschke:
+  \emph{Physikalisches Praktikum},
+  B.~G.~Teubner, Stuttgart/Leipzig 1994.
+
+\bibitem{Demtroeder}
+  W.~Demtröder:
+  \emph{Molekülphysik}, 2.~Auflage,
+  Oldenbourg Wissenschaftsverlag, Berlin 2013, S.~91.
+
+\bibitem{FTIRhist}
+  Universität Leipzig, AG Optik/Spektroskopie:
+  \emph{Geschichte der FTIR-Spektroskopie},
+  \url{https://polariton.exphysik.uni-leipzig.de/subsites/staff/bundesmann/ftir/geschichte.html}
+  (abgerufen 2024).
+
+\bibitem{Rinsland}
+  C.~P.~Rinsland et al.:
+  \emph{The Fundamental Bands of \textsuperscript{35}HCl and \textsuperscript{37}HCl:
+  Line Positions from High-Resolution Laboratory Data},
+  Journal of Molecular Spectroscopy, Vol.~159 (1993).
+
+\bibitem{Gupta}
+  D.~Gupta, L.~Wang, L.~M.~Hanssen, J.~J.~Hsia, R.~U.~Datla:
+  \emph{Polystyrene Films for Calibrating the Wavelength Scale of Infrared
+  Spectrophotometers -- SRM~1921},
+  NIST Special Publication 260-122 (1995).
+
+\end{thebibliography}
+
+\end{document}

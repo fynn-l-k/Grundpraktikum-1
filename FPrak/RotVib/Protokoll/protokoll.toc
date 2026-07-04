@@ -1,0 +1,16 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{2}{section.1}%
+\contentsline {section}{\numberline {2}Aufgabenstellung}{2}{section.2}%
+\contentsline {section}{\numberline {3}Theoretische Grundlagen}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Rotation eines zweiatomigen Moleküls}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Schwingung eines zweiatomigen Moleküls}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Rotations-Schwingungsspektren}{5}{subsection.3.3}%
+\contentsline {paragraph}{R-Zweig ($\Delta n = 1$, $\Delta J = +1$).}{5}{section*.3}%
+\contentsline {paragraph}{P-Zweig ($\Delta n = 1$, $\Delta J = -1$).}{5}{section*.4}%
+\contentsline {subsection}{\numberline {3.4}Wechselwirkung von Rotation und Schwingung}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Intensität des Spektrums (Bjerrum'sche Doppelbande)}{6}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Interferenzmethode zur Schichtdickenbestimmung}{7}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Fourier-Transformations-Infrarot-Spektroskopie}{8}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Funktionsweise}{8}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Diskrete Fourier-Transformation, Auflösung und Zerofilling}{8}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Leakage-Effekt und Apodisation}{9}{subsubsection.3.7.3}%
