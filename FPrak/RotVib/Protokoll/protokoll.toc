@@ -16,3 +16,9 @@
 \contentsline {subsubsection}{\numberline {3.7.3}Leakage-Effekt und Apodisation}{9}{subsubsection.3.7.3}%
 \contentsline {section}{\numberline {4}Auswertung}{9}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Kalibrierung der Wellenzahlskala (Aufgabe 1.1)}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Interferogramme, Fourier-Transformation und Auflösung (Aufgabe 1.2)}{13}{subsection.4.2}%
+\contentsline {paragraph}{Schrittweite des optischen Weges.}{13}{section*.13}%
+\contentsline {paragraph}{Einfluss der Interferogrammlänge.}{14}{section*.15}%
+\contentsline {paragraph}{Zerofilling.}{15}{section*.17}%
+\contentsline {paragraph}{Apodisation.}{15}{section*.19}%
+\contentsline {paragraph}{Theoretisches Auflösungsvermögen.}{16}{section*.21}%

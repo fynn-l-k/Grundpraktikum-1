@@ -595,20 +595,33 @@ gewonnen wird.
 Zur Überprüfung der Wellenzahlskala des Spektrometers Spectrum~100 wurden
 Einkanalspektren von Wasserdampf und einer Polystyrolfolie im Bereich
 $\bar\nu \in [200,4000]\,\si{cm^{-1}}$ mit einem Punktabstand von
-$\SI{0.125}{cm^{-1}}$ aufgenommen. Die Absorptionsbanden erscheinen in den
-Einkanalspektren als lokale Minima der detektierten Intensität. Für jede der in
-der Versuchsanleitung tabellierten Kalibrierbanden~\cite{Riede,Gupta} wurde die
-Lage des zugehörigen gemessenen Minimums bestimmt, indem in einem engen
-Suchfenster um den Referenzwert der tiefste Datenpunkt gesucht wurde. Die
-gemessenen Spektren mit den eingezeichneten Referenz-Wellenzahlen zeigt
-Abb.~\ref{fig:eich_spektren}.
+$\SI{0.125}{cm^{-1}}$ aufgenommen. Das Wasserdampfspektrum wurde ohne Probe im
+Strahlengang gemessen und stellt somit das Referenz- bzw. Hintergrundspektrum
+$I_0(\bar\nu)$ dar. Das Polystyrolspektrum wird daher als Transmissionsspektrum
+\begin{equation}
+  T(\bar\nu) = \frac{I_\mathrm{Poly}(\bar\nu)}{I_0(\bar\nu)}
+  \label{eq:norm}
+\end{equation}
+ausgewertet. Durch diese Normierung werden sowohl der spektrale Verlauf der
+Strahlungsquelle und der Gerätekomponenten als auch die scharfen
+Wasserdampflinien der Umgebungsluft weitgehend herausgeteilt, sodass die breiten
+Polystyrolbanden deutlicher hervortreten. Beim Wasserdampf selbst erscheinen die
+Absorptionsbanden im Einkanalspektrum als lokale Minima der detektierten
+Intensität.
+
+Für jede der in der Versuchsanleitung tabellierten
+Kalibrierbanden~\cite{Riede,Gupta} wurde die Lage des zugehörigen gemessenen
+Minimums bestimmt, indem in einem engen Suchfenster um den Referenzwert der
+tiefste Datenpunkt gesucht wurde. Die gemessenen Spektren mit den eingezeichneten
+Referenz-Wellenzahlen zeigt Abb.~\ref{fig:eich_spektren}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{eich_spektren}
-  \caption{Aufgenommene Einkanalspektren von Polystyrol (links) und Wasserdampf
-    (rechts). Die roten gepunkteten Linien markieren die zur Kalibrierung
-    verwendeten theoretischen Wellenzahlen der Absorptionsbanden.}
+  \caption{Auf den Wasserdampf-Hintergrund normiertes Transmissionsspektrum der
+    Polystyrolfolie (links) und Einkanalspektrum des Wasserdampfs (rechts). Die
+    roten gepunkteten Linien markieren die zur Kalibrierung verwendeten
+    theoretischen Wellenzahlen der Absorptionsbanden.}
   \label{fig:eich_spektren}
 \end{figure}
 
@@ -621,20 +634,25 @@ Auswertung eingehen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{eich_zoom_poly}
-  \caption{Vergrößerte Ausschnitte des Polystyrolspektrums. Rote Punkte
-    kennzeichnen die zur Kalibrierung verwendeten Bandenminima. Die scharfen
-    Einbrüche im mittleren Fenster stammen von Wasserdampflinien der Umgebungsluft
-    und überlagern die breiten Polystyrolbanden.}
+  \caption{Vergrößerte Ausschnitte des normierten Polystyrolspektrums. Die grünen
+    gestrichelten Linien markieren die theoretischen Referenzwellenzahlen, die
+    roten Punkte die zugehörigen gemessenen Bandenminima. Durch die Normierung auf
+    den Hintergrund treten die Banden als klare Transmissionseinbrüche hervor;
+    die vereinzelten schmalen Spikes im mittleren Fenster sind Artefakte der
+    Division in Bereichen, in denen der Wasserdampf nahezu vollständig absorbiert
+    ($I_0 \approx 0$).}
   \label{fig:eich_zoom_poly}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{eich_zoom_water}
-  \caption{Vergrößerte Ausschnitte des Wasserdampfspektrums. Im Fenster um
-    $\SI{1800}{cm^{-1}}$ ist erkennbar, dass die vier dicht benachbarten
-    Referenzlinien bei der vorliegenden Auflösung nicht alle eindeutig getrennt
-    werden können; markiert sind nur die verlässlich zuordenbaren Banden.}
+  \caption{Vergrößerte Ausschnitte des Wasserdampfspektrums. Grüne gestrichelte
+    Linien: theoretische Referenzwellenzahlen; rote Punkte: gemessene
+    Bandenminima. Im Fenster um $\SI{1800}{cm^{-1}}$ ist erkennbar, dass die vier
+    dicht benachbarten Referenzlinien bei der vorliegenden Auflösung nicht alle
+    eindeutig getrennt werden können; markiert sind nur die verlässlich
+    zuordenbaren Banden.}
   \label{fig:eich_zoom_water}
 \end{figure}
 
@@ -642,17 +660,19 @@ Nicht alle tabellierten Banden eignen sich als Kalibrierpunkte: Beim Wasserdampf
 liegen die vier Linien im Bereich um $\SI{1800}{cm^{-1}}$ so dicht beieinander,
 dass sie bei der vorliegenden Auflösung nicht eindeutig getrennt werden können;
 hier wurden nur die eindeutig zuordenbaren Banden verwendet. Beim Polystyrol
-wurden einige breite bzw. von scharfen Wasserdampflinien überlagerte Banden
-(u.\,a.\ bei $699{,}45$, $1368{,}5$ und $1583{,}1\,\si{cm^{-1}}$) verworfen,
-da ihr Minimum nicht verlässlich der Bande zuzuordnen ist. Insgesamt gingen
-$6$~Wasserdampf- und $17$~Polystyrolbanden in die Auswertung ein.
+wurden die breiten, schwach ausgeprägten Banden bei $1368{,}5$ und
+$1583{,}1\,\si{cm^{-1}}$ verworfen, da ihr Minimum auch im normierten Spektrum
+nicht verlässlich der Bande zuzuordnen ist. Die Bande bei $699{,}45\,\si{cm^{-1}}$
+konnte dank der Normierung, die die überlagernde Wasserdampfabsorption entfernt,
+wieder aufgenommen werden. Insgesamt gingen $6$~Wasserdampf- und
+$18$~Polystyrolbanden in die Auswertung ein.
 
 Die relativen Abweichungen $(\bar\nu_\mathrm{mess}-\bar\nu_\mathrm{theo})/
 \bar\nu_\mathrm{theo}$ sind in Abb.~\ref{fig:eich_abweichung} über die gemessene
 Wellenzahl aufgetragen. Sie liegen betragsmäßig unterhalb von etwa
-$3\cdot10^{-3}$ und streuen ohne erkennbares Muster; ein grober systematischer
+$2\cdot10^{-3}$ und streuen ohne erkennbares Muster; ein grober systematischer
 Fehler ist damit auszuschließen. Der Mittelwert der relativen Abweichung beträgt
-$+8{,}8\cdot10^{-4}$ (Wasserdampf) bzw.\ $+4{,}9\cdot10^{-4}$ (Polystyrol), die
+$+8{,}8\cdot10^{-4}$ (Wasserdampf) bzw.\ $+7{,}0\cdot10^{-4}$ (Polystyrol), die
 gemessenen Wellenzahlen liegen also im Mittel geringfügig oberhalb der
 Literaturwerte.
 
@@ -674,11 +694,11 @@ $\bar\nu_\mathrm{theo}$ aufgetragen und mittels linearer Regression durch
 angepasst (Abb.~\ref{fig:eich_regression}, aufgetragen ist die Residuendarstellung
 $\bar\nu_\mathrm{mess}-\bar\nu_\mathrm{theo}$). Die Regression liefert
 \begin{align}
-  a &= 1{,}00122 \pm 0{,}00035, \\
-  b &= (-1{,}03 \pm 0{,}71)\,\si{cm^{-1}}, \\
-  R^2 &= 0{,}999997 .
+  a &= 1{,}00103 \pm 0{,}00025, \\
+  b &= (-0{,}47 \pm 0{,}49)\,\si{cm^{-1}}, \\
+  R^2 &= 0{,}999999 .
 \end{align}
-Der Anstieg weicht mit rund $0{,}12\,\%$ nur geringfügig von $1$ ab, der
+Der Anstieg weicht mit rund $0{,}10\,\%$ nur geringfügig von $1$ ab, der
 Ordinatenabschnitt ist im Rahmen seiner Unsicherheit mit $0$ verträglich. Die
 Wellenzahlskala des Spektrometers ist damit innerhalb der Messgenauigkeit korrekt
 kalibriert; die verbleibende Abweichung ist klein, aber statistisch signifikant
@@ -697,6 +717,162 @@ weiteren Ergebnisse jedoch gering.
     \bar\nu_\mathrm{theo}+b$.}
   \label{fig:eich_regression}
 \end{figure}
+
+% ------------------------------------------------------------------
+\subsection{Interferogramme, Fourier-Transformation und Auflösung (Aufgabe 1.2)}
+\label{sec:ftir_auswertung}
+
+Für diese Aufgabe wurden Interferogramme des Wasserdampfspektrums mit fünf
+verschiedenen Spiegelbereichen des Interferometers aufgenommen. Die
+Datenpunktbereiche reichen von $\pm500$ über $\pm1000$, $\pm4000$ und $\pm8000$
+Punkte (jeweils symmetrisch um den Nullgangunterschied) bis zum maximalen,
+einseitig verlängerten Bereich von $-8000$ bis $+32000$ Punkten. Aus jedem
+Interferogramm $I(s)$ wurde das Spektrum durch eine diskrete
+Fourier-Transformation (FFT) gemäß Gl.~\eqref{eq:ft} berechnet. Da die erste
+Datenspalte den Punktindex und nicht direkt den optischen Weg angibt, liefert die
+FFT zunächst eine Frequenzachse in Einheiten von $1/\text{Punkt}$, deren maximale
+Frequenz $0{,}5$ (zwei Punkte pro Periode) beträgt. Die aufgenommenen
+Interferogramme und die daraus berechneten Spektren zeigt
+Abb.~\ref{fig:a2_interferogramme}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.86\textwidth]{a2_interferogramme}
+  \caption{Aufgenommene Interferogramme (links) und die daraus per FFT berechneten
+    Spektren (rechts) für die fünf Spiegelbereiche. Mit zunehmender
+    Interferogrammlänge nimmt der Detailreichtum der Spektren zu. Das unterste
+    Interferogramm ist einseitig verlängert ($-8000$ bis $+32000$).}
+  \label{fig:a2_interferogramme}
+\end{figure}
+
+\paragraph{Schrittweite des optischen Weges.}
+Zur Umrechnung der Frequenzachse in eine Wellenzahlskala wird die Schrittweite
+$\Delta s$ (optischer Weg pro Datenpunkt) benötigt. Diese lässt sich aus der
+Lage einer bekannten Bande im FFT-Spektrum bestimmen: Liegt ein spektrales
+Merkmal bei der bekannten Wellenzahl $\bar\nu$ und der gemessenen FFT-Frequenz
+$f$, so gilt $\Delta s = f/\bar\nu$. Als Referenz dient die scharfe, isolierte
+Absorptionsbande des in der Umgebungsluft stets vorhandenen
+Kohlendioxids bei $\bar\nu_{\mathrm{CO}_2}=\SI{2349}{cm^{-1}}$. Aus der längsten
+Messung ergibt sich für ihre FFT-Frequenz $f_{\mathrm{CO}_2}=0{,}1494\,
+(\text{Punkt})^{-1}$ und damit
+\begin{equation}
+  \Delta s = \frac{f_{\mathrm{CO}_2}}{\bar\nu_{\mathrm{CO}_2}}
+           = \SI{6.36e-5}{cm} .
+\end{equation}
+Die daraus folgende maximal darstellbare Wellenzahl beträgt
+$\bar\nu_{\max}=1/(2\Delta s)\approx\SI{7862}{cm^{-1}}$ und liegt damit oberhalb
+des vom Detektor erfassten Bereichs. Die Güte dieser Kalibrierung zeigt der
+Vergleich des so skalierten FFT-Spektrums mit dem korrekt kalibrierten
+Referenzspektrum aus Aufgabe~1.1 in Abb.~\ref{fig:a2_kalibrierung}: Sämtliche
+Wasserdampflinien und die CO$_2$-Bande fallen zusammen, was die Schrittweite
+bestätigt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{a2_kalibrierung}
+  \caption{Mit der aus der CO$_2$-Bande bestimmten Schrittweite kalibriertes
+    FFT-Spektrum (blau) im Vergleich mit dem Referenzspektrum aus Aufgabe~1.1
+    (orange). Die vollständige Übereinstimmung aller Banden bestätigt die
+    ermittelte Schrittweite.}
+  \label{fig:a2_kalibrierung}
+\end{figure}
+
+\paragraph{Einfluss der Interferogrammlänge.}
+Abb.~\ref{fig:a2_laenge} zeigt einen Ausschnitt des Wasserdampfspektrums um
+$\SI{1600}{cm^{-1}}$ für alle fünf Messungen. Die kurzen Interferogramme
+($\pm500$, $\pm1000$) besitzen im dargestellten Fenster nur wenige Stützstellen
+und können die dicht liegenden Rotationslinien nicht auflösen. Mit zunehmender
+Länge ($\pm8000$ und die maximale Messung) werden die einzelnen Linien mit tiefen,
+scharfen Einbrüchen sichtbar. Dies illustriert unmittelbar den Zusammenhang
+zwischen Interferogrammlänge und spektralem Auflösungsvermögen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{a2_laenge}
+  \caption{Ausschnitt des Wasserdampfspektrums um $\SI{1600}{cm^{-1}}$ für die
+    fünf Interferogrammlängen. Nur die langen Interferogramme lösen die einzelnen
+    Rotationslinien auf.}
+  \label{fig:a2_laenge}
+\end{figure}
+
+\paragraph{Zerofilling.}
+Beim Zerofilling wird das Interferogramm vor der FFT durch Anhängen von Nullen
+verlängert. Abb.~\ref{fig:a2_zerofill} zeigt den Effekt für die $\pm1000$-Messung
+bei Zerofilling-Faktoren von $1$ bis $8$. Die Dichte der Spektralpunkte steigt,
+sodass der Kurvenverlauf glatter erscheint; die Einhüllende und damit die
+tatsächliche Auflösung bleiben jedoch unverändert. Das Zerofilling wirkt somit
+als reine Interpolation und fügt keine echte spektrale Information hinzu.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{a2_zerofill}
+  \caption{Einfluss des Zerofilling auf das Spektrum der $\pm1000$-Messung. Höhere
+    Faktoren erhöhen die Punktdichte (Interpolation), verändern aber nicht die
+    Linienform bzw. die Auflösung.}
+  \label{fig:a2_zerofill}
+\end{figure}
+
+\paragraph{Apodisation.}
+Das abrupte Abbrechen des endlichen Interferogramms entspricht einer Multiplikation
+mit einer Rechteckfunktion und führt im Spektrum zu den charakteristischen
+Nebenmaxima des Leakage-Effekts (vgl.\ Abschn.~\ref{sec:ftir}).
+Abb.~\ref{fig:a2_apodisation} vergleicht für die $\pm8000$-Messung die
+Rechteck-, Dreieck- und Blackman-Apodisation an einer Einzellinie. Während das
+Rechteckfenster deutliche Nebenschwingungen aufweist, unterdrücken das Dreieck-
+und insbesondere das Blackman-Fenster diese fast vollständig -- allerdings auf
+Kosten einer verbreiterten Hauptlinie und damit geringerer Auflösung. Für die
+Auswertung ist folglich ein Kompromiss zwischen Leakage-Unterdrückung und
+Auflösungsvermögen zu wählen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{a2_apodisation}
+  \caption{Einfluss der Apodisationsfunktion auf eine Einzellinie
+    ($\pm8000$-Messung, Zerofilling $\times4$). Das Rechteckfenster zeigt die
+    stärksten Leakage-Nebenmaxima, Dreieck- und Blackman-Fenster glätten diese
+    unter Verbreiterung der Hauptlinie.}
+  \label{fig:a2_apodisation}
+\end{figure}
+
+\paragraph{Theoretisches Auflösungsvermögen.}
+Aus der bekannten Schrittweite folgt das theoretische spektrale
+Auflösungsvermögen nach Gl.~\eqref{eq:aufloesung} zu
+$\Delta\bar\nu = 1/(n\,\Delta s)$, wobei $n$ die Zahl der Datenpunkte ist. Die
+sich ergebenden Werte sind in Tab.~\ref{tab:a2_aufloesung} zusammengestellt und
+in Abb.~\ref{fig:a2_aufloesung} als Funktion von $n$ aufgetragen.
+
+\begin{table}[H]
+  \centering
+  \caption{Theoretisches Auflösungsvermögen $\Delta\bar\nu=1/(n\,\Delta s)$ für die
+    fünf Interferogrammlängen ($\Delta s=\SI{6.36e-5}{cm}$).}
+  \label{tab:a2_aufloesung}
+  \begin{tabular}{lrr}
+    \toprule
+    Spiegelbereich & Punktzahl $n$ & $\Delta\bar\nu$ (cm$^{-1}$)\\
+    \midrule
+    $\pm500$              &  1001 & 15{,}71\\
+    $\pm1000$             &  2001 &  7{,}86\\
+    $\pm4000$             &  8001 &  1{,}97\\
+    $\pm8000$             & 16001 &  0{,}98\\
+    $-8000\dots+32000$    & 40001 &  0{,}39\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.62\textwidth]{a2_aufloesung}
+  \caption{Theoretisches Auflösungsvermögen $\Delta\bar\nu=1/(n\,\Delta s)$ in
+    Abhängigkeit von der Datenpunktzahl $n$ (doppelt-logarithmisch). Die
+    Messpunkte liegen auf der theoretischen Kurve.}
+  \label{fig:a2_aufloesung}
+\end{figure}
+
+Die längste Messung erreicht ein Auflösungsvermögen von etwa
+$\Delta\bar\nu\approx\SI{0.4}{cm^{-1}}$, das für die Auflösung der
+Rotations-Schwingungslinien des HCl (Aufgabe~1.5) ausreichend ist. Die kurzen
+Interferogramme liefern mit $\Delta\bar\nu\gtrsim\SI{8}{cm^{-1}}$ hingegen nur
+grob aufgelöste Spektren.
 
 % ==================================================================
 %  LITERATUR

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  4 JUL 2026 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  4 JUL 2026 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,7 +685,7 @@ Overfull \hbox (1.27924pt too wide) in paragraph at lines 141--145
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-<figures/hantelmodell.png, id=105, 556.0775pt x 292.09125pt>
+<figures/hantelmodell.png, id=110, 556.0775pt x 292.09125pt>
 File: figures/hantelmodell.png Graphic file (type png)
 <use figures/hantelmodell.png>
 Package pdftex.def Info: figures/hantelmodell.png  used on input line 225.
@@ -702,7 +702,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 res/hantelmodell.png>]
 
 [4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<figures/rotvibschema.png, id=142, 464.73625pt x 342.27875pt>
+<figures/rotvibschema.png, id=147, 464.73625pt x 342.27875pt>
 File: figures/rotvibschema.png Graphic file (type png)
 <use figures/rotvibschema.png>
 Package pdftex.def Info: figures/rotvibschema.png  used on input line 359.
@@ -712,7 +712,7 @@ Package pdftex.def Info: figures/rotvibschema.png  used on input line 359.
 [5 <./figures/rotvibschema.png>]
 
 [6]
-<figures/kuvette.png, id=179, 540.0175pt x 336.25626pt>
+<figures/kuvette.png, id=184, 540.0175pt x 336.25626pt>
 File: figures/kuvette.png Graphic file (type png)
 <use figures/kuvette.png>
 Package pdftex.def Info: figures/kuvette.png  used on input line 489.
@@ -722,82 +722,127 @@ Package pdftex.def Info: figures/kuvette.png  used on input line 489.
 [7 <./figures/kuvette.png>]
 
 [8]
-<figures/eich_spektren.png, id=206, 794.97pt x 289.08pt>
+<figures/eich_spektren.png, id=211, 794.97pt x 289.08pt>
 File: figures/eich_spektren.png Graphic file (type png)
 <use figures/eich_spektren.png>
-Package pdftex.def Info: figures/eich_spektren.png  used on input line 608.
+Package pdftex.def Info: figures/eich_spektren.png  used on input line 620.
 (pdftex.def)             Requested size: 455.24411pt x 165.54922pt.
-<figures/eich_zoom_poly.png, id=209, 505.89pt x 578.16pt>
-File: figures/eich_zoom_poly.png Graphic file (type png)
-<use figures/eich_zoom_poly.png>
-Package pdftex.def Info: figures/eich_zoom_poly.png  used on input line 623.
-(pdftex.def)             Requested size: 327.7763pt x 374.60857pt.
 
 
 [9 <./figures/eich_spektren.png>]
-<figures/eich_zoom_water.png, id=219, 505.89pt x 578.16pt>
+<figures/eich_zoom_poly.png, id=222, 505.89pt x 578.16pt>
+File: figures/eich_zoom_poly.png Graphic file (type png)
+<use figures/eich_zoom_poly.png>
+Package pdftex.def Info: figures/eich_zoom_poly.png  used on input line 636.
+(pdftex.def)             Requested size: 327.7763pt x 374.60857pt.
+<figures/eich_zoom_water.png, id=223, 505.89pt x 578.16pt>
 File: figures/eich_zoom_water.png Graphic file (type png)
 <use figures/eich_zoom_water.png>
-Package pdftex.def Info: figures/eich_zoom_water.png  used on input line 633.
+Package pdftex.def Info: figures/eich_zoom_water.png  used on input line 649.
 (pdftex.def)             Requested size: 327.7763pt x 374.60857pt.
 
 
 [10 <./figures/eich_zoom_poly.png>]
-<figures/eich_abweichung.png, id=226, 794.97pt x 289.08pt>
+<figures/eich_abweichung.png, id=232, 794.97pt x 289.08pt>
 File: figures/eich_abweichung.png Graphic file (type png)
 <use figures/eich_abweichung.png>
-Package pdftex.def Info: figures/eich_abweichung.png  used on input line 661.
+Package pdftex.def Info: figures/eich_abweichung.png  used on input line 681.
 (pdftex.def)             Requested size: 455.24411pt x 165.54922pt.
 
 
 [11 <./figures/eich_zoom_water.png>]
-<figures/eich_regression.png, id=234, 469.755pt x 303.534pt>
+<figures/eich_regression.png, id=240, 469.755pt x 303.534pt>
 File: figures/eich_regression.png Graphic file (type png)
 <use figures/eich_regression.png>
-Package pdftex.def Info: figures/eich_regression.png  used on input line 693.
+Package pdftex.def Info: figures/eich_regression.png  used on input line 713.
 (pdftex.def)             Requested size: 318.66948pt x 205.90944pt.
 
 
 [12 <./figures/eich_abweichung.png> <./figures/eich_regression.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 714--717
+<figures/a2_interferogramme.png, id=255, 735.48624pt x 837.22015pt>
+File: figures/a2_interferogramme.png Graphic file (type png)
+<use figures/a2_interferogramme.png>
+Package pdftex.def Info: figures/a2_interferogramme.png  used on input line 740
+.
+(pdftex.def)             Requested size: 391.51021pt x 445.66637pt.
+
+
+[13 <./figures/a2_interferogramme.png>]
+<figures/a2_kalibrierung.png, id=264, 722.7pt x 303.534pt>
+File: figures/a2_kalibrierung.png Graphic file (type png)
+<use figures/a2_kalibrierung.png>
+Package pdftex.def Info: figures/a2_kalibrierung.png  used on input line 772.
+(pdftex.def)             Requested size: 386.96027pt x 162.52571pt.
+<figures/a2_laenge.png, id=266, 578.16pt x 325.215pt>
+File: figures/a2_laenge.png Graphic file (type png)
+<use figures/a2_laenge.png>
+Package pdftex.def Info: figures/a2_laenge.png  used on input line 791.
+(pdftex.def)             Requested size: 327.7763pt x 184.37207pt.
+
+
+[14 <./figures/a2_kalibrierung.png>]
+<figures/a2_zerofill.png, id=277, 578.16pt x 325.215pt>
+File: figures/a2_zerofill.png Graphic file (type png)
+<use figures/a2_zerofill.png>
+Package pdftex.def Info: figures/a2_zerofill.png  used on input line 808.
+(pdftex.def)             Requested size: 327.7763pt x 184.37207pt.
+<figures/a2_apodisation.png, id=280, 578.16pt x 325.215pt>
+File: figures/a2_apodisation.png Graphic file (type png)
+<use figures/a2_apodisation.png>
+Package pdftex.def Info: figures/a2_apodisation.png  used on input line 829.
+(pdftex.def)             Requested size: 327.7763pt x 184.37207pt.
+
+
+[15 <./figures/a2_laenge.png> <./figures/a2_zerofill.png>]
+<figures/a2_aufloesung.png, id=295, 505.89pt x 303.534pt>
+File: figures/a2_aufloesung.png Graphic file (type png)
+<use figures/a2_aufloesung.png>
+Package pdftex.def Info: figures/a2_aufloesung.png  used on input line 864.
+(pdftex.def)             Requested size: 282.24911pt x 169.35262pt.
+
+
+[16 <./figures/a2_apodisation.png> <./figures/a2_aufloesung.png>]
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 890--893
 []\T1/lmr/m/n/10.95 W. Fin-keln-burg: \T1/lmr/m/it/10.95 Ein-füh-rung in die At
 om-phy-sik\T1/lmr/m/n/10.95 , Springer-Verlag, Ber-
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
-42.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
+18.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5985) in paragraph at lines 740--744
+Underfull \hbox (badness 5985) in paragraph at lines 916--920
 []\T1/lmr/m/n/10.95 Universität Leip-zig, AG Op-tik/Spektroskopie: \T1/lmr/m/it
 /10.95 Ge-schich-te der FTIR-Spektroskopie\T1/lmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 740--744
+Underfull \hbox (badness 10000) in paragraph at lines 916--920
 []$\T1/lmtt/m/n/10.95 https : / / polariton . exphysik . uni-[]leipzig . de / s
 ubsites / staff / bundesmann / ftir /
  []
 
 
 
-[13] (./protokoll.aux)
+[18] (./protokoll.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: C1DBD0D836171893210ED61512CE0962;3415.
+(rerunfilecheck)             Checksum: BF977A8783ED003FAFD3E14FA5F8EB4D;3832.
  ) 
 Here is how much of TeX's memory you used:
- 18400 strings out of 473190
- 355423 string characters out of 5715800
- 736453 words of memory out of 5000000
- 41332 multiletter control sequences out of 15000+600000
- 623016 words of font info for 82 fonts, out of 8000000 for 9000
+ 18511 strings out of 473190
+ 358024 string characters out of 5715800
+ 738588 words of memory out of 5000000
+ 41421 multiletter control sequences out of 15000+600000
+ 628996 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,13n,80p,547b,1078s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,13n,80p,632b,1078s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/tex
@@ -812,11 +857,12 @@ ts/type1/public/lm/lmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
 ublic/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lm
 sy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on protokoll.pdf (14 pages, 1244557 bytes).
+exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on protokoll.pdf (19 pages, 1898584 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 92 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 343 compressed objects within 4 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 199 words of extra memory for PDF output out of 10000 (max. 10000000)
 
