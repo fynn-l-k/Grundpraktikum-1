@@ -1,10 +1,20 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Eichung der Wellenlängenskala mit Hilfe einer Natriumdampflampe.}}{6}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Spektrum der weiß leuchtenden Diode. Mit zwei Peaks bei 470.0nm und 545.0nm.}}{8}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Spektrum der blau leuchtenden Diode. Mit einem Peak bei 473.0nm.}}{9}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Spektrum der grün leuchtenden Diode. Mit einem Peak bei 557.5nm.}}{10}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Spektrum der orange leuchtenden Diode. Mit einem Peak bei 585.6nm.}}{11}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Spektrum der rot leuchtenden Diode. Mit einem Peak bei 655.0nm.}}{12}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Spektrum der Infrarot emittierenden GaAs-Diode. Mit einem Peak bei 899.0nm.}}{13}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Infrarotspektrum der optional gemessenen weißen LED. Mit einem Peak bei 935.0nm.}}{14}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Spektrum der Probe 87063 bei Raumtemperatur und bei flüssiger Stickstoff-Temperatur. Mit Peaks bei 672.1nm (größerer Peak) und 690.5nm (kleinerer Peak) für die kalte Linie und 705.0nm für die warme Linie.}}{15}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Spektrum der Probe 87063 bei Raumtemperatur und bei flüssiger Stickstoff-Temperatur. Mit Peaks bei 621.0nm (kleinerer Peak) und 628.0nm (größerer Peak) für die kalte Linie und 651.0nm für die warme Linie.}}{16}{}%
+\babel@toc {ngerman}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Schematisches Bändermodell eines Halbleiters mit Valenzband, Leitungsband und verbotener Zone, nach \blx@tocontentsinit {0}\cite [S.~5--8]{manual}.}}{5}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Temperaturabhängigkeit der Fermi-Verteilung. Bei höheren Temperaturen wird der Übergang um das Ferminiveau verbreitert, vgl. \blx@tocontentsinit {0}\cite [S.~12--13]{manual}.}}{7}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Schematischer p-n-Übergang im Gleichgewicht und in Durchlassrichtung, nach \blx@tocontentsinit {0}\cite [Abb.~6]{manual}.}}{8}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Rekombinationsmechanismen im Halbleiter}}{9}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Abhängigkeit der direkten und indirekten Bandabstände vom Molanteil im Mischkristall, nach \blx@tocontentsinit {0}\cite [Abb.~9]{manual}.}}{11}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Schematischer Messplatz für Photo- und Elektrolumineszenz, nach \blx@tocontentsinit {0}\cite [Abb.~12]{manual}.}}{12}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Strahlengang im Gittermonochromator SP-2155, nach \blx@tocontentsinit {0}\cite [Abb.~16]{manual}.}}{13}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Quantenausbeute der im Versuch verwendeten SEV-Typen. Im nahen Infrarot fällt die Empfindlichkeit stark ab, nach \blx@tocontentsinit {0}\cite [Abb.~19]{manual}.}}{14}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Probenanordnung im Kryostat. Die Geometrie reduziert den direkten Einfall reflektierter Laserstrahlung in den Monochromator, nach \blx@tocontentsinit {0}\cite [Abb.~14]{manual}.}}{15}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Eichung der Wellenlängenskala mit Hilfe einer Natriumdampflampe.}}{16}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Spektrum der weiß leuchtenden Diode mit Maxima bei \SI {470.0}{\nano \meter } und \SI {545.0}{\nano \meter }.}}{17}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Spektrum der blau leuchtenden Diode mit einem Maximum bei \SI {473.0}{\nano \meter }.}}{18}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Spektrum der grün leuchtenden Diode mit einem Maximum bei \SI {557.5}{\nano \meter }.}}{19}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Spektrum der orange leuchtenden Diode mit einem Maximum bei \SI {585.6}{\nano \meter }.}}{20}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Spektrum der rot leuchtenden Diode mit einem Maximum bei \SI {655.0}{\nano \meter }.}}{21}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Spektrum der Infrarot emittierenden GaAs-Diode mit einem Maximum bei \SI {899.0}{\nano \meter }.}}{22}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Optional gemessenes Infrarotspektrum der weißen LED mit einem Maximum bei \SI {935.0}{\nano \meter }.}}{22}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Spektrum der Probe 1127 bei \SI {293.15}{\kelvin } und \SI {88.75}{\kelvin }. Die Maxima liegen bei \SI {705.0}{\nano \meter } für die warme Messung sowie bei \SI {672.1}{\nano \meter } und \SI {690.5}{\nano \meter } für die kalte Messung.}}{24}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Spektrum der Probe 87063 bei \SI {293.15}{\kelvin } und \SI {88.25}{\kelvin }. Die Maxima liegen bei \SI {651.0}{\nano \meter } für die warme Messung sowie bei \SI {621.0}{\nano \meter } und \SI {628.0}{\nano \meter } für die kalte Messung.}}{24}{}%
