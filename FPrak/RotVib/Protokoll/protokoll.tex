@@ -874,6 +874,403 @@ Rotations-Schwingungslinien des HCl (Aufgabe~1.5) ausreichend ist. Die kurzen
 Interferogramme liefern mit $\Delta\bar\nu\gtrsim\SI{8}{cm^{-1}}$ hingegen nur
 grob aufgelöste Spektren.
 
+% ------------------------------------------------------------------
+\subsection{Sperrverhalten von Glas- und NaCl-Filter (Aufgabe 1.3)}
+\label{sec:sperrfilter}
+
+Zur Charakterisierung des Sperrverhaltens wurden Einkanalspektren einer Glasplatte
+und eines NaCl-Kristalls im Bereich $\bar\nu \in [100,6000]\,\si{cm^{-1}}$
+aufgenommen. Als Referenz $I_0$ dient das ohne Probe gemessene Spektrum
+(vgl.\ Aufgabe~1.1), das im Überlappungsbereich $[200,4000]\,\si{cm^{-1}}$
+vorliegt. Das Transmissionsvermögen ergibt sich als $I/I_0$ nach
+Gl.~\eqref{eq:norm}. Abb.~\ref{fig:a3_uebersicht} zeigt die drei Einkanalspektren
+im direkten Vergleich.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{a3_uebersicht}
+  \caption{Einkanalspektren des Hintergrunds (grau) sowie des Glas- (blau) und
+    des NaCl-Filters (orange). Farbig hinterlegt sind die zur quantitativen
+    Auswertung verwendeten Sperrbereiche.}
+  \label{fig:a3_uebersicht}
+\end{figure}
+
+\paragraph{Glasfilter.}
+Das Transmissionsspektrum des Glases (Abb.~\ref{fig:a3_glas}) zeigt, dass Glas im
+mittleren Infrarot bis etwa $\SI{2200}{cm^{-1}}$ nahezu vollständig undurchlässig
+ist. Erst oberhalb steigt die Transmission an und erreicht ab etwa
+$\SI{3500}{cm^{-1}}$ Werte von rund $\SI{75}{\percent}$. Im gut definierten
+Sperrbereich $[1000,2000]\,\si{cm^{-1}}$, in dem die Referenzintensität hoch ist,
+beträgt das Transmissionsvermögen
+\begin{equation}
+  \left(\frac{I}{I_0}\right)_\mathrm{Glas} = (0{,}03 \pm 0{,}27)\,\si{\percent} ,
+\end{equation}
+das Signal ist dort also im Rahmen des Rauschens mit null verträglich. Glas wirkt
+im mittleren Infrarot damit als praktisch vollständiger Sperrfilter.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{a3_glas}
+  \caption{Transmissionsvermögen $I/I_0$ des Glasfilters (links) und Ausschnitt
+    des Sperrbereichs (rechts). Im Sperrbereich streut das Signal um null; die
+    rote Linie kennzeichnet den Mittelwert.}
+  \label{fig:a3_glas}
+\end{figure}
+
+\paragraph{NaCl-Filter.}
+Natriumchlorid ist im mittleren Infrarot ein Standard-Fenstermaterial. Das
+gemessene Transmissionsspektrum (Abb.~\ref{fig:a3_nacl}) bestätigt dies: Oberhalb
+einer Durchlasskante bei etwa $\SI{550}{cm^{-1}}$ liegt die Transmission auf einem
+Plateau von rund $\SI{88}{\percent}$ und bleibt über den gesamten MIR-Bereich
+hoch. Erst unterhalb von etwa $\SI{500}{cm^{-1}}$ setzt die Absorption
+(Gitterschwingungen) ein. Im Sperrbereich $[300,450]\,\si{cm^{-1}}$ beträgt das
+Transmissionsvermögen
+\begin{equation}
+  \left(\frac{I}{I_0}\right)_\mathrm{NaCl} = (0{,}35 \pm 1{,}79)\,\si{\percent} ,
+\end{equation}
+im Durchlassbereich $[1000,3000]\,\si{cm^{-1}}$ dagegen $(88{,}3 \pm
+0{,}7)\,\si{\percent}$. Die vergleichsweise große Streuung im Sperrbereich ist
+darauf zurückzuführen, dass dort auch die Referenzintensität $I_0$ klein ist,
+sodass sich das Rauschen bei der Division stark auswirkt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{a3_nacl}
+  \caption{Transmissionsvermögen $I/I_0$ des NaCl-Filters (links) und Ausschnitt
+    des Sperrbereichs (rechts). Oberhalb der Durchlasskante bei $\approx
+    \SI{550}{cm^{-1}}$ ist NaCl nahezu transparent.}
+  \label{fig:a3_nacl}
+\end{figure}
+
+Zusammenfassend blockiert das Glas das gesamte mittlere Infrarot bis etwa
+$\SI{2200}{cm^{-1}}$, während NaCl in diesem Bereich transparent ist und lediglich
+das ferne Infrarot unterhalb $\SI{500}{cm^{-1}}$ sperrt. Beide zeigen im jeweiligen
+Sperrbereich ein Transmissionsvermögen von deutlich unter $\SI{1}{\percent}$.
+
+% ------------------------------------------------------------------
+\subsection{Spaltbreite einer Küvette (Aufgabe 1.4)}
+\label{sec:kuvette}
+
+Beim Durchgang durch eine leere Küvette interferiert der transmittierte mit dem
+mehrfach reflektierten Strahl, was im Spektrum eine periodische Modulation
+(Etalon-Interferenzen) erzeugt. Aus deren Periode lässt sich nach
+Gl.~\eqref{eq:schichtdicke} die Spaltbreite $d$ bestimmen. Es wurden zwei leere
+Küvetten vermessen; da beide klare, gut auswertbare Interferenzmuster zeigen,
+werden sie hier ausgewertet und die Ergebnisse als Konsistenzprüfung verglichen.
+Zur Berechnung des Transmissionsvermögens wurden die Einkanalspektren wie zuvor
+auf das Hintergrundspektrum normiert. Abb.~\ref{fig:a4_uebersicht} zeigt die
+resultierenden periodischen Interferenzmuster beider Küvetten.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.92\textwidth]{a4_uebersicht}
+  \caption{Auf den Hintergrund normierte Transmissionsspektren der beiden leeren
+    Küvetten. Die periodische Modulation ist das für die Auswertung genutzte
+    Etalon-Interferenzmuster. Beide Küvetten weisen eine sehr ähnliche Periode
+    (und damit Spaltbreite) auf.}
+  \label{fig:a4_uebersicht}
+\end{figure}
+
+Zur Bestimmung der Fringe-Periode wurde zunächst der (langsam veränderliche)
+spektrale Untergrund abgezogen und das verbleibende Signal mit einem Bandpass um
+die dominante, per Fourier-Transformation ermittelte Modulationsfrequenz
+gefiltert. Anschließend wurden die Maxima des Interferenzmusters detektiert und
+mit fortlaufenden Ordnungen $N$ versehen. Nach Gl.~\eqref{eq:schichtdicke} liefert
+die Auftragung der Ordnung $N$ über die Wellenzahl $\bar\nu$ eine Gerade mit dem
+Anstieg $2d$ (mit $n_0=1$ für Luft). Die lineare Regression
+(Abb.~\ref{fig:a4_interferenz}) ergibt
+\begin{align}
+  d_1 &= (47{,}5 \pm 1{,}0)\,\si{\micro\metre} \quad \text{(Küvette 1)},\\
+  d_2 &= (49{,}8 \pm 1{,}0)\,\si{\micro\metre} \quad \text{(Küvette 2)},
+\end{align}
+jeweils mit einem Bestimmtheitsmaß $R^2 > 0{,}9999$. Als Unsicherheit ist nicht
+der (unrealistisch kleine) rein statistische Regressionsfehler angegeben, sondern
+die Abweichung zwischen der Peak- und einer unabhängigen
+Fourier-Analyse des Interferenzmusters, die die tatsächliche Methodengenauigkeit
+besser widerspiegelt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{a4_interferenz}
+  \caption{Auswertung der Interferenzmethode für beide Küvetten. Links: das
+    bandpass-gefilterte Interferenzmuster mit den detektierten Maxima (rot).
+    Rechts: Ordnung $N$ über der Wellenzahl $\bar\nu$ mit linearer Regression; der
+    Anstieg entspricht $2d$.}
+  \label{fig:a4_interferenz}
+\end{figure}
+
+Beide Küvetten liefern innerhalb der Fehlergrenzen übereinstimmende Spaltbreiten
+von rund $\SI{48}{\micro\metre}$ bzw.\ $\SI{50}{\micro\metre}$, was die Zuverlässigkeit
+der Interferenzmethode belegt. Die Werte liegen in derselben Größenordnung wie die
+in vergleichbaren Messungen bestimmten Schichtdicken~\cite{Geschke}.
+
+% ------------------------------------------------------------------
+\subsection{Rotations-Schwingungsspektrum von HCl (Aufgabe 1.5)}
+\label{sec:hcl}
+
+\paragraph{Vorbemerkung.} Die Aufnahme des HCl-Spektrums war am Versuchstag vor
+Ort nicht möglich. Die im Folgenden ausgewerteten Daten (Spektrum der
+HCl-Gasküvette sowie zugehöriges Hintergrundspektrum) wurden uns daher vom
+Versuchsleiter zur Verfügung gestellt.
+
+Zur Auswertung wurde das Einkanalspektrum der HCl-Küvette auf das mitgelieferte
+Hintergrundspektrum normiert. Das resultierende Transmissionsspektrum zeigt im
+Bereich $\bar\nu \in [2700,3050]\,\si{cm^{-1}}$ die für ein zweiatomiges Molekül
+charakteristische Rotations-Schwingungsbande mit einem P- und einem R-Zweig, die
+durch die verbotene reine Schwingungslinie ($\Delta J = 0$) bei etwa
+$\SI{2887}{cm^{-1}}$ getrennt sind (Abb.~\ref{fig:a5_zuordnung}, oben). Jede Linie
+ist zudem in ein Dublett aufgespalten, das von den beiden Chlorisotopen
+$^{35}\mathrm{Cl}$ und $^{37}\mathrm{Cl}$ herrührt. Da die reduzierte Masse des
+leichteren Isotopologs $\mathrm{H}^{35}\mathrm{Cl}$ kleiner ist, liegen dessen
+Linien bei geringfügig höheren Wellenzahlen; die jeweils höhere (und intensivere)
+Linie eines Dubletts wird daher $^{35}\mathrm{Cl}$ zugeordnet.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{a5_zuordnung}
+  \caption{Oben: normiertes und untergrundkorrigiertes Transmissionsspektrum von
+    HCl mit der Zuordnung der Linien zu $\mathrm{H}^{35}\mathrm{Cl}$ (rot) und
+    $\mathrm{H}^{37}\mathrm{Cl}$ (grün) sowie der Bandlücke. Unten: Residuen des
+    kubischen Fits $\bar\nu(i)$ nach Gl.~\eqref{eq:sammel} für beide Isotope.}
+  \label{fig:a5_zuordnung}
+\end{figure}
+
+\paragraph{Bestimmung der Molekülkonstanten.}
+Die Linienpositionen wurden für jedes Isotop getrennt bestimmt und mit dem
+laufenden Index $i$ versehen ($i=J+1$ für den R-Zweig, $i=-J$ für den P-Zweig).
+Ein kubischer Fit gemäß Gl.~\eqref{eq:sammel},
+\begin{equation*}
+  \bar\nu(i) = \bar\nu_S + (B_1+B_0)\,i + (B_1-B_0)\,i^2 - 2(D_1+D_0)\,i^3 ,
+\end{equation*}
+liefert unmittelbar die Bandmitte $\bar\nu_S$, die Rotationskonstanten $B_0$ und
+$B_1$ sowie die Dehnungskonstante $D$. Die Residuen dieses Fits liegen für beide
+Isotope unterhalb von $\SI{0.02}{cm^{-1}}$ (Abb.~\ref{fig:a5_zuordnung}, unten)
+und zeigen kein systematisches Muster. Aus $B_0$ folgt das Trägheitsmoment
+$I = h/(8\pi^2 c\,B_0)$, daraus der Kernabstand $r_0=\sqrt{I/\mu}$ und aus
+$\bar\nu_S$ die Kraftkonstante $k = (2\pi c\,\bar\nu_S)^2\,\mu$. Die Ergebnisse
+sind in Tab.~\ref{tab:a5} zusammengefasst.
+
+\begin{table}[H]
+  \centering
+  \caption{Aus dem Rotations-Schwingungsspektrum bestimmte Molekülkonstanten für
+    die beiden Isotopologe, im Vergleich mit Literaturwerten~\cite{Rinsland,Demtroeder}.}
+  \label{tab:a5}
+  \begin{tabular}{lccc}
+    \toprule
+    Größe & $\mathrm{H}^{35}\mathrm{Cl}$ & $\mathrm{H}^{37}\mathrm{Cl}$ & Literatur ($^{35}$)\\
+    \midrule
+    $\bar\nu_S$ (cm$^{-1}$)       & $2888{,}8 \pm 0{,}9$ & $2886{,}7 \pm 0{,}9$ & $2885{,}9$\\
+    $B_0$ (cm$^{-1}$)             & $10{,}450 \pm 0{,}022$ & $10{,}437 \pm 0{,}027$ & $10{,}44$\\
+    $B_1$ (cm$^{-1}$)             & $10{,}146 \pm 0{,}022$ & $10{,}133 \pm 0{,}027$ & $10{,}14$\\
+    $D_1{+}D_0$ ($10^{-3}\,$cm$^{-1}$) & $1{,}05 \pm 0{,}58$ & $1{,}09 \pm 0{,}98$ & $1{,}06$\\
+    $I$ ($10^{-47}\,$kg\,m$^2$)   & $2{,}679 \pm 0{,}006$ & $2{,}682 \pm 0{,}007$ & $2{,}64$\\
+    $r_0$ (pm)                    & $128{,}3 \pm 0{,}1$ & $128{,}3 \pm 0{,}2$ & $127{,}5$\\
+    $k$ (N/m)                     & $481{,}7 \pm 0{,}3$ & $481{,}7 \pm 0{,}3$ & $480$\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Sämtliche Werte stimmen sehr gut mit den Literaturwerten überein. Die
+schwingungsabhängige Rotationskonstante zeigt mit $B_1 < B_0$ das erwartete
+Verhalten: Im angeregten Schwingungszustand ist der mittlere Kernabstand größer,
+das Trägheitsmoment somit größer und die Rotationskonstante kleiner.
+
+\paragraph{Isotopeneffekt.}
+Die Verhältnisse der Konstanten beider Isotopologe bestätigen die theoretische
+Massenabhängigkeit. Wegen $\bar\nu_S \propto \mu^{-1/2}$ und $B \propto \mu^{-1}$
+erwartet man
+\begin{align*}
+  \frac{\bar\nu_S(^{35})}{\bar\nu_S(^{37})} &= \sqrt{\frac{\mu_{37}}{\mu_{35}}} = 1{,}00076,
+  & \frac{B_0(^{35})}{B_0(^{37})} &= \frac{\mu_{37}}{\mu_{35}} = 1{,}00152 .
+\end{align*}
+Gemessen wurden $1{,}00073\pm0{,}00043$ bzw.\ $1{,}0013\pm0{,}0033$, beide
+innerhalb ihrer Unsicherheiten in Übereinstimmung mit der Theorie (vgl.\
+Abschn.~\ref{sec:fehler}).
+
+\paragraph{Häufigkeitsverhältnis der Isotope.}
+Nach dem Lambert-Beer'schen Gesetz ist die Absorbanz $A=-\ln(I/I_0)$ proportional
+zur Teilchenzahl des jeweiligen Isotopologs. Aus dem Verhältnis der integrierten
+Absorbanz zusammengehöriger Dublett-Linien ergibt sich das Häufigkeitsverhältnis
+\begin{equation}
+  \frac{N_{35}}{N_{37}} = 1{,}96 \pm 0{,}08 .
+\end{equation}
+Der Wert liegt unter dem natürlichen Häufigkeitsverhältnis von
+$N_{35}/N_{37} \approx 3{,}13$~\cite{Rinsland}. Diese Abweichung ist auf eine
+teilweise Sättigung der intensiveren $^{35}\mathrm{Cl}$-Linien zurückzuführen,
+deren Absorbanz dadurch unterschätzt wird; ein vergleichbarer Wert wird auch in
+anderen Auswertungen dieses Versuchs beobachtet.
+
+% ------------------------------------------------------------------
+\subsection{Intensitätsmodellierung und Temperaturbestimmung (Aufgabe 1.6)}
+\label{sec:intensitaet_aufg}
+
+Abschließend werden die Intensitäten der Absorptionslinien im P-Zweig modelliert.
+Nach Gl.~\eqref{eq:alphaJ} ist der Absorptionskoeffizient und damit -- über das
+Lambert'sche Gesetz -- die Absorbanz $A=-\ln(I/I_0)$ proportional zu
+\begin{equation}
+  A(J) \propto \bar\nu\,(2J+1)\,
+        \exp\!\left(-\frac{hc\,B_0\,J(J+1)}{\kB T}\right) .
+  \label{eq:intmodell}
+\end{equation}
+Der Faktor $(2J+1)$ beschreibt die Entartung der Rotationsniveaus, der
+Boltzmann-Faktor deren thermische Besetzung. Das Produkt beider Terme führt zu
+einem Intensitätsmaximum bei einem mittleren $J$, dessen Lage von der Temperatur
+abhängt. Für die Auswertung wurden die Absorbanzen der P-Zweig-Linien des
+Isotopologs $\mathrm{H}^{35}\mathrm{Cl}$ aus dem Transmissionsspektrum bestimmt und
+den Rotationsquantenzahlen $J=1,\dots,8$ zugeordnet. Mit der in Aufgabe~1.5
+bestimmten Rotationskonstante $B_0$ wurde Gl.~\eqref{eq:intmodell} mit der
+Temperatur $T$ und einem Vorfaktor als freien Parametern an die Daten angepasst.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{a6_intensitaet}
+  \caption{Gemessene Absorbanzen der P-Zweig-Linien von
+    $\mathrm{H}^{35}\mathrm{Cl}$ (Punkte) und angepasstes Boltzmann-Modell nach
+    Gl.~\eqref{eq:intmodell} (Linie). Das Intensitätsmaximum bei $J=3$ wird gut
+    wiedergegeben.}
+  \label{fig:a6_intensitaet}
+\end{figure}
+
+Das Modell beschreibt den charakteristischen Intensitätsverlauf mit dem Maximum
+bei $J=3$ sehr gut (Abb.~\ref{fig:a6_intensitaet}). Als freier Parameter ergibt
+sich die Temperatur
+\begin{equation}
+  T = (397 \pm 11)\,\si{\kelvin} .
+\end{equation}
+Der Wert liegt oberhalb der Raumtemperatur von etwa $\SI{300}{\kelvin}$, bei der
+die Messung durchgeführt wurde. Diese Überschätzung ist im Wesentlichen darauf
+zurückzuführen, dass die intensiven Linien bei kleinen $J$ teilweise gesättigt
+sind und ihre Absorbanz dadurch unterschätzt wird; das Intensitätsmaximum
+erscheint dadurch zu höheren $J$ verschoben, was im Modell einer höheren
+Temperatur entspricht. Innerhalb dieser systematischen Einschränkung gibt der Fit
+die Größenordnung der Messtemperatur korrekt wieder und liegt in guter
+Übereinstimmung mit vergleichbaren Auswertungen dieses Versuchs.
+
+% ==================================================================
+%  4.7  FEHLERBETRACHTUNG
+% ==================================================================
+\subsection{Fehlerbetrachtung}
+\label{sec:fehler}
+
+Im Folgenden werden die Unsicherheiten der bestimmten Größen systematisch
+diskutiert. Es wird zwischen statistischen und systematischen Beiträgen
+unterschieden und die Gauß'sche Fehlerfortpflanzung angewandt.
+
+\paragraph{Grundlegende Fehlerquellen.}
+Alle Wellenzahlen sind mit zwei prinzipiellen Unsicherheiten behaftet:
+\begin{itemize}
+  \item \emph{Statistische Ableseunsicherheit.} Die spektrale Auflösung der
+    HCl-Messung beträgt nach Gl.~\eqref{eq:aufloesung} mit $n=16001$ Punkten und
+    $\Delta s=\SI{6.36e-5}{cm}$ etwa $\Delta\bar\nu\approx\SI{0.98}{cm^{-1}}$.
+    Unter Annahme einer Rechteckverteilung über eine Auflösungsbreite folgt eine
+    Ableseunsicherheit einer Linienposition von
+    $\sigma_{\bar\nu}\approx\Delta\bar\nu/\sqrt{12}\approx\SI{0.28}{cm^{-1}}$.
+  \item \emph{Systematischer Eichfehler.} Die Kalibrierung (Aufgabe~1.1) liefert
+    $\bar\nu_\mathrm{korr}=(\bar\nu_\mathrm{mess}-b)/a$ mit
+    $a=1{,}00103\pm0{,}00025$ und $b=(-0{,}47\pm0{,}49)\,\si{cm^{-1}}$. Für eine
+    absolute Wellenzahl um $\SI{2887}{cm^{-1}}$ ergibt sich daraus über
+    \begin{equation}
+      \sigma_{\bar\nu}^\mathrm{eich}
+      = \sqrt{\left(\frac{\bar\nu-b}{a^2}\sigma_a\right)^2
+             +\left(\frac{\sigma_b}{a}\right)^2}
+      \approx \SI{0.87}{cm^{-1}} .
+    \end{equation}
+\end{itemize}
+Entscheidend ist, dass der Eichfehler \emph{korreliert} auf alle Linien wirkt: In
+absolute Größen (z.\,B.\ die Bandmitte $\bar\nu_S$) geht er voll ein, während er
+sich in \emph{Differenzgrößen} -- und damit in der Rotationskonstante $B$, die aus
+Linienabständen folgt -- weitgehend heraushebt. Dort verbleibt lediglich der
+multiplikative Skalenfehler $\sigma_a/a\approx2{,}5\cdot10^{-4}$.
+
+\paragraph{Molekülkonstanten (Aufgabe 1.5).}
+Die statistischen Unsicherheiten der Fitparameter ergeben sich aus der
+Kovarianzmatrix der gewichteten Regression (Gewicht $\sigma_{\bar\nu}$). Die
+abgeleiteten Größen folgen mit
+\begin{align}
+  I = \frac{h}{8\pi^2 c\,B_0} &\Rightarrow \frac{\sigma_I}{I}=\frac{\sigma_{B_0}}{B_0}, &
+  r_0 = \sqrt{I/\mu} &\Rightarrow \frac{\sigma_{r_0}}{r_0}=\frac12\frac{\sigma_I}{I}, \\
+  k = (2\pi c\,\bar\nu_S)^2\mu &\Rightarrow \frac{\sigma_k}{k}=2\frac{\sigma_{\bar\nu_S}}{\bar\nu_S} .
+\end{align}
+Für $\bar\nu_S$ dominiert der Eichfehler ($\sigma_\mathrm{stat}\approx\SI{0.12}{cm^{-1}}$
+gegenüber $\sigma_\mathrm{eich}\approx\SI{0.87}{cm^{-1}}$), sodass
+$\sigma_{\bar\nu_S}\approx\SI{0.88}{cm^{-1}}$. Da $\bar\nu_S$ groß ist, bleibt der
+relative Fehler klein und pflanzt sich nur schwach auf $k$ fort. Die vollständig
+propagierten Unsicherheiten sind in Tab.~\ref{tab:a5} bereits berücksichtigt; sie
+betragen $\sigma_{B_0}\approx\SI{0.02}{cm^{-1}}$, $\sigma_{r_0}\approx\SI{0.15}{pm}$
+und $\sigma_k\approx\SI{0.3}{N/m}$. Die Isotopenverhältnisse
+$\bar\nu_S(^{35})/\bar\nu_S(^{37})=1{,}00073\pm0{,}00043$ und
+$B_0(^{35})/B_0(^{37})=1{,}0013\pm0{,}0033$ sind damit innerhalb ihrer Fehler mit
+den theoretischen Werten verträglich.
+
+\paragraph{Temperatur (Aufgabe 1.6).}
+Die Absorbanzen $A=-\ln(I/I_0)$ tragen die Unsicherheit
+$\sigma_A=\sigma_T/T$, wobei das Basislinienrauschen der Transmission zu
+$\sigma_T\approx0{,}007$ bestimmt wurde. Die gewichtete Anpassung des
+Boltzmann-Modells liefert $T=(397\pm11)\,\si{\kelvin}$ bei einem reduzierten
+$\chi^2/\mathrm{dof}\approx1{,}1$, was auf eine konsistente Fehlerabschätzung
+hindeutet. Der Wert enthält jedoch einen nicht in der statistischen Unsicherheit
+erfassten \emph{systematischen} Beitrag durch die Sättigung der intensiven Linien
+(siehe Aufgabe~1.6), der die Abweichung von der Raumtemperatur erklärt.
+
+\paragraph{Häufigkeitsverhältnis (Aufgabe 1.5).}
+Das aus $14$ Dublett-Paaren gemittelte Verhältnis beträgt
+$N_{35}/N_{37}=1{,}96\pm0{,}08$ (Standardfehler des Mittelwerts bei einer
+Streuung von $\sigma=0{,}31$). Die deutliche Abweichung vom Literaturwert $3{,}13$
+ist systematischer Natur (Linien\-sättigung) und nicht durch den statistischen
+Fehler abgedeckt.
+
+\paragraph{Spaltbreite (Aufgabe 1.4).}
+Der rein statistische Fehler der Regression $N(\bar\nu)$ ist mit
+$\sigma_\mathrm{stat}<\SI{0.05}{\micro\metre}$ (einschließlich des Eichbeitrags
+$\sigma_a/a$) unrealistisch klein, da er die systematischen Einflüsse der
+Untergrund- und Bandpasswahl nicht erfasst. Als realistische Unsicherheit wird
+daher die Abweichung zwischen der Peak- und der Fourier-Methode
+($\approx\SI{1}{\micro\metre}$) angesetzt. Die verbleibende Differenz der beiden
+Küvettenwerte ($47{,}5$ vs.\ $49{,}8\,\si{\micro\metre}$) liegt in derselben
+Größenordnung und spiegelt reale Fertigungs- bzw.\ Justageunterschiede wider.
+
+\paragraph{Sperrfilter (Aufgabe 1.3).}
+Die Transmissionswerte im Sperrbereich sind Mittelwerte über viele Datenpunkte;
+ihr Standardfehler des Mittelwerts ist mit
+$(0{,}026\pm0{,}003)\,\si{\percent}$ (Glas) bzw.\
+$(0{,}35\pm0{,}06)\,\si{\percent}$ (NaCl) klein. Die größere Streuung bei NaCl
+($\sigma\approx1{,}8\,\si{\percent}$) resultiert aus der kleinen
+Referenzintensität $I_0$ im ferninfraroten Sperrbereich, wo sich das Rauschen bei
+der Division stark auswirkt.
+
+% ==================================================================
+%  5  FAZIT
+% ==================================================================
+\section{Fazit}
+\label{sec:fazit}
+
+Mit dem FTIR-Spektrometer Perkin~Elmer~Spectrum~100 wurden verschiedene Proben im
+infraroten Spektralbereich untersucht. Die Überprüfung der Wellenzahlskala anhand
+der Kalibrierbanden von Wasserdampf und Polystyrol ergab mit einem Anstieg von
+$a=1{,}00103 \pm 0{,}00025$ und einem Achsenabschnitt von $(-0{,}47\pm0{,}49)\,
+\si{cm^{-1}}$ eine innerhalb der Messgenauigkeit korrekte Kalibrierung. Aus den
+Interferogrammen verschiedener Länge wurde die Schrittweite des optischen Weges zu
+$\Delta s \approx \SI{6.36e-5}{cm}$ bestimmt und der Einfluss von
+Interferogrammlänge, Zerofilling und Apodisation auf die Spektren diskutiert; das
+theoretische Auflösungsvermögen reicht von $\SI{15.7}{cm^{-1}}$ (kürzeste Messung)
+bis $\SI{0.39}{cm^{-1}}$ (längste Messung). Die Sperrfilter zeigten im jeweiligen
+Sperrbereich ein Transmissionsvermögen von deutlich unter $\SI{1}{\percent}$,
+wobei Glas das gesamte mittlere Infrarot blockiert und NaCl darin transparent ist.
+Die Spaltbreite zweier Küvetten wurde mit der Interferenzmethode zu $(47{,}5\pm
+1{,}0)\,\si{\micro\metre}$ bzw.\ $(49{,}8\pm1{,}0)\,\si{\micro\metre}$ bestimmt.
+
+Kernstück war die Analyse des Rotations-Schwingungsspektrums von HCl, aus dem sich
+für $\mathrm{H}^{35}\mathrm{Cl}$ eine Schwingungswellenzahl von
+$\bar\nu_S=\SI{2888.8}{cm^{-1}}$, eine Rotationskonstante $B_0=\SI{10.45}{cm^{-1}}$,
+ein Kernabstand $r_0=\SI{128.3}{pm}$ und eine Kraftkonstante $k=\SI{482}{N/m}$
+ergaben -- allesamt in guter Übereinstimmung mit den Literaturwerten. Die
+Isotopenaufspaltung und die Verhältnisse der Molekülkonstanten beider Isotopologe
+bestätigen die theoretische Massenabhängigkeit. Das Häufigkeitsverhältnis
+$N_{35}/N_{37}=1{,}96\pm0{,}08$ und die aus der Intensitätsmodellierung bestimmte
+Temperatur $T=(397\pm11)\,\si{\kelvin}$ liegen aufgrund von Sättigungseffekten der
+starken Linien etwas neben den Erwartungswerten, geben deren Größenordnung aber
+korrekt wieder.
+
 % ==================================================================
 %  LITERATUR
 % ==================================================================
@@ -916,7 +1313,6 @@ grob aufgelöste Spektren.
   Universität Leipzig, AG Optik/Spektroskopie:
   \emph{Geschichte der FTIR-Spektroskopie},
   \url{https://polariton.exphysik.uni-leipzig.de/subsites/staff/bundesmann/ftir/geschichte.html}
-  (abgerufen 2024).
 
 \bibitem{Rinsland}
   C.~P.~Rinsland et al.:
