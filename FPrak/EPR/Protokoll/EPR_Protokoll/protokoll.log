@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  4 JUL 2026 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  6 JUL 2026 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -573,17 +573,17 @@ Package pdftex.def Info: figures/microwave_bridge_schematic.png  used on input l
 <figures/calibration_fit.pdf, id=282, 433.62pt x 325.215pt>
 File: figures/calibration_fit.pdf Graphic file (type pdf)
 <use figures/calibration_fit.pdf>
-Package pdftex.def Info: figures/calibration_fit.pdf  used on input line 461.
+Package pdftex.def Info: figures/calibration_fit.pdf  used on input line 460.
 (pdftex.def)             Requested size: 309.56265pt x 232.18456pt.
 
 
 [10]
-Overfull \hbox (0.6889pt too wide) in paragraph at lines 486--494
+Overfull \hbox (0.6889pt too wide) in paragraph at lines 485--493
 \T1/cmr/m/n/10.95 Für die Auf-ga-ben 4--6 wur-de die HDSDR-Wasserfall-/Spektrumsanzeige wäh-rend des Feld-Sweeps
  []
 
 
-Overfull \hbox (62.70161pt too wide) in paragraph at lines 486--494
+Overfull \hbox (62.70161pt too wide) in paragraph at lines 485--493
 \T1/cmr/m/n/10.95 fo-to-gra-fiert (statt als Screens-hot ex-por-tiert). Je-des Fo-to wur-de an-schlie-ÿend ma-nu-ell mit \T1/cmtt/m/n/10.95 WebPlotDigitizer \T1/cmr/m/n/10.95 [[]]
  []
 
@@ -593,22 +593,22 @@ Overfull \hbox (62.70161pt too wide) in paragraph at lines 486--494
 <figures/task1_10mhz_hdsdr.png, id=378, 1365.1pt x 435.6275pt>
 File: figures/task1_10mhz_hdsdr.png Graphic file (type png)
 <use figures/task1_10mhz_hdsdr.png>
-Package pdftex.def Info: figures/task1_10mhz_hdsdr.png  used on input line 544.
+Package pdftex.def Info: figures/task1_10mhz_hdsdr.png  used on input line 543.
 (pdftex.def)             Requested size: 386.96027pt x 123.48376pt.
 
-Overfull \hbox (20.90602pt too wide) in paragraph at lines 556--563
+Overfull \hbox (20.90602pt too wide) in paragraph at lines 555--562
 \T1/cmr/m/n/10.95 Mit den La-bo-r-an-ten-nen (ak-ti-ve VLF-Antenne und VHF/FM-Drahtantenne) und dem RSP1/HDSDR-
  []
 
 <figures/Radiowellen.png, id=381, 1505.625pt x 479.7925pt>
 File: figures/Radiowellen.png Graphic file (type png)
 <use figures/Radiowellen.png>
-Package pdftex.def Info: figures/Radiowellen.png  used on input line 567.
+Package pdftex.def Info: figures/Radiowellen.png  used on input line 566.
 (pdftex.def)             Requested size: 218.51521pt x 69.63036pt.
 <figures/task3_pmr_445mhz.png, id=382, 1363.0925pt x 434.62375pt>
 File: figures/task3_pmr_445mhz.png Graphic file (type png)
 <use figures/task3_pmr_445mhz.png>
-Package pdftex.def Info: figures/task3_pmr_445mhz.png  used on input line 572.
+Package pdftex.def Info: figures/task3_pmr_445mhz.png  used on input line 571.
 (pdftex.def)             Requested size: 218.51521pt x 69.67384pt.
 
 
@@ -616,54 +616,54 @@ Package pdftex.def Info: figures/task3_pmr_445mhz.png  used on input line 572.
 <figures/task4_dpph_1ug.png, id=392, 1504.62125pt x 478.78876pt>
 File: figures/task4_dpph_1ug.png Graphic file (type png)
 <use figures/task4_dpph_1ug.png>
-Package pdftex.def Info: figures/task4_dpph_1ug.png  used on input line 595.
+Package pdftex.def Info: figures/task4_dpph_1ug.png  used on input line 594.
 (pdftex.def)             Requested size: 218.51521pt x 69.52852pt.
 <figures/task4_dpph_10ug.png, id=393, 1506.62875pt x 477.785pt>
 File: figures/task4_dpph_10ug.png Graphic file (type png)
 <use figures/task4_dpph_10ug.png>
-Package pdftex.def Info: figures/task4_dpph_10ug.png  used on input line 600.
+Package pdftex.def Info: figures/task4_dpph_10ug.png  used on input line 599.
 (pdftex.def)             Requested size: 218.51521pt x 69.29527pt.
 <figures/task4_dpph_1ug_curve.png, id=397, 462.528pt x 346.896pt>
 File: figures/task4_dpph_1ug_curve.png Graphic file (type png)
 <use figures/task4_dpph_1ug_curve.png>
-Package pdftex.def Info: figures/task4_dpph_1ug_curve.png  used on input line 621.
+Package pdftex.def Info: figures/task4_dpph_1ug_curve.png  used on input line 620.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 <figures/task4_dpph_10ug_curve.png, id=398, 462.528pt x 346.896pt>
 File: figures/task4_dpph_10ug_curve.png Graphic file (type png)
 <use figures/task4_dpph_10ug_curve.png>
-Package pdftex.def Info: figures/task4_dpph_10ug_curve.png  used on input line 626.
+Package pdftex.def Info: figures/task4_dpph_10ug_curve.png  used on input line 625.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 
-Underfull \hbox (badness 6141) in paragraph at lines 628--628
+Underfull \hbox (badness 6141) in paragraph at lines 627--627
 []\T1/cmr/m/n/10 (b) |DPPH, $\OT1/cmr/m/n/10 10$$[]$\T1/cmr/m/n/10 : $\OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 345 T$\T1/cmr/m/n/10 , $\OML/cmm/m/it/10 ^^W \OT1/cmr/m/n/10 =
  []
 
 
 
 [13 <./figures/Radiowellen.png> <./figures/task3_pmr_445mhz.png> <./figures/task4_dpph_1ug.png> <./figures/task4_dpph_10ug.png>]
-Overfull \hbox (4.99721pt too wide) in paragraph at lines 665--678
+Overfull \hbox (4.99721pt too wide) in paragraph at lines 664--677
 \T1/cmr/m/n/10.95 Spannungs-Feld-Beziehung wur-de aus ei-nem ein-zi-gen, vi-de-odi-gi-ta-li-sier-ten Ka-li-brier-lauf mit $\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 05$$V$\T1/cmr/m/n/10.95 -
  []
 
 <figures/task5_um_pure.png, id=417, 1504.62125pt x 480.79625pt>
 File: figures/task5_um_pure.png Graphic file (type png)
 <use figures/task5_um_pure.png>
-Package pdftex.def Info: figures/task5_um_pure.png  used on input line 690.
+Package pdftex.def Info: figures/task5_um_pure.png  used on input line 689.
 (pdftex.def)             Requested size: 218.51521pt x 69.82004pt.
 <figures/task5_um_1_10.png, id=418, 1507.6325pt x 480.79625pt>
 File: figures/task5_um_1_10.png Graphic file (type png)
 <use figures/task5_um_1_10.png>
-Package pdftex.def Info: figures/task5_um_1_10.png  used on input line 694.
+Package pdftex.def Info: figures/task5_um_1_10.png  used on input line 693.
 (pdftex.def)             Requested size: 218.51521pt x 69.68065pt.
 <figures/task5_um_1_100.png, id=419, 1508.63625pt x 481.8pt>
 File: figures/task5_um_1_100.png Graphic file (type png)
 <use figures/task5_um_1_100.png>
-Package pdftex.def Info: figures/task5_um_1_100.png  used on input line 700.
+Package pdftex.def Info: figures/task5_um_1_100.png  used on input line 699.
 (pdftex.def)             Requested size: 218.51521pt x 69.78201pt.
 <figures/task5_um_1_1000.png, id=420, 1508.63625pt x 482.80376pt>
 File: figures/task5_um_1_1000.png Graphic file (type png)
 <use figures/task5_um_1_1000.png>
-Package pdftex.def Info: figures/task5_um_1_1000.png  used on input line 704.
+Package pdftex.def Info: figures/task5_um_1_1000.png  used on input line 703.
 (pdftex.def)             Requested size: 218.51521pt x 69.9274pt.
 
 
@@ -671,27 +671,27 @@ Package pdftex.def Info: figures/task5_um_1_1000.png  used on input line 704.
 <figures/task5_um_pure_curve.png, id=434, 462.528pt x 346.896pt>
 File: figures/task5_um_pure_curve.png Graphic file (type png)
 <use figures/task5_um_pure_curve.png>
-Package pdftex.def Info: figures/task5_um_pure_curve.png  used on input line 726.
+Package pdftex.def Info: figures/task5_um_pure_curve.png  used on input line 725.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 
-Underfull \hbox (badness 1831) in paragraph at lines 728--728
+Underfull \hbox (badness 1831) in paragraph at lines 727--727
 []\T1/cmr/m/n/10 (a) |Pur (un-ver-dünnt): $\OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 357 T$\T1/cmr/m/n/10 , $\OML/cmm/m/it/10 ^^W \OT1/cmr/m/n/10 =
  []
 
 <figures/task5_um_1_10_curve.png, id=435, 462.528pt x 346.896pt>
 File: figures/task5_um_1_10_curve.png Graphic file (type png)
 <use figures/task5_um_1_10_curve.png>
-Package pdftex.def Info: figures/task5_um_1_10_curve.png  used on input line 731.
+Package pdftex.def Info: figures/task5_um_1_10_curve.png  used on input line 730.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 <figures/task5_um_1_100_curve.png, id=436, 462.528pt x 346.896pt>
 File: figures/task5_um_1_100_curve.png Graphic file (type png)
 <use figures/task5_um_1_100_curve.png>
-Package pdftex.def Info: figures/task5_um_1_100_curve.png  used on input line 738.
+Package pdftex.def Info: figures/task5_um_1_100_curve.png  used on input line 737.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 <figures/task5_um_1_1000_curve.png, id=437, 462.528pt x 346.896pt>
 File: figures/task5_um_1_1000_curve.png Graphic file (type png)
 <use figures/task5_um_1_1000_curve.png>
-Package pdftex.def Info: figures/task5_um_1_1000_curve.png  used on input line 743.
+Package pdftex.def Info: figures/task5_um_1_1000_curve.png  used on input line 742.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 
 
@@ -701,49 +701,34 @@ Package pdftex.def Info: figures/task5_um_1_1000_curve.png  used on input line 7
 <figures/task6_dpph_calibrated.png, id=463, 1264.725pt x 760.34062pt>
 File: figures/task6_dpph_calibrated.png Graphic file (type png)
 <use figures/task6_dpph_calibrated.png>
-Package pdftex.def Info: figures/task6_dpph_calibrated.png  used on input line 816.
+Package pdftex.def Info: figures/task6_dpph_calibrated.png  used on input line 815.
 (pdftex.def)             Requested size: 218.51521pt x 131.36772pt.
 <figures/task6_dpph_calibrated_curve.png, id=464, 462.528pt x 346.896pt>
 File: figures/task6_dpph_calibrated_curve.png Graphic file (type png)
 <use figures/task6_dpph_calibrated_curve.png>
-Package pdftex.def Info: figures/task6_dpph_calibrated_curve.png  used on input line 820.
+Package pdftex.def Info: figures/task6_dpph_calibrated_curve.png  used on input line 819.
 (pdftex.def)             Requested size: 218.51521pt x 163.88805pt.
 
 
 [17 <./figures/task6_dpph_calibrated.png> <./figures/task6_dpph_calibrated_curve.png>]
-Overfull \hbox (4.79579pt too wide) in paragraph at lines 877--882
+Overfull \hbox (4.79579pt too wide) in paragraph at lines 876--881
 []\T1/cmr/m/n/10.95 Die ab-ge-le-se-ne her-un-ter-ge-misch-te Fre-quenz $\OML/cmm/m/it/10.95 ^^W$ \T1/cmr/m/n/10.95 än-dert sich zwi-schen den Auf-ga-ben um $\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 64$$[]$\T1/cmr/m/n/10.95 ;
  []
 
 
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 958--961
+Underfull \hbox (badness 10000) in paragraph at lines 955--957
 []\T1/cmr/m/n/10.95 I. Poo-le, \T1/cmr/m/it/10.95 RF Mi-xing / Fre-quen-cy Mi-xers\T1/cmr/m/n/10.95 , Elec-tro-nics No-tes, []$\T1/cmtt/m/n/10.95 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 958--961
-\T1/cmtt/m/n/10.95 electronics-[]notes . com / articles / radio / rf-[]mixer / rf-[]mixing-[]basics . php$[] \T1/cmr/m/n/10.95 (ab-ge-ru-
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 963--966
-[]\T1/cmr/m/n/10.95 I. Poo-le, \T1/cmr/m/it/10.95 What is Fre-quen-cy Mo-du-la-ti-on, FM\T1/cmr/m/n/10.95 , Elec-tro-nics No-tes, []$\T1/cmtt/m/n/10.95 https : / / www .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 963--966
-\T1/cmtt/m/n/10.95 electronics-[]notes . com / articles / radio / modulation / frequency-[]modulation-[]fm . php$[]
- []
-
-
-Underfull \hbox (badness 6893) in paragraph at lines 974--976
+Underfull \hbox (badness 6893) in paragraph at lines 968--970
 []\T1/cmr/m/n/10.95 Quelle für die Zeeman-Aufspaltung (Abb. []1[]), []$\T1/cmtt/m/n/10.95 https : / / epr . ethz . ch / education /
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 978--980
+Underfull \hbox (badness 3168) in paragraph at lines 972--974
 []\T1/cmr/m/n/10.95 Quelle für das EPR-Spektrum (Abb. []2[]), []$\T1/cmtt/m/n/10.95 https : / / www . bruker . com / en / resources /
  []
 
@@ -766,7 +751,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  79i,13n,93p,615b,1159s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on protokoll.pdf (19 pages, 13553299 bytes).
+Output written on protokoll.pdf (19 pages, 13553391 bytes).
 PDF statistics:
  621 PDF objects out of 1000 (max. 8388607)
  436 compressed objects within 5 object streams
