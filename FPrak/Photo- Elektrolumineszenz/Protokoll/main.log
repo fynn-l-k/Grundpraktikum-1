@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  3 JUL 2026 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  8 JUL 2026 08:26
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**"c:/Users/vd01p/OneDrive/Desktop/UniversitÃ¤t/Grundpraktikum-1/FPrak/Photo- Elektrolumineszenz/Protokoll/main.tex"
+(c:/Users/vd01p/OneDrive/Desktop/UniversitÃ¤t/Grundpraktikum-1/FPrak/Photo- Elektrolumineszenz/Protokoll/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
 (c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -22,99 +23,74 @@ File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen150
-)
-(c:/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-)
-(c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
-(c:/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaT
-eX and XeLaTeX
+) (c:/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count284
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2084.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2086.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2088.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2089.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2090.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2092.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2117.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2084.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2086.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2088.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2089.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2090.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2092.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2117.
 \U@D=\dimen151
 \l@unhyphenated=\language91
-
-(c:/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
+ (c:/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count285
-
-(c:/texlive/2026/texmf-dist/tex/generic/babel/locale/invalid/babel-ngerman.tex)
+ (c:/texlive/2026/texmf-dist/tex/generic/babel/locale/invalid/babel-ngerman.tex)
 Package babel Info: Importing font and identification data for ngerman
 (babel)             from babel-de.ini. Reported on input line 4356.
-(c:/texlive/2026/texmf-dist/tex/generic/babel-german/ngerman.ldf
+ (c:/texlive/2026/texmf-dist/tex/generic/babel-german/ngerman.ldf
 Language: ngerman 
-
-(c:/texlive/2026/texmf-dist/tex/generic/babel-german/babel-german.def
+ (c:/texlive/2026/texmf-dist/tex/generic/babel-german/babel-german.def
 Package babel Info: Making " an active character on input line 500.
-)))
-(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+))) (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
-(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-)
-(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen152
 \Gin@req@width=\dimen153
-)
-(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count286
 \float@exts=\toks20
 \float@box=\box53
 \@float@everytoks=\toks21
 \@floatcapt=\box54
-)
-(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
-
-(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen154
-))
-(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen155
-)
-(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count287
@@ -164,19 +140,16 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-)
-(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+)) (c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen163
 \lightrulewidth=\dimen164
@@ -195,15 +168,13 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count301
 \@lastruleclass=\count302
 \@thisrulewidth=\dimen175
-)
-(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip54
 \multirow@cntb=\count303
 \multirow@dima=\skip55
 \bigstrutjot=\dimen176
-)
-(c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2026-05-15 v3.5.5 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count304
 \l__siunitx_number_exponent_fixed_int=\count305
@@ -217,26 +188,18 @@ Package: siunitx 2026-05-15 v3.5.5 A comprehensive (SI) units package
 \l__siunitx_number_group_min_int=\count313
 \l__siunitx_number_group_minimum_int=\count314
 \l__siunitx_compound_count_int=\count315
-
-(c:/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
- (CN)
-
-(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+ (c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count316
-)
-(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+) (c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
-(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+) (c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -259,8 +222,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 \l__siunitx_sexagesimal_tmp_dim=\dimen181
 \l__siunitx_sexagesimal_marker_box=\box63
 \l__siunitx_sexagesimal_unit_box=\box64
-
-(c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen182
 \ar@mcellbox=\box65
@@ -269,8 +231,7 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip56
 \backup@length=\skip57
 \ar@cellbox=\box66
-))
-(c:/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+)) (c:/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
 \csq@reset=\count320
 \csq@gtype=\count321
@@ -279,14 +240,12 @@ Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
 \csq@maxlvl=\count324
 \csq@tshold=\count325
 \csq@ltx@everypar=\toks28
-
-(c:/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def
+ (c:/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2026-05-19 v5.2p csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
-
-(c:/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg
+ (c:/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 ))
 
@@ -295,27 +254,20 @@ Package siunitx Info: Option "separate-uncertainty" has been deprecated in
 (siunitx)             
 (siunitx)             Use "uncertainty-mode = separate" as a replacement.
 
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
-
-(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-
-(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+)) (c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count326
-
-(c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
+ (c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+)) (c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -378,8 +330,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@mincompwidth=\count372
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -470,14 +421,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip79
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count441
 \c@textcitetotal=\count442
@@ -495,21 +444,18 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
 File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count450
 \c@bbx:relatedtotal=\count451
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
 File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -525,17 +471,14 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
-
-(c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2026-04-28 L3 programming layer (loader) 
-
-(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count452
 ))
@@ -543,22 +486,17 @@ Package biblatex Info: ... and expl3
 (biblatex)             2026-04-28 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
-(c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-))
-(c:/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
+)) (c:/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
-
-(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
-
-(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -583,8 +521,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
-
-(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count453
 \scratchdimen=\dimen184
@@ -599,34 +536,25 @@ LaTeX Font Info:    ... okay on input line 39.
 \everyMPtoPDFconversion=\toks30
 ) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-(c:/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionar
-y-german.trsl
-File: translations-basic-dictionary-german.trsl (german translation file `trans
-lations-basic-dictionary')
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (c:/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 39.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 39.
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
  (c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
 File: ngerman.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-
-(c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+ (c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 ))
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -645,55 +573,43 @@ File: uni_logo.png Graphic file (type png)
 Package pdftex.def Info: uni_logo.png  used on input line 43.
 (pdftex.def)             Requested size: 258.75pt x 108.71075pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
-
-
-(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
-
-
-(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \hbox (badness 1102) in paragraph at lines 49--50
-\T1/cmr/m/n/9 für die ro-te Di-ode der Phosphor- be-zie-hungs-wei-se Ar-sen-ge-
-halt des
+\T1/cmr/m/n/9 für die ro-te Di-ode der Phosphor- be-zie-hungs-wei-se Ar-sen-ge-halt des
  []
 
 [1
 
-{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/
-texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./uni_logo.png>]
-(./main.toc)
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./uni_logo.png>] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2] [3] [4{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
-c}]
+ [2] [3] [4{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 Underfull \hbox (badness 2334) in paragraph at lines 74--75
-[]\T1/cmr/m/n/10 Die Pho-to-lu-mi-nes-zenz-spek-tren zwei-er $\OML/cmm/m/it/10 
-Ga[]Al[]As$\T1/cmr/m/n/10 -Proben sind bei
+[]\T1/cmr/m/n/10 Die Pho-to-lu-mi-nes-zenz-spek-tren zwei-er $\OML/cmm/m/it/10 Ga[]Al[]As$\T1/cmr/m/n/10 -Proben sind bei
  []
 
 <figures/Energieschme_Halbleiter.png, id=36, 361.35pt x 131.49126pt>
 File: figures/Energieschme_Halbleiter.png Graphic file (type png)
 <use figures/Energieschme_Halbleiter.png>
-Package pdftex.def Info: figures/Energieschme_Halbleiter.png  used on input lin
-e 85.
+Package pdftex.def Info: figures/Energieschme_Halbleiter.png  used on input line 85.
 (pdftex.def)             Requested size: 189.75105pt x 69.04797pt.
 [5 <./figures/Energieschme_Halbleiter.png>]
 Underfull \hbox (badness 1383) in paragraph at lines 97--98
-\T1/cmr/m/n/10 Va-lenz-band-ma-xi-mum beim glei-chen Wel-len-zahl-vek-tor. Die 
-Re-kom-bi-na-ti-on
+\T1/cmr/m/n/10 Va-lenz-band-ma-xi-mum beim glei-chen Wel-len-zahl-vek-tor. Die Re-kom-bi-na-ti-on
  []
 
 [6]
 <figures/fermi_verteilung_temperatur.png, id=45, 501.875pt x 501.875pt>
 File: figures/fermi_verteilung_temperatur.png Graphic file (type png)
 <use figures/fermi_verteilung_temperatur.png>
-Package pdftex.def Info: figures/fermi_verteilung_temperatur.png  used on input
- line 128.
+Package pdftex.def Info: figures/fermi_verteilung_temperatur.png  used on input line 128.
 (pdftex.def)             Requested size: 165.59853pt x 165.59628pt.
  [7 <./figures/fermi_verteilung_temperatur.png>]
 <figures/p-n-ubergang.png, id=54, 499.8675pt x 191.21437pt>
@@ -705,34 +621,29 @@ Package pdftex.def Info: figures/p-n-ubergang.png  used on input line 146.
 <figures/Rekombinationsmechnismen.png, id=59, 422.07687pt x 159.59625pt>
 File: figures/Rekombinationsmechnismen.png Graphic file (type png)
 <use figures/Rekombinationsmechnismen.png>
-Package pdftex.def Info: figures/Rekombinationsmechnismen.png  used on input li
-ne 164.
+Package pdftex.def Info: figures/Rekombinationsmechnismen.png  used on input line 164.
 (pdftex.def)             Requested size: 200.10063pt x 75.66287pt.
  [9 <./figures/Rekombinationsmechnismen.png>]
 Underfull \hbox (badness 1418) in paragraph at lines 205--207
-\T1/cmr/m/n/10 geschrieben wer-den [4, S. 23--26, Ta-bel-le 2]. Die Ma-te-ri-al
--pa-ra-me-ter für
+\T1/cmr/m/n/10 geschrieben wer-den [4, S. 23--26, Ta-bel-le 2]. Die Ma-te-ri-al-pa-ra-me-ter für
  []
 
 [10]
 <figures/bandabstaende_gaasp.png, id=67, 298.61563pt x 313.17pt>
 File: figures/bandabstaende_gaasp.png Graphic file (type png)
 <use figures/bandabstaende_gaasp.png>
-Package pdftex.def Info: figures/bandabstaende_gaasp.png  used on input line 21
-0.
+Package pdftex.def Info: figures/bandabstaende_gaasp.png  used on input line 210.
 (pdftex.def)             Requested size: 207.0021pt x 217.09102pt.
 <figures/experimenteller_aufbau.png, id=68, 578.66188pt x 337.76187pt>
 File: figures/experimenteller_aufbau.png Graphic file (type png)
 <use figures/experimenteller_aufbau.png>
-Package pdftex.def Info: figures/experimenteller_aufbau.png  used on input line
- 221.
+Package pdftex.def Info: figures/experimenteller_aufbau.png  used on input line 221.
 (pdftex.def)             Requested size: 293.2521pt x 171.16881pt.
  [11 <./figures/bandabstaende_gaasp.png>]
 <figures/Gittermonochromator.png, id=73, 265.49188pt x 183.68625pt>
 File: figures/Gittermonochromator.png Graphic file (type png)
 <use figures/Gittermonochromator.png>
-Package pdftex.def Info: figures/Gittermonochromator.png  used on input line 23
-2.
+Package pdftex.def Info: figures/Gittermonochromator.png  used on input line 232.
 (pdftex.def)             Requested size: 282.90253pt x 195.7463pt.
  [12 <./figures/experimenteller_aufbau.png>]
 <figures/quantenausbeute.png, id=78, 385.44pt x 444.66125pt>
@@ -744,8 +655,7 @@ Package pdftex.def Info: figures/quantenausbeute.png  used on input line 241.
 <figures/Probenanordnung_im_Kryostat.png, id=84, 379.91937pt x 216.81pt>
 File: figures/Probenanordnung_im_Kryostat.png Graphic file (type png)
 <use figures/Probenanordnung_im_Kryostat.png>
-Package pdftex.def Info: figures/Probenanordnung_im_Kryostat.png  used on input
- line 252.
+Package pdftex.def Info: figures/Probenanordnung_im_Kryostat.png  used on input line 252.
 (pdftex.def)             Requested size: 224.2479pt x 127.97633pt.
  [14 <./figures/quantenausbeute.png>]
 <figures/plot_aufgabe_1.pdf, id=89, 1008.2493pt x 304.1444pt>
@@ -753,8 +663,7 @@ File: figures/plot_aufgabe_1.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_1.pdf>
 Package pdftex.def Info: figures/plot_aufgabe_1.pdf  used on input line 267.
 (pdftex.def)             Requested size: 345.0pt x 104.07137pt.
- [15 <./figures/Probenanordnung_im_Kryostat.png>] [16 <./figures/plot_aufgabe_1
-.pdf>]
+ [15 <./figures/Probenanordnung_im_Kryostat.png>] [16 <./figures/plot_aufgabe_1.pdf>]
 <figures/plot_aufgabe_2.pdf, id=128, 498.2822pt x 281.0337pt>
 File: figures/plot_aufgabe_2.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_2.pdf>
@@ -792,34 +701,28 @@ Package pdftex.def Info: figures/plot_aufgabe_7.pdf  used on input line 460.
 <figures/plot_aufgabe_7alternative.pdf, id=324, 498.31985pt x 281.0337pt>
 File: figures/plot_aufgabe_7alternative.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_7alternative.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_7alternative.pdf  used on input l
-ine 467.
+Package pdftex.def Info: figures/plot_aufgabe_7alternative.pdf  used on input line 467.
 (pdftex.def)             Requested size: 258.75pt x 145.92395pt.
  [22 <./figures/plot_aufgabe_7.pdf> <./figures/plot_aufgabe_7alternative.pdf>]
 <figures/plot_aufgabe_8_1127.pdf, id=399, 498.37943pt x 281.0337pt>
 File: figures/plot_aufgabe_8_1127.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_8_1127.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_8_1127.pdf  used on input line 51
-2.
+Package pdftex.def Info: figures/plot_aufgabe_8_1127.pdf  used on input line 512.
 (pdftex.def)             Requested size: 258.75pt x 145.90678pt.
  [23]
 <figures/plot_aufgabe_8_87063.pdf, id=403, 498.31985pt x 281.0337pt>
 File: figures/plot_aufgabe_8_87063.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_8_87063.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_8_87063.pdf  used on input line 5
-19.
+Package pdftex.def Info: figures/plot_aufgabe_8_87063.pdf  used on input line 519.
 (pdftex.def)             Requested size: 258.75pt x 145.92395pt.
 
 Underfull \hbox (badness 1533) in paragraph at lines 526--527
-[]\T1/cmr/m/n/10 Bei Raum-tem-pe-ra-tur wird die Emis-si-on nä-he-rungs-wei-se 
-als Band-Band-
+[]\T1/cmr/m/n/10 Bei Raum-tem-pe-ra-tur wird die Emis-si-on nä-he-rungs-wei-se als Band-Band-
  []
 
-[24 <./figures/plot_aufgabe_8_1127.pdf> <./figures/plot_aufgabe_8_87063.pdf>]
-[25] [26]
+[24 <./figures/plot_aufgabe_8_1127.pdf> <./figures/plot_aufgabe_8_87063.pdf>] [25] [26]
 Underfull \hbox (badness 1383) in paragraph at lines 614--615
-\T1/cmr/m/n/10 ner Donator-Akzeptor-Rekombination un-ter Be-tei-li-gung von Si-
-Störstellen
+\T1/cmr/m/n/10 ner Donator-Akzeptor-Rekombination un-ter Be-tei-li-gung von Si-Störstellen
  []
 
 [27] [28] (./main.lof [29])
@@ -840,37 +743,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17413 strings out of 467341
- 371472 string characters out of 5419596
+ 17414 strings out of 467341
+ 371784 string characters out of 5419596
  1209346 words of memory out of 5000000
  46318 multiletter control sequences out of 15000+600000
  646760 words of font info for 89 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 73i,11n,80p,1092b,3199s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
-live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2026/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/te
-xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texli
-ve/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2026/te
-xmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2026/texmf-dist/f
-onts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1
-/public/cm-super/sfcc1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm
--super/sfrm0900.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfr
-m1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-<c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texliv
-e/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2026/tex
-mf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+ 73i,11n,80p,1198b,3199s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 Output written on main.pdf (30 pages, 1215632 bytes).
 PDF statistics:
  613 PDF objects out of 1000 (max. 8388607)

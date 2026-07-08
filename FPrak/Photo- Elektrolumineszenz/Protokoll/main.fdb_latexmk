@@ -1,12 +1,13 @@
 # Fdb version 4
-["biber main"] 1783084256.5924 "main.bcf" "main.bbl" "main" 1783084272.53713 0
-  "main.bcf" 1783084271 112235 a0136a40f16b82812026ad4f51124051 "pdflatex"
+["biber main"] 1783490336.372 "main.bcf" "main.bbl" "main" 1783491990.55488 0
+  "main.bcf" 1783491990 112235 a0136a40f16b82812026ad4f51124051 "pdflatex"
   "quellen.bib" 1783084231 1117 ecf0aadf7be771c4732c52756e94466e ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1783084268.15672 "main.tex" "main.pdf" "main" 1783084272.5384 0
+["pdflatex"] 1783491987.02585 "c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/Photo- Elektrolumineszenz/Protokoll/main.tex" "main.pdf" "main" 1783491990.5559 0
+  "c:/Users/vd01p/OneDrive/Desktop/Universität/Grundpraktikum-1/FPrak/Photo- Elektrolumineszenz/Protokoll/main.tex" 1783491986 47263 8f707442c097f4161e425c3d9d83a406 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1779630654 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1779630654 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1779631590 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -165,13 +166,13 @@
   "figures/plot_aufgabe_8_1127.pdf" 1783015387 13587 80d181cdb40554bcd69aa3d932a55d05 ""
   "figures/plot_aufgabe_8_87063.pdf" 1783015379 14203 79706118486b35462d8b6522b5f7003f ""
   "figures/quantenausbeute.png" 1783080488 182791 ecaba7c8b28f061eb00272de446f88f6 ""
-  "main.aux" 1783084271 13199 64d9dccae7fb82796a86b79a6c763210 "pdflatex"
-  "main.bbl" 1783084259 5946 124db57d6ed68f5bf4872904b15bca23 "biber main"
-  "main.lof" 1783084271 3603 c88b7f2f392d5b894b634e08a4cf1d1f "pdflatex"
-  "main.lot" 1783084271 119 3c05df22653948a8a0516a95f1442d6c "pdflatex"
-  "main.run.xml" 1783084271 2332 e0448163c645ba99aa4c44f134f796d3 "pdflatex"
-  "main.tex" 1783084216 47263 8f707442c097f4161e425c3d9d83a406 ""
-  "main.toc" 1783084271 2180 bbec24a8b424b2948b56af5eb0872ac3 "pdflatex"
+  "main.aux" 1783491990 13199 64d9dccae7fb82796a86b79a6c763210 "pdflatex"
+  "main.bbl" 1783490338 5946 124db57d6ed68f5bf4872904b15bca23 "biber main"
+  "main.lof" 1783491990 3603 c88b7f2f392d5b894b634e08a4cf1d1f "pdflatex"
+  "main.lot" 1783491990 119 3c05df22653948a8a0516a95f1442d6c "pdflatex"
+  "main.run.xml" 1783491990 2332 e0448163c645ba99aa4c44f134f796d3 "pdflatex"
+  "main.tex" 1783491986 47263 8f707442c097f4161e425c3d9d83a406 ""
+  "main.toc" 1783491990 2180 bbec24a8b424b2948b56af5eb0872ac3 "pdflatex"
   "uni_logo.png" 1781551715 18479 82083768b041aaaf23ea7bdd0f196aa8 ""
   (generated)
   "main.aux"
