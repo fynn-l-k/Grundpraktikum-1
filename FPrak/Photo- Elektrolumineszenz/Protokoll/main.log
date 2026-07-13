@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  8 JUL 2026 08:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.24)  10 JUL 2026 09:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -661,71 +661,80 @@ Package pdftex.def Info: figures/Probenanordnung_im_Kryostat.png  used on input 
 <figures/plot_aufgabe_1.pdf, id=89, 1008.2493pt x 304.1444pt>
 File: figures/plot_aufgabe_1.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_1.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_1.pdf  used on input line 267.
+Package pdftex.def Info: figures/plot_aufgabe_1.pdf  used on input line 269.
 (pdftex.def)             Requested size: 345.0pt x 104.07137pt.
  [15 <./figures/Probenanordnung_im_Kryostat.png>] [16 <./figures/plot_aufgabe_1.pdf>]
 <figures/plot_aufgabe_2.pdf, id=128, 498.2822pt x 281.0337pt>
 File: figures/plot_aufgabe_2.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_2.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_2.pdf  used on input line 315.
+Package pdftex.def Info: figures/plot_aufgabe_2.pdf  used on input line 322.
 (pdftex.def)             Requested size: 258.75pt x 145.9411pt.
-<figures/plot_aufgabe_3.pdf, id=129, 498.31985pt x 281.0337pt>
+ [17 <./figures/plot_aufgabe_2.pdf>]
+<figures/plot_aufgabe_3.pdf, id=165, 498.31985pt x 281.0337pt>
 File: figures/plot_aufgabe_3.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_3.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_3.pdf  used on input line 338.
+Package pdftex.def Info: figures/plot_aufgabe_3.pdf  used on input line 348.
 (pdftex.def)             Requested size: 258.75pt x 145.92395pt.
- [17 <./figures/plot_aufgabe_2.pdf>]
 <figures/plot_aufgabe_4.pdf, id=166, 498.2226pt x 281.0337pt>
 File: figures/plot_aufgabe_4.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_4.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_4.pdf  used on input line 357.
+Package pdftex.def Info: figures/plot_aufgabe_4.pdf  used on input line 368.
 (pdftex.def)             Requested size: 258.75pt x 145.95396pt.
  [18 <./figures/plot_aufgabe_3.pdf>]
 <figures/plot_aufgabe_5.pdf, id=205, 498.2226pt x 281.0337pt>
 File: figures/plot_aufgabe_5.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_5.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_5.pdf  used on input line 382.
+Package pdftex.def Info: figures/plot_aufgabe_5.pdf  used on input line 394.
 (pdftex.def)             Requested size: 258.75pt x 145.95396pt.
  [19 <./figures/plot_aufgabe_4.pdf>]
 <figures/plot_aufgabe_6.pdf, id=245, 498.31985pt x 281.0337pt>
 File: figures/plot_aufgabe_6.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_6.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_6.pdf  used on input line 413.
+Package pdftex.def Info: figures/plot_aufgabe_6.pdf  used on input line 426.
 (pdftex.def)             Requested size: 258.75pt x 145.92395pt.
  [20 <./figures/plot_aufgabe_5.pdf>] [21 <./figures/plot_aufgabe_6.pdf>]
 <figures/plot_aufgabe_7.pdf, id=323, 498.31985pt x 281.0337pt>
 File: figures/plot_aufgabe_7.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_7.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_7.pdf  used on input line 460.
+Package pdftex.def Info: figures/plot_aufgabe_7.pdf  used on input line 483.
 (pdftex.def)             Requested size: 258.75pt x 145.92395pt.
 <figures/plot_aufgabe_7alternative.pdf, id=324, 498.31985pt x 281.0337pt>
 File: figures/plot_aufgabe_7alternative.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_7alternative.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_7alternative.pdf  used on input line 467.
+Package pdftex.def Info: figures/plot_aufgabe_7alternative.pdf  used on input line 490.
 (pdftex.def)             Requested size: 258.75pt x 145.92395pt.
- [22 <./figures/plot_aufgabe_7.pdf> <./figures/plot_aufgabe_7alternative.pdf>]
-<figures/plot_aufgabe_8_1127.pdf, id=399, 498.37943pt x 281.0337pt>
+ [22 <./figures/plot_aufgabe_7.pdf>] [23 <./figures/plot_aufgabe_7alternative.pdf>]
+<figures/plot_aufgabe_8_1127.pdf, id=402, 498.37943pt x 281.0337pt>
 File: figures/plot_aufgabe_8_1127.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_8_1127.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_8_1127.pdf  used on input line 512.
+Package pdftex.def Info: figures/plot_aufgabe_8_1127.pdf  used on input line 547.
 (pdftex.def)             Requested size: 258.75pt x 145.90678pt.
- [23]
 <figures/plot_aufgabe_8_87063.pdf, id=403, 498.31985pt x 281.0337pt>
 File: figures/plot_aufgabe_8_87063.pdf Graphic file (type pdf)
 <use figures/plot_aufgabe_8_87063.pdf>
-Package pdftex.def Info: figures/plot_aufgabe_8_87063.pdf  used on input line 519.
+Package pdftex.def Info: figures/plot_aufgabe_8_87063.pdf  used on input line 556.
 (pdftex.def)             Requested size: 258.75pt x 145.92395pt.
-
-Underfull \hbox (badness 1533) in paragraph at lines 526--527
+ [24 <./figures/plot_aufgabe_8_1127.pdf>]
+Underfull \hbox (badness 1533) in paragraph at lines 568--570
 []\T1/cmr/m/n/10 Bei Raum-tem-pe-ra-tur wird die Emis-si-on nä-he-rungs-wei-se als Band-Band-
  []
 
-[24 <./figures/plot_aufgabe_8_1127.pdf> <./figures/plot_aufgabe_8_87063.pdf>] [25] [26]
-Underfull \hbox (badness 1383) in paragraph at lines 614--615
-\T1/cmr/m/n/10 ner Donator-Akzeptor-Rekombination un-ter Be-tei-li-gung von Si-Störstellen
+[25 <./figures/plot_aufgabe_8_87063.pdf>]
+Overfull \hbox (90.85408pt too wide) in paragraph at lines 655--663
+ [][] 
  []
 
-[27] [28] (./main.lof [29])
+[26]
+Overfull \hbox (30.12158pt too wide) in paragraph at lines 687--704
+ [][] 
+ []
+
+[27]
+Underfull \hbox (badness 1221) in paragraph at lines 716--717
+\T1/cmr/m/n/10 Bindungsenergien be-stimmt (GaP: $\OT1/cmr/m/n/10 26$$[]$\T1/cmr/m/n/10 , Ga(As,P): $\OT1/cmr/m/n/10 48$$[]$\T1/cmr/m/n/10 ). Die ro-te
+ []
+
+[28] (./main.lof [29])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -743,15 +752,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17414 strings out of 467341
- 371784 string characters out of 5419596
- 1209346 words of memory out of 5000000
- 46318 multiletter control sequences out of 15000+600000
+ 17417 strings out of 467341
+ 371833 string characters out of 5419596
+ 1209417 words of memory out of 5000000
+ 46321 multiletter control sequences out of 15000+600000
  646760 words of font info for 89 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  73i,11n,80p,1198b,3199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (30 pages, 1215632 bytes).
+Output written on main.pdf (30 pages, 1221996 bytes).
 PDF statistics:
  613 PDF objects out of 1000 (max. 8388607)
  203 compressed objects within 3 object streams

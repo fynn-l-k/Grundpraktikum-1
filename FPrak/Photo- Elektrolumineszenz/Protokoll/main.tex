@@ -256,9 +256,11 @@ Für die Photolumineszenzmessungen werden die $Ga_{1-x}Al_xAs$-Proben mit einem 
 
 Die Probe wird so ausgerichtet, dass reflektierte Laserstrahlung nicht direkt in den Eintrittsspalt des Monochromators fällt. Zusätzlich verhindert ein Kantenfilter, dass Streulicht des Lasers die Messung im Spektralbereich der Photolumineszenz überlagert. Bei sehr intensiven Lichtquellen wie der Natriumdampflampe und der weißen LED wird eine Höhenblende verwendet, um den SEV vor Überlastung zu schützen \cite[S.~29]{manual}.
 
-\section{Auswertung}
+\section{Ergebnisse und Auswertung}
 
 Die gemessene Intensität wurde in allen Spektren über die Ausgangsspannung des Detektors dargestellt. Da diese Spannung im verwendeten Arbeitsbereich proportional zur auf den Detektor fallenden Lichtleistung ist, wird sie als relatives Maß für die spektrale Intensität verwendet. Für die Interpretation sind deshalb vor allem die Lage der Maxima, die qualitative Linienform und relative Breiten relevant. Absolute Intensitätsvergleiche zwischen unterschiedlichen Messreihen sind wegen verschiedener Spaltbreiten, Empfindlichkeitseinstellungen und Detektorempfindlichkeiten nur eingeschränkt aussagekräftig.
+
+Für die Aufnahme der Spektren wurde zunächst in größeren Schritten über einen größeren Wellenlängenbereich gemessen, um die ungefähre Lage der Emissionsmaxima zu bestimmen. Anschließend wurden gezielt feinere Messungen in den relevanten Bereichen aufgenommen, um die Intensität und die Peakpositionen genauer zu bestimmen. Diese Vorgehensweise war besonders sinnvoll, weil die Positionen der Maxima teilweise bereits aus der ersten groben Messung bekannt waren und dadurch nur noch die empfindlichsten Bereiche genauer vermessen werden mussten. Dadurch konnte der Messzeitaufwand reduziert werden, ohne die Auswertung der spektralen Strukturen zu beeinträchtigen.
 
 \subsection{Überprüfung der Eichung der Wellenlängenskala}
 
@@ -302,6 +304,11 @@ Die gemessene Intensität wurde in allen Spektren über die Ausgangsspannung des
 \end{tabular}
 \end{table}
 
+Das FWHM wurde aus dem Fitparametern der Standardabweichung einer Gauß-Fitfunktion bestimmt. Es gilt folgende Relation zwischen Standardabweichung $\sigma$ und FWHM.
+\begin{equation}
+    \mathrm{FWHM} = 2\sqrt{2\ln(2)}\sigma \approx 2.355\sigma.
+\end{equation}
+
 Die in Abbildung~\ref{fig:aufgabe_1} dargestellten Natriumlinien zeigen jeweils zwei Maxima. Dies entspricht der Feinstruktur beziehungsweise Dublettstruktur der ausgewählten Natriumübergänge. Besonders bekannt ist das gelbe Natrium-D-Dublett bei etwa \SI{589}{\nano\meter}; auch im Bereich der 497er- und 819er-Linien treten nahe beieinanderliegende Übergänge auf.
 
 Die experimentell bestimmten Linienpositionen stimmen gut mit den Literaturwerten überein. Die Abweichungen liegen zwischen \SI{0.03}{\nano\meter} und \SI{0.14}{\nano\meter}. Damit ist die Kalibrierung der Wellenlängenskala für die folgenden Messungen ausreichend genau. Ein kleiner systematischer Versatz kann nicht vollständig ausgeschlossen werden, ist jedoch gegenüber den spektralen Breiten der später untersuchten LED- und Photolumineszenzbanden klein.
@@ -319,13 +326,16 @@ Die gemessenen Halbwertsbreiten liegen zwischen \SI{0.104}{\nano\meter} und \SI{
 
 Das Spektrum der weiß leuchtenden Diode besitzt zwei deutlich unterscheidbare Beiträge. Das kurzwellige, vergleichsweise schmale Maximum bei \SI{470.0}{\nano\meter} liegt im blauen Spektralbereich. Die zugehörige Photonenenergie beträgt
 \begin{equation}
-    E_\mathrm{blau}=\frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{470.0}{\nano\meter}}
+    E_\mathrm{blau}
+    = \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{470.0}{\nano\meter}}
     \approx \SI{2.64}{\electronvolt}.
 \end{equation}
 Der breitere langwellige Anteil mit einem Maximum bei etwa \SI{545.0}{\nano\meter} entspricht
 \begin{equation}
-    E_\mathrm{gelb-gruen}\approx
-    \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{545.0}{\nano\meter}}
+    E_\mathrm{gelb-gruen}
+    = \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{545.0}{\nano\meter}}
     \approx \SI{2.28}{\electronvolt}.
 \end{equation}
 
@@ -342,8 +352,9 @@ Dieses Verhalten ist charakteristisch für eine weiße LED aus blauem Halbleiter
 
 Die blau leuchtende Diode zeigt ein einzelnes ausgeprägtes Maximum bei \SI{473.0}{\nano\meter}. Die Photonenenergie beträgt
 \begin{equation}
-    E_\gamma =
-    \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{473.0}{\nano\meter}}
+    E_\gamma
+    = \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{473.0}{\nano\meter}}
     \approx \SI{2.62}{\electronvolt}.
 \end{equation}
 Diese Energie liegt im Bereich blauer Lumineszenz und stimmt sehr gut mit dem kurzwelligen Maximum der weißen LED überein. Damit wird die Interpretation der weißen LED als Kombination aus blauem Halbleiteremitter und langwelliger Leuchtstoffkonversion gestützt.
@@ -361,8 +372,9 @@ Die Emissionsbande ist deutlich breiter als die Kalibrierlinien der Natriumlampe
 
 Das Maximum der grün leuchtenden Diode liegt bei \SI{557.5}{\nano\meter}. Die emittierte Photonenenergie beträgt damit
 \begin{equation}
-    E_\gamma =
-    \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{557.5}{\nano\meter}}
+    E_\gamma
+    = \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{557.5}{\nano\meter}}
     \approx \SI{2.224}{\electronvolt}.
 \end{equation}
 Die verwendete grüne Diode basiert auf stickstoffdotiertem GaP. Da GaP ein indirekter Halbleiter ist, wäre eine direkte Band-Band-Rekombination ohne zusätzliche Impulsübertragung nur schwach wahrscheinlich. Die Stickstoffstörstellen wirken jedoch isoelektronisch und lokalisieren gebundene Exzitonen, wodurch strahlende Übergänge wahrscheinlicher werden \cite[S.~22--23]{manual}.
@@ -386,8 +398,9 @@ Die Bindungsenergie des gebundenen Exzitons beträgt somit etwa \SI{26}{\milli\e
 
 Die orange leuchtende Diode besitzt ihr Intensitätsmaximum bei \SI{585.6}{\nano\meter}. Daraus folgt
 \begin{equation}
-    E_\gamma =
-    \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{585.6}{\nano\meter}}
+    E_\gamma
+    = \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{585.6}{\nano\meter}}
     \approx \SI{2.117}{\electronvolt}.
 \end{equation}
 Für die orange Ga(As,P)-Diode wird ein Phosphoranteil von $x=0.87$ verwendet \cite[S.~21]{manual}. Die indirekte Bandlücke des Mischkristalls ergibt sich aus Gleichung~\eqref{eq:gaasp_indirect} mit $E_{g,i}(0)=\SI{1.82}{\electronvolt}$ und $E_{g,i}(1)=\SI{2.272}{\electronvolt}$ zu
@@ -417,23 +430,33 @@ Die Bindungsenergie des gebundenen Exzitons beträgt damit etwa \SI{48}{\milli\e
 
 Das Spektrum der roten Diode zeigt ein Maximum bei \SI{655.0}{\nano\meter}. Die zugehörige Photonenenergie ist
 \begin{equation}
-    h\nu_\mathrm{max}=
-    \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{655.0}{\nano\meter}}
+    h\nu_\mathrm{max}
+    = \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{655.0}{\nano\meter}}
     \approx \SI{1.893}{\electronvolt}.
 \end{equation}
-Für die rote Ga(As,P)-Diode wird die Emission als Übergang vom Leitungsband zu einem Akzeptorniveau betrachtet \cite[S.~20]{manual}. In guter Näherung wird für die Akzeptorenergie der GaAs-Wert verwendet. Mit $m_p=0.50m$, $\varepsilon=12.9$ und $E_H=\SI{13.6}{\electronvolt}$ \cite[Tabelle~2]{manual} folgt
+Für die rote Ga(As,P)-Diode wird die Emission als Übergang vom Leitungsband zu einem Akzeptorniveau betrachtet \cite[S.~20]{manual}. In guter Näherung wird für die Akzeptorenergie der GaAs-Wert verwendet. Für die Ionisierungsenergie gilt allgemein
+\begin{equation}
+    E_A = \frac{m_p}{m}\frac{E_H}{\varepsilon^2}.
+\end{equation}
+Mit $m_p=0.50m$, $\varepsilon=12.9$ und $E_H=\SI{13.6}{\electronvolt}$ \cite[Tabelle~2]{manual} folgt dann
 \begin{equation}
     E_A = \frac{0.50\cdot\SI{13.6}{\electronvolt}}{12.9^2}
     \approx \SI{0.0409}{\electronvolt}.
 \end{equation}
 Somit ergibt sich für die direkte Bandlücke des Mischkristalls
 \begin{equation}
-    E_{g,d}(x)=h\nu_\mathrm{max}+E_A
+    E_{g,d}(x)
+    = h\nu_\mathrm{max}+E_A
     \approx \SI{1.893}{\electronvolt}+\SI{0.0409}{\electronvolt}
     \approx \SI{1.934}{\electronvolt}.
 \end{equation}
 
-Einsetzen in die Gleichung für den direkten Übergang~\eqref{eq:gaasp_direct} mit $E_{g,d}(0)=\SI{1.43}{\electronvolt}$ und $E_{g,d}(1)=\SI{2.781}{\electronvolt}$ ergibt
+Für den direkten Übergang ~\eqref{eq:gaasp_direct} gilt allgemein
+\begin{equation}
+    E_{g,d}(x)=E_{g,d}(0)+\left[E_{g,d}(1)-E_{g,d}(0)-0.23\right]x+0.23x^2.
+\end{equation}
+Einsetzen der Zahlenwerte $E_{g,d}(0)=\SI{1.43}{\electronvolt}$ und $E_{g,d}(1)=\SI{2.781}{\electronvolt}$ ergibt dann
 \begin{equation}
     1.934 = 1.43 + (2.781-1.43-0.23)x+0.23x^2.
 \end{equation}
@@ -471,8 +494,9 @@ Da $x\approx0.414<x_s$ gilt, befindet sich der Mischkristall noch im direkten Be
 
 Das Maximum der GaAs-Diode liegt bei \SI{899.0}{\nano\meter}. Die zugehörige Photonenenergie beträgt
 \begin{equation}
-    E_\mathrm{exp}=
-    \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{899.0}{\nano\meter}}
+    E_\mathrm{exp}
+    = \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{899.0}{\nano\meter}}
     \approx \SI{1.379}{\electronvolt}.
 \end{equation}
 Mit Gleichung~\eqref{eq:eg_gaas} ergibt sich für Raumtemperatur $T=\SI{293.15}{\kelvin}$
@@ -488,7 +512,13 @@ Die gemessene Photonenenergie liegt somit um etwa
 \end{equation}
 unterhalb der Bandlücke. Eine reine Band-Band-Rekombination erklärt das Maximum daher nicht vollständig.
 
-Die Differenz ist mit Donator-Akzeptor-Rekombinationen im Si-dotierten GaAs vereinbar. Silizium kann in GaAs amphoter eingebaut werden: Auf einem Ga-Platz wirkt es als Donator, auf einem As-Platz als Akzeptor \cite[S.~18]{manual}. Mit $m_n=0.067m$, $m_p=0.50m$ und $\varepsilon=12.9$ \cite[Tabelle~2]{manual} erhält man
+Die Differenz ist mit Donator-Akzeptor-Rekombinationen im Si-dotierten GaAs vereinbar. Silizium kann in GaAs amphoter eingebaut werden: Auf einem Ga-Platz wirkt es als Donator, auf einem As-Platz als Akzeptor \cite[S.~18]{manual}. Für die Ionisierungsenergien gilt allgemein
+\begin{equation}
+    E_D = \frac{m_n}{m}\frac{E_H}{\varepsilon^2},
+    \qquad
+    E_A = \frac{m_p}{m}\frac{E_H}{\varepsilon^2}.
+\end{equation}
+Mit $m_n=0.067m$, $m_p=0.50m$ und $\varepsilon=12.9$ \cite[Tabelle~2]{manual} erhält man dann
 \begin{align}
     E_D &= \frac{0.067\cdot\SI{13.6}{\electronvolt}}{12.9^2}
     \approx \SI{5.48}{\milli\electronvolt},\\
@@ -507,23 +537,36 @@ Der Vergleich mit der SEV-Quantenausbeute in Abbildung~\ref{fig:quantenausbeute}
 
 \subsection{Temperaturabhängigkeit der Photolumineszenz von $Ga_{1-x}Al_xAs$}
 
+Die bei flüssiger Stickstofftemperatur aufgenommenen Spektren dienen primär dem Vergleich mit den
+Raumtemperaturmessungen. Durch die verringerte thermische Verbreiterung werden die Emissionslinien
+schmaler und die Bandkante besser aufgelöst. Die Bestimmung des Aluminiumanteils $x$ erfolgt jedoch
+anhand der Raumtemperaturmessung, da die verwendete empirische Beziehung für diese Temperatur gilt.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/plot_aufgabe_8_1127.pdf}
-    \caption{Spektrum der Probe 1127 bei \SI{293.15}{\kelvin} und \SI{88.75}{\kelvin}. Die Maxima liegen bei \SI{705.0}{\nano\meter} für die warme Messung sowie bei \SI{672.1}{\nano\meter} und \SI{690.5}{\nano\meter} für die kalte Messung.}
+    \caption{Spektrum der Probe 1127 bei \SI{293.15}{\kelvin} und \SI{88.75}{\kelvin}. Die Maxima
+    liegen bei \SI{705.0}{\nano\meter} für die warme Messung sowie bei \SI{672.1}{\nano\meter} und
+    \SI{690.5}{\nano\meter} für die kalte Messung.}
     \label{fig:aufgabe_8_1127}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/plot_aufgabe_8_87063.pdf}
-    \caption{Spektrum der Probe 87063 bei \SI{293.15}{\kelvin} und \SI{88.25}{\kelvin}. Die Maxima liegen bei \SI{651.0}{\nano\meter} für die warme Messung sowie bei \SI{621.0}{\nano\meter} und \SI{628.0}{\nano\meter} für die kalte Messung.}
+    \caption{Spektrum der Probe 87063 bei \SI{293.15}{\kelvin} und \SI{88.25}{\kelvin}. Die Maxima
+    liegen bei \SI{651.0}{\nano\meter} für die warme Messung sowie bei \SI{621.0}{\nano\meter} und
+    \SI{628.0}{\nano\meter} für die kalte Messung.}
     \label{fig:aufgabe_8_87063}
 \end{figure}
 
-Zur eindeutigen Zuordnung werden die beiden Messreihen nach den Dateibezeichnungen der Abbildungen als Probe 1127 und Probe 87063 bezeichnet. Beide Proben zeigen beim Abkühlen auf flüssige-Stickstoff-Temperatur eine Verschiebung der Lumineszenz zu kürzeren Wellenlängen. Dies entspricht einer höheren Photonenenergie und ist qualitativ mit der Zunahme der Bandlücke bei sinkender Temperatur vereinbar.
+Zur eindeutigen Zuordnung werden die beiden Messreihen nach den Dateibezeichnungen der Abbildungen
+als Probe 1127 und Probe 87063 bezeichnet. Beide Proben zeigen beim Abkühlen auf flüssige-Stickstoff-
+Temperatur eine Verschiebung der Lumineszenz zu kürzeren Wellenlängen. Dies entspricht einer höheren
+Photonenenergie und ist qualitativ mit der Zunahme der Bandlücke bei sinkender Temperatur vereinbar.
 
-Bei Raumtemperatur wird die Emission näherungsweise als Band-Band-Rekombination beschrieben. Nach der Eagles-Verteilung liegt das Maximum bei $E_g+k_BT/2$ \cite[S.~24]{manual}. Deshalb gilt
+Bei Raumtemperatur wird die Emission näherungsweise als Band-Band-Rekombination beschrieben. Nach
+der Eagles-Verteilung liegt das Maximum bei $E_g+k_BT/2$ \cite[S.~24]{manual}. Deshalb gilt
 \begin{equation}
     E_{g,d}(x,T_\mathrm{warm})
     \approx \frac{hc}{\lambda_\mathrm{warm}}-\frac{k_BT_\mathrm{warm}}{2}.
@@ -552,68 +595,129 @@ Für Probe 1127 mit $\lambda_\mathrm{warm}=\SI{705.0}{\nano\meter}$ erhält man
 \end{align}
 Für Probe 87063 mit $\lambda_\mathrm{warm}=\SI{651.0}{\nano\meter}$ folgt analog
 \begin{align}
-    h\nu_\mathrm{warm} &\approx \SI{1.905}{\electronvolt},\\
+    h\nu_\mathrm{warm} &= \frac{hc}{\lambda}
+    = \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{651.0}{\nano\meter}}
+    \approx \SI{1.905}{\electronvolt},\\
     E_{g,d}(x,T_\mathrm{warm}) &\approx \SI{1.892}{\electronvolt},\\
     x_{87063} &\approx 0.328.
 \end{align}
-Probe 87063 besitzt damit den größeren Aluminiumanteil und entsprechend die größere Bandlücke, was mit ihrer kürzeren Emissionswellenlänge übereinstimmt. Beide Werte liegen unterhalb von $x_s\approx0.43$, sodass die Proben im direkten Bereich des Mischsystems liegen \cite[S.~23--26]{manual}.
+Probe 87063 besitzt damit den größeren Aluminiumanteil und entsprechend die größere Bandlücke, was mit
+ihrer kürzeren Emissionswellenlänge übereinstimmt. Beide Werte liegen unterhalb von $x_s\approx0.43$,
+sodass die Proben im direkten Bereich des Mischsystems liegen \cite[S.~23--26]{manual}.
 
-Für die kalten Spektren werden die in den Messplots angegebenen Temperaturen verwendet. Damit ist
-\begin{align}
-    E_{g,d}(GaAs,\SI{88.75}{\kelvin})&\approx\SI{1.504}{\electronvolt},\\
-    E_{g,d}(GaAs,\SI{88.25}{\kelvin})&\approx\SI{1.505}{\electronvolt}.
-\end{align}
-Mit den oben bestimmten Aluminiumanteilen ergeben sich für die kalten Bandkanten
-\begin{align}
-    E_{g,d}^{1127}(\SI{88.75}{\kelvin})
-    &\approx \SI{1.504}{\electronvolt}+1.42\cdot0.226
-    \approx \SI{1.825}{\electronvolt},\\
-    E_{g,d}^{87063}(\SI{88.25}{\kelvin})
-    &\approx \SI{1.505}{\electronvolt}+1.42\cdot0.328
-    \approx \SI{1.971}{\electronvolt}.
-\end{align}
-Wenn ein tieftemperierter Peak als Donator-Akzeptor-Paarübergang interpretiert wird und der Coulombterm aus Gleichung~\eqref{eq:dap} vernachlässigt wird, gilt
+Für die Auswertung der Tieftemperaturspektren werden nach Abschnitt 2.5.6 die dort auftretenden
+Donator-Akzeptor-Paarübergänge herangezogen. Unter Vernachlässigung des Coulomb-Terms $E_C$ gilt nach
+Gleichung~\eqref{eq:dap}
 \begin{equation}
-    E_D+E_A\approx E_g(x,T_\mathrm{kalt})-h\nu_\mathrm{kalt}.
+    h\nu_\mathrm{kalt,2} \approx h\nu_\mathrm{kalt,1} - E_D - E_A,
+    \label{eq:dap_diff}
+\end{equation}
+wobei der kurzwelligere, hochenergetische Peak $\lambda_\mathrm{kalt,1}$ näherungsweise der Bandkante
+entspricht ($E_g\approx h\nu_\mathrm{kalt,1}$) und der langwelligere Peak $\lambda_\mathrm{kalt,2}$ dem
+Donator-Akzeptor-Paarübergang zugeordnet wird. Damit lässt sich die Störstellenenergie direkt aus der
+Differenz der beiden gemessenen Photonenenergien abschätzen, ohne dass eine gesonderte Extrapolation
+der Bandlücke auf die tiefe Temperatur notwendig ist:
+\begin{equation}
+    E_D+E_A \approx hc\left(\frac{1}{\lambda_\mathrm{kalt,1}}-\frac{1}{\lambda_\mathrm{kalt,2}}\right).
     \label{eq:stoerstellen_abschaetzung}
 \end{equation}
 
-Bei Probe 1127 liegt neben dem hochenergetischen Peak bei \SI{672.1}{\nano\meter} eine langwelligere Struktur bei \SI{690.5}{\nano\meter}. Für diese Struktur ergibt sich
+Bei Probe 1127 ergibt sich mit $\lambda_\mathrm{kalt,1}=\SI{672.1}{\nano\meter}$ und
+$\lambda_\mathrm{kalt,2}=\SI{690.5}{\nano\meter}$ (gemessen bei \SI{88.75}{\kelvin})
 \begin{align}
-    h\nu(\SI{690.5}{\nano\meter}) &\approx
-    \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{690.5}{\nano\meter}}
+    h\nu_\mathrm{kalt,1} &= \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{672.1}{\nano\meter}}
+    \approx \SI{1.845}{\electronvolt},\\
+    h\nu_\mathrm{kalt,2} &= \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{690.5}{\nano\meter}}
     \approx \SI{1.796}{\electronvolt},\\
-    E_D+E_A &\approx
-    \SI{1.825}{\electronvolt}-\SI{1.796}{\electronvolt}
-    \approx \SI{29}{\milli\electronvolt}.
+    E_D+E_A &\approx \SI{1.845}{\electronvolt}-\SI{1.796}{\electronvolt}
+    \approx \SI{49}{\milli\electronvolt}.
 \end{align}
-Dieser Wert liegt in der Größenordnung der im Manual angegebenen Akzeptorenergien für $Ga_{1-x}Al_xAs$ bei $x\approx0.23$. Beispielsweise ergeben die dort angegebenen Parameter grob \SIrange{28}{38}{\milli\electronvolt} für C-, Mg- oder Zn-Akzeptoren, während Si- und Ge-Akzeptoren höher liegen \cite[Tabelle~2]{manual}. Der Peak bei \SI{672.1}{\nano\meter} liegt dagegen um etwa \SI{20}{\milli\electronvolt} oberhalb der so abgeschätzten kalten Bandkante. Er wird deshalb nicht zur Bestimmung einer Störstellenenergie verwendet, sondern als bandkantennaher Peak mit Mess- beziehungsweise Fitunsicherheit oder als nicht vollständig aufgelöste Überlagerung interpretiert. Eine eindeutige Störstellenidentifikation ist insgesamt nicht möglich, weil der Donatorbeitrag, der Coulombterm des Donator-Akzeptor-Paares und mögliche Phononenbeiträge nicht getrennt bestimmt werden.
 
-Bei Probe 87063 liegt der Peak bei \SI{628.0}{\nano\meter} mit
-\begin{equation}
-    h\nu(\SI{628.0}{\nano\meter})\approx\SI{1.974}{\electronvolt}
-\end{equation}
-innerhalb weniger Milli-Elektronenvolt an der aus der Raumtemperaturmessung berechneten kalten Bandkante $E_{g,d}^{87063}(\SI{88.25}{\kelvin})\approx\SI{1.971}{\electronvolt}$. Gleichung~\eqref{eq:stoerstellen_abschaetzung} würde formal einen leicht negativen Wert von etwa \SI{-3}{\milli\electronvolt} liefern. Da eine negative Störstellenenergie unphysikalisch ist, wird dieser Peak nicht als Donator-Akzeptor-Paarübergang gewertet, sondern als Bandkantenpeak innerhalb der Unsicherheit der Temperatur- und Peakbestimmung.
+Bei Probe 87063 ergibt sich mit $\lambda_\mathrm{kalt,1}=\SI{621.0}{\nano\meter}$ und
+$\lambda_\mathrm{kalt,2}=\SI{628.0}{\nano\meter}$ (gemessen bei \SI{88.25}{\kelvin})
+\begin{align}
+    h\nu_\mathrm{kalt,1} &= \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{621.0}{\nano\meter}}
+    \approx \SI{1.997}{\electronvolt},\\
+    h\nu_\mathrm{kalt,2} &= \frac{\SI{1239.84}{\electronvolt\nano\meter}}{\SI{628.0}{\nano\meter}}
+    \approx \SI{1.974}{\electronvolt},\\
+    E_D+E_A &\approx \SI{1.997}{\electronvolt}-\SI{1.974}{\electronvolt}
+    \approx \SI{23}{\milli\electronvolt}.
+\end{align}
 
-Der Peak bei \SI{621.0}{\nano\meter} besitzt mit
-\begin{equation}
-    h\nu(\SI{621.0}{\nano\meter})\approx\SI{1.997}{\electronvolt}
-\end{equation}
-eine noch höhere Energie und liegt damit etwa \SI{26}{\milli\electronvolt} oberhalb der abgeschätzten Bandkante. Diese Zuordnung ist für einen einfachen Bandkanten- oder Donator-Akzeptor-Übergang nicht konsistent. Plausibel ist daher, dass es sich um ein Mess- oder Auswerteartefakt, eine Fitunsicherheit durch die überlagerte Schulterstruktur oder um eine fehlerhaft bestimmte Peaklage handelt. Für eine belastbare Störstellenenergie der Probe 87063 sollte der \SI{621}{\nano\meter}-Peak daher nicht verwendet werden.
+Mittels der im Manuskript angegebenen Formeln für die Ionisierungsenergien der Akzeptoren lassen sich
+für die bestimmten Molanteile die in Tabelle~\ref{tab:ionisierung} zusammengefassten theoretischen
+Werte berechnen:
 
-Insgesamt zeigen die kalten Spektren dennoch klar, dass bei tieferen Temperaturen zusätzliche Strukturen sichtbar werden, die bei Raumtemperatur thermisch verbreitert oder überlagert sind. Die Verschiebung der Hauptmaxima zu kürzeren Wellenlängen bestätigt qualitativ die Vergrößerung der Bandlücke bei sinkender Temperatur.
+\begin{table}[H]
+\centering
+\caption{Theoretische Ionisierungsenergien verschiedener Akzeptoren für die Molanteile der beiden Proben.}
+\label{tab:ionisierung}
+\begin{tabular}{lccccc}
+\toprule
+Molanteil & $E_A(\mathrm{Zn})$ [meV] & $E_A(\mathrm{C})$ [meV] & $E_A(\mathrm{Mg})$ [meV] & $E_A(\mathrm{Si})$ [meV] & $E_A(\mathrm{Ge})$ [meV]\\
+\midrule
+$x_{87063}\ (0.328)$ & 50.76 & 30.34 & 32.36 & 60.98 & 85.47\\
+$x_{1127}\ (0.226)$ & 37.93 & 28.24 & 29.27 & 48.64 & 62.39\\
+\bottomrule
+\end{tabular}
+\end{table}
 
+Der für Probe 1127 ermittelte Wert von \SI{49}{\milli\electronvolt} stimmt sehr gut mit der theoretischen Ionisierungsenergie von Silizium
+($E_A(\mathrm{Si})\approx\SI{48.64}{\milli\electronvolt}$) überein und liegt deutlich über den Werten
+für Zn, C und Mg sowie unter dem Wert für Ge. Dies legt nahe, dass Probe 1127 mit Silizium dotiert ist.
+Die verbleibende Diskrepanz lässt sich durch Messungenauigkeiten der Peaklagen, die Vernachlässigung
+der Donatorbindungsenergie $E_D$ im Vergleich zu $E_A$ sowie den vernachlässigten Coulomb-Term $E_C$
+erklären.
+
+Für Probe 87063 ergibt sich mit \SI{23}{\milli\electronvolt} hingegen kein befriedigender Vergleichswert: Selbst die niedrigste theoretische Energie
+(C-Akzeptor, \SI{30.34}{\milli\electronvolt}) liegt bereits merklich über dem experimentellen Wert, und
+alle übrigen Akzeptoren (Mg, Zn, Si, Ge) liegen noch deutlich weiter darüber. Eine eindeutige
+Zuordnung zu einem der aufgeführten Akzeptoren ist für diese Probe daher nicht möglich. Die
+Diskrepanz lässt sich durch den vernachlässigten Coulomb-Term $E_C$, durch Messungenauigkeiten bei der
+Peakbestimmung sowie durch eine mögliche Donatorbindungsenergie $E_D$, die in der einfachen Abschätzung
+nicht von $E_A$ getrennt wird, erklären. Insbesondere ein nicht zu vernachlässigender Coulomb-Term
+$E_C>0$ würde den tatsächlichen Wert von $E_D+E_A$ nach oben korrigieren und die Übereinstimmung mit
+den Manual-Werten verbessern.
+
+\begin{table}[H]
+\centering
+\caption{Zusammenfassung der charakteristischen Wellenlängen, Aluminiumanteile und abgeschätzten
+Störstellenenergien.}
+\label{tab:probe_summary}
+\begin{tabular}{lcccccc}
+\toprule
+Probe &
+$T$ [K] &
+$\lambda_{\mathrm{warm}}$ [nm] &
+$\lambda_{\mathrm{kalt},1}$ [nm] &
+$\lambda_{\mathrm{kalt},2}$ [nm] &
+$x$ &
+$E_D+E_A$ [meV]\\
+\midrule
+1127 & 293.15 & 705.0 & -- & -- & 0.226 & -- \\
+1127 & 88.75 & -- & 672.1 & 690.5 & -- & 49 \\
+\midrule
+87063 & 293.15 & 651.0 & -- & -- & 0.328 & -- \\
+87063 & 88.25 & -- & 621.0 & 628.0 & -- & 23 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Insgesamt zeigen die kalten Spektren, dass bei tieferen Temperaturen zusätzliche Strukturen sichtbar
+werden, die bei Raumtemperatur thermisch verbreitert oder überlagert sind. Die Verschiebung der
+Hauptmaxima zu kürzeren Wellenlängen bestätigt qualitativ die Vergrößerung der Bandlücke bei sinkender
+Temperatur. Probe 87063 besitzt aufgrund des größeren Aluminiumanteils durchgehend die größere
+Bandlücke und damit die kürzeren Emissionswellenlängen, während für Probe 1127 die Störstellenenergie
+gut mit einer Silizium-Dotierung übereinstimmt.
 \section{Zusammenfassung}
 
-Im Versuch wurde zunächst die Wellenlängenskala des Gittermonochromators mit Natriumlinien überprüft. Die gemessenen Linienpositionen wichen nur um \SIrange{0.03}{0.14}{\nano\meter} von den Literaturwerten ab. Die Halbwertsbreiten lagen mit \SIrange{0.104}{0.154}{\nano\meter} knapp oberhalb der nominellen spektralen Breite bei einer Spaltbreite von \SI{10}{\micro\meter}. Der Monochromator war damit für die anschließende Untersuchung der deutlich breiteren Lumineszenzspektren hinreichend kalibriert.
+Der Gittermonochromator wurde erfolgreich mit Natriumlinien kalibriert. Die Abweichungen der Linienpositionen vom Literaturwert lagen unter \SI{0.14}{\nano\meter}, die gemessenen Halbwertsbreiten knapp oberhalb der nominellen instrumentellen Breite, sodass die Auflösung für die LED- und Lumineszenzspektren ausreichend war.
 
-Die weiße LED zeigte ein schmales blaues Maximum bei \SI{470.0}{\nano\meter} und eine breite Konversionsbande bei \SI{545.0}{\nano\meter}. Dies bestätigt das typische Funktionsprinzip einer weißen LED aus blauem Halbleiteremitter und Leuchtstoffschicht. Die separat gemessene blaue Diode besaß ihr Maximum bei \SI{473.0}{\nano\meter} und stützte diese Interpretation.
+Die LED-Messungen zeigten typisches Verhalten: Die weiße LED kombiniert einen blauen Halbleiteremitter bei \SI{470.0}{\nano\meter} mit einer breiten Leuchtstoffkonversionsbande bei \SI{545.0}{\nano\meter}. Für die direkten Halbleiter wurden Exziton-Bindungsenergien bestimmt (GaP: \SI{26}{\milli\electronvolt}, Ga(As,P): \SI{48}{\milli\electronvolt}). Die rote Ga(As,P)-Diode mit Maximum bei \SI{655.0}{\nano\meter} lies auf einen Phosphoranteil von $x\approx0.414$ schließen und bleibt damit im direkten Bereich ($x<x_s\approx0.434$).
 
-Für die grüne GaP-Diode wurde aus dem Maximum bei \SI{557.5}{\nano\meter} eine Bindungsenergie des an Stickstoff gebundenen Exzitons von etwa \SI{26}{\milli\electronvolt} bestimmt. Für die orange Ga(As,P)-Diode ergab sich aus dem Maximum bei \SI{585.6}{\nano\meter} eine Exziton-Bindungsenergie von etwa \SI{48}{\milli\electronvolt}. Bei der roten Diode führte das Maximum bei \SI{655.0}{\nano\meter} auf einen Phosphoranteil von ungefähr $x=0.414$ und damit auf einen Arsengehalt von etwa \SI{58.6}{\percent}. Da $x<x_s\approx0.434$ gilt, liegt der Mischkristall noch im direkten Bereich.
+Die infrarote GaAs-Diode zeigte bei \SI{899.0}{\nano\meter} mit \SI{1.379}{\electronvolt} ein Maximum, das sehr gut mit einer Si-Donator-Akzeptor-Rekombination erklärt wird ($E_g-E_D-E_A\approx\SI{1.379}{\electronvolt}$, mit $E_D\approx\SI{5.48}{\milli\electronvolt}$ und $E_A\approx\SI{40.86}{\milli\electronvolt}$).
 
-Die infrarote GaAs-Diode zeigte ein Maximum bei \SI{899.0}{\nano\meter}, entsprechend \SI{1.379}{\electronvolt}. Dieser Wert liegt um etwa \SI{46}{\milli\electronvolt} unterhalb der GaAs-Bandlücke bei Raumtemperatur und stimmt sehr gut mit der erwarteten Energie einer Donator-Akzeptor-Rekombination unter Beteiligung von Si-Störstellen überein. Die berechneten Ionisierungsenergien betragen $E_D\approx\SI{5.48}{\milli\electronvolt}$ und $E_A\approx\SI{40.86}{\milli\electronvolt}$.
-
-Bei den $Ga_{1-x}Al_xAs$-Proben wurde beim Abkühlen auf flüssige-Stickstoff-Temperatur eine Verschiebung der Lumineszenz zu kürzeren Wellenlängen beobachtet. Dies entspricht der Zunahme der Bandlücke bei sinkender Temperatur. Aus den Raumtemperaturmaxima wurden Aluminiumanteile von etwa $x_{1127}=0.226$ und $x_{87063}=0.328$ abgeschätzt. Für Probe 1127 liefert die langwellige kalte Struktur bei der tatsächlich gemessenen Temperatur von \SI{88.75}{\kelvin} eine Störstellenenergie von etwa \SI{29}{\milli\electronvolt}, was in der Größenordnung typischer Akzeptorenergien liegt. Für Probe 87063 lässt sich aus den kalten Peaks bei \SI{88.25}{\kelvin} keine belastbare positive Störstellenenergie bestimmen: Der Peak bei \SI{628}{\nano\meter} wird als bandkantennah interpretiert, während der Peak bei \SI{621}{\nano\meter} wahrscheinlich auf Artefakt, Fitunsicherheit oder eine fehlerhafte Peakbestimmung zurückgeht.
+Bei den $Ga_{1-x}Al_xAs$-Proben zeigten sich beim Abkühlen auf flüssige-Stickstoff-Temperatur Verschiebungen zu kürzeren Wellenlängen, qualitativ konsistent mit der Bandlückenvergrößerung bei sinkender Temperatur. Aus den Raumtemperaturmaxima ergaben sich Aluminiumanteile von $x_{1127}\approx0.226$ und $x_{87063}\approx0.328$. Probe 1127 zeigte bei Tieftemperatur eine Störstellenenergie von etwa \SI{49}{\milli\electronvolt}, die gut mit einer Si-Dotierung vereinbar ist. Für Probe 87063 ließ sich eine belastbare Störstellenenergie nicht bestimmen, da beide beobachteten Peaks ($\SI{621}{\nano\meter}$ und $\SI{628}{\nano\meter}$) entweder bandkantennah liegen oder vermutlich auf Meßartefakte zurückgehen.
 
 \newpage
 \listoffigures

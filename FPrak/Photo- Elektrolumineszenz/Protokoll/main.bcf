@@ -2431,7 +2431,6 @@
     <bcf:citekey order="56" intorder="1">manual</bcf:citekey>
     <bcf:citekey order="57" intorder="1">manual</bcf:citekey>
     <bcf:citekey order="58" intorder="1">manual</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">manual</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
