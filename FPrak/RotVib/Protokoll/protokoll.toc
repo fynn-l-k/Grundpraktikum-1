@@ -24,17 +24,17 @@
 \contentsline {paragraph}{Zerofilling.}{18}{section*.19}%
 \contentsline {paragraph}{Apodisation.}{18}{section*.21}%
 \contentsline {paragraph}{Theoretisches Auflösungsvermögen.}{19}{section*.23}%
-\contentsline {subsection}{\numberline {5.3}Sperrverhalten von Glas- und NaCl-Filter (Aufgabe 1.3)}{19}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.3}Sperrverhalten von Glas- und NaCl-Filter (Aufgabe 1.3)}{20}{subsection.5.3}%
 \contentsline {paragraph}{Glasfilter.}{20}{section*.27}%
-\contentsline {paragraph}{NaCl-Filter.}{20}{section*.29}%
-\contentsline {paragraph}{Fehlerbetrachtung.}{21}{section*.31}%
-\contentsline {subsection}{\numberline {5.4}Spaltbreite einer Küvette (Aufgabe 1.4)}{21}{subsection.5.4}%
-\contentsline {paragraph}{Fehlerbetrachtung.}{22}{section*.33}%
+\contentsline {paragraph}{NaCl-Filter.}{21}{section*.29}%
+\contentsline {paragraph}{Fehlerbetrachtung.}{22}{section*.31}%
+\contentsline {subsection}{\numberline {5.4}Spaltbreite einer Küvette (Aufgabe 1.4)}{22}{subsection.5.4}%
+\contentsline {paragraph}{Fehlerbetrachtung.}{23}{section*.33}%
 \contentsline {subsection}{\numberline {5.5}Rotations-Schwingungsspektrum von HCl (Aufgabe 1.5)}{23}{subsection.5.5}%
 \contentsline {paragraph}{Vorbemerkung.}{23}{section*.35}%
 \contentsline {paragraph}{Bestimmung der Molekülkonstanten.}{24}{section*.37}%
 \contentsline {paragraph}{Isotopeneffekt.}{25}{section*.39}%
 \contentsline {paragraph}{Häufigkeitsverhältnis der Isotope.}{25}{section*.40}%
 \contentsline {paragraph}{Fehlerbetrachtung.}{25}{section*.41}%
-\contentsline {subsection}{\numberline {5.6}Intensitätsmodellierung und Temperaturbestimmung (Aufgabe 1.6)}{25}{subsection.5.6}%
-\contentsline {section}{\numberline {6}Fazit}{26}{section.6}%
+\contentsline {subsection}{\numberline {5.6}Intensitätsmodellierung und Temperaturbestimmung (Aufgabe 1.6)}{26}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Fazit}{27}{section.6}%

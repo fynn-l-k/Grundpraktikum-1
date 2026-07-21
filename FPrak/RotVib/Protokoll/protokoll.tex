@@ -847,13 +847,22 @@ $f_{\mathrm{CO}_2}=0{,}1494\,(\text{Punkt})^{-1}$ und damit
   \Delta s = \frac{f_{\mathrm{CO}_2}}{\bar\nu_{\mathrm{CO}_2}}
            = \SI{6.36e-5}{cm} .
 \end{equation}
-Die daraus folgende maximal darstellbare Wellenzahl beträgt
+Dieser Wert stimmt auf etwa $0{,}5\,\%$ mit der Wellenlänge des internen
+HeNe-Referenzlasers ($\lambda_\mathrm{HeNe}=\SI{632.8}{nm}=\SI{6.328e-5}{cm}$,
+vgl.\ Abschn.~\ref{sec:aufbau}) überein: Das Spectrum~100 tastet das
+Interferogramm offenbar genau einmal pro Laser-Interferenzstreifen ab. Diese
+unabhängige physikalische Plausibilisierung bestätigt die bestimmte
+Schrittweite. Die daraus folgende maximal darstellbare Wellenzahl beträgt
 $\bar\nu_{\max}=1/(2\Delta s)\approx\SI{7862}{cm^{-1}}$ und liegt damit oberhalb
 des vom Detektor erfassten Bereichs. Die Güte dieser Kalibrierung zeigt der
 Vergleich des so skalierten FFT-Spektrums mit dem korrekt kalibrierten
 Referenzspektrum aus Aufgabe~1.1 in Abb.~\ref{fig:a2_kalibrierung}: Sämtliche
 Wasserdampflinien und die CO$_2$-Bande fallen zusammen, was die Schrittweite
-bestätigt.
+bestätigt. Die in der Aufgabenstellung vorgesehene Kalibrierung anhand der
+Wasserdampfbanden erfolgt somit über diesen Vergleich: Die CO$_2$-Bande dient
+wegen ihrer Schärfe und isolierten Lage als primäre Einzelmarke, die Vielzahl
+der Wasserdampflinien als unabhängige Kontrolle der Wellenzahlskala über den
+gesamten Spektralbereich.
 
 \begin{figure}[H]
   \centering
@@ -889,17 +898,25 @@ zwischen Interferogrammlänge und spektralem Auflösungsvermögen.
 \paragraph{Zerofilling.}
 Beim Zerofilling wird das Interferogramm vor der FFT durch Anhängen von Nullen
 verlängert. Abb.~\ref{fig:a2_zerofill} zeigt den Effekt für die $\pm1000$-Messung
-bei Zerofilling-Faktoren von $1$ bis $8$. Die Dichte der Spektralpunkte steigt,
-sodass der Kurvenverlauf glatter erscheint; die Einhüllende und damit die
-tatsächliche Auflösung bleiben jedoch unverändert. Das Zerofilling wirkt somit
-als reine Interpolation und fügt keine echte spektrale Information hinzu.
+bei Zerofilling-Faktoren von $1$ bis $8$. An den ursprünglichen Stützstellen
+stimmen die Spektren aller Faktoren exakt überein -- das Anhängen von Nullen
+ändert die Werte der diskreten Fourier-Transformierten an den Originalfrequenzen
+nicht --, die zusätzlichen Spektralpunkte interpolieren lediglich dazwischen.
+Dadurch erscheint der Kurvenverlauf glatter, und schmale Strukturen, deren
+Extremum zwischen zwei Stützstellen liegt (etwa das Minimum bei
+$\approx\SI{1610}{cm^{-1}}$), werden besser abgetastet und erscheinen tiefer.
+Die Einhüllende und damit die tatsächliche Auflösung bleiben jedoch unverändert:
+Das Zerofilling wirkt als reine Interpolation und fügt keine echte spektrale
+Information hinzu.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{a2_zerofill}
-  \caption{Einfluss des Zerofilling auf das Spektrum der $\pm1000$-Messung. Höhere
-    Faktoren erhöhen die Punktdichte (Interpolation), verändern aber nicht die
-    Linienform bzw. die Auflösung.}
+  \caption{Einfluss des Zerofilling auf das Spektrum der $\pm1000$-Messung. Alle
+    Kurven sind mit derselben Konstante normiert und laufen exakt durch die
+    Stützstellen der unge-zerofillten Messung (blaue Punkte). Höhere Faktoren
+    erhöhen nur die Punktdichte (Interpolation), verändern aber nicht die
+    tatsächliche Auflösung.}
   \label{fig:a2_zerofill}
 \end{figure}
 
@@ -908,20 +925,26 @@ Das abrupte Abbrechen des endlichen Interferogramms entspricht einer Multiplikat
 mit einer Rechteckfunktion und führt im Spektrum zu den charakteristischen
 Nebenmaxima des Leakage-Effekts (vgl.\ Abschn.~\ref{sec:ftir}).
 Abb.~\ref{fig:a2_apodisation} vergleicht für die $\pm8000$-Messung die
-Rechteck-, Dreieck- und Blackman-Apodisation an einer Einzellinie. Während das
-Rechteckfenster deutliche Nebenschwingungen aufweist, unterdrücken das Dreieck-
-und insbesondere das Blackman-Fenster diese fast vollständig -- allerdings auf
-Kosten einer verbreiterten Hauptlinie und damit geringerer Auflösung. Für die
-Auswertung ist folglich ein Kompromiss zwischen Leakage-Unterdrückung und
-Auflösungsvermögen zu wählen.
+Rechteck-, Dreieck- und Blackman-Apodisation an der isolierten Wasserdampflinie
+bei $\SI{1784.5}{cm^{-1}}$; zur Vergleichbarkeit sind alle Spektren auf das
+lokale Kontinuum normiert, wodurch der unterschiedliche Amplitudengewinn der
+Fensterfunktionen herausgerechnet ist. Beim Rechteckfenster schwingt das
+Spektrum beidseits der Linie deutlich über das Kontinuum hinaus über und unter
+(Leakage-Nebenmaxima), während das Dreieck- und insbesondere das
+Blackman-Fenster diese Nebenschwingungen fast vollständig unterdrücken --
+allerdings auf Kosten einer flacheren und verbreiterten Hauptlinie und damit
+geringerer Auflösung und Maximalintensität. Für die Auswertung ist folglich ein
+Kompromiss zwischen Leakage-Unterdrückung und Auflösungsvermögen zu wählen.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{a2_apodisation}
-  \caption{Einfluss der Apodisationsfunktion auf eine Einzellinie
-    ($\pm8000$-Messung, Zerofilling $\times4$). Das Rechteckfenster zeigt die
-    stärksten Leakage-Nebenmaxima, Dreieck- und Blackman-Fenster glätten diese
-    unter Verbreiterung der Hauptlinie.}
+  \caption{Einfluss der Apodisationsfunktion auf die isolierte Wasserdampflinie
+    bei $\SI{1784.5}{cm^{-1}}$ ($\pm8000$-Messung, Zerofilling $\times4$, alle
+    Spektren auf das lokale Kontinuum normiert). Das Rechteckfenster liefert die
+    tiefste, schärfste Linie, zeigt aber starke Leakage-Nebenmaxima; Dreieck-
+    und Blackman-Fenster unterdrücken diese unter Verbreiterung und Abflachung
+    der Hauptlinie.}
   \label{fig:a2_apodisation}
 \end{figure}
 
@@ -1319,7 +1342,7 @@ bis $\SI{0.39}{cm^{-1}}$ (längste Messung). Die Sperrfilter zeigten im jeweilig
 Sperrbereich ein Transmissionsvermögen von deutlich unter $\SI{1}{\percent}$,
 wobei Glas das gesamte mittlere Infrarot blockiert und NaCl darin transparent ist.
 Die Spaltbreite zweier Küvetten wurde mit der Interferenzmethode zu $(47{,}5\pm
-1{,}0)\,\si{\micro\metre}$ bzw.\ $(49{,}8\pm1{,}0)\,\si{\micro\metre}$ bestimmt.
+0{,}5)\,\si{\micro\metre}$ bzw.\ $(49{,}8\pm0{,}3)\,\si{\micro\metre}$ bestimmt.
 
 Kernstück war die Analyse des Rotations-Schwingungsspektrums von HCl, aus dem sich
 für $\mathrm{H}^{35}\mathrm{Cl}$ eine Schwingungswellenzahl von

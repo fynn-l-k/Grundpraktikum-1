@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  21 JUL 2026 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  21 JUL 2026 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -787,102 +787,113 @@ Package pdftex.def Info: figures/a2_interferogramme.png  used on input line 819
 [15 <./figures/eich_regression.png>]
 
 [16 <./figures/a2_interferogramme.png>]
-<figures/a2_kalibrierung.png, id=311, 722.7pt x 303.534pt>
+<figures/a2_kalibrierung.png, id=312, 722.7pt x 303.534pt>
 File: figures/a2_kalibrierung.png Graphic file (type png)
 <use figures/a2_kalibrierung.png>
-Package pdftex.def Info: figures/a2_kalibrierung.png  used on input line 860.
+Package pdftex.def Info: figures/a2_kalibrierung.png  used on input line 869.
 (pdftex.def)             Requested size: 386.96027pt x 162.52571pt.
-<figures/a2_laenge.png, id=313, 578.16pt x 325.215pt>
+<figures/a2_laenge.png, id=314, 578.16pt x 325.215pt>
 File: figures/a2_laenge.png Graphic file (type png)
 <use figures/a2_laenge.png>
-Package pdftex.def Info: figures/a2_laenge.png  used on input line 882.
+Package pdftex.def Info: figures/a2_laenge.png  used on input line 891.
 (pdftex.def)             Requested size: 327.7763pt x 184.37207pt.
 
 
-[17 <./figures/a2_kalibrierung.png> <./figures/a2_laenge.png>]
-<figures/a2_zerofill.png, id=325, 578.16pt x 325.215pt>
+[17 <./figures/a2_kalibrierung.png>]
+<figures/a2_zerofill.png, id=325, 561.48232pt x 341.89268pt>
 File: figures/a2_zerofill.png Graphic file (type png)
 <use figures/a2_zerofill.png>
-Package pdftex.def Info: figures/a2_zerofill.png  used on input line 899.
-(pdftex.def)             Requested size: 327.7763pt x 184.37207pt.
-<figures/a2_apodisation.png, id=328, 578.16pt x 325.215pt>
+Package pdftex.def Info: figures/a2_zerofill.png  used on input line 914.
+(pdftex.def)             Requested size: 327.7763pt x 199.58646pt.
+
+Overfull \hbox (11.44507pt too wide) in paragraph at lines 924--938
+\T1/lmr/m/n/10.95 Rechteck-, Dreieck- und Blackman-Apodisation an der iso-lier-
+ten Was-ser-dampf-li-nie bei $\OT1/lmr/m/n/10.95 1784[]5 [][]$\T1/lmr/m/n/10.95
+ ;
+ []
+
+
+
+[18 <./figures/a2_laenge.png> <./figures/a2_zerofill.png>]
+<figures/a2_apodisation.png, id=339, 555.36716pt x 344.11638pt>
 File: figures/a2_apodisation.png Graphic file (type png)
 <use figures/a2_apodisation.png>
-Package pdftex.def Info: figures/a2_apodisation.png  used on input line 920.
-(pdftex.def)             Requested size: 327.7763pt x 184.37207pt.
-
-
-[18 <./figures/a2_zerofill.png> <./figures/a2_apodisation.png>]
+Package pdftex.def Info: figures/a2_apodisation.png  used on input line 941.
+(pdftex.def)             Requested size: 327.7763pt x 203.1004pt.
 <figures/a2_aufloesung.png, id=343, 505.89pt x 303.534pt>
 File: figures/a2_aufloesung.png Graphic file (type png)
 <use figures/a2_aufloesung.png>
-Package pdftex.def Info: figures/a2_aufloesung.png  used on input line 955.
+Package pdftex.def Info: figures/a2_aufloesung.png  used on input line 978.
 (pdftex.def)             Requested size: 282.24911pt x 169.35262pt.
-<figures/a3_uebersicht.png, id=346, 794.97pt x 332.442pt>
+
+
+[19 <./figures/a2_apodisation.png>]
+<figures/a3_uebersicht.png, id=354, 794.97pt x 332.442pt>
 File: figures/a3_uebersicht.png Graphic file (type png)
 <use figures/a3_uebersicht.png>
-Package pdftex.def Info: figures/a3_uebersicht.png  used on input line 982.
+Package pdftex.def Info: figures/a3_uebersicht.png  used on input line 1005.
 (pdftex.def)             Requested size: 409.71692pt x 171.33888pt.
 
 
-[19 <./figures/a2_aufloesung.png>]
-<figures/a3_glas.png, id=360, 794.97pt x 289.08pt>
+[20 <./figures/a2_aufloesung.png> <./figures/a3_uebersicht.png>]
+<figures/a3_glas.png, id=368, 794.97pt x 289.08pt>
 File: figures/a3_glas.png Graphic file (type png)
 <use figures/a3_glas.png>
-Package pdftex.def Info: figures/a3_glas.png  used on input line 1009.
+Package pdftex.def Info: figures/a3_glas.png  used on input line 1032.
 (pdftex.def)             Requested size: 455.24411pt x 165.54922pt.
-
-
-[20 <./figures/a3_uebersicht.png> <./figures/a3_glas.png>]
-<figures/a3_nacl.png, id=373, 794.97pt x 289.08pt>
+<figures/a3_nacl.png, id=370, 794.97pt x 289.08pt>
 File: figures/a3_nacl.png Graphic file (type png)
 <use figures/a3_nacl.png>
-Package pdftex.def Info: figures/a3_nacl.png  used on input line 1034.
+Package pdftex.def Info: figures/a3_nacl.png  used on input line 1057.
 (pdftex.def)             Requested size: 455.24411pt x 165.54922pt.
-<figures/a4_uebersicht.png, id=376, 794.97pt x 433.62pt>
+
+
+[21 <./figures/a3_glas.png> <./figures/a3_nacl.png>]
+<figures/a4_uebersicht.png, id=383, 794.97pt x 433.62pt>
 File: figures/a4_uebersicht.png Graphic file (type png)
 <use figures/a4_uebersicht.png>
-Package pdftex.def Info: figures/a4_uebersicht.png  used on input line 1072.
+Package pdftex.def Info: figures/a4_uebersicht.png  used on input line 1095.
 (pdftex.def)             Requested size: 418.82375pt x 228.4545pt.
 
-
-[21 <./figures/a3_nacl.png>]
-Overfull \hbox (26.6956pt too wide) in paragraph at lines 1080--1091
+Overfull \hbox (26.6956pt too wide) in paragraph at lines 1103--1114
 []\T1/lmr/m/n/10.95 Die Aus-wer-tung er-folgt in vier Schrit-ten. \T1/lmr/m/it/
 10.95 Ers-tens \T1/lmr/m/n/10.95 wird nur der rausch-ar-me Be-reich $[] \OMS/lm
 sy/m/n/10.95 2 \OT1/lmr/m/n/10.95 [800\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 
 3200] [][]$
  []
 
+
+
+[22 <./figures/a4_uebersicht.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-100.
+123.
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<figures/a4_interferenz.png, id=387, 867.24pt x 505.89pt>
+<figures/a4_interferenz.png, id=393, 867.24pt x 505.89pt>
 File: figures/a4_interferenz.png Graphic file (type png)
 <use figures/a4_interferenz.png>
-Package pdftex.def Info: figures/a4_interferenz.png  used on input line 1114.
+Package pdftex.def Info: figures/a4_interferenz.png  used on input line 1137.
 (pdftex.def)             Requested size: 455.24411pt x 265.55762pt.
 
-
-[22{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./figure
-s/a4_uebersicht.png>]
-Overfull \hbox (44.62071pt too wide) in paragraph at lines 1141--1152
+Overfull \hbox (44.62071pt too wide) in paragraph at lines 1164--1175
 \T1/lmr/m/n/10.95 grund-spek-trum nor-miert. Das re-sul-tie-ren-de Trans-mis-si
 -onss-pek-trum zeigt im Be-reich $[] \OMS/lmsy/m/n/10.95 2 \OT1/lmr/m/n/10.95 [
 2700\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 3050] [][]$
  []
 
-<figures/a5_zuordnung.png, id=399, 867.24pt x 578.16pt>
+
+
+[23{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./figure
+s/a4_interferenz.png>]
+<figures/a5_zuordnung.png, id=406, 867.24pt x 578.16pt>
 File: figures/a5_zuordnung.png Graphic file (type png)
 <use figures/a5_zuordnung.png>
-Package pdftex.def Info: figures/a5_zuordnung.png  used on input line 1155.
+Package pdftex.def Info: figures/a5_zuordnung.png  used on input line 1178.
 (pdftex.def)             Requested size: 455.24411pt x 303.49443pt.
 
-
-[23 <./figures/a4_interferenz.png>]
-Overfull \hbox (8.63133pt too wide) in paragraph at lines 1169--1177
+Overfull \hbox (8.63133pt too wide) in paragraph at lines 1192--1200
 \T1/lmr/m/n/10.95 un-ten) und zei-gen kein sys-te-ma-ti-sches Mus-ter. Aus $\OM
 L/lmm/m/it/10.95 B[]$ \T1/lmr/m/n/10.95 folgt das Träg-heits-mo-ment $\OML/lmm/
 m/it/10.95 I \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 h=\OT1/lmr/m/n/10.95 (8\O
@@ -892,15 +903,17 @@ ML/lmm/m/it/10.95 ^^Y[]c B[]\OT1/lmr/m/n/10.95 )$\T1/lmr/m/n/10.95 ,
 
 
 [24 <./figures/a5_zuordnung.png>]
-<figures/a6_intensitaet.png, id=430, 542.025pt x 325.215pt>
+
+[25]
+<figures/a6_intensitaet.png, id=440, 542.025pt x 325.215pt>
 File: figures/a6_intensitaet.png Graphic file (type png)
 <use figures/a6_intensitaet.png>
-Package pdftex.def Info: figures/a6_intensitaet.png  used on input line 1273.
+Package pdftex.def Info: figures/a6_intensitaet.png  used on input line 1296.
 (pdftex.def)             Requested size: 327.7763pt x 196.6738pt.
 
 
-[25]
-Overfull \hbox (16.79959pt too wide) in paragraph at lines 1324--1335
+[26 <./figures/a6_intensitaet.png>]
+Overfull \hbox (16.79959pt too wide) in paragraph at lines 1347--1358
 \OT1/lmr/m/n/10.95 H[][]$ \T1/lmr/m/n/10.95 ei-ne Schwin-gungs-wel-len-zahl von
  $[] \OT1/lmr/m/n/10.95 = 2888[]8 [][]$\T1/lmr/m/n/10.95 , ei-ne Ro-ta-ti-ons-k
 on-stan-te $\OML/lmm/m/it/10.95 B[] \OT1/lmr/m/n/10.95 = 10[]45 [][]$\T1/lmr/m/
@@ -909,26 +922,24 @@ n/10.95 ,
 
 
 
-[26 <./figures/a6_intensitaet.png>]
-
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1349--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1375
 []\T1/lmr/m/n/10.95 W. Fin-keln-burg: \T1/lmr/m/it/10.95 Ein-füh-rung in die At
 om-phy-sik\T1/lmr/m/n/10.95 , Springer-Verlag, Ber-
  []
 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-377.
+400.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5985) in paragraph at lines 1375--1378
+Underfull \hbox (badness 5985) in paragraph at lines 1398--1401
 []\T1/lmr/m/n/10.95 Universität Leip-zig, AG Op-tik/Spektroskopie: \T1/lmr/m/it
 /10.95 Ge-schich-te der FTIR-Spektroskopie\T1/lmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1375--1378
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1401
 []$\T1/lmtt/m/n/10.95 https : / / polariton . exphysik . uni-[]leipzig . de / s
 ubsites / staff / bundesmann / ftir /
  []
@@ -946,7 +957,7 @@ Package rerunfilecheck Info: File `protokoll.out' has not changed.
 Here is how much of TeX's memory you used:
  18720 strings out of 473190
  362711 string characters out of 5715800
- 745136 words of memory out of 5000000
+ 749414 words of memory out of 5000000
  41582 multiletter control sequences out of 15000+600000
  630102 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -967,10 +978,10 @@ sy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/202
 5/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on protokoll.pdf (29 pages, 2998810 bytes).
+Output written on protokoll.pdf (29 pages, 2971609 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 466 compressed objects within 5 object streams
+ 589 PDF objects out of 1000 (max. 8388607)
+ 467 compressed objects within 5 object streams
  153 named destinations out of 1000 (max. 500000)
  287 words of extra memory for PDF output out of 10000 (max. 10000000)
 
