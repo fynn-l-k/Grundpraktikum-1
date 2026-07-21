@@ -333,6 +333,14 @@ INPUT ./figures/a4_interferenz.png
 INPUT ./figures/a4_interferenz.png
 INPUT ./figures/a4_interferenz.png
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT ./figures/a5_zuordnung.png
+INPUT ./figures/a5_zuordnung.png
+INPUT ./figures/a5_zuordnung.png
+INPUT ./figures/a5_zuordnung.png
+INPUT ./figures/a6_intensitaet.png
+INPUT ./figures/a6_intensitaet.png
+INPUT ./figures/a6_intensitaet.png
+INPUT ./figures/a6_intensitaet.png
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd

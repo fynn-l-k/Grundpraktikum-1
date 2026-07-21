@@ -472,8 +472,9 @@ als freier Parameter bestimmen.
 \subsection{Interferenzmethode zur Schichtdickenbestimmung}
 \label{sec:interferenz}
 
-Wird ein Lichtstrahl durch eine leere Küvette geführt, so wird er an den
-Grenzflächen mehrfach reflektiert (Abb.~\ref{fig:kuvette}). Der transmittierte
+Wird ein Lichtstrahl durch eine Küvette mit planparallelen Fenstern geführt, so
+wird er an den Grenzflächen des Spalts mehrfach reflektiert
+(Abb.~\ref{fig:kuvette}). Der transmittierte
 und der mehrfach reflektierte Strahl sind kohärent und interferieren; im Spektrum
 erscheint dies als periodische Modulation der Intensität. Für senkrechten Einfall
 ($\beta = \SI{0}{\degree}$), wie er beim näherungsweise parallelen Strahl des
@@ -582,6 +583,45 @@ liefert die Fourier-Transformation ein komplexwertiges Spektrum, aus dem mittels
 \emph{Phasenkorrektur} (z.\,B. nach der Mertz-Methode) das reelle Spektrum
 gewonnen wird.
 
+
+
+\section{Versuchsaufbau}
+\label{sec:aufbau}
+
+Alle Messungen wurden mit dem FTIR-Spektrometer Perkin~Elmer~Spectrum~100
+durchgeführt. Dieses beruht auf einem modifizierten Michelson-Interferometer
+(vgl.\ Abschn.~\ref{sec:ftir}): Anstelle eines linear verschobenen Spiegels wird
+ein um eine gemeinsame Achse rotierendes Spiegelpaar zusammen mit einem festen
+Spiegel verwendet, wodurch sich der optische Weg zwischen Strahlteiler und festem
+Spiegel kompakt und präzise variieren lässt. Der Gangunterschied wird über die
+Interferenzen eines zusätzlich eingekoppelten HeNe-Lasers bestimmt, was die
+genaue Wellenzahlskala festlegt.
+
+Als Strahlungsquelle dient ein sogenannter Globar (Norton-Quelle) -- ein
+U-förmiger Stab aus dotiertem Siliziumkarbid, der durch einen Stromfluss geheizt
+wird und näherungsweise ein Schwarzkörperspektrum mit einem Maximum im mittleren
+Infrarot emittiert. Der Detektor ist ein CsI-/TGS-Detektor für den MIR-Bereich.
+Die zu untersuchende Probe (Polystyrolfolie, Glas- bzw.\ NaCl-Sperrfilter,
+Küvette oder HCl-Gasküvette) wird in den Probenraum zwischen Interferometer und
+Detektor eingebracht; hygroskopische Materialien (NaCl, KBr) werden dabei nur mit
+Handschuhen und aus Trockenbehältern gehandhabt.
+
+Für jede Messung wird zunächst ein Interferogramm aufgenommen und daraus intern
+per Fourier-Transformation das Einkanalspektrum berechnet. Die Umgebungsbedingungen
+im Labor betrugen während der Messung $T = \SI{27.2}{\celsius}$ (also
+$\approx\SI{300}{\kelvin}$) bei einer relativen Luftfeuchte von
+$\SI{48}{\percent}$ (Abb.~\ref{fig:klima}). Die vergleichsweise hohe Luftfeuchte
+erklärt die ausgeprägten Wasserdampfbanden, die in allen an Luft aufgenommenen
+Spektren auftreten und für die Kalibrierung (Aufgabe~1.1 und 1.2) genutzt werden.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.32\textwidth]{Temperatur_Luftdruck}
+  \caption{Am Versuchstag abgelesene Umgebungsbedingungen: Lufttemperatur
+    $T=\SI{27.2}{\celsius}$ und relative Luftfeuchte $\SI{48}{\percent}$.}
+  \label{fig:klima}
+\end{figure}
+
 % ==================================================================
 %  4  AUSWERTUNG
 % ==================================================================
@@ -668,36 +708,50 @@ wieder aufgenommen werden. Insgesamt gingen $6$~Wasserdampf- und
 $18$~Polystyrolbanden in die Auswertung ein.
 
 Die relativen Abweichungen $(\bar\nu_\mathrm{mess}-\bar\nu_\mathrm{theo})/
-\bar\nu_\mathrm{theo}$ sind in Abb.~\ref{fig:eich_abweichung} über die gemessene
-Wellenzahl aufgetragen. Sie liegen betragsmäßig unterhalb von etwa
-$2\cdot10^{-3}$ und streuen ohne erkennbares Muster; ein grober systematischer
-Fehler ist damit auszuschließen. Der Mittelwert der relativen Abweichung beträgt
-$+8{,}8\cdot10^{-4}$ (Wasserdampf) bzw.\ $+7{,}0\cdot10^{-4}$ (Polystyrol), die
-gemessenen Wellenzahlen liegen also im Mittel geringfügig oberhalb der
-Literaturwerte.
+\bar\nu_\mathrm{theo}$ sind in Abb.~\ref{fig:eich_abweichung} über die
+theoretische Wellenzahl aufgetragen. Sie liegen betragsmäßig unterhalb von etwa
+$2\cdot10^{-3}$. Auffällig ist, dass insbesondere die Wasserdampfbanden nahezu
+ausschließlich \emph{oberhalb} der Nulllinie liegen: Die gemessenen Wellenzahlen
+sind also systematisch geringfügig zu hoch. Der Mittelwert der relativen
+Abweichung beträgt $+8{,}8\cdot10^{-4}$ (Wasserdampf) bzw.\
+$+7{,}0\cdot10^{-4}$ (Polystyrol) und ist damit deutlich von Null verschieden.
+Dieser kleine, aber systematische Versatz entspricht gerade dem Anstieg
+$a>1$ der weiter unten bestimmten Kalibriergeraden: Da die Abweichung mit der
+Wellenzahl zunimmt, handelt es sich im Wesentlichen um einen multiplikativen
+Skalenfehler der Wellenzahlachse (Größenordnung $0{,}1\,\%$) und nicht um einen
+konstanten Offset. Ursache ist die endliche Genauigkeit der internen
+HeNe-Laser-Wegkalibrierung des Interferometers; die verbleibende Streuung um den
+Trend rührt von der begrenzten Ablesegenauigkeit der Bandenpositionen her.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{eich_abweichung}
   \caption{Relative Abweichung der gemessenen von den theoretischen
-    Bandenwellenzahlen für Polystyrol (links) und Wasserdampf (rechts). Die
-    waagerechte Linie kennzeichnet die Nullabweichung.}
+    Bandenwellenzahlen für Polystyrol (links) und Wasserdampf (rechts), aufgetragen
+    über die theoretische Wellenzahl. Die durchgezogene Linie kennzeichnet die
+    Nullabweichung, die gestrichelte den jeweiligen Mittelwert. Die Punkte liegen
+    überwiegend oberhalb der Nulllinie, was den systematischen Skalenfehler
+    ($a>1$) widerspiegelt.}
   \label{fig:eich_abweichung}
 \end{figure}
 
 Zur Bestimmung einer möglichen Skalenkorrektur wurden die gemessenen
 Bandenwellenzahlen $\bar\nu_\mathrm{mess}$ gegen die theoretischen
-$\bar\nu_\mathrm{theo}$ aufgetragen und mittels linearer Regression durch
+$\bar\nu_\mathrm{theo}$ aufgetragen (Abb.~\ref{fig:eich_regression}) und mittels
+linearer Regression durch
 \begin{equation}
   \bar\nu_\mathrm{mess} = a\,\bar\nu_\mathrm{theo} + b
 \end{equation}
-angepasst (Abb.~\ref{fig:eich_regression}, aufgetragen ist die Residuendarstellung
-$\bar\nu_\mathrm{mess}-\bar\nu_\mathrm{theo}$). Die Regression liefert
+angepasst. In der Abbildung liegen alle Messpunkte praktisch exakt auf der
+Fitgeraden, die ihrerseits kaum von der gestrichelten Ideallinie
+($\bar\nu_\mathrm{mess}=\bar\nu_\mathrm{theo}$) abweicht -- die geringfügige
+Abweichung ist erst in der vorangegangenen Auftragung der relativen Abweichungen
+sichtbar. Die Regression liefert
 \begin{align}
-  a &= 1{,}00103 \pm 0{,}00025, \\
-  b &= (-0{,}47 \pm 0{,}49)\,\si{cm^{-1}}, \\
-  R^2 &= 0{,}999999 .
+  a &= 1{,}00103 \pm 0{,}00025, &
+  b &= (-0{,}47 \pm 0{,}49)\,\si{cm^{-1}}
 \end{align}
+bei einem Bestimmtheitsmaß von $R^2 = 0{,}999999$.
 Der Anstieg weicht mit rund $0{,}10\,\%$ nur geringfügig von $1$ ab, der
 Ordinatenabschnitt ist im Rahmen seiner Unsicherheit mit $0$ verträglich. Die
 Wellenzahlskala des Spektrometers ist damit innerhalb der Messgenauigkeit korrekt
@@ -710,13 +764,35 @@ weiteren Ergebnisse jedoch gering.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{eich_regression}
-  \caption{Residuendarstellung der Eichung: Differenz aus gemessener und
-    theoretischer Wellenzahl über der theoretischen Wellenzahl. Die rote Gerade
-    entspricht der linearen Regression $\bar\nu_\mathrm{mess}=a\,
-    \bar\nu_\mathrm{theo}+b$.}
+  \includegraphics[width=0.62\textwidth]{eich_regression}
+  \caption{Eichung der Wellenzahlskala: gemessene über theoretische
+    Bandenwellenzahl für Polystyrol (Kreise) und Wasserdampf (Quadrate). Die rote
+    Linie ist die lineare Regression $\bar\nu_\mathrm{mess}=a\,\bar\nu_\mathrm{theo}
+    +b$, die graue gestrichelte Linie die Ideal-Gerade. Beide sind auf dieser
+    Skala nahezu deckungsgleich.}
   \label{fig:eich_regression}
 \end{figure}
+
+\paragraph{Fehlerbetrachtung.}
+Aus dieser Kalibrierung folgen die beiden Fehlerquellen, die alle nachfolgend
+bestimmten Wellenzahlen betreffen. Zum einen der \emph{systematische Eichfehler}:
+Über $\bar\nu_\mathrm{korr}=(\bar\nu_\mathrm{mess}-b)/a$ pflanzt sich die
+Unsicherheit von $a$ und $b$ fort zu
+\begin{equation}
+  \sigma_{\bar\nu}^\mathrm{eich}
+  = \sqrt{\left(\tfrac{\bar\nu-b}{a^2}\sigma_a\right)^2+\left(\tfrac{\sigma_b}{a}\right)^2}
+  \approx \SI{0.87}{cm^{-1}} \quad (\text{bei }\bar\nu\approx\SI{2887}{cm^{-1}}).
+\end{equation}
+Dieser Fehler wirkt \emph{korreliert} auf alle Linien: In absolute Größen geht er
+voll ein, in Differenzgrößen (Linienabstände, Rotationskonstante $B$) hebt er
+sich bis auf den multiplikativen Skalenanteil $\sigma_a/a\approx2{,}5\cdot10^{-4}$
+heraus. Zum anderen die \emph{statistische Ableseunsicherheit} einer
+Linienposition, die durch die spektrale Auflösung begrenzt ist; bei der
+HCl-Messung (Aufgabe~1.5) mit $\Delta\bar\nu\approx\SI{0.98}{cm^{-1}}$ beträgt sie
+unter Annahme einer Rechteckverteilung
+$\sigma_{\bar\nu}\approx\Delta\bar\nu/\sqrt{12}\approx\SI{0.28}{cm^{-1}}$. Diese
+beiden Beiträge werden in den folgenden Aufgaben per Gauß'scher
+Fehlerfortpflanzung berücksichtigt.
 
 % ------------------------------------------------------------------
 \subsection{Interferogramme, Fourier-Transformation und Auflösung (Aufgabe 1.2)}
@@ -726,7 +802,10 @@ Für diese Aufgabe wurden Interferogramme des Wasserdampfspektrums mit fünf
 verschiedenen Spiegelbereichen des Interferometers aufgenommen. Die
 Datenpunktbereiche reichen von $\pm500$ über $\pm1000$, $\pm4000$ und $\pm8000$
 Punkte (jeweils symmetrisch um den Nullgangunterschied) bis zum maximalen,
-einseitig verlängerten Bereich von $-8000$ bis $+32000$ Punkten. Aus jedem
+einseitig verlängerten Bereich von $-8000$ bis $+32000$ Punkten. Letzterer stellt
+den größtmöglichen Spiegelweg (Maximal-Background) des Geräts dar und liefert
+folglich das am höchsten aufgelöste Wasserdampfspektrum, das im Weiteren als
+Referenz für die Kalibrierung dient. Aus jedem
 Interferogramm $I(s)$ wurde das Spektrum durch eine diskrete
 Fourier-Transformation (FFT) gemäß Gl.~\eqref{eq:ft} berechnet. Da die erste
 Datenspalte den Punktindex und nicht direkt den optischen Weg angibt, liefert die
@@ -739,9 +818,13 @@ Abb.~\ref{fig:a2_interferogramme}.
   \centering
   \includegraphics[width=0.86\textwidth]{a2_interferogramme}
   \caption{Aufgenommene Interferogramme (links) und die daraus per FFT berechneten
-    Spektren (rechts) für die fünf Spiegelbereiche. Mit zunehmender
-    Interferogrammlänge nimmt der Detailreichtum der Spektren zu. Das unterste
-    Interferogramm ist einseitig verlängert ($-8000$ bis $+32000$).}
+    Spektren (rechts) für die fünf Spiegelbereiche. Das Interferogramm zeigt die
+    Detektorintensität als Funktion des optischen Wegunterschieds mit einem
+    scharfen Maximum (Zentralburst) beim Gangunterschied Null; seine
+    Fourier-Transformierte ist das Wellenzahlspektrum rechts. Mit zunehmender
+    Interferogrammlänge (von oben nach unten) nimmt der Detailreichtum der Spektren
+    zu, da immer feinere Strukturen aufgelöst werden. Das unterste Interferogramm
+    ist einseitig verlängert ($-8000$ bis $+32000$).}
   \label{fig:a2_interferogramme}
 \end{figure}
 
@@ -751,10 +834,15 @@ $\Delta s$ (optischer Weg pro Datenpunkt) benötigt. Diese lässt sich aus der
 Lage einer bekannten Bande im FFT-Spektrum bestimmen: Liegt ein spektrales
 Merkmal bei der bekannten Wellenzahl $\bar\nu$ und der gemessenen FFT-Frequenz
 $f$, so gilt $\Delta s = f/\bar\nu$. Als Referenz dient die scharfe, isolierte
-Absorptionsbande des in der Umgebungsluft stets vorhandenen
-Kohlendioxids bei $\bar\nu_{\mathrm{CO}_2}=\SI{2349}{cm^{-1}}$. Aus der längsten
-Messung ergibt sich für ihre FFT-Frequenz $f_{\mathrm{CO}_2}=0{,}1494\,
-(\text{Punkt})^{-1}$ und damit
+Absorptionsbande des Kohlendioxids bei
+$\bar\nu_{\mathrm{CO}_2}=\SI{2349}{cm^{-1}}$. Diese Bande stammt nicht von der
+Probe, sondern vom CO$_2$ in der Umgebungsluft auf dem Strahlweg: Da die
+Interferogramme ohne separate Untergrundmessung an Luft aufgenommen wurden,
+erscheinen im Spektrum sowohl die Wasserdampf- als auch die CO$_2$-Banden der
+Umgebungsluft. Die CO$_2$-Bande eignet sich wegen ihrer bekannten Lage, ihrer
+Schärfe und ihrer isolierten Position besonders gut als Kalibriermarke. Aus der
+längsten Messung ergibt sich für ihre FFT-Frequenz
+$f_{\mathrm{CO}_2}=0{,}1494\,(\text{Punkt})^{-1}$ und damit
 \begin{equation}
   \Delta s = \frac{f_{\mathrm{CO}_2}}{\bar\nu_{\mathrm{CO}_2}}
            = \SI{6.36e-5}{cm} .
@@ -772,8 +860,11 @@ bestätigt.
   \includegraphics[width=0.85\textwidth]{a2_kalibrierung}
   \caption{Mit der aus der CO$_2$-Bande bestimmten Schrittweite kalibriertes
     FFT-Spektrum (blau) im Vergleich mit dem Referenzspektrum aus Aufgabe~1.1
-    (orange). Die vollständige Übereinstimmung aller Banden bestätigt die
-    ermittelte Schrittweite.}
+    (orange); die gepunktete Linie markiert die CO$_2$-Bande bei
+    $\SI{2349}{cm^{-1}}$. Die vollständige Übereinstimmung sämtlicher
+    Wasserdampf-Rotationslinien und der CO$_2$-Bande in beiden Spektren bestätigt
+    die ermittelte Schrittweite; die scharfen Wasserdampf-Peaks dienen dabei als
+    Kalibriermarken.}
   \label{fig:a2_kalibrierung}
 \end{figure}
 
@@ -890,18 +981,23 @@ im direkten Vergleich.
   \centering
   \includegraphics[width=0.9\textwidth]{a3_uebersicht}
   \caption{Einkanalspektren des Hintergrunds (grau) sowie des Glas- (blau) und
-    des NaCl-Filters (orange). Farbig hinterlegt sind die zur quantitativen
-    Auswertung verwendeten Sperrbereiche.}
+    des NaCl-Filters (orange). Farbig hinterlegt sind die Sperrbereiche. Der
+    Glas-Sperrbereich ist bis zur tatsächlichen Sperrkante bei $\approx
+    \SI{2200}{cm^{-1}}$ (gepunktete Linie) markiert, bis zu der die Glaskurve
+    flach bei null verläuft; die quantitative Auswertung erfolgt jedoch nur im
+    rauscharmen Teilfenster (siehe Abb.~\ref{fig:a3_glas}).}
   \label{fig:a3_uebersicht}
 \end{figure}
 
 \paragraph{Glasfilter.}
 Das Transmissionsspektrum des Glases (Abb.~\ref{fig:a3_glas}) zeigt, dass Glas im
-mittleren Infrarot bis etwa $\SI{2200}{cm^{-1}}$ nahezu vollständig undurchlässig
-ist. Erst oberhalb steigt die Transmission an und erreicht ab etwa
-$\SI{3500}{cm^{-1}}$ Werte von rund $\SI{75}{\percent}$. Im gut definierten
-Sperrbereich $[1000,2000]\,\si{cm^{-1}}$, in dem die Referenzintensität hoch ist,
-beträgt das Transmissionsvermögen
+mittleren Infrarot bis zur Sperrkante bei etwa $\SI{2200}{cm^{-1}}$ nahezu
+vollständig undurchlässig ist. Erst oberhalb steigt die Transmission an und
+erreicht ab etwa $\SI{3500}{cm^{-1}}$ Werte von rund $\SI{75}{\percent}$. Für die
+quantitative Auswertung wird nicht der gesamte Sperrbereich bis zur Kante genutzt,
+sondern das Teilfenster $[1000,2000]\,\si{cm^{-1}}$, in dem die Referenzintensität
+$I_0$ besonders hoch und das Verhältnis $I/I_0$ daher rauscharm ist. Dort beträgt
+das Transmissionsvermögen
 \begin{equation}
   \left(\frac{I}{I_0}\right)_\mathrm{Glas} = (0{,}03 \pm 0{,}27)\,\si{\percent} ,
 \end{equation}
@@ -947,16 +1043,26 @@ $\SI{2200}{cm^{-1}}$, während NaCl in diesem Bereich transparent ist und ledigl
 das ferne Infrarot unterhalb $\SI{500}{cm^{-1}}$ sperrt. Beide zeigen im jeweiligen
 Sperrbereich ein Transmissionsvermögen von deutlich unter $\SI{1}{\percent}$.
 
+\paragraph{Fehlerbetrachtung.}
+Die angegebenen Transmissionswerte sind Mittelwerte über viele Datenpunkte des
+jeweiligen Sperrbereichs; der Standardfehler des Mittelwerts ist entsprechend
+klein ($\pm0{,}003\,\si{\percent}$ bei Glas, $\pm0{,}06\,\si{\percent}$ bei NaCl).
+Die größere Streuung der Einzelwerte bei NaCl ($\sigma\approx1{,}8\,\si{\percent}$)
+resultiert aus der kleinen Referenzintensität $I_0$ im ferninfraroten
+Sperrbereich, wo sich das Rauschen bei der Division $I/I_0$ verstärkt bemerkbar
+macht.
+
 % ------------------------------------------------------------------
 \subsection{Spaltbreite einer Küvette (Aufgabe 1.4)}
 \label{sec:kuvette}
 
-Beim Durchgang durch eine leere Küvette interferiert der transmittierte mit dem
-mehrfach reflektierten Strahl, was im Spektrum eine periodische Modulation
-(Etalon-Interferenzen) erzeugt. Aus deren Periode lässt sich nach
-Gl.~\eqref{eq:schichtdicke} die Spaltbreite $d$ bestimmen. Es wurden zwei leere
-Küvetten vermessen; da beide klare, gut auswertbare Interferenzmuster zeigen,
-werden sie hier ausgewertet und die Ergebnisse als Konsistenzprüfung verglichen.
+Beim Durchgang durch die Küvette interferiert der direkt transmittierte mit dem
+an den Fenstern mehrfach reflektierten Strahl, was im Spektrum eine periodische
+Modulation (Etalon-Interferenzen) erzeugt. Aus deren Periode lässt sich nach
+Gl.~\eqref{eq:schichtdicke} die Spaltbreite $d$ des von den Fenstern begrenzten
+Hohlraums bestimmen; dabei wird $n_0=1$ angenommen. Es wurden zwei Küvetten
+vermessen; da beide klare, gut auswertbare Interferenzmuster zeigen, werden sie
+hier ausgewertet und die Ergebnisse als Konsistenzprüfung verglichen.
 Zur Berechnung des Transmissionsvermögens wurden die Einkanalspektren wie zuvor
 auf das Hintergrundspektrum normiert. Abb.~\ref{fig:a4_uebersicht} zeigt die
 resultierenden periodischen Interferenzmuster beider Küvetten.
@@ -964,30 +1070,44 @@ resultierenden periodischen Interferenzmuster beider Küvetten.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.92\textwidth]{a4_uebersicht}
-  \caption{Auf den Hintergrund normierte Transmissionsspektren der beiden leeren
+  \caption{Auf den Hintergrund normierte Transmissionsspektren der beiden
     Küvetten. Die periodische Modulation ist das für die Auswertung genutzte
     Etalon-Interferenzmuster. Beide Küvetten weisen eine sehr ähnliche Periode
     (und damit Spaltbreite) auf.}
   \label{fig:a4_uebersicht}
 \end{figure}
 
-Zur Bestimmung der Fringe-Periode wurde zunächst der (langsam veränderliche)
-spektrale Untergrund abgezogen und das verbleibende Signal mit einem Bandpass um
-die dominante, per Fourier-Transformation ermittelte Modulationsfrequenz
-gefiltert. Anschließend wurden die Maxima des Interferenzmusters detektiert und
-mit fortlaufenden Ordnungen $N$ versehen. Nach Gl.~\eqref{eq:schichtdicke} liefert
-die Auftragung der Ordnung $N$ über die Wellenzahl $\bar\nu$ eine Gerade mit dem
-Anstieg $2d$ (mit $n_0=1$ für Luft). Die lineare Regression
-(Abb.~\ref{fig:a4_interferenz}) ergibt
+Die Auswertung erfolgt in vier Schritten. \emph{Erstens} wird nur der
+rauscharme Bereich $\bar\nu\in[800,3200]\,\si{cm^{-1}}$ betrachtet, in dem die
+Modulation klar ausgeprägt ist; die stark verrauschten Randbereiche (u.\,a.\
+unterhalb $\SI{800}{cm^{-1}}$) werden ausgeschlossen. \emph{Zweitens} wird der
+langsam veränderliche spektrale Untergrund (durch Glättung mit einem
+Savitzky-Golay-Filter) abgezogen, sodass nur die periodische Oszillation
+verbleibt. \emph{Drittens} wird deren dominante Periode per
+Fourier-Transformation bestimmt und das Signal mit einem schmalen Bandpass um
+diese Frequenz gefiltert, um Rauschen und Oberwellen zu unterdrücken.
+\emph{Viertens} werden die Maxima des gefilterten Musters detektiert und mit
+fortlaufenden Ordnungszahlen $N=0,1,2,\dots$ durchnummeriert.
+
+Nach Gl.~\eqref{eq:schichtdicke} ist die Wellenzahl eines Maximums über
+$N = 2 n_0 d\,\bar\nu$ mit seiner Ordnung verknüpft. Trägt man daher $N$ über
+$\bar\nu$ auf, so ergibt sich eine Gerade, deren Anstieg gerade $2 n_0 d = 2d$
+(mit $n_0=1$ für Luft) entspricht (Abb.~\ref{fig:a4_interferenz}). Die lineare
+Regression liefert
 \begin{align}
-  d_1 &= (47{,}5 \pm 1{,}0)\,\si{\micro\metre} \quad \text{(Küvette 1)},\\
-  d_2 &= (49{,}8 \pm 1{,}0)\,\si{\micro\metre} \quad \text{(Küvette 2)},
+  d_1 &= (47{,}5 \pm 0{,}5)\,\si{\micro\metre} \quad \text{(Küvette 1)},\\
+  d_2 &= (49{,}8 \pm 0{,}3)\,\si{\micro\metre} \quad \text{(Küvette 2)},
 \end{align}
-jeweils mit einem Bestimmtheitsmaß $R^2 > 0{,}9999$. Als Unsicherheit ist nicht
-der (unrealistisch kleine) rein statistische Regressionsfehler angegeben, sondern
-die Abweichung zwischen der Peak- und einer unabhängigen
-Fourier-Analyse des Interferenzmusters, die die tatsächliche Methodengenauigkeit
-besser widerspiegelt.
+jeweils mit einem Bestimmtheitsmaß $R^2 > 0{,}9999$.
+
+\paragraph{Fehlerbetrachtung.} Der rein statistische Regressionsfehler ist mit
+$<\SI{0.05}{\micro\metre}$ unrealistisch klein, da er die systematischen
+Einflüsse der Untergrund- und Bandpasswahl nicht erfasst. Als realistische
+Unsicherheit wird daher die Abweichung zwischen der hier verwendeten Peak-Methode
+und einer unabhängigen, rein auf der Fourier-Analyse beruhenden Bestimmung der
+Fringe-Periode angesetzt ($\SI{0.3}{}$--$\SI{0.5}{\micro\metre}$). Der
+zusätzliche Beitrag des Eichfehlers aus Aufgabe~1.1 ($\sigma_a/a\approx
+2{,}5\cdot10^{-4}$) ist mit $\approx\SI{0.01}{\micro\metre}$ vernachlässigbar.
 
 \begin{figure}[H]
   \centering
@@ -999,10 +1119,15 @@ besser widerspiegelt.
   \label{fig:a4_interferenz}
 \end{figure}
 
-Beide Küvetten liefern innerhalb der Fehlergrenzen übereinstimmende Spaltbreiten
-von rund $\SI{48}{\micro\metre}$ bzw.\ $\SI{50}{\micro\metre}$, was die Zuverlässigkeit
-der Interferenzmethode belegt. Die Werte liegen in derselben Größenordnung wie die
-in vergleichbaren Messungen bestimmten Schichtdicken~\cite{Geschke}.
+Beide Küvetten liefern klar getrennte, aber ähnliche Spaltbreiten von rund
+$\SI{48}{\micro\metre}$ bzw.\ $\SI{50}{\micro\metre}$, was die Zuverlässigkeit
+der Interferenzmethode belegt: Die Peak- und die Fourier-Methode stimmen für jede
+Küvette auf besser als $\SI{0.5}{\micro\metre}$ überein. Die gemessene
+Fringe-Periode von $\approx\SI{100}{cm^{-1}}$ führt über
+$d=1/(2\Delta\bar\nu)$ zwingend auf $\approx\SI{50}{\micro\metre}$; eine deutlich
+kleinere Spaltbreite würde eine entsprechend größere Fringe-Periode erzeugen, die
+im Spektrum nicht beobachtet wird. Die bestimmten Spaltbreiten sind damit
+konsistent und belastbar.
 
 % ------------------------------------------------------------------
 \subsection{Rotations-Schwingungsspektrum von HCl (Aufgabe 1.5)}
@@ -1084,8 +1209,7 @@ erwartet man
   & \frac{B_0(^{35})}{B_0(^{37})} &= \frac{\mu_{37}}{\mu_{35}} = 1{,}00152 .
 \end{align*}
 Gemessen wurden $1{,}00073\pm0{,}00043$ bzw.\ $1{,}0013\pm0{,}0033$, beide
-innerhalb ihrer Unsicherheiten in Übereinstimmung mit der Theorie (vgl.\
-Abschn.~\ref{sec:fehler}).
+innerhalb ihrer Unsicherheiten in Übereinstimmung mit der Theorie.
 
 \paragraph{Häufigkeitsverhältnis der Isotope.}
 Nach dem Lambert-Beer'schen Gesetz ist die Absorbanz $A=-\ln(I/I_0)$ proportional
@@ -1097,8 +1221,31 @@ Absorbanz zusammengehöriger Dublett-Linien ergibt sich das Häufigkeitsverhält
 Der Wert liegt unter dem natürlichen Häufigkeitsverhältnis von
 $N_{35}/N_{37} \approx 3{,}13$~\cite{Rinsland}. Diese Abweichung ist auf eine
 teilweise Sättigung der intensiveren $^{35}\mathrm{Cl}$-Linien zurückzuführen,
-deren Absorbanz dadurch unterschätzt wird; ein vergleichbarer Wert wird auch in
-anderen Auswertungen dieses Versuchs beobachtet.
+deren Absorbanz dadurch unterschätzt wird.
+
+\paragraph{Fehlerbetrachtung.}
+Die statistischen Unsicherheiten der Fitparameter $\bar\nu_S$, $B_0$, $B_1$ und
+$D$ stammen aus der Kovarianzmatrix der mit $\sigma_{\bar\nu}$ gewichteten
+Polynomregression und wurden für \emph{beide} Isotopologe separat bestimmt. Die
+abgeleiteten Größen folgen über die Gauß'sche Fehlerfortpflanzung mit
+\begin{align*}
+  \frac{\sigma_I}{I}=\frac{\sigma_{B_0}}{B_0}, &&
+  \frac{\sigma_{r_0}}{r_0}=\tfrac12\frac{\sigma_I}{I}, &&
+  \frac{\sigma_k}{k}=2\frac{\sigma_{\bar\nu_S}}{\bar\nu_S} .
+\end{align*}
+Für die absolute Bandmitte $\bar\nu_S$ dominiert der Eichfehler
+($\sigma_\mathrm{eich}\approx\SI{0.87}{cm^{-1}}$ gegenüber
+$\sigma_\mathrm{stat}\approx\SI{0.12}{cm^{-1}}$), sodass
+$\sigma_{\bar\nu_S}\approx\SI{0.9}{cm^{-1}}$; da $\bar\nu_S$ groß ist, bleibt der
+relative Fehler klein und überträgt sich nur schwach auf die Kraftkonstante
+($\sigma_k\approx\SI{0.3}{N/m}$). In die Rotationskonstante geht der Eichfehler
+dagegen nur als Skalenanteil ein, sodass $\sigma_{B_0}\approx\SI{0.02}{cm^{-1}}$
+und $\sigma_{r_0}\approx\SI{0.15}{pm}$. Alle so bestimmten Unsicherheiten sind in
+Tab.~\ref{tab:a5} für beide Isotopologe angegeben; die Isotopenverhältnisse sind
+innerhalb dieser Fehler mit der Theorie verträglich. Das
+Häufigkeitsverhältnis $N_{35}/N_{37}=1{,}96\pm0{,}08$ (Standardfehler des
+Mittelwerts über $14$ Dublett-Paare, Streuung $\sigma=0{,}31$) weicht dagegen
+systematisch -- nicht statistisch -- vom Literaturwert ab (Liniensättigung).
 
 % ------------------------------------------------------------------
 \subsection{Intensitätsmodellierung und Temperaturbestimmung (Aufgabe 1.6)}
@@ -1137,106 +1284,21 @@ sich die Temperatur
 \begin{equation}
   T = (397 \pm 11)\,\si{\kelvin} .
 \end{equation}
-Der Wert liegt oberhalb der Raumtemperatur von etwa $\SI{300}{\kelvin}$, bei der
-die Messung durchgeführt wurde. Diese Überschätzung ist im Wesentlichen darauf
-zurückzuführen, dass die intensiven Linien bei kleinen $J$ teilweise gesättigt
-sind und ihre Absorbanz dadurch unterschätzt wird; das Intensitätsmaximum
-erscheint dadurch zu höheren $J$ verschoben, was im Modell einer höheren
-Temperatur entspricht. Innerhalb dieser systematischen Einschränkung gibt der Fit
-die Größenordnung der Messtemperatur korrekt wieder und liegt in guter
-Übereinstimmung mit vergleichbaren Auswertungen dieses Versuchs.
+Die angegebene Unsicherheit ist der statistische Fitfehler; er ergibt sich aus
+der Gewichtung der Absorbanzen mit $\sigma_A=\sigma_T/T$ (Basislinienrauschen
+$\sigma_T\approx0{,}007$) und ist mit einem reduzierten
+$\chi^2/\mathrm{dof}\approx1{,}1$ konsistent, d.\,h.\ Modell und Fehlerabschätzung
+passen zusammen.
 
-% ==================================================================
-%  4.7  FEHLERBETRACHTUNG
-% ==================================================================
-\subsection{Fehlerbetrachtung}
-\label{sec:fehler}
-
-Im Folgenden werden die Unsicherheiten der bestimmten Größen systematisch
-diskutiert. Es wird zwischen statistischen und systematischen Beiträgen
-unterschieden und die Gauß'sche Fehlerfortpflanzung angewandt.
-
-\paragraph{Grundlegende Fehlerquellen.}
-Alle Wellenzahlen sind mit zwei prinzipiellen Unsicherheiten behaftet:
-\begin{itemize}
-  \item \emph{Statistische Ableseunsicherheit.} Die spektrale Auflösung der
-    HCl-Messung beträgt nach Gl.~\eqref{eq:aufloesung} mit $n=16001$ Punkten und
-    $\Delta s=\SI{6.36e-5}{cm}$ etwa $\Delta\bar\nu\approx\SI{0.98}{cm^{-1}}$.
-    Unter Annahme einer Rechteckverteilung über eine Auflösungsbreite folgt eine
-    Ableseunsicherheit einer Linienposition von
-    $\sigma_{\bar\nu}\approx\Delta\bar\nu/\sqrt{12}\approx\SI{0.28}{cm^{-1}}$.
-  \item \emph{Systematischer Eichfehler.} Die Kalibrierung (Aufgabe~1.1) liefert
-    $\bar\nu_\mathrm{korr}=(\bar\nu_\mathrm{mess}-b)/a$ mit
-    $a=1{,}00103\pm0{,}00025$ und $b=(-0{,}47\pm0{,}49)\,\si{cm^{-1}}$. Für eine
-    absolute Wellenzahl um $\SI{2887}{cm^{-1}}$ ergibt sich daraus über
-    \begin{equation}
-      \sigma_{\bar\nu}^\mathrm{eich}
-      = \sqrt{\left(\frac{\bar\nu-b}{a^2}\sigma_a\right)^2
-             +\left(\frac{\sigma_b}{a}\right)^2}
-      \approx \SI{0.87}{cm^{-1}} .
-    \end{equation}
-\end{itemize}
-Entscheidend ist, dass der Eichfehler \emph{korreliert} auf alle Linien wirkt: In
-absolute Größen (z.\,B.\ die Bandmitte $\bar\nu_S$) geht er voll ein, während er
-sich in \emph{Differenzgrößen} -- und damit in der Rotationskonstante $B$, die aus
-Linienabständen folgt -- weitgehend heraushebt. Dort verbleibt lediglich der
-multiplikative Skalenfehler $\sigma_a/a\approx2{,}5\cdot10^{-4}$.
-
-\paragraph{Molekülkonstanten (Aufgabe 1.5).}
-Die statistischen Unsicherheiten der Fitparameter ergeben sich aus der
-Kovarianzmatrix der gewichteten Regression (Gewicht $\sigma_{\bar\nu}$). Die
-abgeleiteten Größen folgen mit
-\begin{align}
-  I = \frac{h}{8\pi^2 c\,B_0} &\Rightarrow \frac{\sigma_I}{I}=\frac{\sigma_{B_0}}{B_0}, &
-  r_0 = \sqrt{I/\mu} &\Rightarrow \frac{\sigma_{r_0}}{r_0}=\frac12\frac{\sigma_I}{I}, \\
-  k = (2\pi c\,\bar\nu_S)^2\mu &\Rightarrow \frac{\sigma_k}{k}=2\frac{\sigma_{\bar\nu_S}}{\bar\nu_S} .
-\end{align}
-Für $\bar\nu_S$ dominiert der Eichfehler ($\sigma_\mathrm{stat}\approx\SI{0.12}{cm^{-1}}$
-gegenüber $\sigma_\mathrm{eich}\approx\SI{0.87}{cm^{-1}}$), sodass
-$\sigma_{\bar\nu_S}\approx\SI{0.88}{cm^{-1}}$. Da $\bar\nu_S$ groß ist, bleibt der
-relative Fehler klein und pflanzt sich nur schwach auf $k$ fort. Die vollständig
-propagierten Unsicherheiten sind in Tab.~\ref{tab:a5} bereits berücksichtigt; sie
-betragen $\sigma_{B_0}\approx\SI{0.02}{cm^{-1}}$, $\sigma_{r_0}\approx\SI{0.15}{pm}$
-und $\sigma_k\approx\SI{0.3}{N/m}$. Die Isotopenverhältnisse
-$\bar\nu_S(^{35})/\bar\nu_S(^{37})=1{,}00073\pm0{,}00043$ und
-$B_0(^{35})/B_0(^{37})=1{,}0013\pm0{,}0033$ sind damit innerhalb ihrer Fehler mit
-den theoretischen Werten verträglich.
-
-\paragraph{Temperatur (Aufgabe 1.6).}
-Die Absorbanzen $A=-\ln(I/I_0)$ tragen die Unsicherheit
-$\sigma_A=\sigma_T/T$, wobei das Basislinienrauschen der Transmission zu
-$\sigma_T\approx0{,}007$ bestimmt wurde. Die gewichtete Anpassung des
-Boltzmann-Modells liefert $T=(397\pm11)\,\si{\kelvin}$ bei einem reduzierten
-$\chi^2/\mathrm{dof}\approx1{,}1$, was auf eine konsistente Fehlerabschätzung
-hindeutet. Der Wert enthält jedoch einen nicht in der statistischen Unsicherheit
-erfassten \emph{systematischen} Beitrag durch die Sättigung der intensiven Linien
-(siehe Aufgabe~1.6), der die Abweichung von der Raumtemperatur erklärt.
-
-\paragraph{Häufigkeitsverhältnis (Aufgabe 1.5).}
-Das aus $14$ Dublett-Paaren gemittelte Verhältnis beträgt
-$N_{35}/N_{37}=1{,}96\pm0{,}08$ (Standardfehler des Mittelwerts bei einer
-Streuung von $\sigma=0{,}31$). Die deutliche Abweichung vom Literaturwert $3{,}13$
-ist systematischer Natur (Linien\-sättigung) und nicht durch den statistischen
-Fehler abgedeckt.
-
-\paragraph{Spaltbreite (Aufgabe 1.4).}
-Der rein statistische Fehler der Regression $N(\bar\nu)$ ist mit
-$\sigma_\mathrm{stat}<\SI{0.05}{\micro\metre}$ (einschließlich des Eichbeitrags
-$\sigma_a/a$) unrealistisch klein, da er die systematischen Einflüsse der
-Untergrund- und Bandpasswahl nicht erfasst. Als realistische Unsicherheit wird
-daher die Abweichung zwischen der Peak- und der Fourier-Methode
-($\approx\SI{1}{\micro\metre}$) angesetzt. Die verbleibende Differenz der beiden
-Küvettenwerte ($47{,}5$ vs.\ $49{,}8\,\si{\micro\metre}$) liegt in derselben
-Größenordnung und spiegelt reale Fertigungs- bzw.\ Justageunterschiede wider.
-
-\paragraph{Sperrfilter (Aufgabe 1.3).}
-Die Transmissionswerte im Sperrbereich sind Mittelwerte über viele Datenpunkte;
-ihr Standardfehler des Mittelwerts ist mit
-$(0{,}026\pm0{,}003)\,\si{\percent}$ (Glas) bzw.\
-$(0{,}35\pm0{,}06)\,\si{\percent}$ (NaCl) klein. Die größere Streuung bei NaCl
-($\sigma\approx1{,}8\,\si{\percent}$) resultiert aus der kleinen
-Referenzintensität $I_0$ im ferninfraroten Sperrbereich, wo sich das Rauschen bei
-der Division stark auswirkt.
+Der Wert liegt oberhalb der Raumtemperatur von etwa $\SI{300}{\kelvin}$
+($\SI{27.2}{\celsius}$, vgl.\ Abschn.~\ref{sec:aufbau}), bei der die Messung
+durchgeführt wurde. Diese Überschätzung ist -- über den statistischen Fehler
+hinaus -- im Wesentlichen darauf zurückzuführen, dass die intensiven Linien bei
+kleinen $J$ teilweise gesättigt sind und ihre Absorbanz dadurch unterschätzt
+wird; das Intensitätsmaximum erscheint dadurch zu höheren $J$ verschoben, was im
+Modell einer höheren Temperatur entspricht. Innerhalb dieser systematischen
+Einschränkung gibt der Fit die Größenordnung der im Labor abgelesenen
+Raumtemperatur (vgl.\ Abschn.~\ref{sec:aufbau}) korrekt wieder.
 
 % ==================================================================
 %  5  FAZIT

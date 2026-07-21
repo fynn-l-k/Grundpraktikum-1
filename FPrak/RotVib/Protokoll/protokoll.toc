@@ -14,29 +14,27 @@
 \contentsline {subsubsection}{\numberline {3.7.1}Funktionsweise}{8}{subsubsection.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.7.2}Diskrete Fourier-Transformation, Auflösung und Zerofilling}{8}{subsubsection.3.7.2}%
 \contentsline {subsubsection}{\numberline {3.7.3}Leakage-Effekt und Apodisation}{9}{subsubsection.3.7.3}%
-\contentsline {section}{\numberline {4}Auswertung}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Kalibrierung der Wellenzahlskala (Aufgabe 1.1)}{9}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Interferogramme, Fourier-Transformation und Auflösung (Aufgabe 1.2)}{13}{subsection.4.2}%
-\contentsline {paragraph}{Schrittweite des optischen Weges.}{13}{section*.13}%
-\contentsline {paragraph}{Einfluss der Interferogrammlänge.}{14}{section*.15}%
-\contentsline {paragraph}{Zerofilling.}{15}{section*.17}%
-\contentsline {paragraph}{Apodisation.}{15}{section*.19}%
-\contentsline {paragraph}{Theoretisches Auflösungsvermögen.}{16}{section*.21}%
-\contentsline {subsection}{\numberline {4.3}Sperrverhalten von Glas- und NaCl-Filter (Aufgabe 1.3)}{17}{subsection.4.3}%
-\contentsline {paragraph}{Glasfilter.}{17}{section*.25}%
-\contentsline {paragraph}{NaCl-Filter.}{18}{section*.27}%
-\contentsline {subsection}{\numberline {4.4}Spaltbreite einer Küvette (Aufgabe 1.4)}{18}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Rotations-Schwingungsspektrum von HCl (Aufgabe 1.5)}{20}{subsection.4.5}%
-\contentsline {paragraph}{Vorbemerkung.}{20}{section*.31}%
-\contentsline {paragraph}{Bestimmung der Molekülkonstanten.}{21}{section*.33}%
-\contentsline {paragraph}{Isotopeneffekt.}{22}{section*.35}%
-\contentsline {paragraph}{Häufigkeitsverhältnis der Isotope.}{22}{section*.36}%
-\contentsline {subsection}{\numberline {4.6}Intensitätsmodellierung und Temperaturbestimmung (Aufgabe 1.6)}{22}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Fehlerbetrachtung}{23}{subsection.4.7}%
-\contentsline {paragraph}{Grundlegende Fehlerquellen.}{23}{section*.38}%
-\contentsline {paragraph}{Molekülkonstanten (Aufgabe 1.5).}{24}{section*.39}%
-\contentsline {paragraph}{Temperatur (Aufgabe 1.6).}{24}{section*.40}%
-\contentsline {paragraph}{Häufigkeitsverhältnis (Aufgabe 1.5).}{24}{section*.41}%
-\contentsline {paragraph}{Spaltbreite (Aufgabe 1.4).}{24}{section*.42}%
-\contentsline {paragraph}{Sperrfilter (Aufgabe 1.3).}{24}{section*.43}%
-\contentsline {section}{\numberline {5}Fazit}{24}{section.5}%
+\contentsline {section}{\numberline {4}Versuchsaufbau}{9}{section.4}%
+\contentsline {section}{\numberline {5}Auswertung}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Kalibrierung der Wellenzahlskala (Aufgabe 1.1)}{10}{subsection.5.1}%
+\contentsline {paragraph}{Fehlerbetrachtung.}{15}{section*.13}%
+\contentsline {subsection}{\numberline {5.2}Interferogramme, Fourier-Transformation und Auflösung (Aufgabe 1.2)}{15}{subsection.5.2}%
+\contentsline {paragraph}{Schrittweite des optischen Weges.}{16}{section*.15}%
+\contentsline {paragraph}{Einfluss der Interferogrammlänge.}{17}{section*.17}%
+\contentsline {paragraph}{Zerofilling.}{18}{section*.19}%
+\contentsline {paragraph}{Apodisation.}{18}{section*.21}%
+\contentsline {paragraph}{Theoretisches Auflösungsvermögen.}{19}{section*.23}%
+\contentsline {subsection}{\numberline {5.3}Sperrverhalten von Glas- und NaCl-Filter (Aufgabe 1.3)}{19}{subsection.5.3}%
+\contentsline {paragraph}{Glasfilter.}{20}{section*.27}%
+\contentsline {paragraph}{NaCl-Filter.}{20}{section*.29}%
+\contentsline {paragraph}{Fehlerbetrachtung.}{21}{section*.31}%
+\contentsline {subsection}{\numberline {5.4}Spaltbreite einer Küvette (Aufgabe 1.4)}{21}{subsection.5.4}%
+\contentsline {paragraph}{Fehlerbetrachtung.}{22}{section*.33}%
+\contentsline {subsection}{\numberline {5.5}Rotations-Schwingungsspektrum von HCl (Aufgabe 1.5)}{23}{subsection.5.5}%
+\contentsline {paragraph}{Vorbemerkung.}{23}{section*.35}%
+\contentsline {paragraph}{Bestimmung der Molekülkonstanten.}{24}{section*.37}%
+\contentsline {paragraph}{Isotopeneffekt.}{25}{section*.39}%
+\contentsline {paragraph}{Häufigkeitsverhältnis der Isotope.}{25}{section*.40}%
+\contentsline {paragraph}{Fehlerbetrachtung.}{25}{section*.41}%
+\contentsline {subsection}{\numberline {5.6}Intensitätsmodellierung und Temperaturbestimmung (Aufgabe 1.6)}{25}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Fazit}{26}{section.6}%
